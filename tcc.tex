@@ -10,13 +10,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{ufscThesis} % Definicao do documentclass ufscThesis	
 
+
 %----------------------------------------------------------------------
 % Pacotes usados especificamente neste documento
 \usepackage{graphicx} % Possibilita o uso de figuras e gráficos
 \usepackage{color}    % Possibilita o uso de cores no documento
 %\usepackage{pdfpages} % Possibilita a inclusão da ficha catalográfica
 \usepackage{listings} % Possibilita colocar códigos
-
+\usepackage{lipsum}
 \usepackage{caption} % colocar textos em figuras
 \usepackage{subfigure}
 
@@ -45,23 +46,23 @@
 \newcommand{\ABNTbibliographyname}{REFERÊNCIAS} % Necessário para abnTeX 0.8.2
 
 \newcommand{\figura}[5][Extraido de:]{
-\begin{figure}[h!tb]
-	\centering
-	\caption{#3.}
-	\includegraphics[width=#4]{#2.png}
-	\ifthenelse{\isempty{#5}}{}{%
-		\\ #1 \citeonline{#5}.
-	}	
-	\label{fig:#2}
-\end{figure}
+	\begin{figure}[h!tb]
+		\centering
+		\caption{#3.}
+		\includegraphics[width=#4]{#2.png}
+		\ifthenelse{\isempty{#5}}{}{%
+			\\ #1 \citeonline{#5}.
+		}	
+		\label{fig:#2}
+	\end{figure}
 }
 
 \NewDocumentEnvironment{tabela}{mm}
 {
 	\begin{table}[htb]
 		\centering
-}
-{
+	}
+	{
 		\caption{#2}
 		\label{tab:#1}
 	\end{table}
@@ -88,17 +89,17 @@
 % Identificadores do trabalho
 % Usados para preencher os elementos pré-textuais
 \instituicao[a]{Universidade Federal de Santa Catarina} % Opcional
-\departamento[a]{} %TODO departamento de engenharia da computação?
+\departamento[a]{Departamento de Computação} %TODO departamento de engenharia da computação?
 \curso[a]{Universidade Federal de Santa Catarina}
 \documento[o]{Trabalho\ de\ Conclusão\ de\ Curso} % [o] para dissertação [a] para tese
-\titulo{OpenAutOS}
-\subtitulo{Um Sistema Operacional Veícular} % Opcional
-\autor{Bruno Fontana Canella}
+\titulo{Título}
+\subtitulo{Subtítulo} % Opcional
+\autor{Thiago Raulino Dal Pont}
 \grau{Bacharel em Engenharia de Computação}
 \local{Araranguá} % Opcional (Florianópolis é o padrão)
-\data{04}{dezembro}{2016}
-\coordenador[Coordenador\\Universidade Federal de Santa Catarina]{Prof. Dr. Anderson Luiz Fernandes Perez}
-\orientador[Orientador\\Universidade Federal de Santa Catarina]{Prof. Dr. Anderson Luiz Fernandes Perez}
+\data{04}{dezembro}{2017}
+\coordenador[Coordenador\\Universidade Federal de Santa Catarina]{Prof. Dr. Anderson Luiz Fernandes Perez} %TODO Rever o Coordenador do curso
+\orientador[Orientador\\Universidade Federal de Santa Catarina]{Prof. Dr. Alexandre Leopoldo Gonçalves}
 %\coorientador[Coorientador\\Universidade ...]{Prof. Dr.}
 
 \numerodemembrosnabanca{3} % Isso decide se haverá uma folha adicional
@@ -114,93 +115,85 @@
 
 \dedicatoria{Este trabalho é dedicado aos meus colegas de classe e aos meus queridos pais.}
 
-\agradecimento{Eu queria mandar um beijo pro meu pai, pra minha mãe e especialmente pra você Xuxa.}
+\agradecimento{A todos qυе direta оυ indiretamente fizeram parte dа minha formação, о mеυ muito obrigado.}
 
-\epigrafe{Escrever um TCC é que nem fazer estrada. Depois que tá feita a base é só passar asfalto.}
-{(Anderson, 2016)}
+\epigrafe{Se A é o sucesso, então A é igual a X mais Y mais Z. O trabalho é X; Y é o lazer; e Z é manter a boca fechada.}
 
-\textoResumo {Afim de padronizar o desenvolvimento de sistemas e dispositivos para veículos automotivos, foram criados padrões abertos, regidos pelas principais montadoras de veículos, as quais os batizaram como AUTOSAR. Dentre estes padrões, foi estabelecido um para governar o desenvolvimento de sistemas operacionais, capazes de gerenciar os recursos eletrônicos de um veículo. A maioria das soluções existentes hoje no mercado, e que respeitam este padrão, são proprietárias. Com o intuito de criar uma alternativa de qualidade comercial, este trabalho visa desenvolver, documentar e validar um sistema operacional automotivo de código aberto, nas normas estabelecidas pelo padrão AUTOSAR.}
-\palavrasChave {Automação Veicular, Sistema Operacional Embarcado, AUTOSAR, OpenAUTOS.}
+\textoResumo {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
 
-\textAbstract {botar no google translate, e é isso ai.}
-\keywords {Operating Systems, Vehicle Automation, AUTOSAR, Open Source.}
+\textAbstract {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+\keywords {Borracha, relógio, mouse, chave}
 
 %----------------------------------------------------------------------
 % Início do documento                                
 \begin{document}
-%--------------------------------------------------------
-% Elementos pré-textuais
-\capa  
-%\folhaderosto[comficha] % Se nao quiser imprimir a ficha, é só não usar o parâmetro
-
-\begin{titlepage}
-	\vfill
-	\begin{center}
-		%{\large \ABNTautordata} \\[5cm]
-		\ABNTautordata \\[5cm]
-		
-		\tituloformat{\ABNTtitulodata}: \\
-		\tituloformat{\subtitulodata} \\[1cm]
-		
-		\hspace{.45\textwidth} % posicionando a minipage
-		\begin{minipage}{.5\textwidth}
-			\begin{espacosimples}
-				
-				Trabalho de Conclusão de Curso submetido à \ABNTinstituicaodata,
-				como parte dos requisitos necessários para a obtenção do Grau de
-				Bacharel em Engenharia de Computação.
-				
-				Orientador: Prof. Anderson Luiz Fernandes Perez, Dr.
-			\end{espacosimples}
-		\end{minipage}
-		\vfill \localformat \ABNTlocaldata, \mesdata\ de \anodata.
-	\end{center}
-	\vspace{1cm}
-\end{titlepage}
-
-%\folhaaprovacao
-%\paginadedicatoria
-%\paginaagradecimento
-%\paginaepigrafe
-\paginaresumo
-%\paginaabstract
-%\pretextuais % Substitui todos os elementos pre-textuais acima
-\listadefiguras % as listas dependem da necessidade do usuário
-\listadetabelas 
-\listadeabreviaturas
-%\listadesimbolos
-\sumario
-
-%--------------------------------------------------------
-% Simbolos e Abreviaturas
-\abreviatura{RAM}{\emph{Random Access Memory}}
-\abreviatura{ROM}{\emph{Read-Only Memory}}
-%--------------------------------------------------------
-% Elementos textuais
-
-\include{cap_1_introducao}
-
-\include{cap_2_automacao_veicular}
-
-\include{cap_3_sistemas_operacionais_embarcados}
-
-%%\include{cap_3_sistemas_operacionais_embarcados_old}
-
-\include{cap_4_openautos}
-
-%--------------------------------------------------------
-%Referências
-
-\bibliographystyle{ufscThesis/ufsc-alf}
-\bibliography{referencias}
-
-%-------------------------\textsl{}-------------------------------
-% Elementos pós-textuais
-%\apendice
-%\chapter{Exemplificando um Apêndice}
-%Texto do Apêndice aqui. 
-
-%\anexo
-%\chapter{Exemplificando um Anexo}
-%Texto do anexo aqui.
+	%--------------------------------------------------------
+	% Elementos pré-textuais
+	\capa  
+	%\folhaderosto[comficha] % Se nao quiser imprimir a ficha, é só não usar o parâmetro
+	
+	\begin{titlepage}
+		\vfill
+		\begin{center}
+			%{\large \ABNTautordata} \\[5cm]
+			\ABNTautordata \\[5cm]
+			
+			\tituloformat{\ABNTtitulodata}: \\
+			\tituloformat{\subtitulodata} \\[1cm]
+			
+			\hspace{.45\textwidth} % posicionando a minipage
+			\begin{minipage}{.5\textwidth}
+				\begin{espacosimples}
+					
+					Trabalho de Conclusão de Curso submetido à \ABNTinstituicaodata,
+					como parte dos requisitos necessários para a obtenção do Grau de
+					Bacharel em Engenharia de Computação.
+					
+					Orientador: Prof. Alexandre Leopoldo Gonçalves, Dr.
+				\end{espacosimples}
+			\end{minipage}
+			\vfill \localformat \ABNTlocaldata, \mesdata\ de \anodata.
+		\end{center}
+		\vspace{1cm}
+	\end{titlepage}
+	
+	%\folhaaprovacao
+	\paginadedicatoria
+	%\paginaagradecimento
+	\paginaepigrafe
+	\paginaresumo
+	\paginaabstract
+	%\pretextuais % Substitui todos os elementos pre-textuais acima
+	\listadefiguras % as listas dependem da necessidade do usuário
+	\listadetabelas 
+	\listadeabreviaturas
+	%\listadesimbolos
+	\sumario
+	
+	%--------------------------------------------------------
+	% Simbolos e Abreviaturas
+	\abreviatura{RAM}{\emph{Random Access Memory}}
+	\abreviatura{ROM}{\emph{Read-Only Memory}}
+	%--------------------------------------------------------
+	% Elementos textuais
+	
+	\include{cap_1_introducao}
+	
+	
+	
+	%--------------------------------------------------------
+	%Referências
+	
+	\bibliographystyle{ufscThesis/ufsc-alf}
+	\bibliography{referencias}
+	
+	%-------------------------\textsl{}-------------------------------
+	% Elementos pós-textuais
+	%\apendice
+	%\chapter{Exemplificando um Apêndice}
+	%Texto do Apêndice aqui. 
+	
+	%\anexo
+	%\chapter{Exemplificando um Anexo}
+	%Texto do anexo aqui.
 \end{document}
