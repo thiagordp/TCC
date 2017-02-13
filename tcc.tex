@@ -1,0 +1,206 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Universidade Federal de Santa Catarina             
+% Biblioteca Universitária                     
+%----------------------------------------------------------------------
+% Exemplo de utilização da documentclass ufscThesis
+%----------------------------------------------------------------------                                                           
+% (c)2013 Roberto Simoni (roberto.emc@gmail.com)
+%         Carlos R Rocha (cticarlo@gmail.com)
+%         Rafael M Casali (rafaelmcasali@yahoo.com.br)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{ufscThesis} % Definicao do documentclass ufscThesis	
+
+%----------------------------------------------------------------------
+% Pacotes usados especificamente neste documento
+\usepackage{graphicx} % Possibilita o uso de figuras e gráficos
+\usepackage{color}    % Possibilita o uso de cores no documento
+%\usepackage{pdfpages} % Possibilita a inclusão da ficha catalográfica
+\usepackage{listings} % Possibilita colocar códigos
+
+\usepackage{caption} % colocar textos em figuras
+\usepackage{subfigure}
+
+\usepackage{xifthen} % deixa fazer uns if-then-else mutcho loko
+
+\usepackage[brazil]{babel}  % usados para arrumar os caracteres em português
+\usepackage[utf8]{inputenx} % 
+\usepackage[T1]{fontenc}    %
+
+\usepackage{bibentry} % permite usar o comando nobibliography
+
+\usepackage{minted} % Sintaxe colorida
+
+\usepackage{xparse} % Permite definir umas funções com mais recursos.
+
+%----------------------------------------------------------------------
+% comandos de customização dos pacotes
+\renewcommand\listingscaption{Algoritmo}
+% \renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}% List of Listings -> List of Algorithms
+
+\graphicspath{{figuras/}}
+
+%----------------------------------------------------------------------
+% Comandos criados pelo usuário
+\newcommand{\afazer}[1]{{\color{red}{#1}}} % Para destacar uma parte a ser trabalhada
+\newcommand{\ABNTbibliographyname}{REFERÊNCIAS} % Necessário para abnTeX 0.8.2
+
+\newcommand{\figura}[5][Extraido de:]{
+\begin{figure}[h!tb]
+	\centering
+	\caption{#3.}
+	\includegraphics[width=#4]{#2.png}
+	\ifthenelse{\isempty{#5}}{}{%
+		\\ #1 \citeonline{#5}.
+	}	
+	\label{fig:#2}
+\end{figure}
+}
+
+\NewDocumentEnvironment{tabela}{mm}
+{
+	\begin{table}[htb]
+		\centering
+}
+{
+		\caption{#2}
+		\label{tab:#1}
+	\end{table}
+}
+
+\newcommand{\reffig}[1]{Figura \ref{fig:#1}}
+\newcommand{\refalg}[1]{Algoritmo \ref{alg:#1}}
+\newcommand{\reftab}[1]{Tabela \ref{tab:#1}}
+\newcommand{\refcap}[1]{\footnote{vide tópico \ref{cap:#1}.}}
+\newcommand{\reftop}[1]{Seção \ref{cap:#1}}
+
+\newcommand{\criarSigla}[3][]{%
+	\ifthenelse{\isempty{#1}}{%
+		#2 - #3\sigla{#3}{#2}%
+	}{%
+		\emph{#2} - #3\sigla{#3}{\emph{#2}}\footnote{Traduzido como: #1.}%
+	}%
+}
+
+%----------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------
+% Identificadores do trabalho
+% Usados para preencher os elementos pré-textuais
+\instituicao[a]{Universidade Federal de Santa Catarina} % Opcional
+\departamento[a]{} %TODO departamento de engenharia da computação?
+\curso[a]{Universidade Federal de Santa Catarina}
+\documento[o]{Trabalho\ de\ Conclusão\ de\ Curso} % [o] para dissertação [a] para tese
+\titulo{OpenAutOS}
+\subtitulo{Um Sistema Operacional Veícular} % Opcional
+\autor{Bruno Fontana Canella}
+\grau{Bacharel em Engenharia de Computação}
+\local{Araranguá} % Opcional (Florianópolis é o padrão)
+\data{04}{dezembro}{2016}
+\coordenador[Coordenador\\Universidade Federal de Santa Catarina]{Prof. Dr. Anderson Luiz Fernandes Perez}
+\orientador[Orientador\\Universidade Federal de Santa Catarina]{Prof. Dr. Anderson Luiz Fernandes Perez}
+%\coorientador[Coorientador\\Universidade ...]{Prof. Dr.}
+
+\numerodemembrosnabanca{3} % Isso decide se haverá uma folha adicional
+\orientadornabanca{sim} % Se faz parte da banca definir como sim
+\coorientadornabanca{não} % Se faz parte da banca definir como sim
+\bancaMembroA{Primeiro membro\\Universidade ...} %Nome do presidente da banca
+\bancaMembroB{Segundo membro\\Universidade ...}      % Nome do membro da Banca
+\bancaMembroC{Terceiro membro\\Universidade ...}     % Nome do membro da Banca
+\bancaMembroD{Quarto membro\\Universidade ...}       % Nome do membro da Banca
+%\bancaMembroE{Quinto membro\\Universidade ...}       % Nome do membro da Banca
+%\bancaMembroF{Sexto membro\\Universidade ...}        % Nome do membro da Banca
+%\bancaMembroG{Sétimo membro\\Universidade ...}       % Nome do membro da Banca
+
+\dedicatoria{Este trabalho é dedicado aos meus colegas de classe e aos meus queridos pais.}
+
+\agradecimento{Eu queria mandar um beijo pro meu pai, pra minha mãe e especialmente pra você Xuxa.}
+
+\epigrafe{Escrever um TCC é que nem fazer estrada. Depois que tá feita a base é só passar asfalto.}
+{(Anderson, 2016)}
+
+\textoResumo {Afim de padronizar o desenvolvimento de sistemas e dispositivos para veículos automotivos, foram criados padrões abertos, regidos pelas principais montadoras de veículos, as quais os batizaram como AUTOSAR. Dentre estes padrões, foi estabelecido um para governar o desenvolvimento de sistemas operacionais, capazes de gerenciar os recursos eletrônicos de um veículo. A maioria das soluções existentes hoje no mercado, e que respeitam este padrão, são proprietárias. Com o intuito de criar uma alternativa de qualidade comercial, este trabalho visa desenvolver, documentar e validar um sistema operacional automotivo de código aberto, nas normas estabelecidas pelo padrão AUTOSAR.}
+\palavrasChave {Automação Veicular, Sistema Operacional Embarcado, AUTOSAR, OpenAUTOS.}
+
+\textAbstract {botar no google translate, e é isso ai.}
+\keywords {Operating Systems, Vehicle Automation, AUTOSAR, Open Source.}
+
+%----------------------------------------------------------------------
+% Início do documento                                
+\begin{document}
+%--------------------------------------------------------
+% Elementos pré-textuais
+\capa  
+%\folhaderosto[comficha] % Se nao quiser imprimir a ficha, é só não usar o parâmetro
+
+\begin{titlepage}
+	\vfill
+	\begin{center}
+		%{\large \ABNTautordata} \\[5cm]
+		\ABNTautordata \\[5cm]
+		
+		\tituloformat{\ABNTtitulodata}: \\
+		\tituloformat{\subtitulodata} \\[1cm]
+		
+		\hspace{.45\textwidth} % posicionando a minipage
+		\begin{minipage}{.5\textwidth}
+			\begin{espacosimples}
+				
+				Trabalho de Conclusão de Curso submetido à \ABNTinstituicaodata,
+				como parte dos requisitos necessários para a obtenção do Grau de
+				Bacharel em Engenharia de Computação.
+				
+				Orientador: Prof. Anderson Luiz Fernandes Perez, Dr.
+			\end{espacosimples}
+		\end{minipage}
+		\vfill \localformat \ABNTlocaldata, \mesdata\ de \anodata.
+	\end{center}
+	\vspace{1cm}
+\end{titlepage}
+
+%\folhaaprovacao
+%\paginadedicatoria
+%\paginaagradecimento
+%\paginaepigrafe
+\paginaresumo
+%\paginaabstract
+%\pretextuais % Substitui todos os elementos pre-textuais acima
+\listadefiguras % as listas dependem da necessidade do usuário
+\listadetabelas 
+\listadeabreviaturas
+%\listadesimbolos
+\sumario
+
+%--------------------------------------------------------
+% Simbolos e Abreviaturas
+\abreviatura{RAM}{\emph{Random Access Memory}}
+\abreviatura{ROM}{\emph{Read-Only Memory}}
+%--------------------------------------------------------
+% Elementos textuais
+
+\include{cap_1_introducao}
+
+\include{cap_2_automacao_veicular}
+
+\include{cap_3_sistemas_operacionais_embarcados}
+
+%%\include{cap_3_sistemas_operacionais_embarcados_old}
+
+\include{cap_4_openautos}
+
+%--------------------------------------------------------
+%Referências
+
+\bibliographystyle{ufscThesis/ufsc-alf}
+\bibliography{referencias}
+
+%-------------------------\textsl{}-------------------------------
+% Elementos pós-textuais
+%\apendice
+%\chapter{Exemplificando um Apêndice}
+%Texto do Apêndice aqui. 
+
+%\anexo
+%\chapter{Exemplificando um Anexo}
+%Texto do anexo aqui.
+\end{document}

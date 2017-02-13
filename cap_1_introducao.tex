@@ -1,0 +1,42 @@
+\chapter{Introdução}
+
+Desde seu surgimento, popularização e evolução até os dias atuais, os veículos automotivos aumentaram em muito a sua complexidade, a ponto de que apenas o conhecimento mecânico do veículo não é mais suficiente. A quantidade de componentes eletrônicos presentes nos veículos automotivos aumentou consideravelmente passando, inclusive, a substituir sistemas puramente mecânicos. Dentre os fatores que alavancaram estas mudanças destacam-se o barateamento, miniaturização e popularização dos componentes eletrônicos, bem como a adequação da industria automobilística as novas leis de trânsito, que passaram a ditar a emissão máxima de poluentes e a exigir mecanismos de segurança, como o ABS e o \emph{Airbag}.
+
+Com o propósito de padronizar e, assim, facilitar o desenvolvimento e intercambialidade de auto-peças por terceiros, as principais montadoras e fabricantes de veículos entraram em um consenso, estipulando um padrão de normas de desenvolvimento para veículos automotivos, chamada de AUTomotive Open System ARchitecture ou AUTOSAR, a qual se encontra em sua quarta revisão.
+
+Para gerenciar os diversos módulos eletrônicos agora presentes em um veículo, bem como garantir a interoperabilidade entre eles, foram criadas normas referente ao desenvolvimento de sistemas operacionais. Estas normas visam o estabelecimento de padrões para o funcionamento, comunicação e especificações do sistema, sem sacrificar a liberdade criativa de desenvolvimento do sistema, como a seleção de hardwares e implementação de algoritmos.
+
+\section{Justificativa e Motivação}
+
+A maioria das soluções em sistemas operacionais automotivos são exclusivamente comerciais e de código fechado. Embora existam soluções de código aberto para sistemas embarcados, não existe, na atualidade, um \criarSigla{Sistema Operacional}{SO} de código aberto homologado nos padrões do AUTOSAR. O projeto que mais chega próximo deste cenário é o Trampoline, que se encontra em fase de homologação da norma \cite{Trampoline:HOME}.
+
+Visando a criação de um SO embarcado, para uso em veículos populares, e que mantivesse um padrão de código aberto, surgiu a idealização do OpenAUTOS. Através do desenvolvimento do OpenAUTOS, deseja-se alcançar um SO nacional que seja referência na área, utilizando componentes e tecnologias com alta disponibilidade e de fácil acesso, além de agregar contribuições com a própria comunidade acadêmica.
+
+\section{OBJETIVOS}
+
+Esta seção apresenta o objetivo geral e os objetivos específicos deste trabalho.
+
+\subsection{Geral}
+
+Desenvolver um sistema operacional embarcado de código aberto que atenda as normas estabelecidas pelo padrão AUTOSAR.
+
+\subsection{Específicos}
+\begin{enumerate}
+	\item Levantar o estado da arte com respeito a algoritmos para sistemas operacionais embarcados;
+	\item Estudar padrões de sistemas automotivos;
+	\item Levantar os requisitos para implementação de um SO de acordo com a norma AUTOSAR;
+	\item Estabelecer um projeto de código aberto em um repositório online;
+	\item Documentar o código do projeto;
+	\item Criar um modelo físico que utilize o SO desenvolvido;
+	\item Validar o OpenAUTOS em um veículo automotivo real.
+\end{enumerate}
+
+\section{Organização do trabalho}
+
+Este trabalho está dividido em 4 capítulos, contando com a introdução.
+
+O \textbf{Capítulo 2} apresentará os domínios eletrônicos de funcionamento em veículos, seus meios de comunicação, unidades de controle e engenharia de software automotivo.
+
+O \textbf{Capítulo 3} abordará os principais conceitos sobre sistemas operacionais. Ao final do capítulo serão relatados alguns estudos de caso a respeito de sistemas operacionais embarcados com foco para a automação veicular.
+
+O \textbf{Capítulo 4} apresentará a proposta do SO OpenAUTOS, destacando as escolhas tanto do projeto do software bem como a arquitetura de hardware adotada.

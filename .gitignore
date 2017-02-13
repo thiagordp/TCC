@@ -1,0 +1,42 @@
+# Compiled Sources #
+####################
+*.aux
+*.bbl
+*.bit
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.glo
+*.idx
+*.ilg
+*.ind
+*.las
+*.lof
+*.log
+*.lot
+*.lsb
+*.out
+*.pyg
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Backup Files #
+################
+*.bib.bak
+
+# Packages #
+############
+*.zip
+
+# Documentation #
+#################
+*.pdf
+*.ppt
+*.pptx
+
+# Directories #
+###############
+fontes/
