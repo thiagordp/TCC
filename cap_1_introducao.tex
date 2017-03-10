@@ -12,28 +12,35 @@
 %TODO: Escrita s\part{title}obre Sistemas de Recomendação
 
 
-
 % Contextualização de todo o trabalho
 
 % Apresentar o cenário.
 
 Nas últimas décadas, presencia-se os acelerados avanços em ciência e tecnologia impulsionados por empresas dos mais diversos ramos e pelas constantes pesquisas nas universidades. 
 
-%TODO: Aprimorar
-
 Um dos avanços mais significativos é a Internet, com um grande impacto no desenvolvimento da economia global e na sociedade atual. Em duas décadas tem decorrido um grande crescimento na disponibilidade do acesso à rede. Em setembro de 2016, o número de usuário da rede mundial de computadores era de, aproximadamente, 3,75 bilhões, cerca de metade da população mundial \cite{Stats2017}.  Outro grande avanço se tem nos celulares, aos quais evoluíram tanto nos últimos anos que passaram de simples e grandes telefones sem fio à dispositivos menores, no entanto, com acesso a Internet, recursos avançados de áudio e vídeo, poder de processamento equiparável ao de computadores de mesa e/ou notebooks.
 
-Em meio ao domínio da Internet convencional, um novo paradigma surgiu no meio acadêmico e aos poucos ganha terreno nas grandes empresas: a sua proposta é levar a tecnologia a objetos do dia a dia, como condicionadores de ar, lâmpadas, fogões etc., e, assim, criar novas formas de interação além de funcionalidades inéditas, seguindo o exemplo dos \textit{smartphones}. 
+Em meio ao domínio da Internet convencional, um novo paradigma surgiu no meio acadêmico e aos poucos ganha terreno nas grandes empresas: a sua proposta é levar a tecnologia a objetos do dia a dia, como condicionadores de ar, lâmpadas, fogões etc., e, assim, criar novas formas de interação além de funcionalidades inéditas, seguindo o exemplo dos \textit{smartphones} (citar). 
 
-Mencionada pela primeira vez, por Kevin Ashton, em 1999 \cite{Ashton2009}, a Internet das Coisas ou IoT (em inglês, \textit{Internet of Things}) está cada vez mais próxima da realidade. Abrigará um imenso ecossistema de dispositivos com capacidade de processamento, sensoriamento, conexão com demais dispositivos, entre outros avanços. Estima-se que, em 2020, cerca de 24 bilhões de dispositivos IoT estejam conectados, implicando em cerca de quatro dispositivos por pessoa \cite{Meola2016}. 
+Mencionada pela primeira vez, por Kevin Ashton, em 1999 \cite{Ashton2009}, a Internet das Coisas ou IoT (em inglês, \textit{Internet of Things}) está cada vez mais próxima da realidade. Abrigará um variado ecossistema de dispositivos com capacidade de processamento, sensoriamento, conexão com demais dispositivos e, em muito casos, com a Internet, entre outros avanços. Estima-se que, em 2020, cerca de 24 bilhões de dispositivos IoT estejam conectados, implicando em cerca de quatro dispositivos por pessoa \cite{Meola2016}.   
+Contudo, com o crescimento do número de itens computacionais, a quantidade de dados gerado por eles também cresce, mas de maneira exponencial \cite{Chiang2016}. A partir disso, o fluxo de dados na rede de internet se intensifica a ponto de comprometer o desempenho desta. Isso ocorre devido ao modelo atual de funcionamento da rede, ou seja, centralizado. Portanto, uma nova arquitetura se faz necessária para incorporar os dispositivos IoT à Internet tradicional (citar). 
+Nesse contexto, a \textit{fog computing} ou computação de neblima, surge como potencial solução, com base na proposta de uma nova forma de organização da rede para complementar a atual. Isso é possível com base na aproximação de algumas funcionalidades centralizadas em servidores aos dispositivos que as utilizam \cite{Chiang2016}. Para tanto, um dispositivo de rede seria responsável por uma \textit{nuvem local}. Assim, os dispositivos IoT se comunicariam com esse equipamento e obteriam funcionalidades necessárias de maneira mais eficiente. A nuvem local se comunicaria diretamente com a nuvem convencional, transferindo apenas informações necessárias \cite{Syed2016}.
 
-Para entender a demanda de tantos dispositivos serão necessários novas formas de interconexão desses dispositivos, bem como formas de fornecimento de energia
+Os objetos inteligentes, ou \textit{smart objects}, com funcionalidades expandidas como comunicação, sensoriamento, processamento e atuação sobre o ambiente, promovem a interação entre o mundo físico (analógico) e o mundo digital\cite{Stojkoska2017}. Isso ocorre graças a sensores capazes de capturar grandezas como temperatura e luminosidade e, a partir disso, permite que aplicações tenham conhecimento do contexto do ambiente (citar). A partir disso, algumas companhias vêm colocando no mercado novos produtos com algumas das características citadas. Como exemplo, é citável o Amazon Echo, um dispositivo que opera com a assistente pessoal Alexa, e interage com pessoas em uma casa a partir de comando de voz. Outro produto destacável, é o \textit{smart lock} da empresa Nuki, pelo qual é possível abrir e fechar a porta apenas com um toque no aplicativo móvel pelo \textit{smartphone} ou através de um \textit{smart watch}.  \textbf{COMO REFERENCIAR EMPRESA?}  Por outro lado, áreas como esportes também recebem atenção. Um exemplo, é o CARV, um dispositivo vestível ou \textit{wearable}, que propõe um calçado para praticantes de ski capaz de analisar em tempo real o modo de esquiar e fornecer informações detalhadas sobre (citar).
 
-% TODO: Falar sobre smart grids e fog
+% Smart Shoes
+% Smart door lock
+% Fit bit.
 
-Os dispostivos com funcionalidades expandidas, os chamados \textit{smart objects}, poderão, a partir da IoT, operar em conjunto para formar os chamados \textit{smart environment}, ambientes nos quais a integração dos dispositivos agrega novas funcionalidades e formas de interação para aquele ambiente. Um desses ambientes pode ser a cozinha inteligente ou \textit{smart kitchen}. Uma cozinha inteligente é capaz de prover ao usuário novas maneiras de interagir com os utensílios na preparação de alimentos, escolha de produtos entre outros. A partir disso, surgem diversas oportunidades em termos de criação de produtos.
+Os \textit{smart objects} poderão, a partir da IoT, operar em conjunto para formar os chamados \textit{smart environment}, ambientes nos quais a integração dos dispositivos agrega novas funcionalidades e formas de interação para aquele ambiente. Entre os ambientes inteligentes emergentes, estão as \textit{smart grids} que propõem estender a tecnologia para a "parte" de geração, transmissão e consumo de energia. 
 
-Uma das maneiras de ampliar as funcionalidades são os sistemas de recomendação, capazes de entender os gostos e preferências do usuário e, a partir disso, recomendar novos itens que ele talvez não conheça e possa a vir se interessar.
+% TODO: Falar sobre smart grids aqui.
+Um desses ambientes pode ser a cozinha inteligente ou \textit{smart kitchen}. Uma cozinha inteligente é capaz de prover ao usuário novas maneiras de interagir com os utensílios na preparação de alimentos, escolha de produtos entre outros. A partir disso, surgem diversas oportunidades em termos de criação de produtos.
+
+%TODO: Reescrever aplicações.
+Uma das maneiras de ampliar as funcionalidades são os sistemas de recomendação, capazes de entender os gostos e preferências do usuário e, a partir disso, recomendar novos itens que ele talvez não conheça e possa a vir se interessar. Sistemas de recomendação são dividos em duas classes: filtragem colaborativa em que as recomendações são feitas com base em gostos de outros usuários e que o usuário não conhece e que provavelmente se interesse. Outra categoria é a baseada em conteúdo, em que os itens recomendados são relacionados aos produtos de interesse do usuário.
+
+Sistemas de recomendação são aplicáveis nos mais diversos XXXX, como filmes, músicas, produtos, livros etc.
 
 \section{Problemática}
 
@@ -45,8 +52,7 @@ Esta seção apresenta o objetivo geral e os objetivos específicos do trabalho.
 
 \textit{Rascunho}
 
-Desenvolver uma geladeira capaz de monitorar os produtos contidos nela e, a partir disso, fazer compras automaticamente quando estes estiverem em falta.
-Além de fazer recomendações de receitas com base nos padrões de consumo dos produtos presentes na geladeiras.
+Desenvolver uma geladeira capaz de monitorar os produtos contidos nela e prover recomendações de receitas com base nos padrões de consumo dos produtos.
 
 % TODO: Detalhar especificamente o que dá pra fazer ou ser mais geral?
 % TODO: Propor um sistema diferente para geladeiras ou uma geladeira com recursos novos?
