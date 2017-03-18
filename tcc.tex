@@ -8,7 +8,7 @@
 %         Carlos R Rocha (cticarlo@gmail.com)
 %         Rafael M Casali (rafaelmcasali@yahoo.com.br)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass{ufscThesis} % Definicao do documentclass ufscThesis	
+\documentclass{ufsctex} % Definicao do documentclass ufscThesis	
 
 
 %----------------------------------------------------------------------
@@ -98,7 +98,7 @@
 \grau{Bacharel em Engenharia de Computação}
 \local{Araranguá} % Opcional (Florianópolis é o padrão)
 \data{04}{dezembro}{2017}
-\coordenador[Coordenador\\Universidade Federal de Santa Catarina]{Prof. Dr. Anderson Luiz Fernandes Perez} %TODO Rever o Coordenador do curso
+\coordenador[Coordenadora\\Universidade Federal de Santa Catarina]{Prof. Dr. Eliane Pozzebon} %TODO Rever o Coordenador do curso
 \orientador[Orientador\\Universidade Federal de Santa Catarina]{Prof. Dr. Alexandre Leopoldo Gonçalves}
 %\coorientador[Coorientador\\Universidade ...]{Prof. Dr.}
 
@@ -113,13 +113,11 @@
 %\bancaMembroF{Sexto membro\\Universidade ...}        % Nome do membro da Banca
 %\bancaMembroG{Sétimo membro\\Universidade ...}       % Nome do membro da Banca
 
-\dedicatoria{Este trabalho é dedicado aos meus colegas de classe e aos meus queridos pais.}
-
-\agradecimento{A todos qυе direta оυ indiretamente fizeram parte dа minha formação, о mеυ muito obrigado.}
-
-\epigrafe{Se A é o sucesso, então A é igual a X mais Y mais Z. O trabalho é X; Y é o lazer; e Z é manter a boca fechada.}
-
-\textoResumo {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+\include{pretextual/dedicatoria}
+\include{pretextual/agradecimento}
+\include{pretextual/epigrafe}
+\include{pretextual/resumo_pt}
+\include{pretextual/resumo_en}
 
 \textAbstract {Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
 \keywords {Borracha, relógio, mouse, chave}
@@ -132,30 +130,7 @@
 	\capa  
 	%\folhaderosto[comficha] % Se nao quiser imprimir a ficha, é só não usar o parâmetro
 	
-	\begin{titlepage}
-		\vfill
-		\begin{center}
-			%{\large \ABNTautordata} \\[5cm]
-			\ABNTautordata \\[5cm]
-			
-			\tituloformat{\ABNTtitulodata}: \\
-			\tituloformat{\subtitulodata} \\[1cm]
-			
-			\hspace{.45\textwidth} % posicionando a minipage
-			\begin{minipage}{.5\textwidth}
-				\begin{espacosimples}
-					
-					Trabalho de Conclusão de Curso submetido à \ABNTinstituicaodata,
-					como parte dos requisitos necessários para a obtenção do Grau de
-					Bacharel em Engenharia de Computação.
-					
-					Orientador: Prof. Alexandre Leopoldo Gonçalves, Dr.
-				\end{espacosimples}
-			\end{minipage}
-			\vfill \localformat \ABNTlocaldata, \mesdata\ de \anodata.
-		\end{center}
-		\vspace{1cm}
-	\end{titlepage}
+	\include{pretextual/folha_de_rosto}
 	
 	%\folhaaprovacao
 	\paginadedicatoria
@@ -174,26 +149,27 @@
 	% Simbolos e Abreviaturas
 	\abreviatura{RAM}{\emph{Random Access Memory}}
 	\abreviatura{IoT}{\emph{Internet of Things}}
-	%--------------------------------------------------------
+	
+	
+	%########################################################
 	% Elementos textuais
 	
-	\include{cap_1_introducao}
-	
-	\include{cap_2_internet_of_things}
+	\include{textual/cap_1_introducao}
+	\include{textual/cap_2_internet_of_things}
+%	\include{textual/cap_3_sistemas_de_recomendacao}
+%	\include{textual/cap_4_sistema_proposto}
+%	\include{textual/cap_5_avalicao_sistema}
+%	\include{textual/cap_6_consideracoes_finais}
 	
 	%--------------------------------------------------------
 	%Referências
 	
 	\bibliographystyle{ufscThesis/ufsc-alf}
-	\bibliography{referencias}
-	
+	\bibliography{postextual/referencias}
+
 	%-------------------------\textsl{}-------------------------------
 	% Elementos pós-textuais
-	%\apendice
-	%\chapter{Exemplificando um Apêndice}
-	%Texto do Apêndice aqui. 
-	
-	%\anexo
-	%\chapter{Exemplificando um Anexo}
-	%Texto do anexo aqui.
+	\include{postextual/apendice}
+	\include{postextual/anexo}
+
 \end{document}
