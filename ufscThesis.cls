@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Universidade Federal de Santa Catarina             
-% Biblioteca Universit·ria                     
+% Biblioteca Universit√°ria                     
 %---------------------------------------------------------------------------
 % Definicao do arquivo de classe UFSCThesis - Modelo de Tese para a BU-UFSC
 %---------------------------------------------------------------------------
-% Vers„o 20100631 - Baseada na classe ABNTex vers„o 0.8-2
+% VersƒÉo 20100631 - Baseada na classe ABNTex versƒÉo 0.8-2
 %                                                           
 % (c)2010 Roberto Simoni (roberto.emc@gmail.com)
 %         Carlos R Rocha (cticarlo@gmail.com)
@@ -17,20 +17,20 @@
 % 2. under the GNU Public License.                          
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-\NeedsTeXFormat{LaTeX2e}   % Identifica a vers„o de LaTeX em uso
-\ProvidesClass{ufscThesis} % Informa o tipo de documentclasse que ele È
+\NeedsTeXFormat{LaTeX2e}   % Identifica a versƒÉo de LaTeX em uso
+\ProvidesClass{ufscThesis} % Informa o tipo de documentclasse que ele √©
 
 %---------------------------------------------------------------------------
-% Passa as opÁıes n„o interessantes para a classe base ABNTex
+% Passa as op√ß≈ëes nƒÉo interessantes para a classe base ABNTex
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abnt}}
 \ProcessOptions
 
 %---------------------------------------------------------------------------
-% Carrega classe ABNTex, com padr„o de p·gina A5, fonte 10pt, frente e verso
+% Carrega classe ABNTex, com padrƒÉo de p√°gina A5, fonte 10pt, frente e verso
 \LoadClass[cleardoublepage=plain,a5paper,10pt,twoside,capchap,capsec,openright,abntfigtabnum,espacosimples]{abnt}
 
 %---------------------------------------------------------------------------
-% Definicao da geometria da p·gina
+% Definicao da geometria da p√°gina
 \RequirePackage[a5paper,inner=2.5cm,outer=1.5cm,top=2.0cm,bottom=1.5cm,head=0.7cm,foot=0.7cm]{geometry}
 % Se o cabecalho e o rodape estao dentro das margens, acrescentar as opcoes includehead e includefoot
 
@@ -40,28 +40,25 @@
 
 %---------------------------------------------------------------------------
 % Pacote de definicoes da tese padrao UFSC
-\RequirePackage{ufscThesis/BUUFSCthesis}
+\RequirePackage{BUUFSCthesis}
 
 %---------------------------------------------------------------------------
 % Definicoes de fontes usadas no documento
 %\RequirePackage{amsmath, amssymb, amsfonts, amsthm}
 %\RequirePackage{fix-cm}
 %\renewcommand{\normalsize}{\fontsize{10.5pt}{12.5pt}\selectfont}
-%---------------------------------------------------------------------------
-\newlength{\espacosumario}
-\setlength{\espacosumario}{3.3em}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Substituicao e criacao de comandos relacionados ao ABNTex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %---------------------------------------------------------------------------
-% Executa o comando #2 se o argumento #1 n„o estiver vazio, sen„o executa #3
+% Executa o comando #2 se o argumento #1 nƒÉo estiver vazio, senƒÉo executa #3
 \newcommand{\UFSCifnotempty}[3]{\ifthenelse{\not\equal{#1}{}}{#2}{#3}}
 
 %---------------------------------------------------------------------------
-% FormataÁ„o de capitulos
-\renewcommand{\ABNTchaptersize}{\normalsize} % Fonte de capÌtulo
+% Formata√ßƒÉo de capitulos
+\renewcommand{\ABNTchaptersize}{\normalsize} % Fonte de cap√≠tulo
 
 \ifthenelse{\boolean{ABNTcapchap}}
   {\renewcommand{\ABNTchapterfont}{\bfseries}}
@@ -77,7 +74,7 @@
          \refstepcounter{chapter}%
          \ABNTchaptermark{#1}% This command MUST came before addcontentsline
          \typeout{\@chapapp\space\thechapter.}%
-         % gambiarra usada para definir maiusculas para capitulos comuns e normal para anexos e apÍndices
+         % gambiarra usada para definir maiusculas para capitulos comuns e normal para anexos e apƒôndices
          \ifthenelse{\boolean{ABNTcapchap}}
                {\renewcommand{\nometoc}{\MakeUppercase{#1}}}
                {\renewcommand{\nometoc}{#1}}
@@ -133,20 +130,8 @@
   \par%
 }
 
-\renewcommand{\@makecaption}[2]{%
-  \vskip\abovecaptionskip
-  \sbox\@tempboxa{#1 -- #2}%
-  \ifdim \wd\@tempboxa >\hsize
-    #1 -- #2\par
-  \else
-    \global \@minipagefalse
-    \hb@xt@\hsize{\hfil\box\@tempboxa\hfil}%
-  \fi
-  \vskip\belowcaptionskip}
-
-
 %---------------------------------------------------------------------------
-% FormataÁ„o de seÁıes
+% Formata√ßƒÉo de se√ß≈ëes
 % Font which section titles will be printed
 \renewcommand{\ABNTsectionfont}{}
 
@@ -208,12 +193,12 @@
   \@xsect{#5}}
 
 %---------------------------------------------------------------------------
-% N˙mero de nÌveis de subseÁıes
+% N√∫mero de n√≠veis de subse√ß≈ëes
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{4}
 
 %---------------------------------------------------------------------------
-% FormataÁ„o das seÁıes e seus componentes
+% Formata√ßƒÉo das se√ß≈ëes e seus componentes
 \renewcommand\section{\ABNTstartsection{section}{1}{\z@}%
                            {-4ex}%
                            {4ex}%
@@ -237,7 +222,7 @@
                             \ABNTsectionfont\normalsize\itshape}}
 
 %---------------------------------------------------------------------------
-% FormataÁ„o do sum·rio
+% Formata√ßƒÉo do sum√°rio
 \renewcommand\@dotsep{2}
 
 \def\@dottedchaptocline#1#2#3#4#5{%
@@ -277,13 +262,12 @@
   \fi}
 
 \renewcommand*\l@chapter[2]{
-    \@dottedchaptocline{1}{0pt}{\espacosumario}%{1.2em}
+    \@dottedchaptocline{1}{0pt}{1.2em}
 	{\normalsize\ABNTtocchapterfont{#1}}
 	{#2}}
-	
 
 \renewcommand*\l@section[2]{
-    \@dottedtocline{1}{0pt}{\espacosumario}%{2em}
+    \@dottedtocline{1}{0pt}{2em}
 	{\normalsize\ABNTsectionfont
 	 \ifthenelse{\boolean{ABNTcapchap}}%
 	    {\MakeUppercase{#1}}%
@@ -291,27 +275,27 @@
 	{#2}}
 
 \renewcommand*\l@subsection[2]{
-    \@dottedtocline{1}{0pt}{\espacosumario}%{2.8em}
+    \@dottedtocline{1}{0pt}{2.8em}
 	{\normalsize\ABNTsectionfont\bfseries{#1}}
 	{#2}}
 
 \renewcommand*\l@subsubsection[2]{
-    \@dottedtocline{1}{0pt}{\espacosumario}
+    \@dottedtocline{1}{0pt}{3.6em}
 	{\normalsize\ABNTsectionfont{#1}}
 	{#2}}
 
 \renewcommand*\l@paragraph[2]{
-    \@dottedtocline{1}{0pt}{\espacosumario}
+    \@dottedtocline{1}{0pt}{4.4em}
 	{\normalsize\ABNTsectionfont\itshape{#1}}
 	{#2}}
 
 \renewcommand*\l@subparagraph[2]{
-    \@dottedtocline{1}{0pt}{\espacosumario}
+    \@dottedtocline{1}{0pt}{5.2em}
 	{\normalsize\ABNTsectionfont\itshape{#1}}
 	{#2}}
 
 %---------------------------------------------------------------------------
-% Lista de figuras, tabelas, sÌmbolos, siglas
+% Lista de figuras, tabelas, s√≠mbolos, siglas
 \newcommand{\filltocentry}[1]{%
  {\hspace{0em}\normalfont\dotfill}\nobreak
  \hb@xt@\@pnumwidth{\hfil\normalfont #1}{}\par}
@@ -341,13 +325,13 @@
 \newcommand{\simbolo}[2]{\addcontentsline{lsb}{simb}{\numberline{#1}{#2}}}
 \newcommand{\l@simb}[2]{
        \vskip -1em
-       \leftskip -3em
+       \leftskip -1.5em
        \rightskip 1.6em
        \parfillskip -\rightskip
        \parindent 0em
-       \@tempdima -\leftskip
+       \@tempdima 3em
        \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
-       {\normalfont #1}\nobreak \hfill}  %{\normalfont #1}\nobreak \filltocentry{#2}}
+       {\normalfont #1}\nobreak \filltocentry{#2}}
 
 
 \newcommand{\listadeabreviaturas}{
@@ -356,60 +340,19 @@
 \newcommand{\sigla}{\abreviatura}
 \newcommand{\l@sig}[2]{
        \vskip -1em
-       \leftskip -4.5em
+       \leftskip -1.5em
        \rightskip 1.6em
        \parfillskip -\rightskip
        \parindent 0em
-       \@tempdima -\leftskip
+       \@tempdima 4.5em
        \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
-       {\normalfont #1}\nobreak \hfill}  %{\normalfont #1}\nobreak \filltocentry{#2}}
+       {\normalfont #1}\nobreak \filltocentry{#2}}
 
 %---------------------------------------------------------------------------
-% ApÍndices e Anexos - PÛs-Textuais
+% Apƒôndices e Anexos - P√≥s-Textuais
 \addto\captionsbrazil{
-\renewcommand{\bibname}{REFER NCIAS}
+\renewcommand\refname{REFERƒòNCIAS}
 }
-\addto\captionsbrazil{
-\renewcommand\refname{REFER NCIAS}
-}
-
-\renewenvironment{thebibliography}[1]%
-  {% replacing \chapter*{\ABNTbibliographyname\@mkboth...}
-   \raggedright
-   \if@openright\cleardoublepage\else\clearpage\fi%
-   \thispagestyle{\chaptertitlepagestyle}%
-   \global\@topnum\z@%
-   \@afterindentfalse%
-   \@mkboth{\ABNTbibliographyname}{\ABNTbibliographyname}% end \chapter*{\ABNTbibliographyname...}
-   \ifthenelse{\boolean{ABNTincludeintoc}}%
-      {\ABNTaddcontentsline{toc}{chapter}{\hspace{\espacosumario}\ABNTbibliographyname}}%
-      {}%
-    \if@twocolumn%
-      \@topnewpage[\@makeschapterhead{\ABNTbibliographyname}]%
-    \else%
-      \@makeschapterhead{\ABNTbibliographyname}%
-      \@afterheading%
-    \fi%
-   \list{\@biblabel{\@arabic\c@enumiv}}%
-        {\settowidth\labelwidth{\@biblabel{#1}}%
-         \leftmargin\labelwidth%
-         \advance\leftmargin\labelsep%
-         \@openbib@code%
-         \usecounter{enumiv}%
-         \let\p@enumiv\@empty%
-         \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-   \sloppy%
-   \espaco{simples}
-   \clubpenalty4000%
-   \@clubpenalty \clubpenalty%
-   \widowpenalty4000%
-   \sfcode`\.\@m%
-  }% end of \begin{thebibliography}
-  {\def\@noitemerr
-       {\@latex@warning{Empty `thebibliography' environment}}%
-   \endlist%
-  }% end of \end{thebibliography}
-
 
 \renewcommand{\annexname}{ANEXO}
 \renewcommand{\appendixname}{AP\^ENDICE} % for completeness ;-)
@@ -451,23 +394,23 @@
          \ifthenelse{\boolean{ABNTAnApName}}{
            \ifthenelse{\equal{#1}{}}
               {\ABNTaddcontentsline{toc}{chapter}%
-                  {\hspace{\espacosumario}\MakeUppercase{\anapchaptername{}} \thechapter}}
+                  {\MakeUppercase{\anapchaptername{}} \thechapter}}
               {\ABNTaddcontentsline{toc}{chapter}%
-                  {\hspace{\espacosumario}\MakeUppercase{\anapchaptername{}} \thechapter{} \ABNTtravessao{} #1}}
+                  {\MakeUppercase{\anapchaptername{}} \thechapter{} \ABNTtravessao{} #1}}
          }
          {
           \ABNTaddcontentsline{toc}{chapter}%
-                   {\hspace{\espacosumario}\protect\numberline{\thechapter}#1}
+                   {\protect\numberline{\thechapter}#1}
          }  
        \else
-         \ABNTaddcontentsline{toc}{chapter}{\hspace{\espacosumario}#1}
+         \ABNTaddcontentsline{toc}{chapter}{#1}
        \fi
        \par
       }
 
 
 \def\@makeanapchapterhead#1{%
-  \thispagestyle{empty} 	% Define o estilo desta p·gina como vazio   
+  \thispagestyle{empty} 	% Define o estilo desta p√°gina como vazio   
   \normalfont\ABNTchapterfont
   \espaco{simples}
   \mbox{}
@@ -479,7 +422,7 @@
   \vfill
   \vfill
   \newpage
-  \thispagestyle{empty} 	% Define o estilo desta p·gina como vazio   
+  \thispagestyle{empty} 	% Define o estilo desta p√°gina como vazio   
   \if@openright\cleardoublepage\else\clearpage\fi%
     \if@twocolumn
 	\@restonecoltrue\onecolumn
@@ -573,12 +516,12 @@
 
 
 %---------------------------------------------------------------------------
-% FormataÁ„o do par·grafo
-\setlength{\parindent}{1cm} % Define indentaÁ„o de 1cm para o par·grafo
-\setlength{\parskip}{0cm}   % Sem espaÁo entre par·grafos
+% Formata√ßƒÉo do par√°grafo
+\setlength{\parindent}{1cm} % Define indenta√ßƒÉo de 1cm para o par√°grafo
+\setlength{\parskip}{0cm}   % Sem espa√ßo entre par√°grafos
 
 %---------------------------------------------------------------------------
-% RedefiniÁ„o do estilo ruledheader
+% Redefini√ßƒÉo do estilo ruledheader
 
 \renewcommand{\ps@ruledheader}{%
   \renewcommand{\@oddfoot}{}%
@@ -653,18 +596,18 @@
 % Redefinicao da capa do ABNTex
 \renewcommand{\capa}
 {
-\if@openright		% Garante que se a p·gina for "direita"
-    \cleardoublepage	% ele pula uma p·gina para deixar o anverso em branco
+\if@openright		% Garante que se a p√°gina for "direita"
+    \cleardoublepage	% ele pula uma p√°gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% ForÁa que a p·gina seja de uma coluna apenas
+\if@twocolumn		% For√ßa que a p√°gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta p·gina como vazio
-\setcounter{page}\z@	% Reseta o contador de p·ginas. Parece n„o ser necess·rio aqui
+\thispagestyle{empty} 	% Define o estilo desta p√°gina como vazio
+%\setcounter{page}\z@	% Reseta o contador de p√°ginas. Parece nƒÉo ser necess√°rio aqui
 \begin{center}
     \begin{espacosimples}
 	\ABNTifnotempty{\ABNTinstituicaodata}%
@@ -708,24 +651,24 @@
 \end{center}
 \vspace{1cm}
 \if@restonecol\twocolumn \else \newpage \fi
-\setcounter{page}\z@	% Reseta o contador de p·ginas. Parece n„o ser necess·rio aqui
+\setcounter{page}\z@	% Reseta o contador de p√°ginas. Parece nƒÉo ser necess√°rio aqui
 }% end of \capa
 
 %-------------------------------------------------------------------------------
 % Redefinicao da folha de rosto do ABNTex
 \renewcommand{\folhaderosto}[1][semficha]%
 {%
-\if@openright		% Garante que se a p·gina for "direita"
-    \cleardoublepage	% ele pula uma p·gina para deixar o anverso em branco
+\if@openright		% Garante que se a p√°gina for "direita"
+    \cleardoublepage	% ele pula uma p√°gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% ForÁa que a p·gina seja de uma coluna apenas
+\if@twocolumn		% For√ßa que a p√°gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta p·gina como vazio
+\thispagestyle{empty} 	% Define o estilo desta p√°gina como vazio
 \begin{center}
     \ABNTifnotempty{\ABNTautordata}%
 	{%
@@ -739,7 +682,7 @@
 	{%
 	\UFSCifnotempty{\subtitulodata}%
 	    {%
-	    \tituloformat{\ABNTtitulodata}:\\ \tituloformat{\subtitulodata}\par
+	    \tituloformat{\ABNTtitulodata}:\ \tituloformat{\subtitulodata}\par
 	    }%
 	    {%
 	    \tituloformat{\ABNTtitulodata}\par
@@ -770,12 +713,12 @@
     \end{espacosimples}
 \end{center}
 \vspace{1cm}
-\ifthenelse{\equal{#1}{comficha}}{\includepdf[pages={1-1}, nup=1, scale=0.95]{Ficha_Catalografica.pdf}}
+\ifthenelse{\equal{#1}{comficha}}
     {\newpage
      \mbox{}
      \vfill
      \conteudofichacatalografica
-    }
+    }{}
 }% end of \folhaderosto
 
 %-------------------------------------------------------------------------------
@@ -826,9 +769,6 @@
     \end{center}
 \end{espacosimples}
 
-
- {\setlength{\parindent}{0cm} \bfseries Banca Examinadora:\par}  
-
 \ABNTifnotempty{\ABNTorientadordata}
     {
     \ifthenelse{\equal{\orientadorbancadata}{nao}}
@@ -842,8 +782,6 @@
 	\end{espacosimples}
 	}{}
     }
-      
-    
 \ABNTifnotempty{\ABNTcoorientadordata}
     {
     \ifthenelse{\equal{\coorientadorbancadata}{nao}}
@@ -858,23 +796,32 @@
 	}{}
     }
 
+{\setlength{\parindent}{0cm} \bfseries Banca Examinadora:\par}
 
+\ABNTifnotempty{\bancanameA}
+    {
+    \begin{espacosimples}
+	\vspace{0.9em}
+	\begin{center}
+	{\rule{\ABNTsignwidth}{1pt}\par
+	 \bancaformat \bancanameA \\ \bancadataA\par}
+	\end{center}
+    \end{espacosimples}
+    }
 
-
-
-% \ABNTifnotempty{\ABNTorientadordata}
-%     {
-%     \ifthenelse{\equal{\orientadorbancadata}{sim}}
-% 	{
-% 	\begin{espacosimples}
-% 	    \vspace{0.5em}
-% 	    \begin{center}
-% 	    {\rule{\ABNTsignwidth}{1pt}\par
-% 	     \bancaformat \ABNTorientadorname \\ \ABNTorientadordata\par}
-% 	    \end{center}
-% 	\end{espacosimples}
-% 	}{}
-%     }
+\ABNTifnotempty{\ABNTorientadordata}
+    {
+    \ifthenelse{\equal{\orientadorbancadata}{sim}}
+	{
+	\begin{espacosimples}
+	    \vspace{0.5em}
+	    \begin{center}
+	    {\rule{\ABNTsignwidth}{1pt}\par
+	     \bancaformat \ABNTorientadorname \\ \ABNTorientadordata\par}
+	    \end{center}
+	\end{espacosimples}
+	}{}
+    }
 \ABNTifnotempty{\ABNTcoorientadordata}
     {
     \ifthenelse{\equal{\coorientadorbancadata}{sim}}
@@ -888,20 +835,7 @@
 	\end{espacosimples}
 	}{}
     }
-    
-\ifnum \nrobanca < 4
-    {
- \ABNTifnotempty{\bancanameA}
-    {
-    \begin{espacosimples}
-	\vspace{0.9em}
-	\begin{center}
-	{\rule{\ABNTsignwidth}{1pt}\par
-	 \bancaformat \bancanameA \\ \bancadataA\par}
-	\end{center}
-    \end{espacosimples}
-    }   
-    
+
 \ABNTifnotempty{\bancanameB}
     {
     \begin{espacosimples}
@@ -912,47 +846,22 @@
 	\end{center}
     \end{espacosimples}
     }
-    
- \ABNTifnotempty{\bancanameC}
-    {
-    \begin{espacosimples}
-	\vspace{0.5em}
-	\begin{center}
-	{\rule{\ABNTsignwidth}{1pt}\par
-	 \bancaformat \bancanameC \\ \bancadataC\par}
-	\end{center}
-    \end{espacosimples}
-    }   
-    }
 \vfill
-% Cria uma nova p·gina de assinaturas
-%\ifnum \nrobanca > 4
-\else
+% Cria uma nova p√°gina de assinaturas
+\ifnum \nrobanca > 4
     {
     \newpage
-   
-    \ABNTifnotempty{\bancanameA}
-    {
-    \begin{espacosimples}
-	\vspace{0.9em}
-	\begin{center}
-	{\rule{\ABNTsignwidth}{1pt}\par
-	 \bancaformat \bancanameA \\ \bancadataA\par}
-	\end{center}
-    \end{espacosimples}
-    }   
-    
-    \ABNTifnotempty{\bancanameB}
-    {
-    \begin{espacosimples}
-	\vspace{0.5em}
-	\begin{center}
-	{\rule{\ABNTsignwidth}{1pt}\par
-	 \bancaformat \bancanameB \\ \bancadataB\par}
-	\end{center}
-    \end{espacosimples}
-    }
-    
+    \if@openright\cleardoublepage\else\clearpage\fi%
+    \if@twocolumn
+	\@restonecoltrue\onecolumn
+    \else
+	\@restonecolfalse\newpage
+    \fi
+	\thispagestyle{empty}%
+    \vfill
+    %{\setlength{\parindent}{0cm} \bfseries Banca Examinadora (continua\c{c}\~ao):\par}
+    \mbox{}
+    \vspace{0.4em}
     \ABNTifnotempty{\bancanameC}
 	{
 	\begin{espacosimples}
@@ -1005,25 +914,25 @@
 	}
     \vfill
     }
-%\fi
+\fi
 %\if@restonecol\twocolumn \else \newpage \fi
 }% end of \aprovacao
 
 %-------------------------------------------------------------------------------
-% Definicao da p·gina de dedicatÛria
+% Definicao da p√°gina de dedicat√≥ria
 \newcommand{\paginadedicatoria}%
 {%
-\if@openright		% Garante que se a p·gina for "direita"
-    \cleardoublepage	% ele pula uma p·gina para deixar o anverso em branco
+\if@openright		% Garante que se a p√°gina for "direita"
+    \cleardoublepage	% ele pula uma p√°gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% ForÁa que a p·gina seja de uma coluna apenas
+\if@twocolumn		% For√ßa que a p√°gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta p·gina como vazio
+\thispagestyle{empty} 	% Define o estilo desta p√°gina como vazio
 \mbox{}
 \vfill
 \ABNTifnotempty{\dedicatoriadata}%
@@ -1032,71 +941,67 @@
 	{\dedicatoriaformat\dedicatoriadata}\par
     \end{textorecuadopretextual}
     }
-    \vspace{1cm}
-%\vfill
+\vfill
 \mbox{}
 }% end of \dedicatoria
 
 %-------------------------------------------------------------------------------
-% Definicao da p·gina de de agradecimentos
+% Definicao da p√°gina de de agradecimentos
 \newcommand{\paginaagradecimento}%
 {%
-\if@openright		% Garante que se a p·gina for "direita"
-    \cleardoublepage	% ele pula uma p·gina para deixar o anverso em branco
+\if@openright		% Garante que se a p√°gina for "direita"
+    \cleardoublepage	% ele pula uma p√°gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% ForÁa que a p·gina seja de uma coluna apenas
+\if@twocolumn		% For√ßa que a p√°gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta p·gina como vazio
+\thispagestyle{empty} 	% Define o estilo desta p√°gina como vazio
 \ABNTifnotempty{\agradecimentodata}%
-    {   
+    {%
     \begin{center}
 	\tituloformat{\agradecimentoname}
     \end{center}
-    \vspace{.2cm}
+    \vspace{2.5cm}
     \begin{espacosimples}
-	\agradecimentodata
+	\agradecimentoformat\agradecimentodata
     \end{espacosimples}
     }
 }% end of \agradecimento
 
 %-------------------------------------------------------------------------------
-% Definicao da p·gina da epÌgrafe
+% Definicao da p√°gina da ep√≠grafe
 \newcommand{\paginaepigrafe}%
 {%
-\if@openright		% Garante que se a p·gina for "direita"
-    \cleardoublepage	% ele pula uma p·gina para deixar o anverso em branco
+\if@openright		% Garante que se a p√°gina for "direita"
+    \cleardoublepage	% ele pula uma p√°gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% ForÁa que a p·gina seja de uma coluna apenas
+\if@twocolumn		% For√ßa que a p√°gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta p·gina como vazio
+\thispagestyle{empty} 	% Define o estilo desta p√°gina como vazio
 \mbox{}
 \vfill\vfill
 \ABNTifnotempty{\epigrafedata}%
     {%
     \begin{textorecuadopretextual}
 	{\epigrafeformat\epigrafedata}\par
-	{\epigrafeautorformat\epigrafeautordata}\par
     \end{textorecuadopretextual}
-%     \ABNTifnotempty{\epigrafeautordata}%
-% 	{%
-% 	\begin{textorecuadopretextual}
-% 	    {\epigrafeautorformat\epigrafeautordata}\par
-% 	\end{textorecuadopretextual}
-% 	}
+    \ABNTifnotempty{\epigrafeautordata}%
+	{%
+	\begin{textorecuadopretextual}
+	    {\epigrafeautorformat\epigrafeautordata}\par
+	\end{textorecuadopretextual}
+	}
     }
-     \vspace{1cm}
-   
-%\vfill\vfill
+\vfill\vfill
 \mbox{}
 }% end of \epigrafe
 
@@ -1112,15 +1017,12 @@
    \begin{espacosimples}\setlength{\parindent}{0cm}%
   }%
   {\end{espacosimples}
-   \vspace{.2cm}
-
-  
    \ABNTifnotempty{\palavrasChavedata}
 	{\par\setlength{\parindent}{0cm}{\bfseries Palavras-chave:} \palavrasChavedata}
    \newpage}%resumo
 
 %-------------------------------------------------------------------------------
-% Definicao da p·gina do resumo
+% Definicao da p√°gina do resumo
 \newcommand{\paginaresumo}
 {
 \ABNTifnotempty{\textoResumodata}
@@ -1143,14 +1045,12 @@
    \begin{espacosimples}\setlength{\parindent}{0cm}%
   }%
   {\end{espacosimples}
- \vspace{.2cm}
-  
    \ABNTifnotempty{\keywordsdata}
 	{\par\setlength{\parindent}{0cm}{\bfseries Keywords:} \keywordsdata}
    \newpage}%abstract
 
 %-------------------------------------------------------------------------------
-% Definicao da p·gina do abstract
+% Definicao da p√°gina do abstract
 \newcommand{\paginaabstract}
 {
 \ABNTifnotempty{\textAbstractdata}

@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Universidade Federal de Santa Catarina
-% Biblioteca Universitária
+% Biblioteca Universitï¿½ria
 %---------------------------------------------------------------------------
 % Definicao do arquivo de classe UFSCThesis - Modelo de Tese para a BU-UFSC
 %---------------------------------------------------------------------------
-% Versão 20100631 - Baseada na classe ABNTex versão 0.8-2
+% Versï¿½o 20100631 - Baseada na classe ABNTex versï¿½o 0.8-2
 %
 % (c)2010 Roberto Simoni (roberto.emc@gmail.com)
 %         Carlos R Rocha (cticarlo@gmail.com)
@@ -18,25 +18,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\usepackage[utf8]{inputenc}	% tipo de caracteres usados no documento
-%\usepackage[T1]{fontenc}	% codificação do documento produzido
+%\usepackage[T1]{fontenc}	% codificaï¿½ï¿½o do documento produzido
 
-% Atualização para usar IS0 8859-1
+% Atualizaï¿½ï¿½o para usar IS0 8859-1
 \usepackage[latin1]{inputenc}
 \usepackage[brazil]{babel}
 
-\NeedsTeXFormat{LaTeX2e}   % Identifica a versão de LaTeX em uso
-\ProvidesClass{ufsctex}    % Informa o tipo de documentclasse que ele é
+\NeedsTeXFormat{LaTeX2e}   % Identifica a versï¿½o de LaTeX em uso
+\ProvidesClass{ufsctex}    % Informa o tipo de documentclasse que ele ï¿½
 %---------------------------------------------------------------------------
-% Passa as opções não interessantes para a classe base ABNTex
+% Passa as opï¿½ï¿½es nï¿½o interessantes para a classe base ABNTex
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{abnt}}
 \ProcessOptions
 
 %---------------------------------------------------------------------------
-% Carrega classe ABNTex, com padrão de página A5, fonte 10pt, frente e verso
+% Carrega classe ABNTex, com padrï¿½o de pï¿½gina A5, fonte 10pt, frente e verso
 \LoadClass[cleardoublepage=plain,a5paper,10pt,twoside,capchap,capsec,openright,abntfigtabnum,espacosimples]{abnt}
 
 %---------------------------------------------------------------------------
-% Definicao da geometria da página
+% Definicao da geometria da pï¿½gina
 \RequirePackage[a5paper,inner=2.5cm,outer=1.5cm,top=2.0cm,bottom=1.5cm,head=0.7cm,foot=0.7cm]{geometry}
 % Se o cabecalho e o rodape estao dentro das margens, acrescentar as opcoes includehead e includefoot
 
@@ -62,23 +62,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %---------------------------------------------------------------------------
-% Executa o comando #2 se o argumento #1 não estiver vazio, sendo executa #3
+% Executa o comando #2 se o argumento #1 nï¿½o estiver vazio, sendo executa #3
 \newcommand{\UFSCifnotempty}[3]{\ifthenelse{\not\equal{#1}{}}{#2}{#3}}
 
 % Wrapper para texorpdfstring.
-% A primeira opção (comandos TeX) torna o texto em maiúsculas usando \MakeUppercase.
-% A segunda opção (pdfstring) usa \uppercase.
+% A primeira opï¿½ï¿½o (comandos TeX) torna o texto em maiï¿½sculas usando \MakeUppercase.
+% A segunda opï¿½ï¿½o (pdfstring) usa \uppercase.
 %
-% (Aparentemente, hyperref não gosta muito do comando \MakeUppercase
-% em alguns pontos; a ideia é que, nestes pontos,
-% \uppercase seja usado como "plano de contingência".)
+% (Aparentemente, hyperref nï¿½o gosta muito do comando \MakeUppercase
+% em alguns pontos; a ideia ï¿½ que, nestes pontos,
+% \uppercase seja usado como "plano de contingï¿½ncia".)
 \newcommand\ufsctex@uppercase[1]{%
     \texorpdfstring{\MakeUppercase{#1}}{\uppercase{#1}}%
 }
 
 %---------------------------------------------------------------------------
-% Formatação de capitulos
-\renewcommand{\ABNTchaptersize}{\normalsize} % Fonte de capítulo
+% Formataï¿½ï¿½o de capitulos
+\renewcommand{\ABNTchaptersize}{\normalsize} % Fonte de capï¿½tulo
 
 \ifthenelse{\boolean{ABNTcapchap}}
   {\renewcommand{\ABNTchapterfont}{\bfseries}}
@@ -94,7 +94,7 @@
          \refstepcounter{chapter}%
          \ABNTchaptermark{#1}% This command MUST came before addcontentsline
          \typeout{\@chapapp\space\thechapter.}%
-         % gambiarra usada para definir maiusculas para capitulos comuns e normal para anexos e apêndices
+         % gambiarra usada para definir maiusculas para capitulos comuns e normal para anexos e apï¿½ndices
          \ifthenelse{\boolean{ABNTcapchap}}
                {\renewcommand{\nometoc}{\ufsctex@uppercase{#1}}}
                {\renewcommand{\nometoc}{#1}}
@@ -163,7 +163,7 @@
 
 
 %---------------------------------------------------------------------------
-% Formatação de seções
+% Formataï¿½ï¿½o de seï¿½ï¿½es
 % Font which section titles will be printed
 \renewcommand{\ABNTsectionfont}{}
 
@@ -225,12 +225,12 @@
   \@xsect{#5}}
 
 %---------------------------------------------------------------------------
-% Número de níveis de subseções
+% Nï¿½mero de nï¿½veis de subseï¿½ï¿½es
 \setcounter{tocdepth}{5}
 \setcounter{secnumdepth}{4}
 
 %---------------------------------------------------------------------------
-% Formatação das seções e seus componentes
+% Formataï¿½ï¿½o das seï¿½ï¿½es e seus componentes
 \renewcommand\section{\ABNTstartsection{section}{1}{\z@}%
                            {-4ex}%
                            {4ex}%
@@ -254,7 +254,7 @@
                             \ABNTsectionfont\normalsize\itshape}}
 
 %---------------------------------------------------------------------------
-% Formatação do sumário
+% Formataï¿½ï¿½o do sumï¿½rio
 \renewcommand\@dotsep{2}
 
 \def\@dottedchaptocline#1#2#3#4#5{%
@@ -328,7 +328,7 @@
 	{#2}}
 
 %---------------------------------------------------------------------------
-% Lista de figuras, tabelas, símbolos, siglas
+% Lista de figuras, tabelas, sï¿½mbolos, siglas
 \newcommand{\filltocentry}[1]{%
  {\hspace{0em}\normalfont\dotfill}\nobreak
  \hb@xt@\@pnumwidth{\hfil\normalfont #1}{}\par}
@@ -359,10 +359,10 @@
 % \ufsctex@symbolbox{symbol}
 % Cria uma caixa (via \makebox) do tamanho do s?mbolo,
 % caso este tamanho seja maior que 2em;
-% caso contrário, a caixa terá largura 2em.
+% caso contrï¿½rio, a caixa terï¿½ largura 2em.
 %
-% Este comando foi criado para lidar com o problema de alguns símbolos
-% serem largos demais e acabarem sobrescrevendo o texto que descreve o símbolo.
+% Este comando foi criado para lidar com o problema de alguns sï¿½mbolos
+% serem largos demais e acabarem sobrescrevendo o texto que descreve o sï¿½mbolo.
 \newlength\ufsctex@symbolwidth
 \DeclareRobustCommand\ufsctex@symbolbox[1]{%
     \settowidth\ufsctex@symbolwidth{#1}%
@@ -374,18 +374,18 @@
     \makebox[\ufsctex@symbolwidth][l]{#1}%
 }
 
-% Insere um símbolo na lista de símbolos.
-% Em relaçãoo ao comando original,
-% esta versão "empurra" o texto do símbolo para a direita
+% Insere um sï¿½mbolo na lista de sï¿½mbolos.
+% Em relaï¿½ï¿½oo ao comando original,
+% esta versï¿½o "empurra" o texto do sï¿½mbolo para a direita
 % caso o s?mbolo seja largo demais.
 %
-% (Esta é a solução que eu encontrei para que símbolos largos demais
-% não sobrescrevessem o texto que os descreve;
-% não sei se esta está de acordo com as normas da ABNT ou da UFSC.
+% (Esta ï¿½ a soluï¿½ï¿½o que eu encontrei para que sï¿½mbolos largos demais
+% nï¿½o sobrescrevessem o texto que os descreve;
+% nï¿½o sei se esta estï¿½ de acordo com as normas da ABNT ou da UFSC.
 \newcommand{\simbolo}[2]{%
     \addcontentsline{lsb}{simb}{%
         % Podemos usar \ufsctex@symbolbox diretamente,
-        % pois este comando é robusto.
+        % pois este comando ï¿½ robusto.
         \ufsctex@symbolbox{#1}\quad{#2}%
     }%
 }
@@ -416,12 +416,12 @@
        {\normalfont #1}\nobreak \filltocentry{#2}}
 
 %---------------------------------------------------------------------------
-% Apêndices e Anexos - Pós-Textuais
+% Apï¿½ndices e Anexos - Pï¿½s-Textuais
 \addto\captionsbrazil{
-    \renewcommand{\bibname}{REFERÊNCIAS}
+    \renewcommand{\bibname}{REFERï¿½NCIAS}
 }
 \addto\captionsbrazil{
-    \renewcommand\refname{REFERÊNCIAS}
+    \renewcommand\refname{REFERï¿½NCIAS}
 }
 
 \renewenvironment{thebibliography}[1]%
@@ -463,7 +463,7 @@
 
 
 \renewcommand{\annexname}{ANEXO}
-\renewcommand{\appendixname}{APÊNDICE} % for completeness ;-)
+\renewcommand{\appendixname}{APï¿½NDICE} % for completeness ;-)
 \renewcommand{\ABNTanapsize}{\normalsize}
 
 \renewcommand{\apendice}{\appendix}
@@ -518,7 +518,7 @@
 
 
 \def\@makeanapchapterhead#1{%
-  \thispagestyle{empty} 	% Define o estilo desta página como vazio
+  \thispagestyle{empty} 	% Define o estilo desta pï¿½gina como vazio
   \normalfont\ABNTchapterfont
   \espaco{simples}
   \mbox{}
@@ -530,7 +530,7 @@
   \vfill
   \vfill
   \newpage
-  \thispagestyle{empty} 	% Define o estilo desta página como vazio
+  \thispagestyle{empty} 	% Define o estilo desta pï¿½gina como vazio
   \if@openright\cleardoublepage\else\clearpage\fi%
     \if@twocolumn
 	\@restonecoltrue\onecolumn
@@ -624,12 +624,12 @@
 
 
 %---------------------------------------------------------------------------
-% Formatação do parágrafo
-\setlength{\parindent}{1cm} % Define indentação de 1cm para o parágrafo
-\setlength{\parskip}{0cm}   % Sem espaço entre parágrafos
+% Formataï¿½ï¿½o do parï¿½grafo
+\setlength{\parindent}{1cm} % Define indentaï¿½ï¿½o de 1cm para o parï¿½grafo
+\setlength{\parskip}{0cm}   % Sem espaï¿½o entre parï¿½grafos
 
 %---------------------------------------------------------------------------
-% Redefinição do estilo ruledheader
+% Redefiniï¿½ï¿½o do estilo ruledheader
 
 \renewcommand{\ps@ruledheader}{%
   \renewcommand{\@oddfoot}{}%
@@ -704,18 +704,18 @@
 % Redefinicao da capa do ABNTex
 \renewcommand{\capa}
 {
-\if@openright		% Garante que se a página for "direita"
-    \cleardoublepage	% ele pula uma página para deixar o anverso em branco
+\if@openright		% Garante que se a pï¿½gina for "direita"
+    \cleardoublepage	% ele pula uma pï¿½gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% Força que a página seja de uma coluna apenas
+\if@twocolumn		% Forï¿½a que a pï¿½gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta página como vazio
-\setcounter{page}\z@	% Reseta o contador de páginas. Parece não ser necessário aqui
+\thispagestyle{empty} 	% Define o estilo desta pï¿½gina como vazio
+\setcounter{page}\z@	% Reseta o contador de pï¿½ginas. Parece nï¿½o ser necessï¿½rio aqui
 \begin{center}
     \begin{espacosimples}
 	\ABNTifnotempty{\ABNTinstituicaodata}%
@@ -759,24 +759,24 @@
 \end{center}
 \vspace{1cm}
 \if@restonecol\twocolumn \else \newpage \fi
-\setcounter{page}\z@	% Reseta o contador de páginas. Parece não ser necessário aqui
+\setcounter{page}\z@	% Reseta o contador de pï¿½ginas. Parece nï¿½o ser necessï¿½rio aqui
 }% end of \capa
 
 %-------------------------------------------------------------------------------
 % Redefinicao da folha de rosto do ABNTex
 \renewcommand{\folhaderosto}[1][semficha]%
 {%
-\if@openright		% Garante que se a página for "direita"
-    \cleardoublepage	% ele pula uma página para deixar o anverso em branco
+\if@openright		% Garante que se a pï¿½gina for "direita"
+    \cleardoublepage	% ele pula uma pï¿½gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% Força que a página seja de uma coluna apenas
+\if@twocolumn		% Forï¿½a que a pï¿½gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta página como vazio
+\thispagestyle{empty} 	% Define o estilo desta pï¿½gina como vazio
 \begin{center}
     \ABNTifnotempty{\ABNTautordata}%
 	{%
@@ -972,7 +972,7 @@
     }
     }
 \vfill
-% Cria uma nova página de assinaturas
+% Cria uma nova pï¿½gina de assinaturas
 %\ifnum \nrobanca > 4
 \else
     {
@@ -1057,20 +1057,20 @@
 }% end of \aprovacao
 
 %-------------------------------------------------------------------------------
-% Definicao da página de dedicatória
+% Definicao da pï¿½gina de dedicatï¿½ria
 \newcommand{\paginadedicatoria}%
 {%
-\if@openright		% Garante que se a página for "direita"
-    \cleardoublepage	% ele pula uma página para deixar o anverso em branco
+\if@openright		% Garante que se a pï¿½gina for "direita"
+    \cleardoublepage	% ele pula uma pï¿½gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% Força que a página seja de uma coluna apenas
+\if@twocolumn		% Forï¿½a que a pï¿½gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta página como vazio
+\thispagestyle{empty} 	% Define o estilo desta pï¿½gina como vazio
 \mbox{}
 \vfill
 \ABNTifnotempty{\dedicatoriadata}%
@@ -1085,20 +1085,20 @@
 }% end of \dedicatoria
 
 %-------------------------------------------------------------------------------
-% Definicao da página de de agradecimentos
+% Definicao da pï¿½gina de de agradecimentos
 \newcommand{\paginaagradecimento}%
 {%
-\if@openright		% Garante que se a página for "direita"
-    \cleardoublepage	% ele pula uma página para deixar o anverso em branco
+\if@openright		% Garante que se a pï¿½gina for "direita"
+    \cleardoublepage	% ele pula uma pï¿½gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% Força que a página seja de uma coluna apenas
+\if@twocolumn		% Forï¿½a que a pï¿½gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta página como vazio
+\thispagestyle{empty} 	% Define o estilo desta pï¿½gina como vazio
 \ABNTifnotempty{\agradecimentodata}%
     {
     \begin{center}
@@ -1112,20 +1112,20 @@
 }% end of \agradecimento
 
 %-------------------------------------------------------------------------------
-% Definicao da página da epígrafe
+% Definicao da pï¿½gina da epï¿½grafe
 \newcommand{\paginaepigrafe}%
 {%
-\if@openright		% Garante que se a página for "direita"
-    \cleardoublepage	% ele pula uma página para deixar o anverso em branco
+\if@openright		% Garante que se a pï¿½gina for "direita"
+    \cleardoublepage	% ele pula uma pï¿½gina para deixar o anverso em branco
 \else
     \clearpage
 \fi
-\if@twocolumn		% Força que a página seja de uma coluna apenas
+\if@twocolumn		% Forï¿½a que a pï¿½gina seja de uma coluna apenas
     \@restonecoltrue\onecolumn
 \else
     \@restonecolfalse\newpage
 \fi
-\thispagestyle{empty} 	% Define o estilo desta página como vazio
+\thispagestyle{empty} 	% Define o estilo desta pï¿½gina como vazio
 \mbox{}
 \vfill\vfill
 \ABNTifnotempty{\epigrafedata}%
@@ -1167,7 +1167,7 @@
    \newpage}%resumo
 
 %-------------------------------------------------------------------------------
-% Definição da página do resumo
+% Definiï¿½ï¿½o da pï¿½gina do resumo
 \newcommand{\paginaresumo}
 {
 \ABNTifnotempty{\textoResumodata}
@@ -1197,7 +1197,7 @@
    \newpage}%abstract
 
 %-------------------------------------------------------------------------------
-% Definicao da página do abstract
+% Definicao da pï¿½gina do abstract
 \newcommand{\paginaabstract}
 {
 \ABNTifnotempty{\textAbstractdata}

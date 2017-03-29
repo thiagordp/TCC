@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Universidade Federal de Santa Catarina
-% Biblioteca Universitária
+% Biblioteca Universitï¿½ria
 %---------------------------------------------------------------------------
 % Definicao do arquivo de estilo BUUFSCThesis - Modelo de Tese da BU-UFSC
 %---------------------------------------------------------------------------
-% Versão 20100531 - Baseada na classe ABNTex versão 0.8-2
+% Versï¿½o 20100531 - Baseada na classe ABNTex versï¿½o 0.8-2
 %
 % (c)2010 Roberto Simoni (roberto.emc@gmail.com)
 %         Carlos R Rocha (cticarlo@gmail.com)
@@ -21,8 +21,8 @@
 % Pacotes essenciais para o estilo funcionar
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[brazil]{babel}	% coloca as coisas em portugues no sumário.
-\usepackage[normalem]{ulem}	% provê sublinhados para textos (\ul)
+\usepackage[brazil]{babel}	% coloca as coisas em portugues no sumï¿½rio.
+\usepackage[normalem]{ulem}	% provï¿½ sublinhados para textos (\ul)
 
 \usepackage{subfigure}		% permite ter subfiguras
 \usepackage{indentfirst}	% indenta a primeira linha dos paragrafos
@@ -31,7 +31,7 @@
 
 \usepackage[colorlinks, allcolors=black]{hyperref}
 %---------------------------------------------------------------------------
-% Pacote de bibliografia no padrão ABNT
+% Pacote de bibliografia no padrï¿½o ABNT
 \usepackage[alf,abnt-and-type=e,abnt-year-extra-label=yes,abnt-emphasize=bf,abnt-url-package=html]{abntcite} %
 
 %originalmente era este
@@ -39,7 +39,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Variáveis identificadoras do trabalho
+% Variï¿½veis identificadoras do trabalho
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %---------------------------------------------------------------------------
@@ -53,7 +53,7 @@
 
 %---------------------------------------------------------------------------
 % Departamento
-\providecommand{\UFSCdepartamentodata}{Departamento de Engenharia Mecânica}
+\providecommand{\UFSCdepartamentodata}{Departamento de Engenharia Mecï¿½nica}
 \providecommand{\UFSCdepartamentogenerodata}{o}
 \newcommand{\departamento}[2][o]%
     {\renewcommand{\UFSCdepartamentodata}{#2}\renewcommand{\UFSCdepartamentogenerodata}{#1}}
@@ -62,7 +62,7 @@
 
 %---------------------------------------------------------------------------
 % Curso
-\providecommand{\UFSCcursodata}{Programa de Pós-Gradua\c{c}\~ao em Engenharia Mecânica}
+\providecommand{\UFSCcursodata}{Programa de Pï¿½s-Gradua\c{c}\~ao em Engenharia Mecï¿½nica}
 \providecommand{\UFSCcursogenerodata}{o}
 \newcommand{\curso}[2][o]%
     {\renewcommand{\UFSCcursodata}{#2}\renewcommand{\UFSCcursogenerodata}{#1}}
@@ -75,7 +75,7 @@
     {\renewcommand{\UFSCdocumentodata}{#2} \renewcommand{\UFSCdocumentogenerodata}{#1} \detgenerodoc{#2}}
 
 %---------------------------------------------------------------------------
-% Titulo e subtítulo
+% Titulo e subtï¿½tulo
 \renewcommand{\tituloformat}[1]{\bfseries\MakeUppercase{#1}}
 
 \providecommand{\subtitulodata}{}
@@ -88,12 +88,12 @@
 
 %---------------------------------------------------------------------------
 % Grau pretendido
-\providecommand{\graudata}{Doutor em Engenharia Mecânica}
+\providecommand{\graudata}{Doutor em Engenharia Mecï¿½nica}
 \newcommand{\grau}[1]{\renewcommand{\graudata}{#1}}
 
 %---------------------------------------------------------------------------
 % Local
-\renewcommand{\ABNTlocaldata}{Florianópolis}
+\renewcommand{\ABNTlocaldata}{Florianï¿½polis}
 \renewcommand{\localformat}{\mdseries}
 
 %---------------------------------------------------------------------------
@@ -132,7 +132,7 @@
 
 %-!
 % Banca - Ate 7 membros, fora orientador e coorientador.
-% Se o nro de membros passar de 4, será criada uma folha adicional
+% Se o nro de membros passar de 4, serï¿½ criada uma folha adicional
 \newcommand{\bancaformat}{}
 
 \providecommand\orientadorbancadata{nao}
@@ -188,14 +188,14 @@
 %---------------------------------------------------------------------------
 % Texto da folha de rosto
 \newcommand{\UFSCcomentariodata}{\UFSCdocumentodata\ submetid\UFSCdocumentogenerodata\ 
-	\aoa{\UFSCcursogenerodata}\ \UFSCcursodata\ para a obtenção do Grau de \graudata.}
+	\aoa{\UFSCcursogenerodata}\ \UFSCcursodata\ para a obtenï¿½ï¿½o do Grau de \graudata.}
 
 \renewcommand{\comentarioformat}{\small}
 %---------------------------------------------------------------------------
 % Texto da folha de aprovacao
 \newcommand{\textoAprovacaodata}{\esteEsta{\UFSCdocumentogenerodata} \UFSCdocumentodata\ 
 	foi julgad\UFSCdocumentogenerodata\ aprovad\UFSCdocumentogenerodata\ para a 
-	obtenção do Título de ``\graudata'',  e aprovad\UFSCdocumentogenerodata\ 
+	obtenï¿½ï¿½o do Tï¿½tulo de ``\graudata'',  e aprovad\UFSCdocumentogenerodata\ 
 	em sua forma final \peloPela{\UFSCcursogenerodata} \UFSCcursodata.} 
 
 % Resumo e abstract
@@ -230,21 +230,21 @@
 \newcommand{\epigrafeautorformat}{\hfill}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Comandos e formatos customizáveis
+% Comandos e formatos customizï¿½veis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %---------------------------------------------------------------------------
-% Funções de ajustes aos textos de acordo com o genero
+% Funï¿½ï¿½es de ajustes aos textos de acordo com o genero
 \newcommand{\esteEsta}[1]{\ifthenelse{\equal{#1}{a}}{Esta}{Este}}
 \newcommand{\aoa}[1]{{\ifthenelse{\equal{#1}{a}}{\`a}{ao}}}
 \newcommand{\peloPela}[1]{\ifthenelse{\equal{#1}{o}}{pelo}{pela}}
 
 %---------------------------------------------------------------------------
-% Determina o genero do documento pré-definido
+% Determina o genero do documento prï¿½-definido
 \newcommand{\detgenerodoc}[1] % Me dei por vencido - Verificar no futuro sobre expansao de commands
-    {\ifthenelse{\equal{#1}{Relatório}\or\equal{#1}{Trabalho}\or
-                 \equal{#1}{Trabalho de Conclusão de Curso}\or
-		 \equal{#1}{Relatório de Pós-Doutorado}}
+    {\ifthenelse{\equal{#1}{Relatï¿½rio}\or\equal{#1}{Trabalho}\or
+                 \equal{#1}{Trabalho de Conclusï¿½o de Curso}\or
+		 \equal{#1}{Relatï¿½rio de Pï¿½s-Doutorado}}
 	{\renewcommand{\UFSCdocumentogenerodata}{o}}
     }
 
@@ -252,8 +252,8 @@
 % Ficha catalografica
 \newcommand{\conteudofichacatalografica}{
 \begin{center}
-Ficha de identificação da obra elaborada pelo autor
-através do \\Programa de Geração Automática da Biblioteca Universitária da UFSC.
+Ficha de identificaï¿½ï¿½o da obra elaborada pelo autor
+atravï¿½s do \\Programa de Geraï¿½ï¿½o Automï¿½tica da Biblioteca Universitï¿½ria da UFSC.
 \end{center}
 \frame{
     \begin{minipage}{\textwidth}
@@ -261,13 +261,13 @@ através do \\Programa de Geração Automática da Biblioteca Universitária da UFSC.
 	    {\small
 	    \vspace{5em}
 	    \parindent1.5cm
-	    A ficha de identificação é elaborada pelo próprio autor\\
+	    A ficha de identificaï¿½ï¿½o ï¿½ elaborada pelo prï¿½prio autor\\
 	
 
 
 	
 	
-	    Maiores informações em:
+	    Maiores informaï¿½ï¿½es em:
 
 	    http://portalbu.ufsc.br/ficha
 	    \vspace{4em}}
@@ -278,7 +278,7 @@ através do \\Programa de Geração Automática da Biblioteca Universitária da UFSC.
 }
 
 %-------------------------------------------------------------------------------
-% Faz a impressão de todos os elementos pré textuais menos o sumário
+% Faz a impressï¿½o de todos os elementos prï¿½ textuais menos o sumï¿½rio
 \newcommand{\pretextuais}{
 %\capa
 \folhaderosto
@@ -291,8 +291,8 @@ através do \\Programa de Geração Automática da Biblioteca Universitária da UFSC.
 } %end of pretextuais
 
 %-------------------------------------------------------------------------------
-% Para listagens de algoritmos e de código, recomenda-se consultar os
-% pacotes algorithms e lstlistings, que são usados para definir esses
+% Para listagens de algoritmos e de cï¿½digo, recomenda-se consultar os
+% pacotes algorithms e lstlistings, que sï¿½o usados para definir esses
 % dois tipos de elementos de texto e possuem os comandos
 % \listofalgorithms e \lstlistoflistings, respectivamente.
 %-------------------------------------------------------------------------------
