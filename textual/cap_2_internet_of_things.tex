@@ -1,7 +1,7 @@
 \chapter{Internet das Coisas}
-
+\label{cap:internet_of_things}
 %%%%%%%%   PARTE 1   %%%%%%%%
-\section{Conceito}
+%\section{Conceito}
 
 
 % TODO: INTRODUÇÃO
@@ -9,74 +9,38 @@
 % Contextualização
 
 % REVER
-A tecnologia, com o passar dos anos, está cada vez mais presente nas indústrias, lares, comércios 
-etc. ao mesmo tempo tornando-se indispensável para todas essas entidades. No entanto, nos últimos 
-anos um novo paradigma está emergindo: a Internet das Coisas. A partir dela, a Internet vai deixar 
-de existir como é vista hoje tornando, assim, onipresente.
+A tecnologia, com o passar dos anos, está cada vez mais presente nas indústrias, lares, comércios etc. ao mesmo tempo tornando-se indispensável para todas essas entidades. No entanto, nos últimos anos um novo paradigma está emergindo: a Internet das Coisas. A partir dela, a Internet vai deixar de existir como é vista hoje tornando, assim, onipresente (citar).
 
 % O que é 
 
-O conceito de Internet das Coisas (IoT) está relacionado à interconexão de objetos distintos 
-através de uma rede, sendo esta, muitas vezes, a Internet. Desse modo, elementos do mundo real, que 
-antes funcionavam de maneira independente ao meio aos quais estavam inseridos, são capazes de 
-interagir com outros objetos à sua volta e, assim, trocar informações que possam ser relevantes 
-permitindo a agregação de novas funcionalidades.  Além disso, a IoT abre espaço para interação 
-entre o mundo físico e o digital a partir de dispositivos capazes de capturar dados físicos no meio 
-em que estão tais como, temperatura, distância etc., representá-los digitalmente e trasmití-los 
-para outros dispositivos.
+O conceito de Internet das Coisas (IoT) está relacionado à interconexão de objetos distintos através de uma rede, sendo esta, muitas vezes, a Internet. Desse modo, elementos do mundo real, que antes funcionavam de maneira independente ao meio aos quais estavam inseridos, são capazes de interagir com outros objetos à sua volta e, assim, trocar informações que possam ser relevantes permitindo a agregação de novas funcionalidades.  Além disso, a IoT abre espaço para interação 
+entre o mundo físico e o digital a partir de dispositivos capazes de capturar dados físicos no meio em que estão tais como, temperatura, distância etc., representá-los digitalmente e trasmití-los para outros dispositivos.
 
 	
-O termo ``Internet das Coisas'' foi citado pela primeira vez por Kevin Ashton, diretor executivo da 
-AutoIDCentre do MIT, em 1999 enquanto realizava uma apresentação para promover a ideia do uso de 
-Identificadores de Radio Frequência (RFID) na etiquetagem de produtos. O uso da tecnologia 
-beneficiaria a logística da cadeia de produção \cite{kevin-ashton}. Apesar de o termo IoT ter sido 
-usado apenas em 1999, aplicações práticas da ideia já existiam anos antes. Um exemplo disso, é a 
-torradeira que podia ser ligada e desligada via internet criada em 1990 \cite{survey-suresh}.
-
-
+O termo ``Internet das Coisas'' foi citado pela primeira vez por Kevin Ashton, diretor executivo da AutoIDCentre do MIT, em 1999 enquanto realizava uma apresentação para promover a ideia do uso de Identificadores de Radio Frequência (RFID) na etiquetagem de produtos. O uso da tecnologia beneficiaria a logística da cadeia de produção \cite{Finep2015}. Apesar de o termo IoT ter sido usado apenas em 1999, aplicações práticas da ideia já existiam anos antes. Um exemplo disso, é a torradeira que podia ser ligada e desligada via internet criada em 1990 \cite{Suresh2014}.
 
 % TODO: Projeções de grandes companhias (número de dispositivos, expansão)
 
-A Internet das Coisas está em grande expansão. Estima-se que em 2020 cerca de 24 bilhões de 
-dispositivos IoT estejam conectados, implicando em cerca de quatro dispositivos por pessoa. Para 
-tanto, em torno de 6 trilhões de dólares serão investidos em desenvolvimento de tecnologias de 
-hardware e software, como aplicações, segurança e dispositivos de hardware. Apesar da grande 
-quantia investida, o setor é visto como promissor. Estima-se será gerado em torno de 13 trilhões de 
-dólares 
-em 2025 \cite{andrewmeola2016}. 
+A Internet das Coisas está em grande expansão. Estima-se que em 2020 cerca de 24 bilhões de dispositivos IoT estejam conectados, implicando em cerca de quatro dispositivos por pessoa. Para tanto, em torno de 6 trilhões de dólares serão investidos em desenvolvimento de tecnologias de hardware e software, como aplicações, segurança e dispositivos de hardware. Apesar da grande quantia investida, o setor é visto como promissor. Estima-se será gerado em torno de 13 trilhões de dólares em 2025 \cite{Meola2016}
 
-Para conectar uma grande quantidade de objetos são necessárias tecnologias, muitas delas sem fio, 
-que permitam que os dispostivos interajam entre si trocando informações de maneira eficiente. A 
-próxima seção tratará dessas tecnologias e a maneira com são organizadas para formar uma 
-arquitetura. A seção seguinte apresenta alguns novos ``conceitos(sobre os smart tudo)'' que a IoT 
-trouxe e algumas aplicações específicas para algumas das mais variadas áreas já existentes.
+Para conectar uma grande quantidade de objetos são necessárias tecnologias, muitas delas sem fio, que permitam que os dispostivos interajam entre si trocando informações de maneira eficiente. A próxima seção tratará dessas tecnologias e a maneira com são organizadas para formar uma arquitetura. A seção seguinte apresenta alguns novos ``conceitos(sobre os smart tudo)'' que a IoT trouxe e algumas aplicações específicas para algumas das mais variadas áreas já existentes.
 
-% TODO: GANCHO PARA AS TECNOLOGIAS
 
-% TODO: Empresas, associações que abraçaram a ideia
+\section{Arquitetura}
+% Escrever sobre as diversas arquiteturas existentes, características de cada uma, as melhores aplicações de cada uma etc.
 
-% TODO: Benefícios, facilidade comodidade
+% Falar sobre a inexistência de um padrão global para a IoT, mas mostrar as instituições que estão tentando tornar a IoT padronizada em realidade.
 
-%%%%%%%%   PARTE 2   %%%%%%%%
 \section{Tecnologias}
 
-
-
-
-
-
-
-
+% Escrever sobre as tecnologias
 
 % ==================================================================================================
 \subsection{Bluetooth}
 
 % O que é
 % MELHORAR e referenciar
-O Bluetooth é uma especificação de rede WPAN, ou seja, rede sem-fio pessoal, sendo descrito e 
-especificado pela IEEE 802.15.1. O Bluetooth foi criado na década de 90 com o objetivo de unir
-tecnologias distintas, tais como computadores, celulares entre outros a partir de uma padronização 
-de comunicação sem fio entre os dispositivos \cite{jimkardach2008}. 
+O Bluetooth é uma especificação de rede WPAN, ou seja, rede sem-fio pessoal, sendo descrito e especificado pela IEEE 802.15.1. O Bluetooth foi criado na década de 90 com o objetivo de unirtecnologias distintas, tais como computadores, celulares entre outros a partir de uma padronização de comunicação sem fio entre os dispositivos \cite{Kardach2008}. 
 
 %\begin{figure}[H]
 %	\centering
@@ -87,138 +51,87 @@ de comunicação sem fio entre os dispositivos \cite{jimkardach2008}.
 %    %https://pixabay.com/en/bluetooth-connectivity-wireless-1690677/)
 %\end{figure}
 
-Uma das principais características da tecnologia \textit{wireless} é o curto alcance de 
-transmissão variando de centímetros até alguns metros \cite{huang2007bluetooth}. 
+Uma das principais características da tecnologia \textit{wireless} é o curto alcance de transmissão variando de centímetros até alguns metros \cite{Huang2007}. 
 
-A tecnologia vem sendo usada ao longo dos últimos anos em diversas aplicações como transferência de 
-arquivos entre dispositivos, transmissão de áudio entre smartphones e fones sem fio, dispositivos 
-capazes de determinar contexto, como os beacons, entre outros.
+A tecnologia vem sendo usada ao longo dos últimos anos em diversas aplicações como transferência de arquivos entre dispositivos, transmissão de áudio entre smartphones e fones sem fio, dispositivos capazes de determinar contexto, como os beacons, entre outros.
 
 % Topologias
-No IEEE 802.15.1 há suporte para criação de redes \textit{ad-hoc}, aos quais, é desnecessário uma 
-infraestrutura de rede para conexão dos dispositivos. A partir disso é possível criar redes 
-chamadas \textit{picorredes}, nas quais os dispositivos são organizados em até oito associados, 
-sendo um deles um mestre, ao qual coordena as operações, e os demais escravos 
-\cite{bluetoothSIG2017}.
+No IEEE 802.15.1 há suporte para criação de redes \textit{ad-hoc}, aos quais, é desnecessário uma infraestrutura de rede para conexão dos dispositivos. A partir disso é possível criar redes chamadas \textit{picorredes}, nas quais os dispositivos são organizados em até oito associados, sendo um deles um mestre, ao qual coordena as operações, e os demais escravos \cite{BluetoothSIG2017}.
 
 % Características
-A tecnologia Bluetooth opera na faixa ISM de 2.4 GHz de uso livre em modo TDM com 
-um delta de $625\mu$s, proporcionando uma taxa de transmissão máxima em torno de 2 Mb/s, podendo 
-variar de acordo com o dispositivo e a categoria de tecnologia de Bluetooth utilizada. 
-\cite{bluetoothSIG2017}.
+A tecnologia Bluetooth opera na faixa ISM de 2.4 GHz de uso livre em modo TDM com um delta de $625\mu$s, proporcionando uma taxa de transmissão máxima em torno de 2 Mb/s, podendo variar de acordo com o dispositivo e a categoria de tecnologia de Bluetooth utilizada \cite{BluetoothSIG2017}.
 
 % Forma de conexão.
 
 \subsubsection{Categorias}
 
-Segundo \cite{sig2017}, o Bluetooth pode ser categorizado em:
+Segundo \citeauthor{BluetoothSIG2017}, o Bluetooth pode ser categorizado em:
 
-BR/EDR
-%2.0 a 2.1
+\begin{enumerate}[label=(\Alph*)]
+    
+    \item {BR/EDR}
+    %2.0 a 2.1
+    
+    % REVER
+    Esta é a subdivisão mais popularizada do Bluetooth presente nas versões $2.0$ e $2.1$ do Bluetooth, onde as principais características são alta velocidade de transmissão alta em relação à outra categoria, baixo alcance e necessidade de conexão através de pareamento, onde os dispositivos confirmam a conexão. A partir disso, há um transmissão contínua de dados. Uma desvantagem é o consumo de energia considerável para o funcionamento do Bluetooth, já que há 
+    uma conexão contínua e uma taxa de transmissão que mantêm o dispositivo ativo por um longo período ininterrupto.
+    % taxa de dados
+    A taxa de transmissão gira em torno de 2Mb/s.
+     
+    
+    \item BLE
+    
+    % 4.0, 4.1, 4.2
+    
+    % O que é
+    O \textit{Bluetooth Low Energy} (BLE) é a mais recente categoria do Bluetooth incorporada na versão 4.0, em 2011, além de ser a menos comum \cite{LinkLabs2015}.
+    % Foco
+    BLE está centrado no baixo consumo de energia para permitir que certos dispositivos não precisem recarregar ou trocar suas fontes de carga, muitas vezes uma bateria, por longos períodos, que podem chegar a anos. 
+    % Pareamento
+    Para uma conexão para transmissão de dados, ao contrário do BR/EPR, não é necessário um pareamento para realizá-la, além disso esta tem curta duração, na ordem de milissegundos.
+    %Taxa e alcance
+    Ademais, a taxa de dados é baixa e o alcance alto. A baixa taxa de dados decorre do modo de funcionamento dos dispositivos BLE, aos quais, enviam dados em rajadas, ou seja, de tempos em tempos dados são transmitidos em forma de \textit{broadcast} e os dispositivos que estiverem conectados receberão esses dados. Nos intervalos de tempo em que o dispositivo não transmite, ele ``dorme'', isto é, entra em modo de consumo mínimo a fim de poupar energia.
+    
+    %Aplicação
+    A aplicação prática dessas características está na IoT através de \textit{beacons} e \textit{wearables}, aos quais incorporam o BLE. Os beacons foram introduzidos pela \textit{Apple} em conjunto com o iOS 7, com o nome de \textit{iBeacon}, que permitia aos aplicativos possuíssem senso de localização \cite{Apple2014}. Com esses dispositivos é possível aprimorar a experiência do usuário em estabelecimentos como museus, supermercados, shoppings, estádios, através da identificação de contexto, na qual, a partir da detecção de um beacon e da aproximação ou afastamento deste, uma aplicação móvel em um smartphone de um usuário pode exibir conteúdos, indicar promoções entre outros relacionados aquele dispositivo BLE.
+    
+    %\begin{figure}[H]
+    %	\centering
+    %	\caption[ABC]{{\noindent Alguns exemplares de beacons}}
+    %	\label{fig:beacons}
+    %	\includegraphics[width=0.5\textwidth]{img/beacons.jpg}
+    %	\newline Fonte: Shine Solutions %(link: 
+    %%https://shinesolutions.com/2014/02/17/the-beacon-experiments-low-energy-bluetooth-devices-in-action/
+    %\end{figure}
+    
+    \item{Dual-mode}
+    
+    Esta categoria se refere a dispositivos, como \textit{smartphones} que precisam se conectar tanto com dispositivos BR/EDR, como fones de ouvido, e BLE, como \textit{beacons} \cite{BluetoothSIG2017a}.
 
-% REVER
-Esta é a subdivisão mais popularizada do Bluetooth presente nas versões $2.0$ e $2.1$ do Bluetooth, 
-onde as principais características são alta velocidade de transmissão alta em relação à outra 
-categoria, baixo alcance e necessidade de conexão através de pareamento, onde os dispositivos 
-confirmam a conexão. A partir disso, há um transmissão contínua de dados. 
-Uma desvantagem é o consumo de energia considerável para o funcionamento do Bluetooth, já que há 
-uma conexão contínua e uma taxa de transmissão que mantêm o dispositivo ativo por um longo 
-período ininterrupto.
-% taxa de dados
-A taxa de transmissão gira em torno de 2Mb/s.
- 
-BLE (Smart)
-% 4.0, 4.1, 4.2
+\end{enumerate}
 
-% O que é
-O \textit{Bluetooth Low Energy} (BLE) é a mais recente categoria do Bluetooth incorporada 
-na versão 4.0, em 2011, além de ser a menos comum \cite{linklabs2015}.
-% Foco
-BLE está centrado no baixo consumo de energia para permitir que certos 
-dispositivos não precisem recarregar ou trocar suas fontes de carga, muitas vezes uma bateria, por 
-longos períodos, que podem chegar a anos. 
-% Pareamento
-Para uma conexão para transmissão de dados, ao contrário do BR/EPR, não é necessário um pareamento 
-para realizá-la, além disso esta tem curta duração, na ordem de milissegundos.
-%Taxa e alcance
-Ademais, a taxa de dados é baixa e o alcance alto. A baixa taxa de dados decorre do modo de 
-funcionamento dos dispositivos BLE, aos quais, enviam dados em rajadas, ou seja, de tempos em 
-tempos dados são transmitidos em forma de \textit{broadcast} e os dispositivos que estiverem 
-conectados receberão esses dados. Nos intervalos de tempo em que o dispositivo não transmite, ele 
-``dorme'', isto é, entra em modo de consumo mínimo a fim de poupar energia.
-
-%Aplicação
-A aplicação prática dessas características está na IoT através de \textit{beacons} e  
-\textit{wearables}, aos quais incorporam o BLE. Os beacons foram introduzidos pela \textit{Apple} 
-em conjunto com o iOS 7, com o nome de \textit{iBeacon}, que permitia aos aplicativos 
-possuíssem senso de localização \cite{apple2014}. 
-Com esses dispositivos é possível 
-aprimorar a experiência do usuário em estabelecimentos como museus, supermercados, shoppings, 
-estádios, através da identificação de contexto, na qual, a partir da 
-detecção de um beacon e da aproximação ou afastamento deste, uma aplicação móvel em um smartphone 
-de um usuário pode exibir conteúdos, indicar promoções entre outros relacionados aquele dispositivo 
-BLE.
-
-%\begin{figure}[H]
-%	\centering
-%	\caption[ABC]{{\noindent Alguns exemplares de beacons}}
-%	\label{fig:beacons}
-%	\includegraphics[width=0.5\textwidth]{img/beacons.jpg}
-%	\newline Fonte: Shine Solutions %(link: 
-%%https://shinesolutions.com/2014/02/17/the-beacon-experiments-low-energy-bluetooth-devices-in-action/
-%\end{figure}
-
-Dual-mode
-%
-Esta categoria se refere a dispositivos, como \textit{smartphones} que precisam 
-se conectar tanto com dispositivos BR/EDR, como fones de ouvido, e BLE, como 
-\textit{beacons} \cite{sig2017}.
 
 \subsubsection{Bluetooth 5.0}
 
-A versão 5.0 do Bluetooth foi lançada em dezembro de 2016 (adopted-specfi) e trás consigo 
-aprimoramentos em desempenho e segurança, garantindo duas vezes mais velocidade, quatro vezes mais 
-alcance, oito vezes mais taxa de dados e, por fim, maior coexistência \cite{bluetoothsig2016}. 
+A versão 5.0 do Bluetooth foi lançada em dezembro de 2016 e trás consigo aprimoramentos em desempenho e segurança, garantindo duas vezes mais velocidade, quatro vezes mais alcance, oito vezes mais taxa de dados e, por fim, maior coexistência \cite{BluetoothSIG2017b}. 
 
-Com a nova versão, veio a flexibilidade para construção de soluções baseadas em necessidade. 
-Parâmetros como alcance, velocidade e segurança podem ser regulados para diversos objetivos a 
-depender das aplicações \cite{bluetoothsig2016}.
+Com a nova versão, veio a flexibilidade para construção de soluções baseadas em necessidade. Parâmetros como alcance, velocidade e segurança podem ser regulados para diversos objetivos a depender das aplicações \cite{BluetoothSIG2017b}.
 
-Algumas atualizações contribuem para a redução de interferência com outras tecnologias sem fio, 
-dessa forma, proporciona melhor coexistência entre dispositivos Bluetooth e de outras tecnologias, 
-dentro do cenário emergente da IoT \cite{bluetoothsig2016}.
-
-
-
-
+Algumas atualizações contribuem para a redução de interferência com outras tecnologias sem fio, dessa forma, proporciona melhor coexistência entre dispositivos Bluetooth e de outras tecnologias, dentro do cenário emergente da IoT \cite{BluetoothSIG2017b}.
 
 
 % ==================================================================================================
 \subsection{RFID}
 
-O RFID (Indentificação por Rádio Frequência) é uma tecnologia de identificação automática, entre 
-diversas outras como código de barras, cartão inteligente e procedimentos biométricos, no entanto 
-se distingue pelo modo de funcionamento, ou seja, por ondas eletromagnéticas. 
-% INFLUÊNCIA EXTERNAS NO FUNCIONAMENTOS
-Por outro lado, o RFID se destaca em relação às outras tecnologias em relação às 
-influências externas no seu funcionamento, como sujeira, posição de leitura. Desse modo, não é 
-necessário nem limpar ou reposicionar o dispositivo RFID para efetuar a leitura \cite{klaus2011}. 
+O RFID (Indentificação por Rádio Frequência) é uma tecnologia de identificação automática, entre diversas outras como código de barras, cartão inteligente e procedimentos biométricos, no entanto se distingue pelo modo de funcionamento, ou seja, por ondas eletromagnéticas. Por outro lado, o RFID se destaca em relação às outras tecnologias em relação às influências externas no seu funcionamento, como sujeira, posição de leitura. Desse modo, não é necessário nem limpar ou reposicionar o dispositivo RFID para efetuar a leitura \cite{Finkenzeller2010}. 
 
 % LEITOR E TRANSPONDER
-No RFID, os dados são transmitidos através de ondas de rádio entre dois dispositivos: 
-\textit{transponder} ou \textit{tag} e \textit{leitor}. O transponder é localizado no objeto 
-identificado, um 
-produto, equipamento etc., e nele são mantidos os dados de identificação. Já o leitor é responsável 
-pela leitura e escrita dos dados presentes no transponder.
+No RFID, os dados são transmitidos através de ondas de rádio entre dois dispositivos: \textit{transponder} ou \textit{tag} e \textit{leitor}. O transponder é localizado no objeto identificado, um produto, equipamento etc., e nele são mantidos os dados de identificação. Já o leitor é responsável pela leitura e escrita dos dados presentes no transponder \cite{Finkenzeller2010}.
 
 % FUNCIONAMENTO
-Para a transmissão dos dados entre os dois dispositivos o leitor emite ondas de rádio na tag. Ao 
-receber o estímulo, a tag responde com os dados contidos nela. Além disso, existem tags que 
-utilizam a energia do campo eletromagnético gerado pelo leitor para seu funcionamento, sendos estas 
-chamadas de \textit{passivas}. Existem, também, aquelas que possuem uma fonte própria de energia e 
-por isso são denominadas \textit{ativas}.
+Para a transmissão dos dados entre os dois dispositivos o leitor emite ondas de rádio na tag. Ao receber o estímulo, a tag responde com os dados contidos nela. Além disso, existem tags que utilizam a energia do campo eletromagnético gerado pelo leitor para seu funcionamento, sendos estas chamadas de \textit{passivas}. Existem, também, aquelas que possuem uma fonte própria de energia e por isso são denominadas \textit{ativas} \cite{Finkenzeller2010}.
 
-Um exemplo de tag ativa é mostrada na Figura \ref{fig:active-rfid}.
+Um exemplo de tag ativa é mostrada na Figura Y.
 
 %\begin{figure}[H]
 %	\centering
@@ -229,7 +142,7 @@ Um exemplo de tag ativa é mostrada na Figura \ref{fig:active-rfid}.
 %	%http://www.vnsky.com/parts/2673180/ACTIVE-TAG-REFERENCE-DESIGN-KIT.html
 %\end{figure}
 
-Uma tag passiva é mostrada na Figura \ref{fig:passive-rfid}.
+Uma tag passiva é mostrada na Figura Y.
 
 %\begin{figure}[H]
 %	\centering
@@ -246,9 +159,7 @@ Uma tag passiva é mostrada na Figura \ref{fig:passive-rfid}.
 % PASSIVO
 
 % FREQ. DE OPERAÇÃO
-Uma das características mais importantes dos dispositivos RFID é a frequência de operação já que 
-ela influi no distância máxima de operação. Tal fator é determinado pelo leitor. 
-Os dispositivos são classificados, de acordo com a frequência de operação, em três grupos:
+Uma das características mais importantes dos dispositivos RFID é a frequência de operação já que ela influi no distância máxima de operação. Tal fator é determinado pelo leitor. Os dispositivos são classificados, de acordo com a frequência de operação, em três grupos:
 
 \begin{itemize} \parskip -4pt
 	\item \textbf{LF (Baixa Frequência):} Entre 30kHz à 300kHz
@@ -264,41 +175,24 @@ Os dispositivos são classificados, de acordo com a frequência de operação, e
 	\item \textbf{\textit{Close-coupling} ou ligação próxima:} até um centímetro.
 \end{itemize}
 
-Geralmente, a frequência de operação é diretamente proporcional ao alcance. Por exemplo, 
-dispositivos de longo alcance operam na faixa UHF. 
-
-
-
-
-
+%TODO: Escrever sobre os fatores que influenciam no funcionamento, alcance etc.
 
 % ==================================================================================================
 \subsection{NFC}
 % O_QUE É
-O NFC é um sistema de comunicação sem fio derivado do RFID. Ele permite transações simples e 
-seguras entre dois dispositivos a partir da curta distância de operação, em torno de 
-4cm, e do funcionamento baseado em aproximação dos objetos em questão \cite{nfcforumabout2017}. 
-Assim, é 
-possível realizar leituras de tags e obter conteúdos de acordo com a aplicação, transferir dados 
-entre smartphones entre outras funcionalidades.
+O NFC é um sistema de comunicação sem fio derivado do RFID. Ele permite transações simples e seguras entre dois dispositivos a partir da curta distância de operação, em torno de 4cm, e do funcionamento baseado em aproximação dos objetos em questão \cite{NFCForum2016}. 
+Assim, é possível realizar leituras de tags e obter conteúdos de acordo com a aplicação, transferir dados entre smartphones entre outras funcionalidades.
 
 % COMPATIBILIDADE
-Outra vantagem do NFC é a compatibilidade com a infraestrutura de cartões sem contato 
-existentes permitindo usar um único dispositivo em tecnologias diferentes. Desse modo, é possível 
-interagir com tags RFID, por exemplo.
+Outra vantagem do NFC é a compatibilidade com a infraestrutura de cartões sem contato existentes permitindo usar um único dispositivo em tecnologias diferentes. Desse modo, é possível interagir com tags RFID, por exemplo.
 
 
 % FUNCIONAMENTO
-Como o RFID, o NFC funciona através de ondas eletromagnéticas com uma taxa de transmissão máxima de 
-424kbps \cite{nfcforumabout2017}. Além disso, pode operar em dois modos de comunicação 
-\cite{brianjepsondoncolemantomigoe2014}: ativo e passivo. Assim como no RFID, é possível que os 
-dispositivos NFC que contenham os dados usem a energia do leitor para transmitir seus dados, no 
-modo passivo, ou usem uma fonte própria para tal procedimento, no modo ativo.
+Como o RFID, o NFC funciona através de ondas eletromagnéticas com uma taxa de transmissão máxima de 424kbps \cite{NFCForum2016}. Além disso, pode operar em dois modos de comunicação \cite{Igoe2014}: ativo e passivo. Assim como no RFID, é possível que os dispositivos NFC que contenham os dados usem a energia do leitor para transmitir seus dados, no modo passivo, ou usem uma fonte própria para tal procedimento, no modo ativo.
 
 
 % MODOS DE OPERAÇÃO
-Outra característica importante no NFC são os modos de operação. De acordo com 
-\cite{nfcforumabout2017} existem três modos:
+Outra característica importante no NFC são os modos de operação. De acordo com \citeauthor{NFCForum2016} existem três modos:
 
 \begin{itemize} \parskip -4pt
 	\item \textit{Leitor/Escritor de tag}: Tem por objetivo ligar o mundo físico ao digital através 
@@ -315,8 +209,7 @@ Outra característica importante no NFC são os modos de operação. De acordo c
 \end{itemize}
 
 % CATEGORIAS
-Há quatros tipos de tags definidas \cite{nfcforumtypespec2017}, sendo que todos operam no modo 
-Leitor/Escritor descrito anteriorente : 
+Há quatros tipos de tags definidas \cite{NFCForum2016a}, sendo que todos operam no modo Leitor/Escritor descrito anteriorente : 
 
 \begin{itemize} \parskip -4pt
 	\item \textbf{Tipo 1}: 96 bytes de memória disponível e expansível para 2kiB. Usuário pode 
@@ -330,30 +223,20 @@ Leitor/Escritor descrito anteriorente :
 	possível ser configurada para leitura/escrita ou somente leitura.
 \end{itemize}
 
-O NFC possui um padrão com o qual dispositivos devem estar formatados, o NDEF (\textit{NFC Data 
-Exchange Format}) um formato comum de comunicação \cite{brianjepsondoncolemantomigoe2014}. Desse 
-modo, os dados armazenados em tags devem estar gravados nesse formato. A partir do NDEF é possível 
-armazenar e trocar documentos binários como MIME, que incluem imagens, arquivos PDF entre outros, 
+O NFC possui um padrão com o qual dispositivos devem estar formatados, o NDEF (\textit{NFC Data Exchange Format}) um formato comum de comunicação \cite{Igoe2014}. Desse 
+modo, os dados armazenados em tags devem estar gravados nesse formato. A partir do NDEF é possível armazenar e trocar documentos binários como MIME, que incluem imagens, arquivos PDF entre outros, 
 URL, texto simples entre outros.
-
-
-
-
-
 
 
 % ==================================================================================================
 \subsection{Zigbee}
 
 % WHAT IS IT
-O Zigbee é um protocolo padrão de comunicação de baixa-potência para redes sem-fio \textit{mesh}, 
-ao qual permite que diversos dispositivo trabalharem em conjunto \cite{FALUDI2010}.
+O Zigbee é um protocolo padrão de comunicação de baixa-potência para redes sem-fio \textit{mesh}, ao qual permite a diversos dispositivo trabalharem em conjunto \cite{Faludi2011}.
 
-O Zigbee é descrito como um conjunto de camadas implementadas sobre o IEEE 802.15.4 \cite{FALUDI2010}, ao qual 
-especifica a camada física(PHY) e o controle de acesso ao meio (MAC) para 
-redes sem-fio de baixa potência \cite{IEEE802154_2011}.
+O Zigbee é descrito como um conjunto de camadas implementadas sobre o IEEE 802.15.4 \cite{Faludi2011}, ao qual especifica a camada física(PHY) e o controle de acesso ao meio (MAC) para redes sem-fio de baixa potência \cite{IEEE2011}.
 
-As camadas do Zigbee, de acordo com \cite{FALUDI2010}, fazem:
+As camadas do Zigbee, de acordo com \cite{Faludi2011}, fazem:
 
 \begin{itemize} \parskip -4pt
 	\item \underline{Roteamento:} Tabelas de roteamento que definem como um nó envia dados até um 
@@ -366,7 +249,7 @@ As camadas do Zigbee, de acordo com \cite{FALUDI2010}, fazem:
 O Zigbee opera na faixa não licenciada ISM, de 2,4GHz, o que permite sua expansão global e, assim, ser capaz de operar em qualquer local do mundo.
 
 O Zigbee especifica que os nós das redes criadas possam assumir papeis específicos. Cada nó deve 
-assumir uma das categorias a seguir \cite{FALUDI2010}:
+assumir uma das categorias a seguir \cite{Faludi2011}:
 
 \begin{itemize} \parskip -4pt
 	\item \textit{Coordenador}: Responsável por criar a rede, distribuir endereços, manter a rede segura, 
@@ -384,7 +267,7 @@ assumir uma das categorias a seguir \cite{FALUDI2010}:
 \end{itemize}
 
 Há diversas topologias suportadas, nas quais, englobam os três tipos de nós e suas possíveis 
-maneiras de organização \cite{FALUDI2010}:
+maneiras de organização \cite{Faludi2011}:
 
 \begin{itemize} \parskip -4pt
 	\item \textit{Par a par}: Uma rede formada apenas por dois nós, sendo um deles, obrigatoriamente, um 
@@ -414,64 +297,124 @@ diferenciar os nós.
 	contexto, apesar disso, é mais amigável aos olhos humanos.
 \end{itemize}
 
-\subsubsection{Criação de uma rede}
+%\subsubsection{Criação de uma rede}
 
-Cada rede de sensores deve possuir um identificador chamado endereço PAN (Personal Area Network). 
-Além disso, cada nó deve ter o mesmo PAN configurado e o mesmo canal de comunicação, que é 
-escolhido de acordo com a disponibilidade pelo coordenador. 
+%Cada rede de sensores deve possuir um identificador chamado endereço PAN (Personal Area Network). 
+%Além disso, cada nó deve ter o mesmo PAN configurado e o mesmo canal de comunicação, que é escolhido de acordo com a disponibilidade pelo coordenador. 
 
-Para que uma mensagem chegue a um destino, é necessário que o nó emissor tenha conhecimento do 
-endereço do nó destinatário do pacote.
+%Para que uma mensagem chegue a um destino, é necessário que o nó emissor tenha conhecimento do endereço do nó destinatário do pacote.
 
+%\subsubsection{XBee}
 
-\subsubsection{XBee}
+%O XBee é um dispositivo fabricado pela Digi. Existem cerca de 
+%30 combinações de hardware, protocolos de \textit{firmware}, potência de transmissão e antenas.
 
-O XBee é um dispositivo fabricado pela Digi. Existem cerca de 
-30 combinações de hardware, protocolos de \textit{firmware}, potência de transmissão e antenas.
+%Apesar das diversas combinações, há duas versões básicas do XBee: Série 1 e Série 2.
 
-Apesar das diversas combinações, há duas versões básicas do XBee: Série 1 e Série 2.
-
-Os nós XBee Série 1 proveem comunicações ponto a ponto, bem como uma implementação proprietária de 
-rede \textit{mesh}. Já os nós Série 2 permitem diversas derivações de padrões de redes mesh Zigbee.
+%Os nós XBee Série 1 proveem comunicações ponto a ponto, bem como uma implementação proprietária de 
+%rede \textit{mesh}. Já os nós Série 2 permitem diversas derivações de padrões de redes mesh Zigbee.
 
 % IMAGEM XBEE S1 e XBEE S2
 % ==================================================================================================
-\section{Aplicações}
 
-\subsection{Smart home}
+\subsection{Wifi}
+% O que é
+% Features
+% História
+% Categorias
+% Oportunidades
 
-Uma \textit{Smart home} ou casa inteligente é formada por um conjunto de sensores e atuadores 
-conectados em rede, aos quais, podem se comunicar entre si e que permitem ao morador o controle de 
-maneira remota de diversos dispositivos tais como lâmpadas \cite{mandula2015}, 
-condicionamento de ar, segurança entre outros.
 
-A empresa \textit{Amazon}, empresa de tecnologia dos Estados Unidos, oferece o \textit{Amazon 
-Echo}, um dispositivo que oferece diversas funcionalidades multimídia, como reprodução de músicas 
-através 
-de controle por voz, inclusive se algo estiver tocando, além de oferecer informações como previsão 
-do tempo, notícias, tráfego entre outros através do \textit{Alexa Voice Service}. É capaz de 
-controlar a luz, tomadas e termostatos além de ser compatível com produtos de empresas, como 
-Samsung, Philips entre outras, com foco em \textit{smart homes} \cite{amazon2017}.
+\subsection{Outros}
+% Z-wave
+Entre as tecnologias utilizadas em Smart Homes está o Z-Wave, um protocolo sem fio focado em automação residencial e comercial de pequeno porte, criado pelo ZenSys e hoje representado pela Z-Wave Alliance  (whan survey, gomez, 2010). O protocolo foi desenvolvido especificamente para controle, monitoramento e verificação de estado. Em relação a aspectos técnicos, o Z-Wave opera na faixa de frequências de 1GHz, o que evita interferências com outras tecnologias como Bluetooth e Wifi que operam em 2,4GHz. Entre as principais vantagens do Z-wave está a interoperabilidade que este proporciona entre os diversos produtos desenvolvidos com a tecnologia, além da segurança obtida a partir do uso de criptografia AES128.  (http://z-wavealliance.org/about_z-wave_technology/)
+
+% 6LowPan
+Há a tendência de dispositivos IoT conectados à Internet usaram o protocolo de endereçamento IPv6 para serem identificados na rede. No entanto, algumas das aplicações terão limitações como fonte de energia e capacidade de transferências de dados limitadas. A partir disso, criou-se o 6LowPan, focado em dispositivos com restrições de consumo de energia. A principal característica desse protocolo é a redução da transmissão de dados a partir da compressão dos cabeçalhos do IPv6. Com isso, o 6LowPan é capaz de reduzir a sobrecarga de pacote para dois bytes. (enabling technologies)
+(rever com base em http://www.ti.com/lsds/ti/wireless-connectivity/6lowpan/overview.page)
+
+\section{Ambientes inteligentes}
 
 \subsection{Smart grid}
 
-\textit{Smart grid} é uma rede elétrica inteligente, na qual, através da tecnologia coleta dados de 
-consumo e dos distribuidores toma ações a partir deles, tornando o sistema mais eficiente, seguro 
-e sustentável \cite{Cecilia2016}. As smart grids têm três componentes importantes: rede de 
-transmissão inteligente, às quais contêm sensores, troca de informações, controle e tecnologias de 
-comunicação que proporcionam uma transmissão eficiente, tecnologia da informação e comunicação de 
-smart grid  e tecnologia de medição inteligente, no qual, além de realizar medições como os 
-equipamentos tradicionais, é capaz de trocar informações com a rede inteligente. 
+\textit{Smart grid} é uma rede elétrica inteligente, na qual, através da tecnologia coleta dados de consumo e dos distribuidores toma ações a partir deles, tornando o sistema mais eficiente, seguro e sustentável \cite{Cecilia2016}. As smart grids têm três componentes importantes: rede de transmissão inteligente, às quais contêm sensores, troca de informações, controle e tecnologias de comunicação que proporcionam uma transmissão eficiente, tecnologia da informação e comunicação de smart grid  e tecnologia de medição inteligente, no qual, além de realizar medições como os equipamentos tradicionais, é capaz de trocar informações com a rede inteligente. 
 
-Empresas como a \textit{Texas Instruments} (TI) têm investido em soluções para smart grid que 
-proporcionam segurança, eficiência e inteligência. A TI oferece soluções para monitoramento da rede 
-através de medidores de eletricidade, gás e calor, além de tecnologias para comunicação como o 
-\textit{Power Line Communications} entre outras \cite{texasinstruments2017}.
+Empresas como a \textit{Texas Instruments} (TI) têm investido em soluções para smart grid que proporcionam segurança, eficiência e inteligência. A TI oferece soluções para monitoramento da rede através de medidores de eletricidade, gás e calor, além de tecnologias para comunicação como o 
+\textit{Power Line Communications} entre outras \cite{TexasInstruments2017}.
 
-%\subsection{Smart city}
-% Smart city 
-% Tudo conectado
-% Eficiência
+\subsection{Smart home}
+
+% TODO: Conceitos
+O conceito de \textit{smart home} ou casa inteligente propõe um novo modelo para um ambiente domiciliar no qual a implementação e o uso da tecnologia abrem espaço para novas formas de interação com o lar, além de proporcionar mais comodidade e um melhor gerenciamento dos equipamentos presentes. Isso será possível graças ao uso de sensores e atuadores no ambiente, nos eletrodomésticos e utensílios. Além disso, para interconectar todos os dispositivos, usa-se as tecnologias de rede existentes, como o Zigbee e a Internet.
+
+A interconexão dos dispositivos em uma casa inteligente proporcionorá funcionalidades inéditas de interação de acordo com as ações do morador, como entrar e sair de um cômodo da casa. Nesse caso, seria possível implementar um sistema que apagasse e acendesse a lâmpada conforme os sensores de presença indicarem a ausência do indivíduo e a hora do dia \cite{audiovideo}.
+
+Entre as principais apostas para as casas inteligentes está o aumento da eficiência do consumo energético. O uso da tecnologia por meio de medidores de energia, tomadas e aparelhos inteligentes permitirá o monitoramento e controle do consumo dos dispositivos da casa. Com base nisso, é viável a otimização do consumo de cada equipamento controlando-o para ativá-lo somente quando necessário e, assim, evitar desperdícios, além de previsão da demanda de energia para cada momento do dia (A review, Stojk).
+
+% Segundo \cite{DeSilva2012}, as casas inteligentes podem ser divididas em três categorias principais. 
+% A primeira delas atenta-se em detectar e reconhecer ações dos moradores e seu estado de saúde e, baseando-se nelas, prover serviços com foco no bem-estar e na saúde dos residentes. Nesse categoria estão incluídos cuidado de idosos, da saúde e de crianças. 
+% A segunda categoria se refere à captura e multimídia de eventos ocorridos no dia a dia.
+% A terceira tem como foco na segurança. Uma sistema de alerta pode ser ativado, no momento em que uma invasão, sequestro ou desastre natural ocorrer, a partir captura de imagens, sensoriamento entre outros.
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+% TODO: Arquitetura
+    % Categorias
+
+As casas inteligentes necessitam que os dispositivos sejam organizados hierarquicamente para garantir um bom desempenho. \citeauthor{stojkoska} propõe uma arquitetura para casa inteligente construída a partir de alguns componentes:  \textit{smart objects}, hubs, cloud e aplicações de terceiros (escanoladores, reguladores, balanceadores de carga).
+(stoj...; mostrar a figura do cara)
+
+ Os objetos inteligentes interagem diretamente com o ambiente e com os moradores, seja de forma direta, no caso de eletrodomésticos inteligentes ou ubíqua no caso de sensores.
+
+ A partir da incorporação da tecnologias aos objetos da casa será possível obter informações inétidas sobre estes e sobre os moradores, como temperatura ambiente preferencial, grau de uso dos equipamentos entre outros.
+ Muitos serviços poderão ser automatizados. Acender e apagar de luzes, ativação do condicionamento de ar, cafeteira etc. \cite{Silva2012}.
+
+
+% TODO: Formas de interação
+    % Vídeo
+    % Áudio
+ A partir da interação diária dos moradores com os eletrodomésticos e móveis da casa e do uso de recursos de imagem, áudio e vídeo, será possível capturar ações e eventos do dia a dia, como o entrar e sair de um quarto por exemplo. Com base nisso, será possível adaptar os equipamentos da casa para que automaticamente executem ações para cada evento do dia a dia {stoj...}.
+
+Uma casa inteligente permite que os moradores tenham maior independência no seu dia a dia, especialmente em caso de pessoas idosas, com dificuldade de locomoção, além daquelas com deficiências físicas e visuais.
+No artigo X, os autores propõe um sistema que usa imagem para casa inteligente, capaz de detectar o dia a dia de uma pessoa idosa. É possível também identificar possíveis quedas e avisar o responsável ou ao atendimento médico.
+
+% Rascunho
+Entender o comportamento dos moradores a partir da detecção de suas ações é desejável para que se possa prover serviços que vão de acordo com o esperado por eles.
+
+% TODO: Usuários
+
+Despite this broad range of potential and assumed benefits, a clear user-centric vision of smart homes is currently missing from a field being overwhelmingly ‘‘pushed’’ by technology developers ( smart home and their users).
+
+% TODO: Tecnologias
+    % Tecnologias de 
+    % Eclipse SmartHome
+
+Diversas sistemas para vem sendo implementados nos últimos tempos para facilitar o desenvolvimento de aplicações e dispositivos para casas inteligentes.
+Entre eles está o projeto SmartHome do Eclipse para IoT.
+(imagem do projeto)
+    
+% TODO: Desafios
+
+A empresa \textit{Amazon}, empresa de tecnologia dos Estados Unidos, oferece o \textit{Amazon Echo}, um dispositivo que oferece diversas funcionalidades multimídia, como reprodução de músicas através de controle por voz, inclusive se algo estiver tocando, além de oferecer informações como previsão 
+do tempo, notícias, tráfego entre outros através do \textit{Alexa Voice Service}. É capaz de controlar a luz, tomadas e termostatos além de ser compatível com produtos de empresas, como Samsung, Philips entre outras, com foco em \textit{smart homes} \cite{amazon2017}.
+
+\subsubsection{Smart Kitchen}
+
+Seguindo a lógica das casas inteligentes, as \textit{Smart Kitchens} ou cozinhas inteligentes promovem o aprimoramento dos dispositivos da cozinha com a inserção da tecnologia. A partir disso, utensílios como panelas, talheres entre outros poderão fazer uso de tecnologia para entregar novas funcionalidades. Por exemplo, no caso das panelas, é possível colocar sensores de temperatura e câmera para determinar a temperatura atual e o estado atual do alimento que está sendo cozido. A partir disso, o sistema computacional presente na panela, processará os dados e fará uma comunicação com o fogão para ajustar a intensidade do fogo caso ainda não esteja pronto, ou simplesmente, desligar o fogo, caso o esteja. 
+
+\subsection{Smart factory}
+% Quarta revolução industrial,
+
+% Apoio a logística
+
+%\subsection{Transportes}
+
+
+%A empresa \textit{General Eletric} (GE), a maior empresa digital industrial do mundo, atua em diversos setores como saúde, aviação, transporte, energias renovável, entre outros \cite{generalelectric2017} . A empresa fabrica uma locomotiva, modelo \textit{Evolution}, com cerca de 250 sensores, resultando em 150 mil leituras por minuto. Com a leitura dos sensores, dados como tempo, pressão de óleo, temperatura, velocidade entre outros, podem ser utilizado para determinar a performance da máquina em um dado momento. Além disso, é possível prever quando surgirá algum problema, devido a algum componente que indica falha, a partir do software de análise em escala industrial \textit{Predix} \cite{danielterdiman2014}.
+
+\subsection{Smart City}
 
 \subsection{Wearables}
 
@@ -486,17 +429,18 @@ Outra tecnologia em ascensão é o \textit{smart watch}, relógio digital conect
 Na área de esportes e saúde, existem as \textit{smart bands}, pulseiras capazes de monitorar sinais, como batimentos além das calorias eliminadas durante um exercício, distância percorrida entre outros.
 
 
-\subsection{Indústrias}
-% Quarta revolução industrial,
-
-% Apoio a logística
-
-\subsection{Transportes}
 
 
-A empresa \textit{General Eletric} (GE), a maior empresa digital industrial do mundo, atua em diversos setores como saúde, aviação, transporte, energias renovável, entre outros \cite{generalelectric2017} . A empresa fabrica uma locomotiva, modelo \textit{Evolution}, com cerca de 250 sensores, resultando em 150 mil leituras por minuto. Com a leitura dos sensores, dados como tempo, pressão de óleo, temperatura, velocidade entre outros, podem ser utilizado para determinar a performance da máquina em um dado momento. Além disso, é possível prever quando surgirá algum problema, devido a algum componente que indica falha, a partir do software de análise em escala industrial \textit{Predix} \cite{danielterdiman2014}.
 
-
-\subsection{Turismo}
+%\subsection{Turismo}
 % Exemplo de turismo do artigo
-Uma aplicação proposta consiste em um sistema de informação turístico com intuito de expandir a experiência dos visitantes nos diversos pontos turísticos no Japão. Isso é possível graças ao uso de beacons, sensores sem fio descritos na seção anterior, e realidade aumentada, viabilizada por uma aplicação móvel \cite{SHIBATA2016}. 
+%Uma aplicação proposta consiste em um sistema de informação turístico com intuito de expandir a experiência dos visitantes nos diversos pontos turísticos no Japão. Isso é possível graças ao uso de beacons, sensores sem fio descritos na seção anterior, e realidade aumentada, viabilizada por uma aplicação móvel \cite{SHIBATA2016}. 
+
+
+\section{Desafios}
+
+
+\subsection{Interoperabilidade}
+
+
+\subsection{Segurança}

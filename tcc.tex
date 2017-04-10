@@ -25,8 +25,13 @@
 
 \usepackage[brazil]{babel}  % usados para arrumar os caracteres em português
 \usepackage[utf8]{inputenx} % 
+%\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}    %
-
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{calc}
+\usepackage{enumitem}
 \usepackage{bibentry} % permite usar o comando nobibliography
 
 \usepackage{minted} % Sintaxe colorida
@@ -94,8 +99,12 @@
 \departamento[a]{Departamento de Computação} %TODO departamento de engenharia da computação?
 \curso[a]{Universidade Federal de Santa Catarina}
 \documento[o]{Trabalho\ de\ Conclusão\ de\ Curso} % [o] para dissertação [a] para tese
-\titulo{Título X}
-\subtitulo{Subtítulo} % Opcional
+
+\titulo{Um modelo de geladeira aprimorado que facilite a vida dos usuário e que leva em conta suas preferências}
+
+%\subtitulo{Subtítulo} % Opcional
+
+
 \autor{Thiago Raulino Dal Pont}
 \grau{Bacharel em Engenharia de Computação}
 \local{Araranguá} % Opcional (Florianópolis é o padrão)
@@ -155,7 +164,7 @@
 	
 	\include{textual/cap_1_introducao}
 	\include{textual/cap_2_internet_of_things}
-%	\include{textual/cap_3_sistemas_de_recomendacao}
+	%\include{textual/cap_3_sistemas_de_recomendacao}
 %	\include{textual/cap_4_sistema_proposto}
 %	\include{textual/cap_5_avalicao_sistema}
 	\include{textual/cap_6_consideracoes_finais}
@@ -164,7 +173,7 @@
 	%Referências
 	
 	\bibliographystyle{ufscThesis/ufsc-alf}
-	\bibliography{postextual/library}
+	\bibliography{postextual/referencias}
 
 	%-------------------------\textsl{}-------------------------------
 	% Elementos pós-textuais
