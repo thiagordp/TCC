@@ -35,7 +35,7 @@
 \usepackage{bibentry} % permite usar o comando nobibliography
 
 \usepackage{minted} % Sintaxe colorida
-
+\usepackage{booktabs}
 \usepackage{xparse} % Permite definir umas funções com mais recursos.
 %\usepackage[square,numbers]{natbib}
 %----------------------------------------------------------------------
@@ -45,12 +45,18 @@
 
 \graphicspath{{figuras/}}
 
+
+% Numeração das tabelas e figuras de acordo com o capítulo
+\usepackage{amsmath}
+\numberwithin{table}{chapter}
+\numberwithin{figure}{chapter}
+
 %----------------------------------------------------------------------
 % Comandos criados pelo usuário
 \newcommand{\afazer}[1]{{\color{red}{#1}}} % Para destacar uma parte a ser trabalhada
 \newcommand{\ABNTbibliographyname}{REFERÊNCIAS} % Necessário para abnTeX 0.8.2
 
-\newcommand{\figura}[5][Extraido de:]{
+\newcommand{\figura}[5][Extraído de:]{
 	\begin{figure}[h!tb]
 		\centering
 		\caption{#3.}
@@ -169,8 +175,7 @@
 %	\include{textual/cap_5_avalicao_sistema}
 	\include{textual/cap_6_consideracoes_finais}
 	
-	%--------------------------------------------------------
-	%Referências
+	%--------------------------------------------------
 	
 	\bibliographystyle{ufscThesis/ufsc-alf}
 	\bibliography{postextual/referencias}

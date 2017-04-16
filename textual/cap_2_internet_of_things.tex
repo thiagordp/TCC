@@ -23,7 +23,7 @@ O termo ``Internet das Coisas'' foi citado pela primeira vez por Kevin Ashton, d
 
 A Internet das Coisas está em grande expansão. Estima-se que em 2020 cerca de 24 bilhões de dispositivos IoT estejam conectados, implicando em cerca de quatro dispositivos por pessoa. Para tanto, em torno de 6 trilhões de dólares serão investidos em desenvolvimento de tecnologias de hardware e software, como aplicações, segurança e dispositivos de hardware. Apesar da grande quantia investida, o setor é visto como promissor. Estima-se será gerado em torno de 13 trilhões de dólares em 2025 \cite{Meola2016}
 
-Para conectar uma grande quantidade de objetos são necessárias tecnologias, muitas delas sem fio, que permitam que os dispostivos interajam entre si trocando informações de maneira eficiente. A próxima seção tratará dessas tecnologias e a maneira com são organizadas para formar uma arquitetura. A seção seguinte apresenta alguns novos ``conceitos(sobre os smart tudo)'' que a IoT trouxe e algumas aplicações específicas para algumas das mais variadas áreas já existentes.
+Para conectar uma grande quantidade de objetos são necessárias tecnologias, muitas delas sem fio, que permitam que os dispositivos interajam entre si trocando informações de maneira eficiente. A próxima seção tratará dessas tecnologias e a maneira com são organizadas para formar uma arquitetura. A seção seguinte apresenta alguns novos ``conceitos(sobre os smart tudo)'' que a IoT trouxe e algumas aplicações específicas para algumas das mais variadas áreas já existentes.
 
 
 \section{Arquitetura}
@@ -34,13 +34,14 @@ Para conectar uma grande quantidade de objetos são necessárias tecnologias, mu
 \section{Tecnologias}
 
 % Escrever sobre as tecnologias
-
-% ==================================================================================================
+% Introduzir comos as tecnologias influem e são necessárias na IoT.
+% Contextualizar um pouco a evolução da tecnologia
+% =========================================================
 \subsection{Bluetooth}
 
 % O que é
 % MELHORAR e referenciar
-O Bluetooth é uma especificação de rede WPAN, ou seja, rede sem-fio pessoal, sendo descrito e especificado pela IEEE 802.15.1. O Bluetooth foi criado na década de 90 com o objetivo de unirtecnologias distintas, tais como computadores, celulares entre outros a partir de uma padronização de comunicação sem fio entre os dispositivos \cite{Kardach2008}. 
+O Bluetooth é uma especificação de rede WPAN, ou seja, rede sem-fio pessoal, sendo descrito e especificado pela IEEE 802.15.1. O Bluetooth foi criado na década de 90 com o objetivo de unir tecnologias distintas, tais como computadores, celulares entre outros a partir de uma padronização de comunicação sem fio entre os dispositivos \cite{Kardach2008}. 
 
 %\begin{figure}[H]
 %	\centering
@@ -51,7 +52,7 @@ O Bluetooth é uma especificação de rede WPAN, ou seja, rede sem-fio pessoal, 
 %    %https://pixabay.com/en/bluetooth-connectivity-wireless-1690677/)
 %\end{figure}
 
-Uma das principais características da tecnologia \textit{wireless} é o curto alcance de transmissão variando de centímetros até alguns metros \cite{Huang2007}. 
+Uma das principais características dessa tecnologia \textit{wireless} é o curto alcance de transmissão variando de centímetros até alguns metros \cite{Huang2007}. 
 
 A tecnologia vem sendo usada ao longo dos últimos anos em diversas aplicações como transferência de arquivos entre dispositivos, transmissão de áudio entre smartphones e fones sem fio, dispositivos capazes de determinar contexto, como os beacons, entre outros.
 
@@ -317,27 +318,65 @@ diferenciar os nós.
 % IMAGEM XBEE S1 e XBEE S2
 % ==================================================================================================
 
-\subsection{Wifi}
+\subsection{Wi-Fi}
 % O que é
-% Features
-% História
-% Categorias
-% Oportunidades
+Wi-Fi, é uma das diversas classes de padrões de rede sem-fio LAN (Local Area Network) normatizado pelo padrão IEEE 802.11, no qual foca nas camadas física e de enlace do modelo OSI \cite{Gast2005}. 
+Além disso, há padrões específicos para o Wi-fi, como o 802.11a, 802.11b e 802.11g,  além da possibilidade de unir alguns de padrões para formar outros híbridos, como o 802.11a/g e 802.11a/b/g \cite{Kurose2012}. 
 
+Apesar da distinção, os padrões citados compartilham diversas características, como o protocolo de acesso ao meio, estrutura de quadros da camada de enlace, habilidade de reduzir a taxa de transmissão a fim de alcançar distâncias maiores. A principal diferença é vinculada à camada física.
+
+Os padrões a, b e g são regulamentados de acordo com a Tabela \ref{tab:ieee80211abg-phy}, sendo que pode variar em diversos países.
+
+\begin{table}[hbt]
+    \caption{Resumo dos protocolos 802.11}
+    \label{tab:ieee80211abg-phy}
+    \centering
+    \begin{tabular}{@{}ccc@{}}
+        \toprule
+        \textbf{Padrão} & \textbf{Faixa de Frequências} & \textbf{Taxa de dados} \\ \midrule
+        802.11b         & 2,4 - 2,485 GHz               & até 11 Mbps            \\
+        802.11a         & 5,1 - 5,8 GHz                 & até 54 Mbps            \\
+        802.11g         & 2,4 - 2,485 GHz               & até 54 Mbps            \\ \bottomrule 
+        \end{tabular}
+        
+    Fonte: \cite{Kurose2012}
+\end{table}
+
+
+
+Além dos três protocolos citados há outros mais recentes ou que estão em fase de criação. O protocolo 802.11n, por exemplo, criado em 2012, faz uso de múltiplas antenas além disso, permitir atingir uma taxa de transmissão de centenas de megabits por segundo. \cite{Kurose2012}.
+
+A arquitetura básica do IEEE802.11, exposta na \reffig{cap2_arquitetura-ieee80211},  é formada por Conjuntos Básicos de Serviço (BSS) onde cada um é composto de um Ponto de Acesso (AP), um dispositivo para unir os conjuntos, sendo esse um roteador ou \textit{switch}, responsável por ligar cada BSS à Internet e, por fim, os dispositivos que desejam se conectar a rede.
+
+\figura{cap2_arquitetura-ieee80211}{Arquitetura básica para o IEEE802.11}{0.8\textwidth}{Kurose2012}
+
+
+% Taxonomia
+    % Adhoc
+    % 
+O IEEE 802.11 suporta dois tipos de interconexão de dispositivos: \textit{ad-hoc} e ponto de acesso com dispositivo. No primeiro caso, é possível interconectar dispositivos, como notebooks, sem a necessidade de uma infraestrutura de rede, no entanto com a impossibilidade de conexão com a Internet, apenas com os dispositivos na rede. Assim, é possível efetuar transferência de arquivos de maneira rápida e sem cabos. Além de redes ad-hoc, suporta conexões entre um ponto de acesso e um dispositivo para conexão com a Internet. Em diversos casos, o AP e o roteador estarão incorporados em um mesmo dispositivo \cite{Kurose2012}.
+
+% Mobilidade
+
+%O protocolo permite a mobilidade de um dispositivo entre pontos de acessos e ainda assim manter a conexão com estes sem a necessidade de se obter um novo endereço IP. Isso será possível se ambos os pontos de acessos fizerem parte de uma mesma subrede.
+
+% Tipos de escaneamento numa mesma subrede
+Existem algumas funcionalidades mais avançadas no IEEE802.11. Uma delas se refere à possibilidade de se adaptar a taxa de dados a partir da escolha da técnica de modulação da camada física de acordo com as características do canal. Há também a possibilidade de reduzir o consumo de energia a partir fazendo com que o nó em modo \textit{sleep} por determinados períodos de tempo o que pode gerar uma economia de até 99\% \cite{Kurose2012}.
+
+No contexto da Internet das Coisas, o Wi-fi é fundamental na inserção de novos dispositivos conectados à Internet. O seu uso, consideravelmente difundido, facilitará o alcance de novos dispositivos à rede e propiciará o crescimento destes sem a necessidade da expansão da infraestrutura a cada novo objeto conectado \cite{Suresh2014}.
 
 \subsection{Outros}
 % Z-wave
-Entre as tecnologias utilizadas em Smart Homes está o Z-Wave, um protocolo sem fio focado em automação residencial e comercial de pequeno porte, criado pelo ZenSys e hoje representado pela Z-Wave Alliance  (whan survey, gomez, 2010). O protocolo foi desenvolvido especificamente para controle, monitoramento e verificação de estado. Em relação a aspectos técnicos, o Z-Wave opera na faixa de frequências de 1GHz, o que evita interferências com outras tecnologias como Bluetooth e Wifi que operam em 2,4GHz. Entre as principais vantagens do Z-wave está a interoperabilidade que este proporciona entre os diversos produtos desenvolvidos com a tecnologia, além da segurança obtida a partir do uso de criptografia AES128.  (http://z-wavealliance.org/about_z-wave_technology/)
+Entre as tecnologias utilizadas em Smart Homes está o Z-Wave, um protocolo sem fio focado em automação residencial e comercial de pequeno porte, criado pelo ZenSys e hoje representado pela Z-Wave Alliance  \cite{Gomez2010}. O protocolo foi desenvolvido especificamente para controle, monitoramento e verificação de estado. Em relação a aspectos técnicos, o Z-Wave opera na faixa de frequências em torno de 1GHz, o que evita interferências com outras tecnologias como Bluetooth e Wi-Fi que operam em 2,4GHz, em geral. Entre as principais vantagens do Z-Wave está a interoperabilidade que este proporciona entre os diversos produtos desenvolvidos com a tecnologia, além da segurança obtida a partir do uso de criptografia AES128 \cite{Z-WaveAlliance2015}.
 
 % 6LowPan
-Há a tendência de dispositivos IoT conectados à Internet usaram o protocolo de endereçamento IPv6 para serem identificados na rede. No entanto, algumas das aplicações terão limitações como fonte de energia e capacidade de transferências de dados limitadas. A partir disso, criou-se o 6LowPan, focado em dispositivos com restrições de consumo de energia. A principal característica desse protocolo é a redução da transmissão de dados a partir da compressão dos cabeçalhos do IPv6. Com isso, o 6LowPan é capaz de reduzir a sobrecarga de pacote para dois bytes. (enabling technologies)
-(rever com base em http://www.ti.com/lsds/ti/wireless-connectivity/6lowpan/overview.page)
+Há a tendência de dispositivos IoT conectados à Internet usarem o protocolo de endereçamento IPv6 para serem identificados na rede. No entanto, algumas das aplicações terão limitações como fonte de energia e capacidade de transferências de dados limitadas. Como proposta de solução, tem-se o 6LowPan, definido no RFC 6282 pela Internet Engineering Task Force (IETF) focado em dispositivos com restrições de consumo de energia \cite{Olsson2014}. A principal característica desse protocolo é a redução da transmissão de dados a partir da compressão dos cabeçalhos do IPv6. Com isso, o 6LowPan é capaz de reduzir a sobrecarga de pacote para dois bytes \cite{Al-Fuqaha2015}. As redes 6LoWPAN são conectadas às redes IPv6 a partir de roteadores de borda, capazes de trocar dados entre os dispositivos dentro da rede 6LoWPAN e a Internet e  entre os dispositivos da rede além de ser responsáveis por manter a rede em funcionamento. Outra característica importante nesse padrão é que este torna possível implementar o IPv6 em redes IEEE 802.15.4 \cite{Olsson2014}.
 
 \section{Ambientes inteligentes}
 
 \subsection{Smart grid}
 
-\textit{Smart grid} é uma rede elétrica inteligente, na qual, através da tecnologia coleta dados de consumo e dos distribuidores toma ações a partir deles, tornando o sistema mais eficiente, seguro e sustentável \cite{Cecilia2016}. As smart grids têm três componentes importantes: rede de transmissão inteligente, às quais contêm sensores, troca de informações, controle e tecnologias de comunicação que proporcionam uma transmissão eficiente, tecnologia da informação e comunicação de smart grid  e tecnologia de medição inteligente, no qual, além de realizar medições como os equipamentos tradicionais, é capaz de trocar informações com a rede inteligente. 
+Na rede elétrica tradicional, a inteligência é concentrada nas unidades geradoras de energia e parcialmente nos distribuidores e o fluxo de energia é unidirecional, seguindo apenas um caminho entre a geração e o consumo. No entanto, com o aumento do uso de fontes próprias geração de energia como placas fotovoltaicas em residências, além do crescimento do consumo tem-se a necessidade de adaptação do modelo de rede elétrica existente. As \textit{smart grids} surgiram, então, como novo modelo de geração e distribuição de energia elétrica, onde o fluxo de energia passa a ser bidirecional e o uso de tecnologias de medições de consumo permitem prever demandas, otimizar a distribuição e aprimorar a eficiência e a confiabilidade do sistema elétrico \cite{Cecilia2016}. Portanto, a smart grid tenderá a ser um avanço do modelo atual com o uso de tecnologias de comunicação, sistema eletrônicos de potência avançados e de medição o que possibilitará monitoramento em tempo real, permitindo o fluxo de informações em ambos os sentidos entre consumidores e unidades geradores além da garantia de otimização do fluxo de energia.
 
 Empresas como a \textit{Texas Instruments} (TI) têm investido em soluções para smart grid que proporcionam segurança, eficiência e inteligência. A TI oferece soluções para monitoramento da rede através de medidores de eletricidade, gás e calor, além de tecnologias para comunicação como o 
 \textit{Power Line Communications} entre outras \cite{TexasInstruments2017}.
@@ -345,11 +384,19 @@ Empresas como a \textit{Texas Instruments} (TI) têm investido em soluções par
 \subsection{Smart home}
 
 % TODO: Conceitos
-O conceito de \textit{smart home} ou casa inteligente propõe um novo modelo para um ambiente domiciliar no qual a implementação e o uso da tecnologia abrem espaço para novas formas de interação com o lar, além de proporcionar mais comodidade e um melhor gerenciamento dos equipamentos presentes. Isso será possível graças ao uso de sensores e atuadores no ambiente, nos eletrodomésticos e utensílios. Além disso, para interconectar todos os dispositivos, usa-se as tecnologias de rede existentes, como o Zigbee e a Internet.
+O conceito de \textit{smart home} ou casa inteligente propõe um novo modelo para um ambiente domiciliar no qual a implementação e o uso da tecnologia abrem espaço para novas formas de interação com o lar, além de proporcionar mais comodidade e um melhor gerenciamento dos equipamentos presentes. Isso será possível graças ao uso de sensores e atuadores no ambiente, nos eletrodomésticos e utensílios. E, para interconectar todos os dispositivos, fará-se o uso das tecnologias de rede existentes, como o Zigbee e a Internet.
 
-A interconexão dos dispositivos em uma casa inteligente proporcionorá funcionalidades inéditas de interação de acordo com as ações do morador, como entrar e sair de um cômodo da casa. Nesse caso, seria possível implementar um sistema que apagasse e acendesse a lâmpada conforme os sensores de presença indicarem a ausência do indivíduo e a hora do dia \cite{audiovideo}.
+A interconexão dos dispositivos em uma casa inteligente proporcionorá funcionalidades inéditas de interação de acordo com as ações do morador, como entrar e sair de um cômodo da casa. Nesse caso, seria possível implementar um sistema que apagasse e acendesse a lâmpada conforme os sensores de presença indicarem a ausência do indivíduo e a hora do dia \cite{DeSilva2012}.
 
-Entre as principais apostas para as casas inteligentes está o aumento da eficiência do consumo energético. O uso da tecnologia por meio de medidores de energia, tomadas e aparelhos inteligentes permitirá o monitoramento e controle do consumo dos dispositivos da casa. Com base nisso, é viável a otimização do consumo de cada equipamento controlando-o para ativá-lo somente quando necessário e, assim, evitar desperdícios, além de previsão da demanda de energia para cada momento do dia (A review, Stojk).
+Entre as principais apostas para as casas inteligentes está o aumento da eficiência do consumo energético. O uso da tecnologia por meio de medidores de energia, tomadas e aparelhos inteligentes permitirá o monitoramento e controle do consumo dos dispositivos da casa. Com base nisso, é viável a otimização do consumo de cada equipamento controlando-o para ativá-lo somente quando necessário e, assim, evitar desperdícios, além de previsão da demanda de energia para cada momento do dia \cite{Stojkoska2017}.
+
+As casas inteligentes necessitam que os dispositivos sejam organizados hierarquicamente para garantir o bom desempenho dos componentes do sistema. \citeonline{Stojkoska2017} propõe um modelo, mostrado na \reffig{cap2_smart-home_framework-stojkoska} para organização de casa inteligente que integra \textit{smart grid} e envolve cinco componentes principais: a casa inteligente em si, a nuvem, unidade geradora de energia, aplicações de terceiros e interfaces de usuário. Nesse contexto, a casa inteligente contém redes de sensores sem fio que adquirem dados do ambiente e enviam esses dados para um \textit{home hub}, um ponto central capaz de se conectar à uma rede externa. Já a unidade geradora de energia é responsável por, além da geração e fornecimento de energia, trocar informações sobre custo da energia, consumo atual e futuro da casa entre outros. A nuvem é responsável por armazenar todos os dados provenientes de sensores e outros dispositivos da casa e por comportar uma infraestrutura de processamento. A partir dos dados existentes na nuvem é possível que as aplicações de terceiros entreguem soluções web ou aplicações mobile para os usuários. Para obter acesso às soluções, o último componente é necessário, a interface de usuário. Nesse ponto, o usuário tem em mãos a capacidade de monitorar em tempo real os gastos de energia dos equipamentos de sua casa, bem como controlá-los de acordo com a sua necessidade e desejo.
+
+\figura{cap2_smart-home_framework-stojkoska}{Modelo para casas inteligentes}{\textwidth}{Stojkoska2017}
+
+
+%(escanoladores, reguladores, balanceadores de carga).
+%(stoj...; mostrar a figura do cara)
 
 % Segundo \cite{DeSilva2012}, as casas inteligentes podem ser divididas em três categorias principais. 
 % A primeira delas atenta-se em detectar e reconhecer ações dos moradores e seu estado de saúde e, baseando-se nelas, prover serviços com foco no bem-estar e na saúde dos residentes. Nesse categoria estão incluídos cuidado de idosos, da saúde e de crianças. 
@@ -357,52 +404,26 @@ Entre as principais apostas para as casas inteligentes está o aumento da efici�
 % A terceira tem como foco na segurança. Uma sistema de alerta pode ser ativado, no momento em que uma invasão, sequestro ou desastre natural ocorrer, a partir captura de imagens, sensoriamento entre outros.
 
 
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-% TODO: Arquitetura
-    % Categorias
-
-As casas inteligentes necessitam que os dispositivos sejam organizados hierarquicamente para garantir um bom desempenho. \citeauthor{stojkoska} propõe uma arquitetura para casa inteligente construída a partir de alguns componentes:  \textit{smart objects}, hubs, cloud e aplicações de terceiros (escanoladores, reguladores, balanceadores de carga).
-(stoj...; mostrar a figura do cara)
-
- Os objetos inteligentes interagem diretamente com o ambiente e com os moradores, seja de forma direta, no caso de eletrodomésticos inteligentes ou ubíqua no caso de sensores.
-
- A partir da incorporação da tecnologias aos objetos da casa será possível obter informações inétidas sobre estes e sobre os moradores, como temperatura ambiente preferencial, grau de uso dos equipamentos entre outros.
- Muitos serviços poderão ser automatizados. Acender e apagar de luzes, ativação do condicionamento de ar, cafeteira etc. \cite{Silva2012}.
-
-
-% TODO: Formas de interação
-    % Vídeo
-    % Áudio
- A partir da interação diária dos moradores com os eletrodomésticos e móveis da casa e do uso de recursos de imagem, áudio e vídeo, será possível capturar ações e eventos do dia a dia, como o entrar e sair de um quarto por exemplo. Com base nisso, será possível adaptar os equipamentos da casa para que automaticamente executem ações para cada evento do dia a dia {stoj...}.
-
 Uma casa inteligente permite que os moradores tenham maior independência no seu dia a dia, especialmente em caso de pessoas idosas, com dificuldade de locomoção, além daquelas com deficiências físicas e visuais.
-No artigo X, os autores propõe um sistema que usa imagem para casa inteligente, capaz de detectar o dia a dia de uma pessoa idosa. É possível também identificar possíveis quedas e avisar o responsável ou ao atendimento médico.
-
-% Rascunho
-Entender o comportamento dos moradores a partir da detecção de suas ações é desejável para que se possa prover serviços que vão de acordo com o esperado por eles.
-
-% TODO: Usuários
-
-Despite this broad range of potential and assumed benefits, a clear user-centric vision of smart homes is currently missing from a field being overwhelmingly ‘‘pushed’’ by technology developers ( smart home and their users).
+No seu artigo, \citeonlibe{DeSilva2012} propõe um sistema que usa imagens de uma casa, capaz de detectar o dia a dia de uma pessoa idosa. É possível também identificar possíveis quedas e avisar o responsável ou ao atendimento médico. Apesar, da aplicação citada possuir um enfoque no morador, não há muitas propostas para casa inteligente com o foco nos usuários, no entanto, existem muitas que focam nos aspectos técnicos, como dispositivos, arquiteturas entre outros \cite{Wilson2015}.
 
 % TODO: Tecnologias
     % Tecnologias de 
     % Eclipse SmartHome
 
-Diversas sistemas para vem sendo implementados nos últimos tempos para facilitar o desenvolvimento de aplicações e dispositivos para casas inteligentes.
-Entre eles está o projeto SmartHome do Eclipse para IoT.
-(imagem do projeto)
+Em relação às tecnologias para desenvolvimento de aplicações e dispositivos para casas inteligentes, tem-se diversos sistemas sendo implementados nos últimos tempos. Entre eles está o projeto \textit{Eclipse SmartHome} \textsuperscript{\texttrademark}
+\footnote{http://www.eclipse.org/smarthome} para IoT, ao qual disponibiliza aos desenvolvedores um \textit{framework} para desenvolvimento de soluções para IoT para usuários finais. 
     
 % TODO: Desafios
 
-A empresa \textit{Amazon}, empresa de tecnologia dos Estados Unidos, oferece o \textit{Amazon Echo}, um dispositivo que oferece diversas funcionalidades multimídia, como reprodução de músicas através de controle por voz, inclusive se algo estiver tocando, além de oferecer informações como previsão 
-do tempo, notícias, tráfego entre outros através do \textit{Alexa Voice Service}. É capaz de controlar a luz, tomadas e termostatos além de ser compatível com produtos de empresas, como Samsung, Philips entre outras, com foco em \textit{smart homes} \cite{amazon2017}.
+A empresa \textit{Amazon} \textsuperscript{\textregistered}
+\footnote{https://www.amazon.com/}, empresa de tecnologia dos Estados Unidos, oferece o \textit{Amazon Echo}, um dispositivo que oferece diversas funcionalidades multimídia, como reprodução de músicas através de controle por voz, além de oferecer informações como previsão do tempo, notícias, tráfego entre outros através do \textit{Alexa Voice Service}. É capaz de controlar a luz, tomadas e termostatos além de ser compatível com produtos de empresas, como SAMSUNG\textsuperscript{\textregistered}
+\footnote{http://www.samsung.com/br/}, Philips{\textregistered}
+\footnote{http://www.philips.com.br/} entre outras, com foco em \textit{smart homes} \cite{amazon2017}.
 
 \subsubsection{Smart Kitchen}
 
-Seguindo a lógica das casas inteligentes, as \textit{Smart Kitchens} ou cozinhas inteligentes promovem o aprimoramento dos dispositivos da cozinha com a inserção da tecnologia. A partir disso, utensílios como panelas, talheres entre outros poderão fazer uso de tecnologia para entregar novas funcionalidades. Por exemplo, no caso das panelas, é possível colocar sensores de temperatura e câmera para determinar a temperatura atual e o estado atual do alimento que está sendo cozido. A partir disso, o sistema computacional presente na panela, processará os dados e fará uma comunicação com o fogão para ajustar a intensidade do fogo caso ainda não esteja pronto, ou simplesmente, desligar o fogo, caso o esteja. 
+Seguindo a lógica das casas inteligentes, as \textit{Smart Kitchens} ou cozinhas inteligentes promovem o aprimoramento dos dispositivos da cozinha com a inserção da tecnologia. A partir disso, utensílios como panelas, talheres entre outros poderão fazer uso de tecnologia para entregar novas funcionalidades \cite{Staender2012}. Por exemplo, no caso das panelas, é possível colocar sensores de temperatura e câmera para determinar a temperatura atual e o estado atual do alimento que está sendo cozido. A partir disso, o sistema computacional presente na panela, processará os dados e fará uma comunicação com o fogão para ajustar a intensidade do fogo caso ainda não esteja pronto, ou simplesmente, desligar o fogo, caso o esteja. 
 
 \subsection{Smart factory}
 % Quarta revolução industrial,
@@ -416,17 +437,17 @@ Seguindo a lógica das casas inteligentes, as \textit{Smart Kitchens} ou cozinha
 
 \subsection{Smart City}
 
-\subsection{Wearables}
+% \subsection{Wearables}
 
-\textit{Wearables} são dispositivos computacionais vestíveis, ou seja, são itens que uma pessoa pode usar no dia a dia como, roupas, relógios, óculos, sapatos entre outros e, ainda obter novas funcionalidades, graças à presença da tecnologia nesses dispositivos. Isso é possível devido a sensores aos quais medem sinais vitais do corpo humano e dados do ambiente, a depender da aplicação, além de pequenos equipamentos de hardware responsáveis por ler os dados dos sensores e comandos do usuário e assim tomar as ações necessárias de acordo com a situação.
+% \textit{Wearables} são dispositivos computacionais vestíveis, ou seja, são itens que uma pessoa pode usar no dia a dia como, roupas, relógios, óculos, sapatos entre outros e, ainda obter novas funcionalidades, graças à presença da tecnologia nesses dispositivos. Isso é possível devido a sensores aos quais medem sinais vitais do corpo humano e dados do ambiente, a depender da aplicação, além de pequenos equipamentos de hardware responsáveis por ler os dados dos sensores e comandos do usuário e assim tomar as ações necessárias de acordo com a situação.
 
-Os \textit{wearables} têm aplicações nas mais diversas áreas, partindo das áreas da saúde e esportes até lazer e trabalho. 
+% Os \textit{wearables} têm aplicações nas mais diversas áreas, partindo das áreas da saúde e esportes até lazer e trabalho. 
 
-Algumas empresas têm investido na área de dispositivos vestíveis. Um exemplo é a Microsoft que vem desenvolvendo o \textit{Holo Lens}, um dispositivo que se assemelha a um óculos, com foco em realidade aumentada. A tecnologia pode ser usada na concepção e design de produtos, educação, astronomia entre outros.
+% Algumas empresas têm investido na área de dispositivos vestíveis. Um exemplo é a Microsoft que vem desenvolvendo o \textit{Holo Lens}, um dispositivo que se assemelha a um óculos, com foco em realidade aumentada. A tecnologia pode ser usada na concepção e design de produtos, educação, astronomia entre outros.
 
-Outra tecnologia em ascensão é o \textit{smart watch}, relógio digital conectado à internet, dotado de aplicativos entre outras funções que vão além de mostrar as horas.
+% Outra tecnologia em ascensão é o \textit{smart watch}, relógio digital conectado à internet, dotado de aplicativos entre outras funções que vão além de mostrar as horas.
 
-Na área de esportes e saúde, existem as \textit{smart bands}, pulseiras capazes de monitorar sinais, como batimentos além das calorias eliminadas durante um exercício, distância percorrida entre outros.
+% Na área de esportes e saúde, existem as \textit{smart bands}, pulseiras capazes de monitorar sinais, como batimentos além das calorias eliminadas durante um exercício, distância percorrida entre outros.
 
 
 
