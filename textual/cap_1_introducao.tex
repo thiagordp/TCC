@@ -6,7 +6,7 @@ Um dos avanços mais significativos é a Internet, com um grande impacto no dese
 
 Em meio ao domínio da Internet, um novo paradigma surgiu no meio acadêmico e aos poucos ganha terreno nas grandes empresas. A sua proposta é levar a tecnologia a objetos do dia a dia, como condicionadores de ar, lâmpadas, fogões etc., e, assim, criar novas formas de interação além de funcionalidades inéditas, seguindo o exemplo dos \textit{smartphones}. 
 
-Mencionada pela primeira vez, por Kevin Ashton, em 1999 \cite{kevin-ashton}, a Internet das Coisas ou IoT (em inglês, \textit{Internet of Things}) está cada vez mais próxima da realidade. Abrigará um variado ecossistema de dispositivos com capacidade de processamento, sensoriamento, conexão com demais dispositivos e, em muito casos, com a Internet, entre outros avanços. Estima-se que, em 2020, cerca de 24 bilhões de dispositivos IoT estejam conectados, implicando em cerca de quatro dispositivos por pessoa \cite{Meola2016}.   
+Mencionada pela primeira vez, por Kevin Ashton, em 1999 \cite{Finep2015}, a Internet das Coisas ou IoT (em inglês, \textit{Internet of Things}) está cada vez mais próxima da realidade. Abrigará um variado ecossistema de dispositivos com capacidade de processamento, sensoriamento, conexão com demais dispositivos e, em muito casos, com a Internet, entre outros avanços. Estima-se que, em 2020, cerca de 24 bilhões de dispositivos IoT estejam conectados, implicando em cerca de quatro dispositivos por pessoa \cite{Meola2016}.   
 Contudo, com o crescimento do número de itens computacionais, a quantidade de dados gerado por eles também cresce, mas de maneira exponencial \cite{Chiang2016}. A partir disso, o fluxo de dados na rede de internet se intensifica a ponto de comprometer o desempenho desta. Isso ocorre devido ao modelo atual de funcionamento da rede, ou seja, centralizado. Portanto, uma nova arquitetura se faz necessária para incorporar os dispositivos IoT à Internet tradicional. % já citado
 Nesse contexto, a \textit{fog computing} ou computação de neblima, surge como potencial solução, com base na proposta de uma nova forma de organização de rede para complementar a atual. Isso é possível com base na aproximação de algumas funcionalidades centralizadas em servidores aos dispositivos que as utilizam \cite{Chiang2016}. Para tanto, um dispositivo de rede seria responsável por uma \textit{nuvem local}. Assim, os dispositivos IoT se comunicariam com esse equipamento e obteriam funcionalidades necessárias de maneira mais eficiente. A nuvem local se comunicaria diretamente com a nuvem convencional, transferindo apenas informações necessárias \cite{Syed2016}.
 
@@ -48,19 +48,20 @@ Esta seção apresenta o objetivo geral e os objetivos específicos do trabalho.
 
 % V1: Desenvolver uma geladeira capaz de monitorar os produtos contidos nela e prover recomendações de receitas com base nos padrões de consumo dos produtos.
 
-% V2: Desenvolver uma geladeira que facilite o dia a dia dos usuários a partir da análise das interações entre os mesmos.
-% V3: Melhorar o modelo de geladeira comum para que facilite o dia a dia dos usuários a partir da análise das interações entre os mesmos.
+% Desenvolver uma geladeira que facilite o dia a dia dos usuários a partir da análise das interações entre os mesmos.
+
+Desenvolver um modelo de geladeira inteligente que facilite o dia a dia dos usuários a partir da análise das interações entre os mesmos.
     
-Melhorar o modelo de geladeira inteligente para que facilite o dia a dia dos usuários a partir da análise das interações entre os mesmos.
+% V4 Melhorar o modelo de geladeira inteligente para que facilite o dia a dia dos usuários a partir da análise das interações entre os mesmos.
 
 \subsection{Específicos}
 
 
 \begin{itemize} %\parskip -4pt
-	\item Levantamento do estado da arte com relação a Internet das Coisas e Sistemas de Recomendação
-	\item Propor um projeto de leitura e monitoramento dos produtos contidos na geladeira.
-	\item Propor um sistema de análise das interações e recomendação de serviços.
-	\item Elaborar um cenário que permita a avaliação do sistema proposto.
+	%\item Levantamento do estado da arte com relação a Internet das Coisas e Sistemas de Recomendação
+	\item Elaborar e desenvolver um projeto de leitura e monitoramento dos produtos contidos na geladeira.
+	\item Implementar um sistema de análise das interações e recomendação de serviços.
+	\item Elaborar um cenário que permita a avaliação do modelo proposto.
 	\item Avaliar e discutir os resultados obtidos a partir do sistema proposto.
 
 %V1
@@ -87,28 +88,26 @@ Tratando-se de uma casa inteligente, chamada também de \textit{smart home}, os 
 Portanto, este trabalho trará como contribuição a melhora do modelo atual de geladeira inteligente que além das funcionalidades citadas, leve em conta os interesses e padrões de consumo de seus usuários.
 
 
-% V1: ...como contribuição a proposição e implementação de uma geladeira inteligente que além das funcionalidades citadas, leve em conta os interesses e padrões de consumo de seus usuários. % TODO: rever
-% TODO: colocar a hipótese 
-
-% TODO: citar o estado da arte e referenciar
-% TODO: falar do cenário global e no brasil? MCTIC abriu uma comissão para IoT
+% V1: ...como contribuição a proposição e implementação de uma geladeira inteligente que além das funcionalidades citadas, leve em conta os interesses e padrões de consumo de seus usuários. 
 
 % ITENS PARA ABORDAR
-% IoT em alta
-% Potencial de inovação e de mercado
-% Questão de aprimoramento do modelo da geladeira.
-% Resultados esperados - o que traz para sociedade.
 
 \section{Procedimentos metodológicos}
 
-O trabalho será realizado através de uma pesquisa tecnológica e aplicada com o projeto e desenvolvimento de um protótipo de geladeira capaz de reconhecer as interações do usuário, realizar compras automáticas além de recomendações de outros produtos e receitas com base nas preferências do usuário. A metodologia de desenvolvimento deste trabalho é dividida em X etapas:
+O trabalho será realizado através de uma pesquisa tecnológica e aplicada com o projeto e desenvolvimento de um protótipo de geladeira capaz de reconhecer as interações do usuário, realizar compras automáticas além de recomendações de outros produtos e receitas com base nas preferências do usuário. A metodologia de desenvolvimento deste trabalho é dividida em 8 etapas:
 
-\begin{itemize}
-	\item Etapa 1: Levantamento bibliográfico a cerca de Internet das Coisas e Sistemas de Recomendação;
-	\item Etapa 2: Projeto de um protótipo
-	\item Etapa 3: Criação de um cenário de testes para avaliar o protótipo
-	\item Etapa 4: Avaliação e discussão dos resultados obtidos no cenário proposto.
+\begin{itemize}\parskip -1pt
+    \item Etapa 1: Análise e definição do escopo do trabalho.
+	\item Etapa 2: Levantamento bibliográfico a cerca de Internet das Coisas e Sistemas de Recomendação;
+	\item Etapa 3: Elaborar e desenvolver um projeto de leitura e monitoramento dos produtos contidos na geladeira.
+	\item Etapa 4: Implementar um sistema de análise das interações e recomendação de serviços.
+	\item Etapa 5: Desenvolvimento de um protótipo funcional que integre as Etapas 3 e 4.
+	\item Etapa 6: Criação de um cenário de testes para avaliar o protótipo.
+	\item Etapa 7: Avaliação e discussão dos resultados obtidos no cenário proposto.
+	\item Etapa 8: Escrita do Trabalho de Conclusão de Curso.
 \end{itemize}
+
+% Colocar uma figura do fluxo
 
 % Contextualizar para caracterizar
 % O que vai usar 

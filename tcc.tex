@@ -20,9 +20,7 @@
 \usepackage{lipsum}
 \usepackage{caption} % colocar textos em figuras
 \usepackage{subfigure}
-
 \usepackage{xifthen} % deixa fazer uns if-then-else mutcho loko
-
 \usepackage[brazil]{babel}  % usados para arrumar os caracteres em português
 \usepackage[utf8]{inputenx} % 
 %\usepackage[utf8]{inputenc}
@@ -33,7 +31,6 @@
 \usepackage{calc}
 \usepackage{enumitem}
 \usepackage{bibentry} % permite usar o comando nobibliography
-
 \usepackage{minted} % Sintaxe colorida
 \usepackage{booktabs}
 \usepackage{xparse} % Permite definir umas funções com mais recursos.
@@ -89,14 +86,13 @@
 
 \newcommand{\criarSigla}[3][]{%
 	\ifthenelse{\isempty{#1}}{%
-		#2 - #3\sigla{#3}{#2}%
+		#2 (#3)\sigla{#3}{#2}%
 	}{%
-		\emph{#2} - #3\sigla{#3}{\emph{#2}}\footnote{Traduzido como: #1.}%
+		\emph{#2} (#3)\sigla{#3}{\emph{#2}}\footnote{Traduzido como: #1.}%
 	}%
 }
 
 %----------------------------------------------------------------------
-
 
 %----------------------------------------------------------------------
 % Identificadores do trabalho
@@ -106,7 +102,7 @@
 \curso[a]{Universidade Federal de Santa Catarina}
 \documento[o]{Trabalho\ de\ Conclusão\ de\ Curso} % [o] para dissertação [a] para tese
 
-\titulo{Um modelo de geladeira aprimorado que facilite a vida dos usuário e que leva em conta suas preferências}
+\titulo{Um modelo de geladeira aprimorado que facilite a vida dos usuários e que leva em conta suas preferências}
 
 %\subtitulo{Subtítulo} % Opcional
 
@@ -170,7 +166,7 @@
 	
 	\include{textual/cap_1_introducao}
 	\include{textual/cap_2_internet_of_things}
-	%\include{textual/cap_3_sistemas_de_recomendacao}
+	\include{textual/cap_3_sistemas_de_recomendacao}
 %	\include{textual/cap_4_sistema_proposto}
 %	\include{textual/cap_5_avalicao_sistema}
 	\include{textual/cap_6_consideracoes_finais}
