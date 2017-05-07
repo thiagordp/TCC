@@ -19,6 +19,7 @@
 \usepackage{listings} % Possibilita colocar códigos
 \usepackage{lipsum}
 \usepackage{caption} % colocar textos em figuras
+\captionsetup{justification=raggedright,singlelinecheck=false}
 \usepackage{subfigure}
 \usepackage{xifthen} % deixa fazer uns if-then-else mutcho loko
 \usepackage[brazil]{babel}  % usados para arrumar os caracteres em português
@@ -53,13 +54,12 @@
 \newcommand{\afazer}[1]{{\color{red}{#1}}} % Para destacar uma parte a ser trabalhada
 \newcommand{\ABNTbibliographyname}{REFERÊNCIAS} % Necessário para abnTeX 0.8.2
 
-\newcommand{\figura}[5][Extraído de:]{
+\newcommand{\figura}[5][Fonte:]{
 	\begin{figure}[h!tb]
-		\centering
 		\caption{#3.}
 		\includegraphics[width=#4]{#2.png}
 		\ifthenelse{\isempty{#5}}{}{%
-			\\ #1 \citeonline{#5}.
+			\\ \footnotesize{#1 \citeonline{#5}.}
 		}	
 		\label{fig:#2}
 	\end{figure}
@@ -68,7 +68,6 @@
 \NewDocumentEnvironment{tabela}{mm}
 {
 	\begin{table}[htb]
-		\centering
 	
 	{
 	    %TODO: Rever
@@ -111,8 +110,8 @@
 \grau{Bacharel em Engenharia de Computação}
 \local{Araranguá} % Opcional (Florianópolis é o padrão)
 \data{04}{dezembro}{2017}
-\coordenador[Coordenadora\\Universidade Federal de Santa Catarina]{Prof. Dr. Eliane Pozzebon} %TODO Rever o Coordenador do curso
-\orientador[Orientador\\Universidade Federal de Santa Catarina]{Prof. Dr. Alexandre Leopoldo Gonçalves}
+\coordenador[Coordenadora]{Prof. Dr. Eliane Pozzebon} %TODO Rever o Coordenador do curso
+\orientador[Orientador]{Prof. Dr. Alexandre Leopoldo Gonçalves}
 %\coorientador[Coorientador\\Universidade ...]{Prof. Dr.}
 
 \numerodemembrosnabanca{3} % Isso decide se haverá uma folha adicional
@@ -142,24 +141,24 @@
 	
 	\include{pretextual/folha_de_rosto}
 	
-	%\folhaaprovacao
-	\paginadedicatoria
+	\folhaaprovacao
+	%\paginadedicatoria
 	%\paginaagradecimento
-	\paginaepigrafe
+	%\paginaepigrafe
 	\paginaresumo
 	\paginaabstract
 	%\pretextuais % Substitui todos os elementos pre-textuais acima
 	\listadefiguras % as listas dependem da necessidade do usuário
 	\listadetabelas 
 	\listadeabreviaturas
-	%\listadesimbolos
+	\listadesimbolos
 	\sumario
 	
 	%--------------------------------------------------------
 	% Simbolos e Abreviaturas
 	\abreviatura{RAM}{\emph{Random Access Memory}}
 	\abreviatura{IoT}{\emph{Internet of Things}}
-	
+	\simbolo{$\int$}{Integral}
 	
 	%########################################################
 	% Elementos textuais

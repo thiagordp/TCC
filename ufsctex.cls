@@ -339,7 +339,7 @@
        \rightskip 1.6em
        \parfillskip -\rightskip
        \parindent 0em
-       \@tempdima 1.5em
+       \@tempdima 2.5em % margem entre o número e o texto da legenda (anterior = 1,5em)
        \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
        {\figurename~\normalfont #1}\nobreak \filltocentry{#2}}
 
@@ -349,7 +349,7 @@
        \rightskip 1.6em
        \parfillskip -\rightskip
        \parindent 0em
-       \@tempdima 1.5em
+       \@tempdima 2.5em % margem entre o número e o texto da legenda (anterior = 1,5em)
        \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
        {\tablename~\normalfont #1}\nobreak \filltocentry{#2}}
 
@@ -411,7 +411,7 @@
        \rightskip 1.6em
        \parfillskip -\rightskip
        \parindent 0em
-       \@tempdima 4.5em
+       \@tempdima 6em % anterior 4.5em
        \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
        {\normalfont #1}\nobreak \filltocentry{#2}}
 
