@@ -15,11 +15,11 @@
 % Pacotes usados especificamente neste documento
 \usepackage{graphicx} % Possibilita o uso de figuras e gráficos
 \usepackage{color}    % Possibilita o uso de cores no documento
-%\usepackage{pdfpages} % Possibilita a inclusão da ficha catalográfica
+\usepackage{pdfpages} % Possibilita a inclusão da ficha catalográfica
 \usepackage{listings} % Possibilita colocar códigos
 \usepackage{lipsum}
 \usepackage{caption} % colocar textos em figuras
-\captionsetup{justification=raggedright,singlelinecheck=false}
+\captionsetup{justification=raggedright,singlelinecheck=false, labelsep=endash}%, textfont=footnotesize}
 \usepackage{subfigure}
 \usepackage{xifthen} % deixa fazer uns if-then-else mutcho loko
 \usepackage[brazil]{babel}  % usados para arrumar os caracteres em português
@@ -35,6 +35,7 @@
 \usepackage{minted} % Sintaxe colorida
 \usepackage{booktabs}
 \usepackage{xparse} % Permite definir umas funções com mais recursos.
+
 %\usepackage[square,numbers]{natbib}
 %----------------------------------------------------------------------
 % comandos de customização dos pacotes
@@ -141,10 +142,10 @@
 	
 	\include{pretextual/folha_de_rosto}
 	
-	\folhaaprovacao
-	%\paginadedicatoria
-	%\paginaagradecimento
-	%\paginaepigrafe
+	% \folhaaprovacao
+	% \paginadedicatoria
+	% \paginaagradecimento
+%	\paginaepigrafe
 	\paginaresumo
 	\paginaabstract
 	%\pretextuais % Substitui todos os elementos pre-textuais acima
@@ -156,7 +157,7 @@
 	
 	%--------------------------------------------------------
 	% Simbolos e Abreviaturas
-	\abreviatura{RAM}{\emph{Random Access Memory}}
+	%\abreviatura{RAM}{\emph{Random Access Memory}}
 	\abreviatura{IoT}{\emph{Internet of Things}}
 	\simbolo{$\int$}{Integral}
 	
@@ -168,7 +169,7 @@
 	\include{textual/cap_3_sistemas_de_recomendacao}
 %	\include{textual/cap_4_sistema_proposto}
 %	\include{textual/cap_5_avalicao_sistema}
-	\include{textual/cap_6_consideracoes_finais}
+	%\include{textual/cap_6_consideracoes_finais}
 	
 	%--------------------------------------------------
 	
