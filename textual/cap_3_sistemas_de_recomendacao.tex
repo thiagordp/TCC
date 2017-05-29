@@ -72,7 +72,7 @@ Falar sobre avaliações explícitas e implícitas
     
     
     \begin{table}[htb]
-        \centering
+        
         \caption{Matriz de avaliações de itens por usuários}
         \label{tab:matriz-av-item-user}
         \begin{tabular}{@{}lcccccc@{}}
@@ -83,9 +83,11 @@ Falar sobre avaliações explícitas e implícitas
         Elizabeth & 5      & 3      & 3      & 4      & 2      & 4      \\
         Hector    & 3      & 5      & 4      & 5      & 4      & 4      \\ \bottomrule
         \end{tabular}
+        
+        \footnotesize{Fonte: Autores}
     \end{table}
     
-    Segundo \citeonline{Ricci2010}, os métodos de filtragem colaborativa podem ser classificados em duas classes: os baseados em memória ou em vizinhança e os métodos baseados em modelo. A principal diferença entre as abordagens está no modo de uso da matriz de avaliações na geração de recomendações. 
+    Segundo \citeonline{Ricci2010}, os métodos de filtragem colaborativa podem ser agrupados em duas classes: os baseados em memória ou em vizinhança e os métodos baseados em modelo. A principal diferença entre as abordagens está no modo de uso da matriz de avaliações na geração de recomendações. 
     
     % Não precisa das características específicas dos itens.
     
@@ -109,8 +111,7 @@ Falar sobre avaliações explícitas e implícitas
         \subsubsection{Similaridade}    
         
         % Definição
-        A similaridade entre usuários, itens, etc., podem ser obtidas a partir da matriz de avaliações dos usuários em relação ao itens (citar).  
-        Os diversos algoritmos operam sobre pares de linhas ou colunas da tabela para encontrar um valor numérico que caracterize o grau de afinidade entre os objetos da comparação. Além disso, uma abordagem geométrica pode ser utilizada para aprimorar a observação do comportamento desses algoritmos \cite{Jones1987}.
+        A similaridade entre usuários, itens, etc., podem ser obtidas a partir da matriz de avaliações dos usuários em relação ao itens. Os diversos algoritmos operam sobre pares de linhas ou colunas da tabela para encontrar um valor numérico que caracterize o grau de afinidade entre os objetos da comparação (citar). Além disso, uma abordagem geométrica pode ser utilizada para aprimorar a observação do comportamento desses algoritmos \cite{Jones1987}.
         
         % \subsubsection{Correlação de Pearson}
         O grau de semelhança entre dois usuários pode ser mensurado a partir de sua correlação, na qual estima a relação linear entre ambos. Dentre os diversos métodos, a correlação de \textit{Pearson} avalia vetores de mesma dimensão \cite{Ricci2010}. Considerando, um conjunto de produtos $P=\{p_1, p_2, ..., p_n\}$, um conjunto de usuários $U = \{u_1, u_2, ..., u_m\}$ e uma matriz de avaliações $R=\{r_{1,1}, r_{1,2}, ..., r_{n, m}\}$ desses produtos em função dos usuários, com dimensão  $n\times m$, tem-se a Equação \ref{eq:correlacao-pearson} que descreve a correlação de Pearson entre dois usuários $a$ e $b$.
@@ -136,7 +137,7 @@ Falar sobre avaliações explícitas e implícitas
         %##########    Cosseno    ###################
         Em relação a similaridade de itens, o método do \textit{cosseno} é considerado o padrão. Como base para o seu cálculo se faz uso das avaliações dadas por todos os usuários a cada item, ou seja, as colunas da matriz de avaliação são utilizadas. No entanto, o método do cosseno não leva em conta o perfil de cada usuário ao considerar apenas a avaliação dada ao item em questão\cite{Jannach2010}.
         
-        A Equação \ref{eq:sim-cosseno} define o cálculo de similaridade pelo método do cosseno onde, calcula-se o produto interno entre os vetores de avaliações dos itens, como numerador e a multiplicação dos comprimentos L2 de cada um como denominador.         
+        A Equação \ref{eq:sim-cosseno} define o cálculo de similaridade pelo método do cosseno onde, calcula-se o produto interno entre os vetores de avaliações dos itens, como numerador e a multiplicação dos comprimentos de cada um como denominador.         
         
         %cosseno: É melhor que Pearson para comparar itens.
         %Jones
@@ -146,7 +147,7 @@ Falar sobre avaliações explícitas e implícitas
     
         Em outras palavras, para cada usuário $u$ pertencente ao conjunto de usuário $U$, é calculada a multiplicação das suas avaliações para cada item e somada aos demais resultados da operação e, por fim, calcula-se o módulo de cada vetor. Um outra interpretação para o cálculo é considerar como sendo o produto interno entre os vetores de avaliação normalizados \cite{Jones1987}. Assim, com a divisão pelo comprimento, os possíveis resultados permanecem entre $0$ e $1$ \cite{Jannach2010}, sendo que geometricamente, esses resultados podem ser avaliados como ângulos. As avaliações de um item podem ser consideradas componentes de um vetor que representa o objeto. Inserindo, então, os vetores num plano será formado um ângulo $\theta$ no qual, no contexto das avaliações de itens é obtido partir do arco cosseno do resultado da similaridade. Quanto mais próximo, esse ângulo estiver de zero grau ($0^o$), maior será a semelhança entre os itens.
         
-        Como exemplo, pretende-se encontrar o grau de similaridade entre Item 2 e Item 5. Para tanto, considera-se as respectivas colunas de avaliações que usuários forneceram à cada um e a Equação \ref{eq:sim-cosseno}. Por fim, tem-se o seguinte cálculo:
+        Como exemplo, pretende-se encontrar o grau de similaridade entre Item 2 e Item 5 da Tabela \ref{tab:matriz-av-item-user}. Para tanto, considera-se as respectivas colunas de avaliações que usuários forneceram à cada um e a Equação \ref{eq:sim-cosseno}. Por fim, tem-se o seguinte cálculo:
         
         \begin{eqnarray}
             sim(2, 5) &=& \frac{(4\cdot 5)+(5\cdot 1)+(3\cdot 2)+(5 \cdot 4)}{\sqrt{4^2+5^2+3^2+5^2}\sqrt{5^2+1^2+2^2+4^2}} \nonumber \\
@@ -167,7 +168,7 @@ Falar sobre avaliações explícitas e implícitas
         %
         \subsubsection{k Vizinhos Mais Próximos (kNN)}
             
-            O kNN é um dos principais algoritmos para geração de recomendação e previsões de avaliações \cite{Bobadilla_2013}. Originalmente, foi implementado com o intuito de operar um classificador. Assim, dado um ponto em um espaço, o kNN encontrará os k pontos mais próximos com base em um conjunto de outros pontos pré-classificados . Como exemplo, a \reffig{cap3_knn-no-class} traz dois conjuntos de pontos, azuis mais abaixo na imagem e vermelhos acima. Em meio a esses pontos à um outro, rosa, ao qual deseja-se saber à qual grupo pertence (independentemente de sua cor).             
+            O kNN é um dos principais algoritmos para geração de recomendação e previsões de avaliações \cite{Bobadilla_2013} onde, originalmente, opera como classificador. Assim, dado um ponto em um espaço, o kNN encontrará os k pontos mais próximos com base em um conjunto de outros pontos pré-classificados e revelará à qual classe pertence. Como exemplo, a \reffig{cap3_knn-no-class} traz dois conjuntos de pontos, azuis mais abaixo na imagem e vermelhos acima. Em meio a esses pontos à um outro, rosa, ao qual deseja-se saber à qual grupo pertence (independentemente de sua cor).             
             
             \begin{figure}[htb]
                 \caption{Exemplo de grupos para classificação com o kNN}
@@ -179,7 +180,7 @@ Falar sobre avaliações explícitas e implícitas
                         
             A partir de cálculos de similaridade o algoritmo encontrará os $k$ pontos mais próximos, onde tal valor varia de acordo o contexto da aplicação. \citeonline{Duda2000} sugerem um $k$  igual a raiz quadrada do total de pontos $n$, ou seja, $k$ é igual $\sqrt{n}$, no âmbito geral de classificadores, já no contexto de sistemas de recomendação, \citeonline{Jannach2010} afirma que $k$  entre $20$ a $50$ é uma boa estimativa. 
             
-            Em um aspecto gráfico, $k$ pode ser interpretado como o número de pontos aos quais podem ser inseridos dentro de um círculo centrado no ponto que será classificado, como pode ser visualizado na Figura \reffig{cap3_knn-class}. 
+            Em um aspecto gráfico, $k$ pode ser interpretado como o número de pontos aos quais podem ser inseridos dentro de um círculo centrado no ponto que será classificado, como pode ser visualizado na \reffig{cap3_knn-class}. 
             
             \begin{figure}[htb]
                 \caption{Exemplo de classificação com o kNN}
@@ -191,15 +192,19 @@ Falar sobre avaliações explícitas e implícitas
             
             % CF baseado em kNN é simples e implementação direta
                  
-            O algoritmo de $k$ vizinhos mais próximos opera em três etapas, sendo a primeira, a determinação dos vizinhos mais próximos do usuário $x$ conforme cálculos de similaridade. A seguir, previsões são computadas sobre as avaliações que $x$ daria a itens, aos quais, ainda não conhece, a partir de funções de agregação como, por exemplo, média e soma ponderada de notas de outros usuários ao item. Por fim, com nas avaliações obtidas, os $m$ melhores itens são recomendados ao usuário. \cite{Bobadilla_2013}.
+            O algoritmo de $k$ vizinhos mais próximos opera em três etapas, sendo a primeira, a determinação dos vizinhos mais próximos do usuário $x$ conforme cálculos de similaridade. A seguir, previsões são computadas sobre as avaliações que $x$ daria a itens, aos quais, ainda não conhece, a partir de funções de agregação como, por exemplo, média e soma ponderada de notas de outros usuários ao item. Por fim, com base nas avaliações obtidas, os $m$ melhores itens são recomendados ao usuário. \cite{Bobadilla_2013}.
             
-                
+            O kNN pode ser aplicado em duas categorias de filtragem colaborativa baseada em memória. A primeira delas é \textit{baseada em usuário}, onde as sugestões são fundamentadas em outros com preferências semelhantes. Assim, os itens recomendados fazem parte do conjunto, ao qual, o usuário ainda não comprou ou não conhece, no entanto os mais semelhantes o fizeram.             
+            A segunda abordagem é \textit{baseada em item}, onde um item $i$ é avaliado e recomendado com base nas notas que o usuário $u$ forneceu para itens similares aquele em questão. Itens são, então similares se diversos usuários os avaliaram de maneira equivalente \cite{Ricci2010}.
+            
             %     
             %\subsubsection{FC baseada em usuário}
                             
             % mais custosa (online), toda vez que for recomendar, tem que calcular tudo de novo.
             % encontrar usuários semelhantes com 
             % Baseado em item
+            
+            
           %  \subsubsection{FC baseada em item}
             % compara os itens com base nas avaliações dos usuários. 
             % "Quem gosta desse item também costuma gostar deste".
