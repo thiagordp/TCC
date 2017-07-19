@@ -50,7 +50,7 @@
 \numberwithin{table}{chapter}
 \numberwithin{figure}{chapter}
 
-%----------------------------------------------------------------------
+%----------------------------------------
 % Comandos criados pelo usuário
 \newcommand{\afazer}[1]{{\color{red}{#1}}} % Para destacar uma parte a ser trabalhada
 \newcommand{\ABNTbibliographyname}{REFERÊNCIAS} % Necessário para abnTeX 0.8.2
@@ -102,7 +102,9 @@
 \curso[a]{Universidade Federal de Santa Catarina}
 \documento[o]{Trabalho\ de\ Conclusão\ de\ Curso} % [o] para dissertação [a] para tese
 
-\titulo{Um modelo de geladeira aprimorado que facilite a vida dos usuários e que leva em conta suas preferências}
+\titulo{Um modelo de geladeira inteligente que leva em conta as preferências e hábitos de seus usuários}
+
+% V1: Um modelo de geladeira aprimorado que facilite a vida dos usuários e que leva em conta suas preferências
 
 %\subtitulo{Subtítulo} % Opcional
 
@@ -158,27 +160,27 @@
 	%--------------------------------------------------------
 	% Simbolos e Abreviaturas
 	%\abreviatura{RAM}{\emph{Random Access Memory}}
-	\abreviatura{IoT}{\emph{Internet of Things}}
+%	\abreviatura{IoT}{\emph{Internet of Things}}
 	\simbolo{$\int$}{Integral}
-	
+	\simbolo{$\Omega$}{Ômega}
+	\simbolo{$\omega$}{Ômega}
 	%########################################################
 	% Elementos textuais
 	
 	\include{textual/cap_1_introducao}
 	\include{textual/cap_2_internet_of_things}
 	\include{textual/cap_3_sistemas_de_recomendacao}
-%	\include{textual/cap_4_sistema_proposto}
-%	\include{textual/cap_5_avalicao_sistema}
+	%\include{textual/cap_4_sistema_proposto}
+	%\include{textual/cap_5_avalicao_sistema}
 	%\include{textual/cap_6_consideracoes_finais}
 	
 	%--------------------------------------------------
-	
 	\bibliographystyle{ufscThesis/ufsc-alf}
 	\bibliography{postextual/referencias}
 
 	%-------------------------\textsl{}-------------------------------
 	% Elementos pós-textuais
-	\include{postextual/apendice}
-	\include{postextual/anexo}
+	%\include{postextual/apendice}
+	%\include{postextual/anexo}
 
 \end{document}

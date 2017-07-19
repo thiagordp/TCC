@@ -346,8 +346,8 @@
        \parindent 0em
        \@tempdima 4.5em
        \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
-       {\normalfont #1}\nobreak \filltocentry{#2}}
-
+       %{\normalfont #1}\nobreak \hfill} \filltocentry{#2}}
+       {\normalfont #1}\nobreak \hfill}
 %---------------------------------------------------------------------------
 % Apęndices e Anexos - Pós-Textuais
 \addto\captionsbrazil{

@@ -397,9 +397,10 @@
        \parfillskip -\rightskip
        \parindent 0em
        \@tempdima 3em
-       \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
-       {\normalfont #1}\nobreak \filltocentry{#2}}
-
+       \advance\leftskip 1.5em \null\nobreak\hskip -\leftskip
+       % \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+       %{\normalfont #1}\nobreak \filltocentry{#2}}
+        {\normalfont #1}\nobreak \hfill}
 
 \newcommand{\listadeabreviaturas}{
     \pretextualchapter{Lista de Abreviaturas e Siglas}\@starttoc{las}}
@@ -412,9 +413,10 @@
        \parfillskip -\rightskip
        \parindent 0em
        \@tempdima 6em % anterior 4.5em
-       \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
-       {\normalfont #1}\nobreak \filltocentry{#2}}
-
+       \advance\leftskip 1.5em \null\nobreak\hskip -\leftskip
+       % \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+       % {\normalfont #1}\nobreak \filltocentry{#2}}
+       {\normalfont #1}\nobreak \hfill}
 %---------------------------------------------------------------------------
 % Ap�ndices e Anexos - P�s-Textuais
 \addto\captionsbrazil{
