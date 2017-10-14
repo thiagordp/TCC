@@ -184,6 +184,9 @@ O componente desta camada é o mercado. Através dele, será possível verificar
 % Se preciso desenhar a arquitetura interna do componente
 % Por exemplo a geladeira, vai ter muitas coisas dentro que devem ser explicitadas
 
+A modelagem física desse trabalho é apresentada na Figura \ref{fig:c4_modelo_fisico}. Nas seções a seguir serão detalhados os diversos componentes do sistema, em relação aos aspectos internos.
+
+
 \begin{figure}[htb]
     \caption{Modelo físico}
     \label{fig:c4_modelo_fisico}
@@ -195,7 +198,7 @@ O componente desta camada é o mercado. Através dele, será possível verificar
 
 \subsubsection{Geladeira}
 
-A geladeira, presente no modelo lógido da Figura \ref{fig:c4_modelo_logico}, foi construída de acordo com a Figura \ref{fig:cap4_estr_geladeira}. Assim, observa-se três componentes principais: os leitores de etiquetas MFCR522 para RFID e NFC e o sensor de fechamento para a porta e a placa Raspberry PI\textsuperscript{\textregistered}\footnote{https://www.raspberrypi.org} 3 Modelo B. O primeiro deles, o conjunto de leitores, responsabiliza-se por efetuar leituras de possíveis etiquetas próximas a cada leitor quando for requerido. A partir disso, os dados lidos, referentes aos produtos, serão transferidos para o Raspberry PI que, por sua vez, os transfere para o serviço de Registro de Interação. Os dados das etiquetas se encontram no formato EPC, no qual, identifica-se o fabricante, a classe, o produto e a instância do produto a partir de um número de 96 bits, de forma semelhante ao código de barras presente nos produtos.
+A geladeira, presente no modelo lógico da Figura \ref{fig:c4_modelo_logico}, foi construída de acordo com a Figura \ref{fig:cap4_estr_geladeira}. Assim, observa-se três componentes principais: os leitores de etiquetas MFCR522 para RFID e NFC e o sensor de fechamento para a porta e a placa Raspberry PI\textsuperscript{\textregistered}\footnote{https://www.raspberrypi.org} 3 Modelo B. O primeiro deles, o conjunto de leitores, responsabiliza-se por efetuar leituras de possíveis etiquetas próximas a cada leitor quando for requerido. A partir disso, os dados lidos, referentes aos produtos, serão transferidos para o Raspberry PI que, por sua vez, os transfere para o serviço de Registro de Interação. Os dados das etiquetas se encontram no formato EPC, no qual, identifica-se o fabricante, a classe, o produto e a instância do produto a partir de um número de 96 bits, de forma semelhante ao código de barras presente nos produtos.
 
 O sensor de fechamento de porta, por outro lado, é responsável por determinar quando ações devem ocorrer. O seu funcionamento envolve dois componentes: o primeiro é dotado de um imã e o outro contém um mecanismo que é influenciado pela presença ou não do ímã. Assim, quando estes se aproximam, indicando fechamento da porta, haverá um curto-circuito entre os terminais do mecanismo. Já quando afastados, indica-se abertura existindo, então, tem-se um circuito aberto.
 
@@ -204,6 +207,8 @@ Considerando-se, primeiramente, o evento de abertura da porta. Caso o usuário n
 Por fim, o último componente, o Raspberry PI, opera como um centro de controle, onde obtém dados do sensor de fechamento para, então, comandar leituras de etiquetas e/ou fazer requisições descritas anteriormente.
 
 Para a comunicação entre os três componentes fez-se uso de dois protocolos específicos: a Interface Periférica Serial (SPI) e Protocolo de Transferência de Hipertexto (HTTP) com Transferência de Estado Representacional (REST). O primeiro deles foi empregado na comunicação entre os leitores RFID e o Rasbpberry, já o segundo, para troca de informações entre o Raspberry e o serviço de registro. Por fim, a comunicação com o sensor de fechamento se deu através de sinais digitais.
+
+
 
 % FALAR SOBRE O PROTOCOLO USADO EM CADA PONTO
 
@@ -231,6 +236,7 @@ Para a geração de recomendações de receitas, tem-se duas situações: de aco
 \lipsum[1]
 
 \subsubsection{Registro de Interação}
+
 
 \subsubsection{Consulta de Produtos Disponíveis}
 
@@ -287,7 +293,7 @@ Esse tipo de registro é a principal fonte de informação a cerca dos hábitos 
 
 A base de estruturas auxiliares tem como principal objetivo intermediar a comunicação entre serviços e entre processos. Assim, ela contém diversos tipos de registros, sendo eles, de estado da porta, configurações de cada geladeira e listas de compras pendentes.
 
-O primeiro dos registros, informa qual o último estado registrado por uma determinada geladeira, ou seja, aberto ou fechado. Assim, tal informação será requisitada pela interface, através do registro de consulta de porta, e alertará o usuário caso necessário. A Figura \ref{fig:cap4_aux_setting}, demonstra um registro de estado da porta.
+O primeiro dos registros, informa qual o último estado registrado por uma determinada geladeira, ou seja, aberto ou fechado. Assim, tal informação será requisitada pela interface, através do serviço de consulta de porta, e alertará o usuário caso necessário. A Figura \ref{fig:cap4_aux_setting}, demonstra um registro de estado da porta.
 
 \begin{figure}[htb]
     \caption{Estrutura de um registro de estado da porta}
@@ -299,47 +305,174 @@ O primeiro dos registros, informa qual o último estado registrado por uma deter
 
 Como é visível na Figura \ref{fig:cap4_aux_setting}, três informações são guardadas: a identificação da geladeira, o tipo de registro que será inserido, ou seja, estado da porta, e o estado em si. Segundo a implementação, ``0'' significa porta aberta e, ``1'', fechada.
 
-O segundo tipo de registro, de configurações, mantém um conjunto de parâmetros específicos de cada geladeira. Esses parâmetros se referem serviço do mercado no qual às compras são realizadas e metainformações de produtos e receitas são resgatadas; ao tempo para que a porta da geladeira deve permanecer aberta antes que a interface notifique o usuário; ao período mínimo entre compras automáticas e os produtos que o usuário deseja que estejam sempre disponíveis. As demais informações se referem à identificação da geladeira bem como o tipo de registro, nesse caso, de configurações.
+O segundo tipo de registro, de configurações, mantém um conjunto de parâmetros específicos de cada geladeira, conforme Figura \ref{fig:cap4_settings}. Esses parâmetros se referem ao serviço do mercado no qual às compras são realizadas e metainformações de produtos e receitas são resgatadas; ao tempo para que a porta da geladeira deve permanecer aberta antes que a interface notifique o usuário; ao período mínimo entre compras automáticas e os produtos que o usuário deseja que estejam sempre disponíveis. As demais informações se referem à identificação da geladeira bem como o tipo de registro, nesse caso, de configurações.
 
 As informações referentes ao mercado são utilizadas pelos processos do sistema, ou seja, de compra automática, recomendação e sincronização de meta-informação. Já informações de tempo de notificação são requisitados pela interface através do serviço de configurações. Por outro lado, o tempo mínimo entre compras é requisitado pelo processo de compras automáticas. Por fim, a lista de produtos requeridos pelo usuário é utilizada pelo processo de recomendação na sugestão de novas compras.
-
 \begin{figure}[htb]
     \caption{Estrutura de um registro de configurações}
     \label{fig:cap4_settings}
     \includegraphics[width=0.5\textwidth]{cap4_settings}
-    
+     
     Fonte: Autor
 \end{figure}
 
-\subsubsection{Base de Recomendações}
-abc
+A terceira categoria de registro se refere às listas de compras definida pelo usuário. Nesse caso, tem-se informações de identificação da geladeira, o momento no qual ao registro foi feito, bem como a lista de produtos e suas respectivas quantidades. Assim, tal lista será, posteriormente, analisada e efetivada pelo processo de compra automática.
 
 
+% TODO: COLOCAR FIGURA DA LISTA DE COMPRAS AQUI.
+
+%-----------------------------------------------------------%
 \subsubsection{Base de Meta-Informação}
-abc
+
+% META INFO DE PRODUTOS
+
+Os produtos disponibilizados pelo mercado terão suas informações armazenadas nessa base de dados. Dessa forma, o sistema terá acesso a preços, códigos de barras, informações nutricionais, entre outros. Assim, será possível utilizar tais informações em recomendações como, por exemplo, produtos similares a um em específico. 
+
+A estrutura do registro de um produto em específico é demonstrada na Figura \ref{fig:cap4_metainfo}.
+
 
 \begin{figure}[htb]
     \caption{Estrutura de um registro de metainformação de produto}
     \label{fig:cap4_metainfo}
-    \includegraphics[width=\textwidth]{cap4_metainfo}
+    \includegraphics[width=0.9\textwidth]{cap4_metainfo}
     
     Fonte: Autor
+\end{figure}
+
+A primeira parte do registro indica as informações nutricionais, que poderão ser utilizadas, futuramente, na recomendação de produtos segundo uma dieta específica do usuário. A seguir, tem-se informações de peso/volume e fabricante.
+
+Cada produto cadastrado é classificado em dois níveis: classe e especificação, sendo o primeiro relacionado a um determinado tipo de produto como, por exemplo, bebidas e laticínios. A especificação determina qual o produto em si que é representado como, refrigerante e leite. Assim, torna-se possível recomendar produtos através da abordagem baseada em conteúdo.
+Na sequência, é informado o tempo estimado, em dias, para considerar o produto adequado para consumo e, em seguida, a quantidade disponível no mercado, o preço unitário, código de barras e o parâmetro que indica que o registro se trata da metainformação de um produto.
+
+Outra informação relevante se refere aos parâmetros do código EPC que exemplares do produto terão. Considerando, novamente, a Figura \ref{fig:cap4_epc}, tais parâmetros se referem ao fabricante e o produto.
+
+Por fim, tem-se informações de descrição do produto, de endereço da respectiva imagem ilustrativa e do instante ao qual esse registro foi atualizado. Tanto descrição como endereço da imagem são empregados pela interface de usuário na demonstração do produto, já o instante do registro é utilizado pelo processo de sincronização de meta-informação na verificação da necessidade por atualização do registro de metainformação.
+
+% Metainfo de receitas
+As receitas disponibilizadas pelo mercado terão a estrutura demonstrada na Figura \ref{fig:c4_recipe-meta}.
+
+\begin{figure}[htb]
+    \caption{Registro de Receita}
+    \label{fig:c4_recipe-meta}
+    \includegraphics[width=0.8\textwidth]{c4_recipe-meta}
+\end{figure}
+
+Cada receita terá um nome ou uma descrição breve de seu conteúdo, além de um conjunto de passos para o preparo. Haverá também um conjunto de produtos que fazem parte da receita bem como suas respectivas classificações e quantidades necessárias à receita. Por fim, cada receita terá sua própria classificação, indicando que se trata de uma torta ou bolo, por exemplo. Tal informação de classificação é utilizada na recomendação de novas receitas.
+
+%-----------------------------------------------------------%
+\subsubsection{Base de Recomendações}
+
+% TIPOS DE RECOMENDAÇÕES
+
+Nessa base se encontram todos os diversos tipos de recomendação que o sistema pode prover, sendo elas: de compra de produtos faltantes, de novos produtos além de receitas selecionadas a partir do conteúdo da geladeira ou do perfil do usuário.
+
+% Recomendação de produto
+Cada recomendação a estrutura demonstrada na Figura \ref{fig:cap4_rec-prod}.
+
+\begin{figure}[htb]
+    \caption{Registro de recomendação de produtos}
+    \label{fig:cap4_rec-prod}
+    \includegraphics[width=\textwidth]{cap4_rec-prod}
+\end{figure}
+
+No registro da Figura \ref{fig:cap4_rec-prod} é apresentada uma recomendação de um novo produto ao usuário. Cada registro deste especifica a que tipo de registro se refere, ou seja, de produto faltante ou novo. Além disso, o momento ao qual a recomendação foi gerada é guardado para diferenciar recomendações novas e antigas. A seguir, tem-se a lista de produtos em si. Cada produto recomendado tem todo a sua metainformação anexada à recomendação.
+
+
+% Recomendação de receita
+Recomendações de receitas, como mostrado na Figura \ref{fig:cap4_rec-recipe}, são diferenciadas de duas formas: receitas criadas com base no conteúdo da geladeira e receitas baseadas no perfil do usuário. Ademais, cada registro contém além da classificação da recomendação, o momento em que foi criada e a lista com as recomendações criadas com suas respectivas metainformações.
+
+\begin{figure}[H]
+    \caption{Registro de recomendação de receitas}
+    \label{fig:cap4_rec-recipe}
+    \includegraphics[width=\textwidth]{cap4_rec-recipe}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Camada de Processamento}
-\lipsum[1]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection{Processo de Compras Automáticas}
 
+A compra automática se dará quando houver receitas pendentes na base de estruturas auxiliares. Quando isso ocorrer o processo deve contatar o serviço de compras do mercado para efetuar a aquisição definida pelo usuário.
+
+Este processo não foi implementado no sistema.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Processo de Geração de Recomendações}
 
+Nesse trabalho, implementou-se quatro formas distintas de recomendação, conforme será descrito a seguir, sendo elas, recomendação de produtos faltantes ou novos além de receitas a partir do conteúdo disponível ou do perfil.
+
+\begin{itemize}
+    \item \textbf{Recomendação de Produtos Faltantes}
+\end{itemize}
+
+A recomendação de produtos faltantes baseia-se na ideia de lembrar ao usuário quando determinados produtos, considerando essenciais, estão em falta e efetuar a compra desses itens. Assim, o usuário será alertado quando isso ocorrer e poderá decidir se aceita que se efetive a compra ou não.
+
+Para que as recomendações sejam possíveis, são necessárias duas informações: lista de produtos essenciais, obtida a partir das configurações de usuário, e da lista de interações. 
+
+A partir dessas informações, um processo em segundo plano, periodicamente, verificará a necessidade da compra desses produtos.
+
+Inicialmente, será criada uma lista de produtos contidos atualmente e suas respectivas quantidades, a partir da conjunto de registros de interações. Em seguida, será comparado produtos requisitados com as respectivas quantidades de produtos existentes e uma lista com os itens em falta será criada e gravada na base de registros de recomendação.
+
+\begin{itemize}
+    \item \textbf{Recomendação de Produtos Novos}
+\end{itemize}
+
+A recomendação de produtos novos tem como princípio fundamental o conceito de filtragem colaborativa, descrita na Seção \ref{sec:filtragem-colaborativa}. Assim, sugestões são criadas a partir da comparação entre usuários com preferências parecidas. Tendo conhecimento do usuário com maior semelhança, é possível recomendar produtos que um usuário interagiu mas que o outro não conhece. Apesar de não conhecer o produto sugerido, a probabilidade de a recomendação agradar o usuário é alta, já que a sugestão emergiu de um usuário parecido.
+
+A comparação entre usuários foi realizada a partir da correlação de Pearson, descrita na Seção \ref{sssec:similaridade}.
+
+As informações utilizadas para as sugestões de itens são os registros de interações e as metainformações dos produtos. 
+
+Primeiramente, uma matriz, semelhante à matriz da Tabela X, no entanto, cada par de usuário e item é interpretado como o número de interações entre usuário e item, ao contrário da matriz de avaliação da tabela mencionada. A partir da matriz, é possível calcular a média de interações para cada usuário, valor requisitado pelo cálculo. Tendo o número de interações entre cada usuário e cada item além da média de interações, é possível obter a similaridade entre cada usuário.
+
+Tendo a similaridade entre usuários, ordena-se uma lista de usuários do mais semelhante ao menos, tendo como referência o usuário ao qual deseja-se recomendar um item. A seguir, a começar pelo primeiro usuário da lista de semelhantes, se faz a subtração de conjunto de produtos interagidos por este em relação ao usuário de referência. Desse modo, tem-se um conjunto de produtos que o usuário ainda não interagiu. Assim, o processo será feito para os demais usuários da lista até que se atinja um conjunto de produtos com a quantidade desejada que, então, será registrado na base de recomendações.
+
+\begin{itemize}
+    \item \textbf{Recomendação de Receitas com Base nos Produtos Disponíveis}
+\end{itemize}
+
+Recomendação de receitas a partir dos produtos disponíveis leva em conta itens acessíveis para selecionar as receitas que, em seu conteúdo, englobem, tanto quanto possível, apenas os itens disponíveis.
+
+Para o cálculo das recomendações, são necessárias as metainformações dos produtos e receitas e os registros de interação. Assim, é possível comparar produtos atuais com os itens contidos em receitas.
+
+Cada receita não especifica um produto em particular, mas deixa claro a classificação do produto. Assim, ao invés de especificar uma caixa de leite da marca X, deixa restrito a um produto que é um laticínio e, mais especificamente, uma caixa de leite.
+
+Inicialmente, a lista de itens, atualmente contidos na geladeira, é criada. Após isso, para cada receita na base de dados, é contabilizado o número de itens presentes na receita e na geladeira. Em seguida, ordena-se a lista começando por aquela que contém o maior número de correspondências entre receita e conteúdo. Por fim, um conjunto contendo as primeiras receitas da lista é gravado na base como recomendação.
+
+\begin{itemize} 
+    \item \textbf{Recomendação de Receitas com base no Perfil do Usuário}
+\end{itemize}
+
+As recomendações de receitas a partir do perfil do usuário buscam trazer receitas ao usuário a partir das suas preferências por produtos em específicos. Assim, seleciona-se receitas que contenham produtos que o usuário tem maior preferência.
+
+As informações necessárias à recomendação são as interações dos usuários e as metainformações de produtos e receitas.
+
+Para gerar as sugestões, inicialmente cria-se uma lista com todos os produtos com os quais o usuário em questão interagiu e as contagens de interações com cada produto. Seleciona-se, em seguida, o conjunto de produtos com maior frequência de interações. Por fim, seleciona-se receitas que contenham tais produtos, da mesma forma que a recomendação por conteúdo.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Processo de Sincronização de Meta-Informação}
+
+A sincronização é feita a partir da comparação entre dos momentos em que se criou o registro presente na base de metainformação e o registro contido no mercado. Caso o registro do mercado seja mais recente, esse será enviado para o servidor para atualização do registro. 
+
+Para que a sincronização seja possível, em cada metainformação tem-se um campo chamado  \textit{timestamp} que indica a data de criação de tal registro.
+Por fim, a operação de sincronização deve ser realizada periodicamente por um processo em segundo plano.
+
+A implementação desse processo não foi executada devido a falta de tempo e o fato de não ser essencial ao trabalho.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Camada de Agente Externo}
-\lipsum[1]
+
+
+
+A camada descrita nesta seção refere-se ao componente independente do sistema do modelo proposto, isto é, o mercado. Ele possui um sistema interno próprio, mas que disponibiliza um conjunto de serviços pelos quais é possível a interação externa. O primeiro serviço é a sincronização de metainformação de produtos e receitas, onde periodicamente serão verificadas alterações, ou inserções de novos produtos e receitas. Caso exista dados desatualizados, estes serão enviados ao servidor principal.
+
+efetivação de compras e verificação de disponibilidade imediata de produtos.
+
+As primeiras das funcionalidades,  
 
 %#######################################################
-\section{Exemplo de fluxo de execução}
+%\section{Exemplo de fluxo de execução}

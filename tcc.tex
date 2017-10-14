@@ -13,7 +13,7 @@
 
 %----------------------------------------------------------------------
 % Pacotes usados especificamente neste documento
-\usepackage{graphicx} % Possibilita o uso de figuras e gráficos
+\usepackage{graphicx, subcaption} % Possibilita o uso de figuras e gráficos
 \usepackage{color}    %  Possibilita o uso de cores no documento
 \usepackage{pdfpages} % Possibilita a inclusão da ficha catalográfica
 \usepackage{listings} % Possibilita colocar códigos
@@ -23,7 +23,7 @@
 \usepackage{subfigure}
 \usepackage{xifthen} % deixa fazer uns if-then-else mutcho loko
 \usepackage[brazil]{babel}  % usados para arrumar os caracteres em português
-\usepackage[utf8]{inputenx} % 
+\usepackage[utf8]{inputenx} % fa
 %\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}    %
 \usepackage{mathtools}
@@ -45,11 +45,13 @@
 \graphicspath{{figuras/}}
 
 
-% Numeração das tabelas e figuras de acordo com o capítulo
+% Numeração das tabelas e figuras de acordo com o capítulofa
 \usepackage{amsmath}
 \numberwithin{table}{chapter}
 \numberwithin{figure}{chapter}
+%\numberwithin{subfigure}{}
 
+%\renewcommand{\thesubfigure}{\thefigure(\alph{subfigure})}
 %----------------------------------------
 % Comandos criados pelo usuário
 \newcommand{\afazer}[1]{{\color{red}{#1}}} % Para destacar uma parte a ser trabalhada
