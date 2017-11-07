@@ -35,7 +35,10 @@
 \usepackage{minted} % Sintaxe colorida
 \usepackage{booktabs}
 \usepackage{xparse} % Permite definir umas funções com mais recursos.
+\usepackage{adjustbox}
+\usepackage{array}
 
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 %\usepackage[square,numbers]{natbib}
 %----------------------------------------------------------------------
 % comandos de customização dos pacotes
@@ -47,8 +50,8 @@
 
 % Numeração das tabelas e figuras de acordo com o capítulofa
 \usepackage{amsmath}
-\numberwithin{table}{chapter}
-\numberwithin{figure}{chapter}
+%\numberwithin{table}{chapter}
+%\numberwithin{figure}{chapter}
 %\numberwithin{subfigure}{}
 
 %\renewcommand{\thesubfigure}{\thefigure(\alph{subfigure})}
@@ -116,7 +119,7 @@
 \autor{Thiago Raulino Dal Pont}
 \grau{Bacharel em Engenharia de Computação}
 \local{Araranguá} % Opcional (Florianópolis é o padrão)
-\data{04}{dezembro}{2017}
+\data{05}{dezembro}{2017}
 \coordenador[Coordenadora]{Prof. Dr. Eliane Pozzebon} %TODO Rever o Coordenador do curso
 \orientador[Orientador]{Prof. Dr. Alexandre Leopoldo Gonçalves}
 %\coorientador[Coorientador\\Universidade ...]{Prof. Dr.}
@@ -148,10 +151,10 @@
 	
 	\include{pretextual/folha_de_rosto}
 	
-	 \folhaaprovacao
-	 \paginadedicatoria
-	 \paginaagradecimento
-	\paginaepigrafe
+%	 \folhaaprovacao
+%	 \paginadedicatoria
+%	 \paginaagradecimento
+%	\paginaepigrafe
 	\paginaresumo
 	\paginaabstract
 	%\pretextuais % Substitui todos os elementos pre-textuais acima
@@ -160,9 +163,7 @@
 	\listadeabreviaturas
 	\listadesimbolos
 	%\listadequacoes
-	
-    
-	
+
 	\sumario
 	
 	%--------------------------------------------------------
@@ -189,6 +190,6 @@
 	%-------------------------\textsl{}-------------------------------
 	% Elementos pós-textuais
 	%\include{postextual/apendice}
-	%\include{postextual/anexo}
+	\include{postextual/anexo}
 
 \end{document}
