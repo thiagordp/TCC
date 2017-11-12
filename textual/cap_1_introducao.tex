@@ -6,16 +6,19 @@ Um dos avanços tecnológicos mais significativos é a Internet, com efeito sign
 
 Em meio ao contexto da Internet, um novo paradigma surgiu no meio acadêmico e aos poucos ganha terreno nas grandes empresas. A sua proposta é levar a tecnologia a objetos do dia a dia, como condicionadores de ar, lâmpadas, fogões etc., e, assim, criar novas formas de interação além de funcionalidades inéditas, seguindo o exemplo dos \textit{smartphones}. 
 
-Mencionada pela primeira vez, por Kevin Ashton, em 1999 \cite{Finep2015}, a Internet das Coisas ou IoT (em inglês, \textit{Internet of Things}) vem se consolidando cada vez mais. Abrigará um variado ecossistema de dispositivos com capacidade de processamento, sensoriamento, conexão com demais dispositivos, em muito casos, com a Internet, entre outros avanços. Estima-se que, em 2020, cerca de 24 bilhões de dispositivos IoT estejam conectados, implicando em torno de quatro dispositivos por pessoa \cite{Meola2016}.   
+
+Mencionada pela primeira vez, por Kevin Ashton, em 1999 \cite{Finep2015}, a Internet das Coisas (IoT, do inglês, \textit{Internet of Things}) vem se consolidando cada vez mais. Abrigará um variado ecossistema de dispositivos com capacidade de processamento, sensoriamento, conexão com demais dispositivos, em muito casos, com a Internet, entre outros avanços. Estima-se que, em 2020, cerca de 24 bilhões de dispositivos IoT estejam conectados, implicando em torno de quatro dispositivos por pessoa \cite{Meola2016}.   
 Contudo, com o crescimento do número de itens computacionais, a quantidade de dados gerada por eles também cresce de maneira acelerada \cite{Chiang2016}. A partir disso, o fluxo de dados na rede de internet se intensifica a ponto de comprometer o seu desempenho. Isso decorre do modelo de rede utilizado, também chamado \textit{cloud computing}, ao qual mantêm recursos e funcionalidades distantes dos dispositivos que os utilizam, ou seja, em servidores e \textit{data centers}. Assim, para obtenção de tais recursos há a necessidade dos dispositivos em acessar a nuvem através da internet sempre que necessário, gerando, desse modo, um alto tráfego de dados \cite{Vaquero2014}. 
 Além disso, o acesso a nuvem dificulta aplicações em IoT em tempo real devido ao atraso entre envio e recebimento de dados pela rede de internet \cite{Syed2016}.
 % original: Isso ocorre devido ao modelo atual de funcionamento da rede, ou seja, centralizado.
 Portanto, uma nova arquitetura se faz necessária para incorporar os dispositivos IoT à Internet tradicional. 
-Nesse contexto, a \textit{fog computing} ou computação de neblina, surge como potencial solução, com base na proposta de uma forma de organização de rede que complemente a atual. Isso é possível com base na aproximação de algumas funcionalidades e recursos que atualmente são acessados através da nuvem, ou seja, centralizadas em servidores e data centers, aos dispositivos IoT que as utilizam.
+Nesse contexto, a \textit{fog computing} ou computação de neblina, surge como potencial solução, com base na proposta de uma forma de organização de rede que complemente a atual. Isso é possível com base na aproximação, aos dispositivos IoT que as utilizam, de algumas funcionalidades e recursos que atualmente são acessados através da nuvem, ou seja, centralizadas em servidores e data centers.
 % Original: Isso é possível com base na aproximação de algumas funcionalidades, centralizadas em servidores, aos dispositivos que as utilizam
 \cite{Chiang2016}. Para tanto, um dispositivo de rede seria responsável por uma ``nuvem local'' ou \textit{fog}. Desse modo, os dispositivos IoT se comunicariam com esse equipamento e obteriam funcionalidades necessárias de maneira mais eficiente. Ademais, a nuvem local se comunicaria diretamente com a nuvem convencional, transferindo apenas informações mais relevantes e necessárias \cite{Syed2016}.
 
-Os dispositivos que compõem a Internet das Coisas podem ser denominados objetos inteligentes, ou \textit{smart objects}, aos quais detêm funcionalidades expandidas como comunicação, sensoriamento, processamento e atuação sobre o ambiente, promovem a interação entre o mundo físico (analógico) e o mundo digital \cite{Stojkoska2017}. Isso ocorre graças a sensores capazes de capturar grandezas como temperatura e luminosidade e, a partir disso, possibilita que aplicações tenham conhecimento do contexto do ambiente. Baseando-se nesses conceitos, algumas companhias vêm inserindo no mercado novos produtos com as características citadas. Como exemplo, é citável o Amazon Echo\textsuperscript{\textregistered}\footnote{https://www.amazon.com/Amazon-Echo-Bluetooth-Speaker-with-WiFi-Alexa/dp/B00X4WHP5E}, um dispositivo que opera com o serviço de assistente pessoal Alexa, e interage com pessoas em uma casa a partir de comando de voz. Outro produto destacável é a \textit{smart lock} da empresa Nuki\textsuperscript{\textregistered}\footnote{https://nuki.io/en/shop/nuki-smart-lock/}, pelo qual é possível abrir e fechar a porta apenas com um toque no aplicativo móvel pelo \textit{smartphone} ou através de um \textit{smart watch}. Outras áreas vem se utilizando desses conceitos, por exemplo, os esportes. O CARV\textsuperscript{\textregistered}\footnote{https://www.kickstarter.com/projects/333155164/carv-the-worlds-first-wearable-that-helps-you-ski}, um dispositivo vestível ou \textit{wearable}, propõe um calçado para praticantes de ski capaz de analisar em tempo real o modo de esquiar e fornecer informações detalhadas visando melhorar o desempenho dos usuários.
+Os dispositivos que compõem a Internet das Coisas podem ser denominados objetos inteligentes, ou \textit{smart objects}, aos quais detêm funcionalidades expandidas como comunicação, sensoriamento, processamento e atuação sobre o ambiente. Além disso, promovem a interação entre o mundo físico (analógico) e o mundo digital. Isso ocorre graças a sensores capazes de capturar grandezas como temperatura e luminosidade e, a partir disso, torna-se possível que aplicações tenham conhecimento do contexto do ambiente \cite{Stojkoska2017}. 
+
+Baseando-se nesses conceitos, algumas companhias vêm inserindo no mercado novos produtos com as características citadas. Como exemplo, é citável o Amazon Echo\textsuperscript{\textregistered}\footnote{https://www.amazon.com/Amazon-Echo-Bluetooth-Speaker-with-WiFi-Alexa/dp/B00X4WHP5E}, um dispositivo que opera com o serviço de assistente pessoal Alexa, e interage com pessoas em uma casa a partir de comando de voz. Outro produto destacável é a \textit{smart lock} da empresa Nuki\textsuperscript{\textregistered}\footnote{https://nuki.io/en/shop/nuki-smart-lock/}, pelo qual é possível abrir e fechar a porta apenas com um toque no aplicativo móvel pelo \textit{smartphone} ou através de um \textit{smart watch}. Ademais, outras áreas vem se utilizando desses conceitos, por exemplo, os esportes. O CARV\textsuperscript{\textregistered}\footnote{https://www.kickstarter.com/projects/333155164/carv-the-worlds-first-wearable-that-helps-you-ski}, um dispositivo vestível ou \textit{wearable}, propõe um calçado para praticantes de ski capaz de analisar, em tempo real, o modo de esquiar e fornecer informações detalhadas, visando melhorar o desempenho dos usuários.
 
 Os \textit{smart objects} poderão, a partir da IoT, operar em conjunto com o objetivo de compor os chamados \textit{smart environments}, ambientes nos quais a integração dos dispositivos agrega novas funcionalidades e formas de interação para determinado ambiente \cite{Asano2016}. Entre os ambientes inteligentes emergentes estão as \textit{smart grids}, que propõem a atualização do sistema elétrico atual a partir do uso da tecnologia. Uma das principais mudanças será o direcionamento do fluxo de energia e informações em dois sentidos. Como consequência, será possível consumir e fornecer energia para o sistema elétrico, bem como trocar informações sobre o estado da rede de eletricidade, o consumo, entre outros avanços. Tudo isso será viável em virtude da capacidade de sensoriamento, troca de informações, controle e da tecnologia da informação e comunicação \cite{Cecilia2016}.  
 
@@ -43,7 +46,7 @@ Em relação às geladeiras inteligentes, um dos problemas em aberto está o mod
 Apesar do grande número de estudos a cerca da IoT, as tecnologias e aplicações propostas não têm demonstrado a devida atenção aos aspectos de usabilidade e experiência do usuário, focando mais no ponto de vista técnico \cite{Koreshoff2013}. É necessário, portanto, incluir no projeto de aplicações conceitos que visem auxiliar o ser humano no seu dia a dia.
 
 % Concluir com a pergunta de pesquisa
-Desse modo, tem-se como pergunta de pesquisa: ``Como aprimorar o conceito atual de geladeira levando em conta a interação dos usuários de modo que o dia a dia destes seja facilitado?''
+Desse modo, tem-se como pergunta de pesquisa: \textbf{``Como aprimorar o conceito atual de geladeira levando em conta a interação dos usuários de modo que o dia a dia destes seja facilitado?''}
 
 % V1: Como projetar uma geladeira inteligente com experiência única aos seus usuários e lhes proporcionar uma melhor qualidade de vida?
 % V2: Como projetar uma geladeira inteligente que capture a interação com os usuários permitindo a estes experiências que facilitem o seu dia a dia na cozinha.
@@ -69,7 +72,7 @@ Desenvolver um modelo de geladeira inteligente que facilite o dia a dia dos usu�
 \begin{itemize} \parskip -1pt
 	%\item Levantamento do estado da arte com relação a Internet das Coisas e Sistemas de Recomendação
 	\item Elaborar e desenvolver um projeto de leitura e monitoramento dos produtos contidos na geladeira.
-	\item Implementar um sistema de análise das interações e recomendação de produtos.
+	\item Implementar um sistema de análise das interações e recomendação de produtos e de receitas.
 	\item Elaborar um cenário que permita a avaliação do modelo proposto.
 	\item Avaliar e discutir os resultados obtidos a partir do sistema proposto.
 
@@ -86,7 +89,7 @@ Desenvolver um modelo de geladeira inteligente que facilite o dia a dia dos usu�
 
 A Internet tem evoluído nas últimas décadas impactando na economia mundial e no dia a dia das pessoas. Nos seus primeiros anos de existência, tinha como principal função o uso militar e acadêmico, como foco em troca de informações \cite{Leiner2012}. Contudo, anos mais tarde foi aberta para uso da população em geral permitindo, desse modo, que pessoas comuns tivessem acesso a rede. Hoje, cerca de metade da população mundial usa a Internet frequentemente \cite{MiniwattsMarketingGroup2016}. 
 
-No cenário atual, um novo grupo está sendo conectado na Internet: "as coisas". Cria-se um novo paradigma, a Internet das Coisas, onde a rede não será mais utilizada apenas da maneira tradicional, como em um computador de mesa ou \textit{smartphone} entre outros, mas por dispositivos que possuem acesso a redes e capacidades como sensoriamento, atuação e comunicação com outros dispositivos. Muitos dos dispositivos serão versões conectadas dos objetos presentes no dia a dia, como televisão, fogão, geladeira, lâmpada e porta. Todos esses equipamentos, operando em conjunto com a rede, criarão um ecossistema de objetos com funcionalidades inéditas. 
+No cenário atual, um novo grupo está sendo conectado na Internet: ``as coisas''. Cria-se um novo paradigma, a Internet das Coisas, onde a rede não será mais utilizada apenas da maneira tradicional, como em um computador de mesa ou \textit{smartphone} entre outros, mas por dispositivos que possuem acesso a redes e capacidades como sensoriamento, atuação e comunicação com outros dispositivos. Muitos dos dispositivos serão versões conectadas dos objetos presentes no dia a dia, como televisão, fogão, geladeira, lâmpada e porta. Todos esses equipamentos, operando em conjunto com a rede, criarão um ecossistema de objetos com funcionalidades inéditas. 
 
 Com a IoT estima-se que até 2020, cerca de 24 bilhões de dispositivos estejam conectados, garantindo espaço para inovação em produtos e serviços. Além disso, espera-se que a Internet das Coisas se torne um grande atrativo para o mercado. Preve-se que, em 2025, sejam gerados em torno de 13 trilhões de dólares \cite{Meola2016}.
 
@@ -99,7 +102,7 @@ Portanto, este trabalho trará como contribuição a melhora do modelo atual de 
 
 % V1: ...como contribuição a proposição e implementação de uma geladeira inteligente que além das funcionalidades citadas, leve em conta os interesses e padrões de consumo de seus usuários. 
 
-\section{Procedimentos metodológicos}
+\section{Procedimentos Metodológicos}
 
 % O que é metodologia
 Um método representa a ordem que se deve impor aos diferentes procedimentos necessários para atingir um certo objetivo \cite{Cervo2007}. Por meio destes procedimentos, a pesquisa caracteriza-se como uma atividade voltada para a investigação de problemas teóricos ou práticos \cite{Matias-Pereira2012}.
@@ -110,12 +113,11 @@ Este trabalho pode ser caracterizado, quanto à sua finalidade, como uma pesquis
 A metodologia de desenvolvimento deste trabalho é dividida em 8 etapas, das quais, a ordem cronológica é apresentado na \reffig{cap1_metodologia-etapas}.
 
 \begin{figure}[htb]
-    
-    \caption{Fluxo das Etapas do Trabalho}
+    \caption{Fluxo das etapas do trabalho}
     \includegraphics[width=\textwidth]{cap1_metodologia-etapas}
     \label{fig:cap1_metodologia-etapas}
     
-    \footnotesize{Fonte: Autor}
+    \footnotesize{Fonte: Elaborado pelo Autor}
 \end{figure}
 
 A seguir, a sequência de etapas demonstradas anteriormente são especificadas em detalhes.
@@ -124,7 +126,7 @@ A seguir, a sequência de etapas demonstradas anteriormente são especificadas e
     \item Etapa 1: Análise e definição do escopo do trabalho.
 	\item Etapa 2: Levantamento bibliográfico sobre Internet das Coisas e Sistemas de Recomendação;
 	\item Etapa 3: Elaboração e desenvolvimento de um projeto de leitura e monitoramento dos produtos contidos na geladeira.
-	\item Etapa 4: Implementação de um sistema de análise das interações e recomendação de serviços.
+	\item Etapa 4: Implementação de um sistema de análise das interações e recomendação de produtos e receitas.
 	\item Etapa 5: Desenvolvimento de um protótipo funcional que integre as Etapas 3 e 4.
 	\item Etapa 6: Criação de um cenário de testes para avaliar o protótipo.
 	\item Etapa 7: Avaliação e discussão dos resultados obtidos no cenário proposto.
@@ -140,17 +142,19 @@ A seguir, a sequência de etapas demonstradas anteriormente são especificadas e
 % Dizer como vai avaliar
 % TODO: Descrição das etapas
 
-\section{Organização do trabalho} % Não é necessário, no TCC 1
+\section{Organização do Trabalho} % Não é necessário, no TCC 1
 
 Este trabalho, até o momento visando cumprir os requisitos da etapa etapa do TCC I, é divido em cinco capítulos. O \textbf{Capítulo 1} apresenta uma introdução do estado da arte das áreas envolvidas bem como a problemática do trabalho e os objetivos gerais e específicos.
 
 O \textbf{Capítulo \ref{cap:internet_of_things}} trata da Internet das Coisas, no qual é realizada uma revisão da arquitetura para organização dos diversos componentes, das tecnologias existentes que possibilitam o desenvolvimento de novos dispositivos e, por fim, uma descrição sobre alguns dos ambientes nos quais a Internet das Coisas será incorporada nos próximos anos.
 
-O \textbf{Capítulo \ref{cap:sistemas_de_recomendacao}} apresenta a área de Sistemas de Recomendação considerando um histórico, as principais abordagens e aplicações em que esta se insere.  
+O \textbf{Capítulo \ref{cap:sistemas_de_recomendacao}} apresenta a área de Sistemas de Recomendação considerando um histórico, as principais abordagens e aplicações em que se inserem.  
 
 O \textbf{Capítulo 4} tem por objetivo detalhar o sistema proposto apresentando uma visão lógica e uma visão física promovendo assim um entendimento do como os diversos componentes interagem e se comportam.
 
-O \textbf{Capítulo 5} apresenta  o cronograma necessário para o cumprimento de todas as etapas necessárias para finalizar este trabalho.
+O \textbf{Capítulo 5} apresenta um cenário criado bem como os resultados obtidos a partir da aplicação do mesmo no sistema.
+
+O \textbf{Capítulo 6} contém as considerações finais e os trabalhos futuros.
 
 % O capítulo 5 é sobre a Avaliação do Sistema Proposto
 % %	- Descrever um cenário

@@ -24,6 +24,7 @@ A Internet das Coisas está em grande expansão. Estima-se que, até 2020, cerca
 Segundo \citeonline{Al-Fuqaha2015}, para que seja possível a Internet das Coisas, em meio ao grande número de objetos, são necessários seis elementos básicos: a) identificação de cada dispositivo na rede; b) sensoriamento sobre o ambiente; c) comunicação entre os dispositivos e a Internet; d) computação; e) serviços; e f) semântica. As arquiteturas para Internet das Coisas, devem levar em conta esses pontos.
 
 Com o tempo, alguns modelos de arquiteturas em camadas foram propostos no âmbito da Internet das Coisas. \citeonline{Al-Fuqaha2015} mostra algumas das arquiteturas mais comuns para IoT, entre elas, as que estão apresentadas na Figura \ref{fig:cap2_arquiteturas}.
+
 \begin{figure}[htb]
 	\caption{Arquiteturas para IoT}
 	\subfigure[\label{fig:cap2_arq_3layer}][3 camadas]{\includegraphics[width=0.25\textwidth]{cap2_arq_3layers_readaptation.png}}
@@ -55,7 +56,11 @@ Para compreender melhor o funcionamento e a evolução da Internet das Coisas, �
 \subsection{Bluetooth}
 
 % O que é
-O Bluetooth é uma especificação de rede  \criarSigla[Rede Sem Fio de Área Pessoal]{Wireless Personal Area Network}{WPAN}, ou seja, rede sem fio pessoal, sendo descrito e especificado pelo padrão definido pelo \criarSigla[Instituto de Engenheiros Eletricistas e Eletrônicos]{Institute of Electrical and Electronics Engineers}{IEEE}, o IEEE 802.15.1. O \textit{Bluetooth} foi criado na década de 90 com o objetivo de unir tecnologias distintas, tais como computadores, celulares entre outros, a partir de uma padronização de comunicação sem fio entre os dispositivos \cite{Kardach2008}. 
+O \textit{Bluetooth} é uma especificação de rede  \textit{Wireless Personal Area Network} (WPAN), ou seja, rede sem fio pessoal, sendo descrito e especificado pelo padrão definido pelo \textit{{Institute of Electrical and Electronics Engineers}} (IEEE), o IEEE 802.15.1. O \textit{Bluetooth} foi criado na década de 90 com o objetivo de unir tecnologias distintas, tais como computadores, celulares entre outros, a partir de uma padronização de comunicação sem fio entre os dispositivos \cite{Kardach2008}. 
+
+
+
+
 %\begin{figure}[H]
 %	\centering
 %	\caption[ABC]{Interconexão entre diversas classes de dispositivos}
@@ -72,27 +77,26 @@ Uma das principais características dessa tecnologia \textit{wireless} é o curt
 No IEEE 802.15.1 há suporte para criação de redes \textit{ad-hoc}, aos quais, é desnecessário uma infraestrutura de rede para conexão dos dispositivos. A partir disso, é possível criar redes chamadas \textit{picorredes}, nas quais podem conter até 8 dispositivos ativos. Um dos  um mestre, ao qual coordena as operações, e os demais, são os escravos \cite{BluetoothSIG2017, Kurose2012}.
 
 % Características
-A tecnologia Bluetooth opera na faixa \criarSigla[Industrial, Científico e Médico]{Industrial, Scientific and Medical}{ISM} de 2.4 GHz de uso livre em modo \criarSigla[Multiplexação por Divisão de Tempo]{Time-Division Multiplexing}{TDM} com um delta de $625\mu$s, proporcionando uma taxa de transmissão máxima em torno de 2 Mb/s, podendo variar de acordo com o dispositivo e a categoria de tecnologia de \textit{Bluetooth} utilizada \cite{BluetoothSIG2017}.
+A tecnologia Bluetooth opera na faixa \textit{Industrial, Scientific and Medical} (ISM) de 2.4 GHz de uso livre em modo \textit{Time-Division Multiplexing} com um delta de $625\mu$s, proporcionando uma taxa de transmissão máxima em torno de 2 Mb/s, podendo variar de acordo com o dispositivo e a categoria de tecnologia de \textit{Bluetooth} utilizada \cite{BluetoothSIG2017}.
 
 % Forma de conexão.
 
+\ProximoForaDoSumario % Retira a próxima seção do sumário
 \subsubsection{Categorias}
 
 Segundo \citeonline{BluetoothSIG2017}, o \textit{Bluetooth} pode ser categorizado em:
 
 \begin{enumerate}[label=(\Alph*)]
     
-    \item {\criarSigla[Taxa Básica / Taxa de Dados Aprimorada]{Basic Rate/Enhanced Data Rate}{BR/EDR}}
+    \item \textit{Basic Rate/Enhanced Data Rate} (BR/EDR)
     %2.0 a 2.1
-    
     % REVER
     Esta é a subdivisão mais popularizada do Bluetooth presente nas versões $2.0$ e $2.1$, onde as principais características são alta velocidade de transmissão, baixo alcance e necessidade de conexão através da confirmação dos dispositivos. A partir disso, há um transmissão contínua de dados. Uma desvantagem é o consumo de energia considerável para o funcionamento na categoria, já que há uma conexão contínua e uma taxa de transmissão que mantêm o dispositivo ativo por um longo período ininterrupto.
     % taxa de dados
     A taxa de transmissão gira em torno de 2Mb/s.
      
     
-    \item \criarSigla[Bluetooth de Baixo Consumo Energético]{Bluetooth Low Energy}{BLE}
-    
+    \item \textit{Bluetooth Low Energy} (BLE)
     % 4.0, 4.1, 4.2
     
     % O que é
@@ -122,7 +126,7 @@ Segundo \citeonline{BluetoothSIG2017}, o \textit{Bluetooth} pode ser categorizad
 
 \end{enumerate}
 
-
+\ProximoForaDoSumario
 \subsubsection{Bluetooth 5.0}
 
 A versão 5.0 do \textit{Bluetooth} foi lançada em dezembro de 2016 e traz consigo aprimoramentos em desempenho e segurança, garantindo duas vezes mais velocidade, quatro vezes mais alcance, oito vezes mais taxa de dados e, por fim, maior coexistência \cite{BluetoothSIG2017b}. 
@@ -135,12 +139,15 @@ Com a nova versão, veio a flexibilidade para construção de soluções baseada
 % ==================================================================================================
 \subsection{RFID}
 
-O protocolo de \criarSigla[Identificação por Rádio Frequência]{Radio-Frequency IDentification}{RFID} é uma tecnologia de identificação automática, entre diversas outras como código de barras. No entanto, se distingue pelo modo de funcionamento, ou seja, por ondas eletromagnéticas. Além disso, o RFID se destaca em relação às demais tecnologias no que se refere às influências externas no seu funcionamento, como sujeira e posição de leitura. Desse modo, não é necessário nem limpar ou reposicionar o dispositivo RFID para efetuar a leitura \cite{Finkenzeller2010}. 
+
+O protocolo de \textit{Radio-Frequency IDentification} (RFID) é uma tecnologia de identificação automática, entre diversas outras como código de barras. No entanto, se distingue pelo modo de funcionamento, ou seja, por ondas eletromagnéticas. Além disso, o RFID se destaca em relação às demais tecnologias no que se refere às influências externas no seu funcionamento, como sujeira e posição de leitura. Desse modo, não é necessário nem limpar ou reposicionar o dispositivo RFID para efetuar a leitura \cite{Finkenzeller2010}. 
+
 
 % LEITOR E TRANSPONDER
-No RFID, os dados são transmitidos através de ondas de rádio entre dois dispositivos: \textit{transponder} ou \textit{tag} e \textit{leitor}. O transponder é localizado no objeto identificado, um produto, equipamento etc., e nele são mantidos os dados de identificação. Já o leitor é responsável pela leitura e escrita destes \cite{Finkenzeller2010}.
+No RFID, os dados são transmitidos através de ondas de rádio entre dois dispositivos: \textit{transponder} ou \textit{tag} e leitor. O \textit{transponder} é localizado no objeto identificado, um produto, equipamento etc., e nele são mantidos os dados de identificação. Já o leitor é responsável pela leitura e escrita destes \cite{Finkenzeller2010}.
+
 % FUNCIONAMENTO
-Para a transmissão dos dados entre os dois dispositivos o leitor emite ondas de rádio na \textit{tag}. Ao receber o estímulo, a \textit{tag} responde com seus respectivos dados. Além disso, existem \textit{tags} que utilizam a energia do campo eletromagnético gerado pelo leitor para seu funcionamento, sendo estas chamadas de \textit{passivas}. Existem, também, aquelas que possuem uma fonte própria de energia e por isso são denominadas \textit{ativas} \cite{Finkenzeller2010}.
+Para a transmissão dos dados entre os dois dispositivos o leitor emite ondas de rádio na \textit{tag}. Ao receber o estímulo, a \textit{tag} responde com seus respectivos dados. Além disso, existem \textit{tags} que utilizam a energia do campo eletromagnético gerado pelo leitor para seu funcionamento, sendo estas chamadas de passivas. Existem, também, aquelas que possuem uma fonte própria de energia e por isso são denominadas ativas \cite{Finkenzeller2010}.
 
 %Um exemplo de tag ativa é mostrada na Figura Y.
 
@@ -175,9 +182,9 @@ Uma das características mais importantes dos dispositivos RFID é a frequência
 Os dispositivos são classificados, de acordo com esse parâmetro, em três grupos:
 
 \begin{itemize} \parskip -3pt
-	\item \textbf{Baixa Frequência (LF):} Entre 30kHz à 300kHz
-	\item \textbf{Alta Frequência (HF):} Entre 3MHz à 30MHz
-	\item \textbf{Ultra Alta Frequência (UHF)}: Entre 300MHz a 3GHz.
+	\item \textbf{\textit{Low Frequency} (LF):} Entre 30kHz à 300kHz
+	\item \textbf{\textit{High Frequency} (HF):} Entre 3MHz à 30MHz
+	\item \textbf{\textit{Ultra High Frequency} (UHF)}: Entre 300MHz a 3GHz.
 \end{itemize}
 
 É possível distinguir pelo alcance:
@@ -193,7 +200,8 @@ Os dispositivos são classificados, de acordo com esse parâmetro, em três grup
 % ==================================================================================================
 \subsection{NFC}
 % O_QUE É
-O \criarSigla[Comunicação por Campo de Proximidade]{Near Field Communication}{NFC} é um sistema de comunicação sem fio derivado do RFID. Ele permite transações simples e seguras entre dois dispositivos a partir da curta distância de operação, em torno de quatro centímetros, e do funcionamento baseado em aproximação dos objetos em questão \cite{NFCForum2016}. 
+
+O \textit{\textit{Near Field Communication}} (NFC) é um sistema de comunicação sem fio derivado do RFID. Ele permite transações simples e seguras entre dois dispositivos a partir da curta distância de operação, em torno de quatro centímetros, e do funcionamento baseado em aproximação dos objetos em questão \cite{NFCForum2016}. 
 Assim, é possível realizar leituras de etiquetas (do inglês, \textit{tags}) e obter conteúdos de acordo com a aplicação, transferir dados entre \textit{smartphones} entre outras funcionalidades.
 % COMPATIBILIDADE
 Outra vantagem do NFC é a compatibilidade com a infraestrutura de cartões sem contato existentes permitindo usar um único dispositivo em tecnologias diferentes. Desse modo, é possível interagir com tags RFID, por exemplo.
@@ -226,16 +234,14 @@ Outra característica importante no NFC são os modos de operação. De acordo c
 	%possível ser configurada para leitura/escrita ou somente leitura.
 %\end{itemize}
 
-O NFC possui um padrão com o qual dispositivos devem estar formatados, o \criarSigla[Formato de Troca de Dados por NFC]{NFC Data Exchange Format}{NDEF} (\textit{NFC Data Exchange Format}), um formato comum de comunicação \cite{Igoe2014}. Deste 
-modo, os dados armazenados em \textit{tags} devem estar gravados neste formato. A partir do NDEF é possível armazenar e trocar documentos binários como Mime, que incluem imagens, arquivos \criarSigla[Formato de Documento Portável]{Portable Document Format}{PDF}, entre outros, 
-\criarSigla[Localização Uniforme de Recursos]{Uniform Resource Locator}{URL}, texto simples entre outros.
+O NFC possui um padrão com o qual dispositivos devem estar formatados, o\textit{NFC Data Exchange Format} (NDEF). O mesmo define um formato comum de comunicação \cite{Igoe2014}. Deste modo, os dados armazenados em \textit{tags} devem estar gravados de acordo com o ele. A partir do NDEF, é possível é possível armazenar e trocar documentos binários, como imagens e arquivos \textit{Portable Document Format} (PDF), além de endereços \textit{Uniform Resource Locator} (URL) e textos simples.
 
 
 % ==================================================================================================
 \subsection{Zigbee}
 
 % WHAT IS IT
-O Zigbee é um protocolo padrão de comunicação de baixa potência para redes sem fio \textit{mesh}, ao qual permite a diversos dispositivo trabalharem em conjunto \cite{Faludi2011}. Além disso, é descrito como um conjunto de camadas implementadas sobre o IEEE 802.15.4 \cite{Faludi2011}, ao qual especifica a camada física (PHY) e o controle de acesso ao meio (MAC) para redes sem fio de baixa potência (WLAN) \cite{IEEE2011}.
+O Zigbee é um protocolo padrão de comunicação de baixa potência para redes sem fio \textit{mesh}, ao qual permite a diversos dispositivo trabalharem em conjunto \cite{Faludi2011}. Além disso, é descrito como um conjunto de camadas implementadas sobre o IEEE 802.15.4 \cite{Faludi2011}, ao qual especifica a Camada Física (PHY) e o controle de acesso ao meio (MAC) para redes WPAN. \cite{IEEE2011}.
 
 As camadas do Zigbee, de acordo com \citeonline{Faludi2011}, responsabilizam-se pelo:
 
@@ -279,17 +285,17 @@ O Zigbee define três maneiras de identificação de nodos, que podem ser utiliz
 
 \subsection{Wi-Fi}
 % O que é
-Wi-Fi, é uma das diversas classes de \criarSigla[Rede Local Sem Fio]{Wireless Local Area Network}{WLAN} normatizado pelo padrão IEEE 802.11, no qual foca nas camadas física e de enlace do modelo \criarSigla[Conexão de Sistema Aberta]{Open System Interconnection}{OSI} \cite{Gast2005}. 
+Wi-Fi, uma das diversas classes de redes WLAN, é normatizado pelo padrão IEEE 802.11, no qual foca nas camadas física e de enlace do modelo \textit{Open System Interconnection} (OSI) \cite{Gast2005}. 
 Além disso, há padrões específicos para o Wi-fi, como o 802.11a, 802.11b e 802.11g,  além da possibilidade de unir alguns de padrões para formar outros híbridos, como o 802.11a/g e 802.11a/b/g \cite{Kurose2012}. 
+
 
 Apesar da distinção, os padrões citados compartilham diversas características, como o protocolo de acesso ao meio, estrutura de quadros da camada de enlace, habilidade de reduzir a taxa de transmissão a fim de alcançar distâncias maiores. A principal diferença é vinculada à camada física.
 
 Os padrões a, b e g são regulamentados de acordo com a Tabela \ref{tab:ieee80211abg-phy}, sendo que pode variar em diversos países.
 
-\begin{table}[hbt]
+\begin{table}[htb]
     \caption{Resumo dos protocolos 802.11}
     \label{tab:ieee80211abg-phy}
-    \centering
     \begin{tabular}{@{}ccc@{}}
         \toprule
         \textbf{Padrão} & \textbf{Faixa de Frequências} & \textbf{Taxa de dados} \\ \midrule
@@ -298,12 +304,12 @@ Os padrões a, b e g são regulamentados de acordo com a Tabela \ref{tab:ieee802
         802.11g         & 2,4 - 2,485 GHz               & até 54 Mbps            \\ \bottomrule 
         \end{tabular}
         
-    Adaptado de: \citeonline{Kurose2012}
+    Fonte: Adaptado de \citeonline{Kurose2012}
 \end{table}
 
 Além dos três protocolos citados há outros mais recentes ou que estão em fase de criação. O protocolo 802.11n, por exemplo, criado em 2012, faz uso de múltiplas antenas e, além disso, permite atingir uma taxa de transmissão de centenas de megabits por segundo \cite{Kurose2012}. Há também o 802.11ac e, entre os mais recentes, o 802.11ax, ainda em estágio de desenvolvimento e que permitirá o uso eficiente do espectro além de aprimorar a experiência de usuário \cite{Afaqui2017}.
 
-A arquitetura básica do IEEE 802.11, exposta na \reffig{cap2_arquitetura-ieee80211}, é formada por \criarSigla[Conjunto Básicos de Serviço]{Basic Service Set}{BSS} onde cada um é composto de um \criarSigla[Ponto de Acesso]{Access Point}{AP}, um dispositivo para unir os conjuntos, sendo esse um roteador ou \textit{switch}, responsável por ligar cada BSS à Internet e, por fim, os dispositivos que desejam se conectar a rede.
+A arquitetura básica do IEEE 802.11, exposta na \reffig{cap2_arquitetura-ieee80211}, é formada por \textit{Basic Service Set} (BSS) onde cada um é composto de um \textit{Access Point} (AP), um dispositivo para unir os conjuntos, sendo esse um roteador ou \textit{switch}, responsável por ligar cada BSS à Internet e, por fim, os dispositivos que desejam se conectar a rede.
 
 \figura{cap2_arquitetura-ieee80211}{Arquitetura básica para o IEEE802.11}{0.6\textwidth}{Kurose2012}
 
@@ -324,28 +330,27 @@ No contexto da Internet das Coisas, o Wi-fi é fundamental na inserção de novo
 \subsection{Outros}
 % Z-wave
 Entre as tecnologias utilizadas em Smart Homes está o Z-Wave, um protocolo sem fio focado em automação residencial e comercial de pequeno porte, criado pelo ZenSys e hoje representado pela \textit{Z-Wave Alliance } \cite{Gomez2010}. O protocolo foi desenvolvido especificamente para controle, monitoramento e verificação de estado. Em relação a aspectos técnicos, o Z-Wave opera na faixa de frequências em torno de 1GHz, o que evita interferências com outras tecnologias como \textit{Bluetooth} e Wi-Fi que operam em 2,4GHz, em geral. Entre as principais vantagens do Z-Wave está a interoperabilidade, além da segurança obtida a partir do uso de criptografia  AES128 \cite{Z-WaveAlliance2015}.
-\sigla{AES128}{Advanced Encryption Standard de 128 bits}
+
 
 % 6LowPan
-Por outro lado, há a tendência de dispositivos IoT conectados à Internet usarem o protocolo de endereçamento IPv6 para serem identificados na rede. No entanto, algumas das aplicações terão limitações como fonte de energia e capacidade de transferências de dados limitadas. Como proposta de solução, tem-se o 6LowPan, definido no RFC 6282 pela Internet Engineering Task Force (IETF) focado em dispositivos com restrições de consumo de energia \cite{Olsson2014}. A principal característica desse protocolo é a redução da transmissão de dados a partir da compressão dos cabeçalhos do IPv6. Com isso, o 6LowPan é capaz de reduzir a sobrecarga de pacote para dois bytes \cite{Al-Fuqaha2015}. As redes 6LoWPAN são conectadas às redes IPv6 a partir de roteadores de borda, capazes de trocar dados entre os dispositivos dentro da rede 6LoWPAN e a Internet, além de serem responsáveis por manter a rede em funcionamento. Outra característica importante neste padrão é a viabilidade de se implementar o IPv6 em redes IEEE 802.15.4 \cite{Olsson2014}.
-
+Por outro lado, há a tendência de dispositivos IoT conectados à Internet usarem o protocolo de endereçamento IPv6 para serem identificados na rede. No entanto, algumas das aplicações terão limitações como fonte de energia e capacidade de transferências de dados limitadas. Como proposta de solução, tem-se o \textit{IPv6 Over Wireless Personal Area Network} (6LoWPAN), definido no RFC 6282 pela Internet Engineering Task Force (IETF), focado em dispositivos com restrições de consumo de energia \cite{Olsson2014}. A principal característica desse protocolo é a redução da transmissão de dados a partir da compressão dos cabeçalhos do IPv6. Com isso, o 6LoWPAN é capaz de reduzir a sobrecarga de pacote para dois bytes \cite{Al-Fuqaha2015}. As redes 6LoWPAN são conectadas às redes IPv6 a partir de roteadores de borda, capazes de trocar dados entre os dispositivos dentro da rede 6LoWPAN e a Internet, além de serem responsáveis por manter a rede em funcionamento. Outra característica importante neste padrão é a viabilidade de se implementar o IPv6 em redes IEEE 802.15.4 \cite{Olsson2014}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Ambientes inteligentes}
+\section{Ambientes Inteligentes}
 
 A Internet das Coisas vem promovendo avanços tecnológicos importantes nos mais diversos ambientes, aprimorando desta maneira funcionalidades já existentes ou promovendo novas. A seguir, alguns ambientes em destaque são expostos e como a Internet das Coisas atua nestes casos. 
 
-\subsection{Smart grid}
+\subsection{Smart Grid}
 
 Na rede elétrica tradicional, a inteligência, ou seja, o controle, sensoriamento etc., é concentrada nas unidades geradoras de energia e parcialmente nos distribuidores. Além disso, o fluxo de energia é unidirecional, seguindo apenas um caminho entre a geração e o consumo. No entanto, com o aumento do uso de fontes próprias de geração de energia em residências, como placas fotovoltaicas, além do crescimento do consumo, tem-se a necessidade de adaptação do modelo de rede elétrica existente. As \textit{smart grids} surgiram, então, como modelo alternativo de geração e distribuição de energia elétrica, onde o fluxo de energia passa a ser bidirecional e o uso de tecnologias de medições de consumo permitem prever demandas, otimizar a distribuição e aprimorar a eficiência e a confiabilidade do sistema elétrico \cite{Cecilia2016}. 
 
 %Empresas como a \textit{Texas Instruments} (TI) têm investido em soluções para smart grid que proporcionam segurança, eficiência e inteligência. A TI oferece soluções para monitoramento da rede através de medidores de eletricidade, gás e calor, além de tecnologias para comunicação como o \textit{Power Line Communications} entre outras \cite{TexasInstruments2017}.
 
-\subsection{Smart home}
+\subsection{Smart Home}
 
 % TODO: Conceitos
 O conceito de \textit{smart home} ou casa inteligente propõe um novo modelo para um ambiente domiciliar. A implementação e o uso da tecnologia nesse ambiente abrem espaço para novas formas de interação, além de proporcionar mais comodidade e um melhor gerenciamento dos equipamentos presentes. Isso será possível graças ao uso de sensores e atuadores tanto no ambiente, como nos eletrodomésticos e utensílios. E, para interconectar todos os dispositivos, será feito uso das tecnologias de rede existentes, como o Zigbee e a Internet.

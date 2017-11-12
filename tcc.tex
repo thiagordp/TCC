@@ -13,13 +13,14 @@
 
 %----------------------------------------------------------------------
 % Pacotes usados especificamente neste documento
+
 \usepackage{graphicx, subcaption} % Possibilita o uso de figuras e gráficos
 \usepackage{color}    %  Possibilita o uso de cores no documento
 \usepackage{pdfpages} % Possibilita a inclusão da ficha catalográfica
 \usepackage{listings} % Possibilita colocar códigos
 \usepackage{lipsum}
 \usepackage{caption} % colocar textos em figuras
-\captionsetup{justification=raggedright,singlelinecheck=false, labelsep=endash}%, textfont=footnotesize}
+\captionsetup{justification=raggedright,singlelinecheck=false, labelsep=endash,position=above, skip=0pt}%, textfont=footnotesize}
 \usepackage{subfigure}
 \usepackage{xifthen} % deixa fazer uns if-then-else mutcho loko
 \usepackage[brazil]{babel}  % usados para arrumar os caracteres em português
@@ -37,13 +38,19 @@
 \usepackage{xparse} % Permite definir umas funções com mais recursos.
 \usepackage{adjustbox}
 \usepackage{array}
-
+\usepackage{mdframed}
+\usepackage{float}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 %\usepackage[square,numbers]{natbib}
 %----------------------------------------------------------------------
 % comandos de customização dos pacotes
-\renewcommand\listingscaption{Algoritmo}
-% \renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}% List of Listings -> List of Algorithms
+%\renewcommand{\thelisting}{\arabic{listing}}
+%\SetupFloatingEnvironment{listing}{name=Algoritmo,listname={Lista de Algoritmos},within=none}
+
+%\captionsetup[listing]{position=above,skip=0pt}
+%\captionsetup[figure]{position=above,skip=0pt}
+%\captionsetup[table]{position=above,skip=0pt}
+
 
 \graphicspath{{figuras/}}
 
@@ -83,11 +90,35 @@
 	\end{table}
 }
 
+\usepackage{longtable, ltcaption}
+\usepackage{trivfloat}
+\usepackage{floatrow}
+\usepackage{chngcntr}
+%\begin{quadro}[h!tp]
+%    \centering
+%    \caption{Teste}
+%    \begin{tabular}{|c|c|} \hline
+%        Coluna 1 &amp; Coluna 2 \\ \hline
+%        Conteúdo 1 &amp; Conteúdo 2 \\ \hline
+%    \end{tabular}
+%\end{quadro}
+
+
+
+
+
+\captionsetup[quadro]{position=above,skip=0pt}
+
+
 \newcommand{\reffig}[1]{Figura \ref{fig:#1}}
 \newcommand{\refalg}[1]{Algoritmo \ref{alg:#1}}
 \newcommand{\reftab}[1]{Tabela \ref{tab:#1}}
 \newcommand{\refcap}[1]{\footnote{vide tópico \ref{cap:#1}.}}
 \newcommand{\reftop}[1]{Seção \ref{cap:#1}}
+
+\newcommand{\criaSigla}[2][]{
+    #1 (#2) \sigla{#2}{#1}
+}
 
 \newcommand{\criarSigla}[3][]{%
 	\ifthenelse{\isempty{#1}}{%
@@ -97,8 +128,20 @@
 	}%
 }
 
-\newfloat{Equation}{htbp}{equ}[chapter]
-\newcommand{\listequationsname}{List of Equations}
+
+\trivfloat{quadro}
+\floatstyle{plaintop} % Forçar posição da legenda para o topo
+\restylefloat{quadro} % Forçar posição da legenda para o topo
+\renewcommand{\listquadroname}{Lista de Quadros} % Forçar texto na Lista de Quadros
+
+
+
+%\renewcommand{\listofquadrosname}{Lista de Quadros}
+
+%\DeclareFloatingEnvironment[name=Equação,listname={Lista de Equações}]{equacao} % \listof...
+%\renewcommand{\theequacao}{\arabic{equacao}}
+%\captionsetup[equacao]{position=above,skip=0pt}
+
 %----------------------------------------------------------------------
 
 %----------------------------------------------------------------------
@@ -115,7 +158,7 @@
 
 %\subtitulo{Subtítulo} % Opcional
 
-
+\setcounter{tocdepth}{2} 
 \autor{Thiago Raulino Dal Pont}
 \grau{Bacharel em Engenharia de Computação}
 \local{Araranguá} % Opcional (Florianópolis é o padrão)
@@ -141,9 +184,18 @@
 \include{pretextual/resumo_pt}
 \include{pretextual/resumo_en}
 
+
+%
+
+
+
 %----------------------------------------------------------------------
 % Início do documento                                
 \begin{document}
+
+    \counterwithout{quadro}{chapter}
+    \counterwithout{equation}{chapter} % OK
+
 	%--------------------------------------------------------
 	% Elementos pré-textuais
 	\capa  
@@ -151,31 +203,69 @@
 	
 	\include{pretextual/folha_de_rosto}
 	
-%	 \folhaaprovacao
-%	 \paginadedicatoria
-%	 \paginaagradecimento
+%	\folhaaprovacao
+%	\paginadedicatoria
+%	\paginaagradecimento
 %	\paginaepigrafe
 	\paginaresumo
 	\paginaabstract
 	%\pretextuais % Substitui todos os elementos pre-textuais acima
 	\listadefiguras % as listas dependem da necessidade do usuário
 	\listadetabelas 
-	\listadeabreviaturas
-	\listadesimbolos
-	%\listadequacoes
 
+	\listadeabreviaturas
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \sigla{6LoWPAN}{\textit{IPv6 Over Wireless Personal Area Network}}
+    \sigla{AES128}{\textit{Advanced Encryption Standard de 128 bits}}
+    \sigla{AP}{\textit{Access Point}}
+    \sigla{BLE}{\textit{Bluetooth Low Energy}}
+    \sigla{BR/EDR}{\textit{Basic Rate/Enhanced Data Rate}}
+    \sigla{BSS}{\textit{Basic Service Set}}
+    \sigla{EPC}{\textit{Electronic Product Code}}
+    \sigla{FC}{Filtragem Colaborativa}
+    \sigla{HTTP}{\textit{Hypertext Transfer Protocol}}
+    \sigla{IDE}{\textit{Integrated Development Environment}}
+    \sigla{IDF}{\textit{Inverse Document Frequency}}
+    \sigla{IEEE}{\textit{Institute of Electrical and Electronics Engineers}}
+    \sigla{IETF}{\textit{Internet Engineering Task Force}}
+    \sigla{IPv6}{\textit{Internet Protocol Version 6}}
+    \sigla{ISM}{\textit{Industrial, Scientific and Medical}}
+    \sigla{JAX-WS}{\textit{Java API for XML Web Services}}
+    \sigla{JEE}{\textit{Java Enterprise Edition}}
+    \sigla{JSON}{\textit{JavaScript Object Notation}}
+    \sigla{kNN}{\textit{k Nearest Neighbors}}
+    \sigla{MLP}{\textit{Multilayer Perceptron}}
+    \sigla{NDEF}{\textit{NFC Data Exchange Format}}
+    \sigla{NFC}{\textit{Near Field Communication}}
+    \sigla{OSI}{\textit{Open System Interconnection}}
+    \sigla{PDF}{\textit{Portable Document Format}}
+    \sigla{REST}{\textit{Representational State Transfer}}
+    \sigla{RFID}{\textit{Radio-Frequency IDentification}}
+    \sigla{RMSE}{\textit{Root Mean Square Error}}
+    \sigla{RNA}{Rede Neural Artificial}
+    \sigla{SPI}{\textit{Serial Peripheral Interface}}
+    \sigla{SQL}{\textit{Search Query Language}}
+    \sigla{SR}{Sistema de Recomendação}
+    \sigla{SVD}{\textit{Singular Value Decomposition}}
+    \sigla{TDM}{\textit{Time-Division Multiplexing}}
+    \sigla{TF-IDF}{\textit{Term Frequency - Inverse Document Frequency}}
+    \sigla{TF}{\textit{Term Frequency}}
+    \sigla{URI}{\textit{Uniform Resource Identifier}}
+    \sigla{URL}{\textit{Uniform Resource Locator}}
+    \sigla{WPAN}{\textit{Wireless Personal Area Network}}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	%\listadesimbolos
+%	\addcontentsline{toc}{chapter}{\listquadroname}
+    
+  
+    \listofquadros % Adiciona lista de quadros
 	\sumario
 	
 	%--------------------------------------------------------
-	% Simbolos e Abreviaturas
-	%\abreviatura{RAM}{\emph{Random Access Memory}}
-%	\abreviatura{IoT}{\emph{Internet of Things}}
-	\simbolo{$\int$}{Integral}
-	\simbolo{$\Omega$}{Ômega}
-	\simbolo{$\omega$}{Ômega}
 	%########################################################
 	% Elementos textuais
-	
 	\include{textual/cap_1_introducao}
 	\include{textual/cap_2_internet_of_things}
 	\include{textual/cap_3_sistemas_de_recomendacao}
@@ -184,11 +274,11 @@
 	\include{textual/cap_6_consideracoes_finais}
 	
 	%--------------------------------------------------
+	% Elementos pós-textuais
 	\bibliographystyle{ufscThesis/ufsc-alf}
 	\bibliography{postextual/referencias}
 
-	%-------------------------\textsl{}-------------------------------
-	% Elementos pós-textuais
+
 	%\include{postextual/apendice}
 	\include{postextual/anexo}
 
