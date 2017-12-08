@@ -226,8 +226,8 @@
 
 %---------------------------------------------------------------------------
 % N�mero de n�veis de subse��es
-\setcounter{tocdepth}{5}
-\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
 %---------------------------------------------------------------------------
 % Formata��o das se��es e seus componentes
@@ -314,25 +314,25 @@
 
 \renewcommand*\l@subsubsection[2]{
     \@dottedtocline{1}{0pt}{\espacosumario}
-	{\normalsize\ABNTsectionfont{#1}}
+    {\normalsize\ABNTsectionfont{#1}}
 	{#2}}
 
-\renewcommand*\l@paragraph[2]{
-    \@dottedtocline{1}{0pt}{\espacosumario}
-	{\normalsize\ABNTsectionfont\itshape{#1}}
-	{#2}}
+%\renewcommand*\l@paragraph[2]{
+%    \@dottedtocline{1}{0pt}{\espacosumario}
+%	{\normalsize\ABNTsectionfont\itshape{#1}}
+%	{#2}}
 
-\renewcommand*\l@subparagraph[2]{
-    \@dottedtocline{1}{0pt}{\espacosumario}
-	{\normalsize\ABNTsectionfont\itshape{#1}}
-	{#2}}
+%\renewcommand*\l@subparagraph[2]{
+%    \@dottedtocline{1}{0pt}{\espacosumario}
+%	{\normalsize\ABNTsectionfont\itshape{#1}}
+%	{#2}}
 
 %---------------------------------------------------------------------------
 % Lista de figuras, tabelas, s�mbolos, siglas
 \newcommand{\filltocentry}[1]{%
  {\hspace{0em}\normalfont\dotfill}\nobreak
  \hb@xt@\@pnumwidth{\hfil\normalfont #1}{}\par}
-
+                                           
 \renewcommand*{\l@figure}[2]{
        \vskip -1em
        \leftskip -1.5em
@@ -343,6 +343,8 @@
        \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
        {\figurename~\normalfont #1}\nobreak \filltocentry{#2}}
 
+
+
 \renewcommand*{\l@table}[2]{
        \vskip -1em
        \leftskip -1.5em
@@ -352,6 +354,8 @@
        \@tempdima 2.5em % margem entre o número e o texto da legenda (anterior = 1,5em)
        \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
        {\tablename~\normalfont #1}\nobreak \filltocentry{#2}}
+
+
 
 \newcommand{\listadesimbolos}{
     \pretextualchapter{Lista de S\'imbolos}\@starttoc{lsb}}

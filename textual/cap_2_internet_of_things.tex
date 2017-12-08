@@ -1,29 +1,28 @@
 \chapter{Internet das Coisas}
 \label{cap:internet_of_things}
 %%%%%%%%   PARTE 1   %%%%%%%%
-%\section{Conceito}
 
-% TODO: INTRODUÇÃO
+Neste capítulo, será tratado da IoT, no qual é realizada uma revisão da arquitetura para organização dos diversos componentes, das tecnologias existentes que possibilitam o desenvolvimento de novos dispositivos e, por fim, uma descrição sobre alguns dos ambientes nos quais a IoT será incorporada nos próximos anos.
 
-% Contextualização
+\section{Introdução}
 
 % REVER
-A tecnologia de telecomunicação cada vez mais se faz presente em diferentes setores, por exemplo, na indústria \cite{Fernandes2013}, no comércio \cite{Carmona2014}, no agricultura \cite{Quadros2011}. No entanto, um novo paradigma vem emergindo, a Internet das Coisas (IoT). A partir dela novas possibilidades de interação e aplicações serão criadas.
+A tecnologia de telecomunicação cada vez mais se faz presente em diferentes setores, por exemplo, na indústria \cite{Fernandes2013}, no comércio \cite{Carmona2014}, no agricultura \cite{Quadros2011}. No entanto, um novo paradigma vem emergindo, a IoT. A partir dela novas possibilidades de interação e aplicações serão criadas.
 
 % O que é 
 
-O conceito de Internet das Coisas está relacionado à interconexão de objetos distintos através de uma rede, sendo esta, muitas vezes, a Internet. Desse modo, elementos do mundo real, que até então funcionavam de maneira independente ao meio em que estavam inseridos, são capazes de interagir com outros objetos à sua volta e, assim, trocar informações que possam ser relevantes. Desse modo, permite-se a agregação de novas funcionalidades. Além disso, a IoT abre espaço para interação entre o mundo físico e o digital a partir de dispositivos capazes de capturar dados físicos no meio em que estão, tais como, temperatura, distância, entre outros, e então representá-los digitalmente e trasmiti-los para outros dispositivos \cite{Suresh2014}.
+O conceito de IoT está relacionado à interconexão de objetos distintos através de uma rede, sendo esta, muitas vezes, a Internet. Desse modo, elementos do mundo real, que até então funcionavam de maneira independente ao meio em que estavam inseridos, são capazes de interagir com outros objetos à sua volta e, assim, trocar informações que possam ser relevantes. Desse modo, permite-se a agregação de novas funcionalidades. Além disso, a IoT abre espaço para interação entre o mundo físico e o digital a partir de dispositivos capazes de capturar dados físicos no meio em que estão, tais como, temperatura, distância, entre outros, e então representá-los digitalmente e trasmiti-los para outros dispositivos \cite{Suresh2014}.
 
-O termo Internet das Coisas foi citado pela primeira vez em 1999 por Kevin Ashton, diretor executivo da AutoIDCentre do MIT, em 1999 enquanto realizava uma apresentação para promover a ideia do uso de Identificadores de Radio Frequência (RFID) na etiquetagem de produtos. O uso da tecnologia beneficiaria a logística da cadeia de produção \cite{Finep2015}. Apesar de o termo IoT ter sido usado apenas em 1999, aplicações práticas da ideia já existiam anos antes. Um exemplo disso, é a torradeira que podia ser ligada e desligada via internet criada em 1990 \cite{Suresh2014}.
+O termo IoT foi citado pela primeira vez em 1999 por Kevin Ashton, diretor executivo da AutoIDCentre do MIT, em 1999 enquanto realizava uma apresentação para promover a ideia do uso de Identificadores de Radio Frequência (RFID) na etiquetagem de produtos. O uso da tecnologia beneficiaria a logística da cadeia de produção \cite{Finep2015}. Apesar de o termo IoT ter sido usado apenas em 1999, aplicações práticas da ideia já existiam anos antes. Um exemplo disso é a torradeira que podia ser ligada e desligada via internet criada em 1990 \cite{Suresh2014}.
 
-A Internet das Coisas está em grande expansão. Estima-se que, até 2020, cerca de 24 bilhões de dispositivos IoT estejam conectados, implicando em cerca de quatro dispositivos por pessoa. Para tanto, em torno de 6 trilhões de dólares serão investidos em desenvolvimento de tecnologias de \textit{hardware} e \textit{software}. Além disso, o setor é visto como promissor, pois, a partir desses investimentos, aproximadamente 13 trilhões de dólares serão gerados até 2025 \cite{Meola2016}.
+A IoT está em grande expansão. Estima-se que, até 2020, cerca de 24 bilhões de dispositivos estejam conectados, implicando em cerca de quatro dispositivos por pessoa. Para tanto, em torno de 6 trilhões de dólares serão investidos em desenvolvimento de tecnologias de \textit{hardware} e \textit{software}. Além disso, o setor é visto como promissor, pois, a partir desses investimentos, aproximadamente 13 trilhões de dólares serão gerados até 2025 \cite{Meola2016}.
 
 \section{Arquitetura}
 % Escrever sobre as diversas arquiteturas existentes, características de cada uma, as melhores aplicações de cada uma etc.
 
-Segundo \citeonline{Al-Fuqaha2015}, para que seja possível a Internet das Coisas, em meio ao grande número de objetos, são necessários seis elementos básicos: a) identificação de cada dispositivo na rede; b) sensoriamento sobre o ambiente; c) comunicação entre os dispositivos e a Internet; d) computação; e) serviços; e f) semântica. As arquiteturas para Internet das Coisas, devem levar em conta esses pontos.
+Segundo \citeonline{Al-Fuqaha2015}, para que seja possível a IoT, em meio ao grande número de objetos, são necessários seis elementos básicos: a) identificação de cada dispositivo na rede; b) sensoriamento sobre o ambiente; c) comunicação entre os dispositivos e a Internet; d) computação; e) serviços; e f) semântica. As arquiteturas para IoT, devem levar em conta esses pontos.
 
-Com o tempo, alguns modelos de arquiteturas em camadas foram propostos no âmbito da Internet das Coisas. \citeonline{Al-Fuqaha2015} mostra algumas das arquiteturas mais comuns para IoT, entre elas, as que estão apresentadas na Figura \ref{fig:cap2_arquiteturas}.
+Com o tempo, alguns modelos de arquiteturas em camadas foram propostos no âmbito da IoT. \citeonline{Al-Fuqaha2015} mostra algumas das arquiteturas mais comuns para IoT, entre elas, as que estão apresentadas na Figura \ref{fig:cap2_arquiteturas}.
 
 \begin{figure}[htb]
 	\caption{Arquiteturas para IoT}
@@ -34,7 +33,7 @@ Com o tempo, alguns modelos de arquiteturas em camadas foram propostos no âmbit
 	\label{fig:cap2_arquiteturas}
 \end{figure}
 
-A arquitetura em três camadas pode ser definida como a base para dispositivos relacionados à IoT e envolve a  percepção, a rede e a aplicação. A primeira camada compreende os objetos inteligentes responsáveis pelo sensoriamento e a atuação sobre o ambiente. Já a segunda se refere a infraestrutura de comunicação responsável por conectar os dispositivos entre si e com a Internet. Por fim, a camada de aplicação provê serviços, processamento e tomada de decisão.  
+A arquitetura em três camadas pode ser definida como a base para dispositivos relacionados à IoT e envolve a  percepção, a rede e a aplicação. A primeira camada compreende os objetos inteligentes responsáveis pelo sensoriamento e a atuação sobre o ambiente. Já a segunda se refere à infraestrutura de comunicação responsável por conectar os dispositivos entre si e com a Internet. Por fim, a camada de aplicação provê serviços, processamento e tomada de decisão.  
 
 % Teoricamente
 
@@ -51,7 +50,7 @@ Na Figura 2.1\subref{fig:cap2_arq_5layer} também é apresentada a arquitetura d
 % Contextualizar um pouco a evolução da tecnologia
 % =========================================================
 
-Para compreender melhor o funcionamento e a evolução da Internet das Coisas, é importante ter conhecimento e entendimento das tecnologias que promovem base à ela. As principais tecnologias necessárias estão imersas nas camadas das arquiteturas expostas na seção anterior, ou seja, sensoriamento e atuação, redes e aplicação. A seguir é exposta uma breve introdução sobre algumas das tecnologias.
+Para compreender melhor o funcionamento e a evolução da IoT, é importante ter conhecimento e entendimento das tecnologias que promovem base à ela. As principais tecnologias necessárias estão imersas nas camadas das arquiteturas expostas na seção anterior, ou seja, sensoriamento e atuação, redes e aplicação. A seguir é exposta uma breve introdução sobre algumas das tecnologias.
 
 \subsection{Bluetooth}
 
@@ -74,7 +73,7 @@ Uma das principais características dessa tecnologia \textit{wireless} é o curt
 %A tecnologia vem sendo usada ao longo dos últimos anos em diversas aplicações como transferência de arquivos entre dispositivos, transmissão de áudio entre smartphones e fones sem fio, dispositivos capazes de determinar contexto, como os beacons, entre outros.
 
 % Topologias
-No IEEE 802.15.1 há suporte para criação de redes \textit{ad-hoc}, aos quais, é desnecessário uma infraestrutura de rede para conexão dos dispositivos. A partir disso, é possível criar redes chamadas \textit{picorredes}, nas quais podem conter até 8 dispositivos ativos. Um dos  um mestre, ao qual coordena as operações, e os demais, são os escravos \cite{BluetoothSIG2017, Kurose2012}.
+No IEEE 802.15.1 há suporte para criação de redes \textit{ad-hoc}, aos quais, é desnecessário uma infraestrutura de rede para conexão dos dispositivos. A partir disso, é possível criar redes chamadas \textit{picorredes}, nas quais podem conter até 8 dispositivos ativos. Sendo um mestre, ao qual coordena as operações, e os demais, são os escravos \cite{BluetoothSIG2017, Kurose2012}.
 
 % Características
 A tecnologia Bluetooth opera na faixa \textit{Industrial, Scientific and Medical} (ISM) de 2.4 GHz de uso livre em modo \textit{Time-Division Multiplexing} com um delta de $625\mu$s, proporcionando uma taxa de transmissão máxima em torno de 2 Mb/s, podendo variar de acordo com o dispositivo e a categoria de tecnologia de \textit{Bluetooth} utilizada \cite{BluetoothSIG2017}.
@@ -106,7 +105,7 @@ Segundo \citeonline{BluetoothSIG2017}, o \textit{Bluetooth} pode ser categorizad
     % Pareamento
     Para uma conexão para transmissão de dados, ao contrário do BR/EDR, não é necessário um pareamento, além disso esta tem curta duração, na ordem de milissegundos.
     %Taxa e alcance
-    Ademais, a taxa de dados é baixa e o alcance alto. A baixa taxa de dados decorre do modo de funcionamento dos dispositivos BLE, aos quais, enviam dados em rajadas, ou seja, de tempos em tempos dados são transmitidos em forma de \textit{broadcast} e os dispositivos que estiverem próximos receberão esses dados. Nos intervalos de tempo em que o dispositivo não transmite, ele ``dorme'', isto é, entra em modo de consumo mínimo a fim de poupar energia.
+    Ademais, a taxa de dados é baixa e o alcance alto. A baixa taxa de dados decorre do modo de funcionamento dos dispositivos BLE, aos quais, enviam dados em rajadas, ou seja, de tempos em tempos dados são transmitidos em forma de \textit{broadcast} para os dispositivos que estiverem próximos. Nos intervalos de tempo em que o dispositivo não transmite, ele ``dorme'', isto é, entra em modo de consumo mínimo a fim de poupar energia.
     
     %Aplicação
     A aplicação prática dessas características está na IoT através de \textit{beacons} e \textit{wearables}. Os beacons foram introduzidos pela \textit{Apple}\textsuperscript{\textregistered} em conjunto com o iOS 7, com o nome de \textit{iBeacon}, que permitia aos aplicativos possuir senso de localização \cite{Apple2014}. Com esses dispositivos é possível aprimorar a experiência do usuário em estabelecimentos como museus, supermercados, \textit{shoppings}, estádios. Através da identificação de contexto, uma aplicação móvel, em um \textit{smartphone} de um usuário pode exibir conteúdos, indicar promoções entre outros relacionados a determinado dispositivo BLE.
@@ -181,7 +180,7 @@ Uma das características mais importantes dos dispositivos RFID é a frequência
 %já que ela influi no distância máxima de operação. Tal fator é determinado pelo leitor.
 Os dispositivos são classificados, de acordo com esse parâmetro, em três grupos:
 
-\begin{itemize} \parskip -3pt
+\begin{itemize}[noitemsep,topsep=2pt]
 	\item \textbf{\textit{Low Frequency} (LF):} Entre 30kHz à 300kHz
 	\item \textbf{\textit{High Frequency} (HF):} Entre 3MHz à 30MHz
 	\item \textbf{\textit{Ultra High Frequency} (UHF)}: Entre 300MHz a 3GHz.
@@ -189,7 +188,7 @@ Os dispositivos são classificados, de acordo com esse parâmetro, em três grup
 
 É possível distinguir pelo alcance:
 
-\begin{itemize} \parskip -3pt
+\begin{itemize}[topsep=3pt, noitemsep]  
 	\item \textbf{Longo alcance:} maior que um metro
 	\item \textbf{Ligação remota:} até um metro
 	\item \textbf{Ligação próxima:} até um centímetro
@@ -214,7 +213,7 @@ Como o RFID, o NFC funciona através de ondas eletromagnéticas, mas com uma tax
 % MODOS DE OPERAÇÃO
 Outra característica importante no NFC são os modos de operação. De acordo com \citeonline{NFCForum2016}, existem três modos:
 
-\begin{itemize} \parskip -1pt
+\begin{itemize}[noitemsep,topsep=5pt]
 	\item \textbf{Leitor/Escritor de \textit{tag}}: Tem por objetivo ligar o mundo físico ao digital através de aplicações que leem e/ou escrevem em \textit{tags} para obter dados e, assim, fornecer conteúdo ao usuário relacionado à etiqueta lida. Um exemplo é um \textit{smartphone} ao ler uma \textit{tag} NFC de um cartaz na rua.
 	\item \textbf{Peer to Peer}: Visa conectar dispositivos por aproximação física e permite transferência de dados. Um exemplo é o Android \textsuperscript{\textregistered}\footnote{https://www.android.com/intl/pt-BR\_br/} Beam que possibilita a troca de arquivos entre smartphones com o 
 	sistema operacional móvel da Google\textsuperscript{\textregistered}\footnote{https://www.google.com}.
@@ -234,7 +233,7 @@ Outra característica importante no NFC são os modos de operação. De acordo c
 	%possível ser configurada para leitura/escrita ou somente leitura.
 %\end{itemize}
 
-O NFC possui um padrão com o qual dispositivos devem estar formatados, o\textit{NFC Data Exchange Format} (NDEF). O mesmo define um formato comum de comunicação \cite{Igoe2014}. Deste modo, os dados armazenados em \textit{tags} devem estar gravados de acordo com o ele. A partir do NDEF, é possível é possível armazenar e trocar documentos binários, como imagens e arquivos \textit{Portable Document Format} (PDF), além de endereços \textit{Uniform Resource Locator} (URL) e textos simples.
+O NFC possui um padrão com o qual dispositivos devem estar formatados, o\textit{NFC Data Exchange Format} (NDEF). O mesmo define um formato comum de comunicação \cite{Igoe2014}. Deste modo, os dados armazenados em \textit{tags} devem estar gravados de acordo com o ele. A partir do NDEF, é possível armazenar e trocar documentos binários, como imagens e arquivos \textit{Portable Document Format} (PDF), além de endereços \textit{Uniform Resource Locator} (URL) e textos simples.
 
 
 % ==================================================================================================
@@ -245,7 +244,7 @@ O Zigbee é um protocolo padrão de comunicação de baixa potência para redes 
 
 As camadas do Zigbee, de acordo com \citeonline{Faludi2011}, responsabilizam-se pelo:
 
-\begin{itemize} \parskip -4pt
+\begin{itemize}[noitemsep,topsep=5pt]
 	\item \textbf{Roteamento:} Tabelas de roteamento que definem como um nó envia dados até um 
 	destino.
 	\item \textbf{Rede Adhoc:} Criação automática de rede.
@@ -255,7 +254,7 @@ As camadas do Zigbee, de acordo com \citeonline{Faludi2011}, responsabilizam-se 
 
 O Zigbee opera na faixa não licenciada ISM, de 2,4GHz, o que permite sua expansão global e, assim, ter a capacidade de operar em qualquer local do mundo. Além disso, especifica que os nós das redes criadas possam assumir papeis específicos \cite{Faludi2011}, sendo eles:
 
-\begin{itemize} \parskip -4pt
+\begin{itemize}[noitemsep,topsep=5pt]
 	\item \textbf{Coordenador}: Responsável por criar a rede, distribuir endereços, manter a rede segura e em funcionamento entre outras funções. Cada rede tem um e apenas um coordenador.
 	\item \textbf{Roteador}: Tem capacidade de unir redes existentes, enviar e receber informações e rotear 	informações, atuando como um intermediário entre dispositivos. É permitido às redes terem múltiplos roteadores, bem como, possuírem nenhum. No entanto, no caso de existirem, cada roteador deve estar conectado a um coordenador ou outro roteador.
 	\item \textbf{Dispositivo final}: É um tipo de nó capaz de se unir a redes e de enviar e receber informações da rede. Além disso, podem se desligar de tempos em tempos para poupar energia. Caso mensagens para um dispositivo final desligado sejam detectadas, o nó responsável por ele, podendo ser um coordenador ou roteador, armazena as mensagens até que o nó desperte.
@@ -264,7 +263,7 @@ O Zigbee opera na faixa não licenciada ISM, de 2,4GHz, o que permite sua expans
 Há diversas topologias suportadas que englobam os três tipos de nós e suas possíveis 
 maneiras de organização \cite{Faludi2011}:
 
-\begin{itemize} \parskip -4pt
+\begin{itemize}[noitemsep,topsep=5pt]
 	\item \textbf{Par a par}: Uma rede formada apenas por dois nós, sendo um deles, obrigatoriamente, um 
 	coordenador e o nó restante podendo ser um roteador ou dispositivo final.
 	\item \textbf{Estrela}: Nesta topologia, o coordenador se situa no centro da rede e os demais nós, 
@@ -276,7 +275,7 @@ maneiras de organização \cite{Faludi2011}:
 
 O Zigbee define três maneiras de identificação de nodos, que podem ser utilizadas em uma aplicação para diferenciar os nós.
 
-\begin{itemize} \parskip -4pt
+\begin{itemize}[noitemsep,topsep=5pt]
 	\item \textbf{64 bits}: Único e permanente para cada rádio fabricado.
 	\item \textbf{16 bits}: Dinamicamente configurado pelo coordenador ao entrar em uma rede. É único apenas 
 	dentro do contexto da rede.
@@ -325,7 +324,7 @@ O IEEE 802.11 suporta dois tipos de interconexão de dispositivos: \textit{ad-ho
 % Tipos de escaneamento numa mesma subrede
 Existem algumas funcionalidades mais avançadas no IEEE 802.11. Uma delas se refere à possibilidade de se adaptar a taxa de dados a partir da escolha da técnica de modulação da camada física de acordo com as características do canal. Há também a possibilidade de reduzir o consumo de energia fazendo com que o nó permaneça em modo \textit{sleep} por determinados períodos de tempo o que pode gerar uma economia de até 99\% \cite{Kurose2012}.
 
-No contexto da Internet das Coisas, o Wi-fi é fundamental na inserção de novos dispositivos à Internet. O seu uso propiciará o crescimento destes sem a necessidade da expansão da infraestrutura a cada novo objeto conectado \cite{Suresh2014}.
+No contexto da IoT, o Wi-fi é fundamental na inserção de novos dispositivos à Internet. O seu uso propiciará o crescimento destes sem a necessidade da expansão da infraestrutura a cada novo objeto conectado \cite{Suresh2014}.
 
 \subsection{Outros}
 % Z-wave
@@ -333,7 +332,7 @@ Entre as tecnologias utilizadas em Smart Homes está o Z-Wave, um protocolo sem 
 
 
 % 6LowPan
-Por outro lado, há a tendência de dispositivos IoT conectados à Internet usarem o protocolo de endereçamento IPv6 para serem identificados na rede. No entanto, algumas das aplicações terão limitações como fonte de energia e capacidade de transferências de dados limitadas. Como proposta de solução, tem-se o \textit{IPv6 Over Wireless Personal Area Network} (6LoWPAN), definido no RFC 6282 pela Internet Engineering Task Force (IETF), focado em dispositivos com restrições de consumo de energia \cite{Olsson2014}. A principal característica desse protocolo é a redução da transmissão de dados a partir da compressão dos cabeçalhos do IPv6. Com isso, o 6LoWPAN é capaz de reduzir a sobrecarga de pacote para dois bytes \cite{Al-Fuqaha2015}. As redes 6LoWPAN são conectadas às redes IPv6 a partir de roteadores de borda, capazes de trocar dados entre os dispositivos dentro da rede 6LoWPAN e a Internet, além de serem responsáveis por manter a rede em funcionamento. Outra característica importante neste padrão é a viabilidade de se implementar o IPv6 em redes IEEE 802.15.4 \cite{Olsson2014}.
+Por outro lado, há a tendência de dispositivos IoT conectados à Internet usarem o protocolo de endereçamento IPv6 para serem identificados na rede. No entanto, algumas das aplicações terão limitações como fonte de energia e capacidade de transferências de dados limitadas. Como proposta de solução, tem-se o \textit{IPv6 Over Wireless Personal Area Network} (6LoWPAN), definido no RFC 6282 pela \textit{Internet Engineering Task Force} (IETF), focado em dispositivos com restrições de consumo de energia \cite{Olsson2014}. A principal característica desse protocolo é a redução da transmissão de dados a partir da compressão dos cabeçalhos do IPv6. Com isso, o 6LoWPAN é capaz de reduzir a sobrecarga de pacote para dois bytes \cite{Al-Fuqaha2015}. As redes 6LoWPAN são conectadas às redes IPv6 a partir de roteadores de borda, capazes de trocar dados entre os dispositivos dentro da rede 6LoWPAN e a Internet, além de serem responsáveis por manter a rede em funcionamento. Outra característica importante neste padrão é a viabilidade de se implementar o IPv6 em redes IEEE 802.15.4 \cite{Olsson2014}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -342,7 +341,7 @@ Por outro lado, há a tendência de dispositivos IoT conectados à Internet usar
 
 \section{Ambientes Inteligentes}
 
-A Internet das Coisas vem promovendo avanços tecnológicos importantes nos mais diversos ambientes, aprimorando desta maneira funcionalidades já existentes ou promovendo novas. A seguir, alguns ambientes em destaque são expostos e como a Internet das Coisas atua nestes casos. 
+A IoT vem promovendo avanços tecnológicos importantes nos mais diversos ambientes, aprimorando desta maneira funcionalidades já existentes ou promovendo novas. A seguir, alguns ambientes em destaque são expostos e como a IoT atua nestes casos. 
 
 \subsection{Smart Grid}
 
@@ -359,7 +358,7 @@ A interconexão dos dispositivos em uma casa inteligente proporcionará novas fu
 
 Entre as apostas para as casas inteligentes está o aumento da eficiência do consumo energético. O uso da tecnologia por meio de medidores de energia, tomadas e aparelhos inteligentes permitirá o monitoramento e controle do consumo dos dispositivos da casa. Com base nisso, é viável a otimização do consumo de cada equipamento controlando-o para ativá-lo somente quando necessário e, assim, evitar desperdícios. Além disso, é viável a previsão da demanda de energia para cada momento do dia \cite{Stojkoska2017}.
 
-As casas inteligentes necessitam que os dispositivos sejam organizados hierarquicamente para garantir o bom desempenho dos componentes do sistema. \citeonline{Stojkoska2017} propõe um modelo, mostrado na \reffig{cap2_smart-home_framework-stojkoska} para organização de casa inteligente que integra \textit{smart grid} e envolve cinco componentes principais: a casa inteligente em si, a nuvem, unidade geradora de energia, aplicações de terceiros e interfaces de usuário. Nesse contexto, a casa inteligente contém redes de sensores sem fio que adquirem dados do ambiente e enviam esses dados para um \textit{home hub}, um ponto central capaz de se conectar à uma rede externa. Já a unidade geradora de energia é responsável por, além da geração e fornecimento de energia, trocar informações sobre custo da energia, consumo atual e futuro da casa entre outros. 
+As casas inteligentes necessitam que os dispositivos sejam organizados hierarquicamente para garantir o bom desempenho dos componentes do sistema. \citeonline{Stojkoska2017} propõe um modelo, ilustrado na \reffig{cap2_smart-home_framework-stojkoska}, para organização de casa inteligente que integra \textit{smart grid} e envolve cinco componentes principais: a casa inteligente em si, a nuvem, unidade geradora de energia, aplicações de terceiros e interfaces de usuário. Nesse contexto, a casa inteligente contém redes de sensores sem fio que adquirem dados do ambiente e enviam esses dados para um \textit{home hub}, um ponto central capaz de se conectar à uma rede externa. Já a unidade geradora de energia é responsável por, além da geração e fornecimento de energia, trocar informações sobre custo da energia, consumo atual e futuro da casa entre outros. 
 A nuvem é responsável por armazenar todos os dados provenientes de sensores e outros dispositivos da casa e por comportar uma infraestrutura de processamento. 
 
 A partir dos dados existentes na nuvem é possível que as aplicações de terceiros entreguem soluções web ou aplicações mobile para os usuários. Para obter acesso às soluções, o último componente é necessário: a interface de usuário. Nesse ponto, o usuário tem em mãos a capacidade de monitorar em tempo real os gastos de energia dos equipamentos de sua casa, bem como controlá-los de acordo com a sua necessidade e desejo.
@@ -393,10 +392,10 @@ Seguindo a lógica das casas inteligentes, as \textit{Smart Kitchens} ou cozinha
 
 \subsection{Outros}
 
-Entre os ambientes inteligentes em expansão está a cidade inteligente ou \textit{smart city}. Apesar de não ter uma definição conceitual clara \cite{Cocchia2014}, no contexto da Internet das Coisas, a ideia principal por trás desse ambiente é trazer qualidade de vida aos cidadãos, crescimento sustentável e melhor uso de recursos públicos, aos quais são possíveis graças ao uso da IoT com foco no ambiente urbano. A Internet das Coisas, neste contexto, permite uma melhor gerenciamento, otimização dos serviços públicos como transporte, iluminação, vigilância e manutenção de áreas públicas entre outros  \cite{Zanella2014}. 
+Entre os ambientes inteligentes em expansão está a cidade inteligente ou \textit{smart city}. Apesar de não ter uma definição conceitual clara \cite{Cocchia2014}, no contexto da IoT, a ideia principal por trás desse ambiente é trazer qualidade de vida aos cidadãos, crescimento sustentável e melhor uso de recursos públicos, aos quais são possíveis graças ao uso da IoT com foco no ambiente urbano. A IoT, neste contexto, permite uma melhor gerenciamento, otimização dos serviços públicos como transporte, iluminação, vigilância e manutenção de áreas públicas entre outros  \cite{Zanella2014}. 
 
 %
-Já no ambiente industrial, a Internet das Coisas em conjunto com sistemas interconectados promoverá a Indústria 4.0, também chamada quarta revolução industrial. Ademais, os sistemas cyber-físicos, aos quais podem ser definidos como sistemas que integram processos físicos, computacionais, de comunicação e de rede, integrados com a Indústria 4.0, poderão ser definidos como a \textit{smart factory} ou fábrica inteligente \cite{Lee2015}. Por outro lado, a Indústria 4.0 é vista como uma possível solução para problemas atuais como a poluição, o consumo de combustíveis fósseis, entre outros \cite{Hussain2016}.
+Já no ambiente industrial, a IoT em conjunto com sistemas interconectados promoverá a Indústria 4.0, também chamada quarta revolução industrial. Ademais, os sistemas cyber-físicos, aos quais podem ser definidos como sistemas que integram processos físicos, computacionais, de comunicação e de rede, integrados com a Indústria 4.0, poderão ser definidos como a \textit{smart factory} ou fábrica inteligente \cite{Lee2015}. Por outro lado, a Indústria 4.0 é vista como uma possível solução para problemas atuais como a poluição, o consumo de combustíveis fósseis, entre outros \cite{Hussain2016}.
 
 % \subsection{Wearables}
 
@@ -420,7 +419,7 @@ Já no ambiente industrial, a Internet das Coisas em conjunto com sistemas inter
 \section{Desafios}
 
 % Contextualizar
-Apesar dos avanços constantes, a área de Internet das Coisas terá de superar alguns desafios para que possa se expandir sem prejudicar o desempenho das aplicações e a experiência dos usuários. Esses desafios, segundo \citeonline{Hussain2016}, são a heterogeneidade dos dispositivos, a interoperabilidade, a escalabilidade, segurança, privacidade e Qualidade de Serviço (QoS).
+Apesar dos avanços constantes, a área de IoT terá de superar alguns desafios para que possa se expandir sem prejudicar o desempenho das aplicações e a experiência dos usuários. Esses desafios, segundo \citeonline{Hussain2016}, são a heterogeneidade dos dispositivos, a interoperabilidade, a escalabilidade, segurança, privacidade e Qualidade de Serviço (QoS).
 
 % Heteregeineidade
 O primeiro dos desafios, a heterogeneidade, se refere as diferenças de \textit{hardware} e \textit{software} dos dispositivos, bem como, seu propósito, como objetivos, plataforma de \textit{hardware}, modos de interação, entre outros \cite{Hussain2016}. %Um solução simples à primeira vista, é fazer com que se use os mesmos padrões de hardware e software, no entanto não há uma única tecnologia de comunicação, por exemplo, que supra as necessidades de todas aplicações existentes.

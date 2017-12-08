@@ -1,16 +1,18 @@
 \chapter{Sistemas de recomendação}
 \label{cap:sistemas_de_recomendacao}
 
-% Introdução
+Neste capítulo, apresenta-se a área de SRs considerando um histórico, as principais abordagens e aplicações em que se inserem.  
+
+\section{Introdução}
 
 % Falar sobre as mudança das coisas ligadas por "links" para por dados.
 
-A web tem proporcionado diversas formas de interação, seja entre usuários ou entre sistemas e como resultado, tem-se gerado uma grande quantidade de dados. Os usuários que lidam com esses dados brutos certamente terão dificuldades em assimilar alguma informação útil e de seu interesse. Se faz necessário, portanto, um modo de processar tal montante de dados e extrair informações relevantes \cite{Aggarwal2016}. Entre os possíveis métodos estão os mecanismos de busca, em relação à páginas web \cite{Brin1998}, e sistemas de recomendação, em relação a itens.
+A web tem proporcionado diversas formas de interação, seja entre usuários ou entre sistemas e como resultado, tem-se gerado uma grande quantidade de dados. Os usuários que lidam com esses dados brutos certamente terão dificuldades em assimilar alguma informação útil e de seu interesse. Se faz necessário, portanto, um modo de processar tal montante de dados e extrair informações relevantes \cite{Aggarwal2016}. Entre os possíveis métodos estão os mecanismos de busca, em relação à páginas web \cite{Brin1998}, e SRs, em relação a itens.
 % Contextualizar com a Amazon, Netflix entre outros
 
 % Os Sistemas de Recomendação surgem como potencial solução para esse problema. Um Sistema de Recomendação (SR) a partir de dados coletados sobre seus usuários na forma de preferências em certos conjuntos de itens, ou seja, produtos, eventos, ações entre outros e outras fontes de informação, provê aos usuários previsões e recomendações de itens de acordo c.
 
-Sistemas de Recomendação (SRs) surgem como possível solução, com base na análise do perfil de cada usuário e, a partir deste, fornecer recomendações de itens que possam lhe interessar. Os itens recomendados podem ser filmes, livros, receitas, páginas web entre outros \cite{Bobadilla_2013}.  Deste modo, a tarefa de SRs é transformar os dados e preferências dos usuários em previsões de itens aos quais pode-se demonstrar interesse \cite{Lue2012}.
+SRs surgem como possível solução, com base na análise do perfil de cada usuário e, a partir deste, fornecer recomendações de itens que possam lhe interessar. Os itens recomendados podem ser filmes, livros, receitas, páginas web entre outros \cite{Bobadilla_2013}.  Deste modo, a tarefa de SRs é transformar os dados e preferências dos usuários em previsões de itens aos quais pode-se demonstrar interesse \cite{Lue2012}.
 % Caracterizar
 % Falar sobre os objetivos: previsão de avaliações, recomendação de itens.
 % Definir item
@@ -21,7 +23,7 @@ Sistemas de Recomendação (SRs) surgem como possível solução, com base na an
 As informações de preferências de usuário, utilizadas como entrada por SRs, podem ser adquiridas de duas maneiras: explícita ou implicitamente. No primeiro caso, o usuário é indagado sobre suas preferências, já no segundo, as informações são extraídas de acordo com o comportamento do usuário e sem o questionamento direto \cite{Bobadilla_2013}. No entanto, informações adicionais podem ser utilizadas \cite{Jannach2010}. Deste modo, as fontes de informações utilizáveis são: avaliações de itens pelos usuários, conjunto de características específicas que o item deve possuir, além de detalhes sobre seu conteúdo. 
 
 % Introduzir as abordagens e o que as diferencia
-Os Sistemas de Recomendação são subdivididos em abordagens, entre elas, a filtragem colaborativa, a baseada em conteúdo, a baseada em conhecimento entre outras. Estas diferem na forma como geram sugestões e nas informações que utilizam para a realização de sugestões \cite{Jannach2010}. 
+Os SRs são subdivididos em abordagens, entre elas, a filtragem colaborativa, a baseada em conteúdo, a baseada em conhecimento entre outras. Estas diferem na forma como geram sugestões e nas informações que utilizam para a realização de sugestões \cite{Jannach2010}. 
 
 \section{Histórico}
 
@@ -36,7 +38,7 @@ Com a Web 3.0, se deu a transformação da Web de Documentos, presente nas vers�
  
 %A web de documentos consiste em objetos, como websites, e as ligações entre eles, isto é, os \textit{links}, com foco no consumo de conteúdo por pessoas. A web de dados, entretanto, torna legível o conteúdo da web para as máquinas, priorizando estas em detrimento dos humanos a partir da representação e organização das dados formato organizado como o \textit{Resource Description Framework} (RDF) \cite{Aghaei2012}. Acrescentou-se, dessa forma, a possibilidade da comunicação entre dispositivos, além do aprimoramento do gerenciamento dos dados.
 
-Já se discute a cerca da Web 4.0, apesar de, conceitualmente, não bem definida. Propõe-se que, no futuro, haveria uma simbiose entre os computadores e as pessoas e, como consequência, seria possível a construção de interfaces mais poderosas, entre elas, as controladas pela mente \cite{Aghaei2012}.
+Já se discute a Web 4.0, apesar de, conceitualmente, não estar bem definida. Propõe-se que, no futuro, haveria uma simbiose entre os computadores e as pessoas e, como consequência, seria possível a construção de interfaces mais poderosas, entre elas, as controladas pela mente \cite{Aghaei2012}.
 
 A ideia de fazer uso de todo o volume de dados por muitos usuários, com a Web 2.0, para auxiliar na procura por conteúdos mais úteis e interessantes, já existia desde a década de 1990 \cite{Jannach2010}.
 
@@ -49,7 +51,7 @@ Outro sistema desenvolvido, o Ringo, provia recomendações aos seus usuários a
 
 %Com o passar dos anos, os Sistemas de Recomendação se expandiram para a área negócios, como o comércio eletrônico nos anos 2000 pela Internet. Ademais, se deu uma comercialização imediata e diversas companhias foram criadas como, \textit{Pattie Maes}, \textit{Net Perceptions}, entre outras. Por outro lado, não apenas pesquisadores apresentaram interesse, mas também profissionais da área de marketing. Por fim, desenvolveu-se novas abordagens baseadas em conceitos de inteligência artificial, recuperação de informação, mineração de dados, segurança, privacidade além de pesquisas em negócios e marketing \cite{Jannach2010}.
 
-Os sistemas de recomendação surgiram em um contexto de alto crescimento de neǵocios relacionados à Internet,  o que fez com que a sua comercialização se iniciasse rapidamente. Assim, diversas companhias foram criadas como, \textit{Pattie Maes}, \textit{Net Perceptions}, entre outras. Por outro lado, não apenas pesquisadores apresentaram interesse, mas também profissionais da área de marketing. Por fim, desenvolveu-se novas abordagens baseadas em conceitos de inteligência artificial, recuperação de informação, mineração de dados, segurança, privacidade além de pesquisas em negócios e marketing \cite{Jannach2010}.
+Os SRs surgiram em um contexto de alto crescimento de neǵocios relacionados à Internet,  o que fez com que a sua comercialização se iniciasse rapidamente. Assim, diversas companhias foram criadas como, \textit{Pattie Maes}, \textit{Net Perceptions}, entre outras. Por outro lado, não apenas pesquisadores apresentaram interesse, mas também profissionais da área de marketing. Por fim, desenvolveu-se novas abordagens baseadas em conceitos de inteligência artificial, recuperação de informação, mineração de dados, segurança, privacidade além de pesquisas em negócios e marketing \cite{Jannach2010}.
 
 % Comercialização (...)
 % Pesquisa (quais as pesquisar mais recentes
@@ -118,7 +120,7 @@ Os sistemas de recomendação surgiram em um contexto de alto crescimento de ne�
         \subsubsection{Medidas de Similaridade} \label{sssec:similaridade}
         
         % Definição
-        A similaridade entre usuários, itens, etc., podem ser obtidas a partir da matriz de avaliações dos usuários em relação ao itens. Os diversos algoritmos operam sobre as linhas ou colunas da tabela para encontrar um valor numérico que caracterize o grau de afinidade entre os objetos da comparação \cite{Aggarwal2016}. Além disso, uma abordagem geométrica \cite{Jones1987} pode ser utilizada para aprimorar a observação do comportamento desses algoritmos .
+        A similaridade entre usuários, itens, etc., podem ser obtidas a partir da matriz de avaliações dos usuários em relação ao itens. Os diversos algoritmos operam sobre as linhas ou colunas da tabela para encontrar um valor numérico que caracterize o grau de afinidade entre os objetos da comparação \cite{Aggarwal2016}. Além disso, uma abordagem geométrica \cite{Jones1987} pode ser utilizada para aprimorar a observação do comportamento desses algoritmos.
         
         % \subsubsection{Correlação de Pearson}
         O grau de semelhança entre dois usuários pode ser mensurado a partir de sua correlação, na qual estima a relação linear entre ambos. Dentre os diversos métodos, a correlação de \textit{Pearson} avalia vetores de mesma dimensão \cite{Ricci2010}. Considerando, um conjunto de produtos $P=\{p_1, p_2, ..., p_n\}$, um conjunto de usuários $U = \{u_1, u_2, ..., u_m\}$ e uma matriz de avaliações $R=\{r_{1,1}, r_{1,2}, ..., r_{n, m}\}$ desses produtos em função dos usuários, com dimensão  $n\times m$, tem-se a Equação \ref{eq:correlacao-pearson} que descreve a correlação de Pearson entre dois usuários $a$ e $b$.
@@ -142,7 +144,7 @@ Os sistemas de recomendação surgiram em um contexto de alto crescimento de ne�
         Os usuários Will e Elizabeth têm portanto uma similaridade medida pela correlação de Pearson de $0,21$ indicando que ambos têm alguma semelhança entre suas preferências.
     
         %##########    Cosseno    ###################
-        Em relação a similaridade de itens, o método do \textit{cosseno} é considerado o padrão. Como base para o seu cálculo, se faz uso das avaliações dadas por todos os usuários a cada item, ou seja, as colunas da matriz de avaliação são utilizadas. No entanto, o método do cosseno não leva em conta o perfil de cada usuário ao considerar apenas a avaliação dada ao item em questão\cite{Jannach2010}.
+        Em relação a similaridade de itens, o método do \textit{cosseno} é considerado o padrão. Como base para o seu cálculo, se faz uso das avaliações dadas por todos os usuários a cada item, ou seja, as colunas da matriz de avaliação são utilizadas. No entanto, o método do cosseno não leva em conta o perfil de cada usuário ao considerar apenas a avaliação dada ao item em questão \cite{Jannach2010}.
         
         A Equação \ref{eq:sim-cosseno} define o cálculo de similaridade pelo método do cosseno onde, calcula-se o produto interno entre os vetores de avaliações dos itens, como numerador e a multiplicação dos comprimentos de cada um como denominador.         
         
@@ -188,7 +190,7 @@ Os sistemas de recomendação surgiram em um contexto de alto crescimento de ne�
                 {\footnotesize Fonte: Adaptado de \citeonline{Ricci2010}}
             \end{figure}
                         
-            A partir de cálculos de similaridade o algoritmo encontrará os $k$ pontos mais próximos, onde tal valor varia de acordo o contexto da aplicação. \citeonline{Duda2000} sugerem um $k$  igual a raiz quadrada do total de pontos $n$, ou seja, $k$ é igual $\sqrt{n}$, no âmbito geral de classificadores, já no contexto de sistemas de recomendação, onde há bases com milhares de usuários, \citeonline{Jannach2010} afirma que $k$ entre $20$ a $50$ é uma boa estimativa. 
+            A partir de cálculos de similaridade o algoritmo encontrará os $k$ pontos mais próximos, onde tal valor varia de acordo o contexto da aplicação. \citeonline{Duda2000} sugerem um $k$  igual a raiz quadrada do total de pontos $n$, ou seja, $k$ é igual $\sqrt{n}$, no âmbito geral de classificadores, já no contexto de SRs, onde há bases com milhares de usuários, \citeonline{Jannach2010} afirma que $k$ entre $20$ a $50$ é uma boa estimativa. 
             
             Em um aspecto gráfico, $k$ pode ser interpretado como o número de pontos aos quais podem ser inseridos dentro de um círculo centrado no ponto que será classificado, como pode ser visualizado na \reffig{cap3_knn-class}. 
             
@@ -225,7 +227,7 @@ Os sistemas de recomendação surgiram em um contexto de alto crescimento de ne�
     \subsection{Método de FC Baseado em Modelo}
     % processamento offline
 
-        Sistemas de Recomendação baseados em modelo  não fazem uso direto da matriz de avaliações para geração de recomendação, contudo, ela é utilizada para o aprendizado de um modelo que fará as recomendações \cite{Adomavicius2005}. Primeiramente, os dados de avaliações são processados internamente, ou seja, \textit{offline}, antes mesmo de  recomendações serem calculadas. Assim, no momento em que se recomendar itens apenas o modelo será necessário \cite{Jannach2010}. Entre as possíveis métodos para recomendação baseada em modelo tem-se a fatoração de matriz, métodos probabilísticos, redes neurais e baseados em regras de associação, como será descrito nas seções seguintes. 
+        SRs baseados em modelo  não fazem uso direto da matriz de avaliações para geração de recomendação, contudo, ela é utilizada para o aprendizado de um modelo que fará as recomendações \cite{Adomavicius2005}. Primeiramente, os dados de avaliações são processados internamente, ou seja, \textit{offline}, antes mesmo de  recomendações serem calculadas. Assim, no momento em que se recomendar itens apenas o modelo será necessário \cite{Jannach2010}. Entre as possíveis métodos para recomendação baseada em modelo tem-se a fatoração de matriz, métodos probabilísticos, redes neurais e baseados em regras de associação, como será descrito nas seções seguintes. 
         
         \ProximoForaDoSumario
         \subsubsection{Fatoração de Matriz}
@@ -266,7 +268,7 @@ Os sistemas de recomendação surgiram em um contexto de alto crescimento de ne�
         
         Considerando-se os eventos A e B, a Equação \ref{eq:bayes} define a expectativa de o evento A ocorrer no futuro sabendo que B transcorreu ($P(A \mid B)$). Tal possibilidade é determinada a partir da probabilidade do evento A e B ocorrerem sem considerar um ao outro ($P(A)$ e $P(B)$, respectivamente) e a probabilidade do evento B ocorrer em função de A ($P (B \mid A)$).
         
-        No contexto de sistemas de recomendação o evento A, presente na Equação \ref{eq:bayes}, é visto como a probabilidade do usuário $u$ promover uma determinada nota $v_s$, dentre as possíveis notas, ao item $i$, tendo como base as avaliações já fornecidas por $u$. \cite{Aggarwal2016}
+        No contexto de SRs o evento A, presente na Equação \ref{eq:bayes}, é visto como a probabilidade do usuário $u$ promover uma determinada nota $v_s$, dentre as possíveis notas, ao item $i$, tendo como base as avaliações já fornecidas por $u$ \cite{Aggarwal2016}.
         
         \begin{equation}
               P(r_{ui} = v_s \mid r_u) = \frac{P(r_{ui}=v_s) \cdot P(r_u \mid r_{ui} = v_s)}{P(r_u)}
@@ -278,9 +280,9 @@ Os sistemas de recomendação surgiram em um contexto de alto crescimento de ne�
         \subsubsection{Redes Neurais}
         
         % o que são e onde pode usar
-        Redes Neurais Artificiais (RNAs) tentam retratar, de forma matemática, o comportamento do cérebro biológico, ao qual é formado por células chamadas neurônios e suas diversas interconexões, onde, a cada uma das ligações, é atribuído um peso. Desse modo, a aprendizagem consiste em alterar, a partir de treinamento, os valores de cada peso a fim de se ter um comportamento específico para a rede. Além disso, a entrada e saída da rede é composta por um conjunto de neurônios que são ligados a parte externa da rede. \cite{Russell2009}. 
+        Redes Neurais Artificiais (RNAs) tentam retratar, de forma matemática, o comportamento do cérebro biológico, ao qual é formado por células chamadas neurônios e suas diversas interconexões, onde, a cada uma das ligações, é atribuído um peso. Desse modo, a aprendizagem consiste em alterar, a partir de treinamento, os valores de cada peso a fim de se ter um comportamento específico para a rede. Além disso, a entrada e saída da rede é composta por um conjunto de sinais de entrada e de neurônios, respectivamente, que são ligados a parte externa da rede. \cite{Russell2009}. 
         
-        A Figura \ref{fig:cap3_rna} mostra uma RNA chamada \textit{Multilayer Perceptron} (MLP), onde os neurônios são representados por quadrados e elipses, e as conexões entre eles, por setas indicando os pesos a elas associados. A RNA mostrada tem duas entradas, representadas pelos neurônios um (1) e dois (2); dois neurônios, três (3) e quatro (4), na camada intermediária, também chamada oculta e, por fim, mais dois neurônios, cinco (5) e seis (6) na camada de saída.
+        A Figura \ref{fig:cap3_rna} mostra uma RNA chamada \textit{Multilayer Perceptron} (MLP), onde os neurônios são representados por elipses e sinais de entrada por quadrados. As conexões entre eles são indicadas por setas com os pesos a elas associados. A RNA mostrada tem duas entradas, representadas pelos sinais um (1) e dois (2); dois neurônios, três (3) e quatro (4), na camada intermediária, também chamada oculta e, por fim, mais dois neurônios, cinco (5) e seis (6) na camada de saída.
         
         \begin{figure}[htb]        
             \caption{Rede MLP}
@@ -292,12 +294,12 @@ Os sistemas de recomendação surgiram em um contexto de alto crescimento de ne�
         
         Redes neurais são capazes de aprender os padrões em dados de entrada e atuarem como classificadores. Entre as principais vantagens de RNAs de múltiplas camadas entre os demais classificadores é a capacidade de lidar com funções não-lineares, ou seja, a relação entre entradas e saídas é variável. \cite{Aggarwal2016}.
         
-        No contexto de Sistemas de Recomendação, redes neurais podem ser utilizadas para detectar padrões nas avaliações atribuídas pelos usuários aos diversos itens, e a partir disso, fazer predições de notas à itens que o usuário ainda não avaliou \cite{Ricci2010}. Assim, considerando uma matriz de avaliações de usuários para itens, como na Tabela \ref{tab:matriz-av-item-user}, a forma com a qual o usuário \textit{Jack} avaliaria o \textit{Item 4} pode ser determinada por RNA.
+        No contexto de SRs, redes neurais podem ser utilizadas para detectar padrões nas avaliações atribuídas pelos usuários aos diversos itens, e a partir disso, fazer predições de notas à itens que o usuário ainda não avaliou \cite{Ricci2010}. Assim, considerando uma matriz de avaliações de usuários para itens, como na Tabela \ref{tab:matriz-av-item-user}, a forma com a qual o usuário \textit{Jack} avaliaria o \textit{Item 4} pode ser determinada por RNA.
          
         \ProximoForaDoSumario
         \subsubsection{Baseado em Regras de Associação}
         
-        Há uma relação entre sistemas baseados em regras e os sistemas de recomendação baseados em regras, onde o primeiro foi proposto para a descoberta das relações entre transações. Assim, busca-se, por exemplo, descobrir qual a relação de compra de produtos entre as diversas transações, ou seja, se a aquisição de um item pode implicar na compra de outro \cite{Aggarwal2016}.  
+        Há uma relação entre sistemas baseados em regras e os SRs baseados em regras, onde o primeiro foi proposto para a descoberta das relações entre transações. Assim, busca-se, por exemplo, descobrir qual a relação de compra de produtos entre as diversas transações, ou seja, se a aquisição de um item pode implicar na compra de outro \cite{Aggarwal2016}.  
         
         Recomendações são feitas para um usuário com base nas regras de associação que melhor se encaixam no seu histórico de transações.
         % Quem costuma comprar desse, compra desse outro também.
@@ -305,20 +307,26 @@ Os sistemas de recomendação surgiram em um contexto de alto crescimento de ne�
             
 \section{Abordagem Baseada em Conteúdo}
 
-    Sistemas de Recomendação baseados em conteúdo, aos quais têm como origens as pesquisas de filtragem de informação e recuperação de informação \cite{Cazella2010}, tentam recomendar itens ao usuário de acordo com as características de itens que ele gostou e das características do item em específico \cite{Ricci2010}. A recomendação será feita a partir da correspondência do perfil do usuário com as características dos itens. Assim, para esse tipo de sistema necessita-se apenas dos dados referentes aos itens, ou seja, sua descrição, e às preferências de usuário, isto é, seu perfil, não carecendo de uma grande comunidade de usuários para fazer recomendações. \cite{Jannach2010}. 
+    SRs baseados em conteúdo, aos quais têm como origens as pesquisas de filtragem de informação e recuperação de informação \cite{Cazella2010}, tentam recomendar itens ao usuário de acordo com as características de itens que ele gostou e das características do item em específico \cite{Ricci2010}. A recomendação será feita a partir da correspondência do perfil do usuário com as características dos itens. Assim, para esse tipo de sistema necessita-se apenas dos dados referentes aos itens, ou seja, sua descrição, e às preferências de usuário, isto é, seu perfil, não carecendo de uma grande comunidade de usuários para fazer recomendações. \cite{Jannach2010}. 
 
     \subsection{Descrição do Item}
    
-    Um item pode ser descrito em termo de seus atributos ou de seu conteúdo. No contexto de SR baseado em conteúdo essa definição pode ser obtida a partir de duas formas, sendo elas a explícita e implícita \cite{Jannach2010}. A forma explícita faz uso de características bens definidas dos itens. No caso de um livro, por exemplo, essas características são autor, gênero, preço, número de páginas entre outros. Em um sistema de recomendação essas informações devem ser inseridas manualmente para que possam ser utilizadas nos algoritmos. Por outro lado, a forma implícita faz uso de algoritmos que extraem informações dos itens. Além disso, essa abordagem é amplamente utilizada no contexto de recomendação de documentos textuais como, por exemplo, artigos científicos \cite{Garcia2013}.
+    Um item pode ser descrito em termo de seus atributos ou de seu conteúdo. No contexto de SR baseado em conteúdo essa definição pode ser obtida a partir de duas formas, sendo elas a explícita e implícita \cite{Jannach2010}. A forma explícita faz uso de características bens definidas dos itens. No caso de um livro, por exemplo, essas características são autor, gênero, preço, número de páginas entre outros. Em um SR essas informações devem ser inseridas manualmente para que possam ser utilizadas nos algoritmos. Por outro lado, a forma implícita faz uso de algoritmos que extraem informações dos itens. Além disso, essa abordagem é amplamente utilizada no contexto de recomendação de documentos textuais como, por exemplo, artigos científicos \cite{Garcia2013}.
     
     % Entre as principais formas de revelar as melhores palavras para representar o documento está a abordagem booleana, ao qual.
     
-    Entre as diversas abordagens de representação de itens textuais está o modelo vetor de espaço baseado em palavras-chave. Nesse caso, busca-se representar um item por um conjunto de palavras melhor o descrevem \cite{Jannach2010}.
+    Entre as diversas abordagens de representação de itens textuais está o modelo vetor de espaço baseado em palavras-chave. Nesse caso, busca-se representar um documento por um conjunto de palavras que melhor o descrevem \cite{Jannach2010}. Como forma de encontrar os termos mais relevantes em um documento, pode-se utilizar o cálculo do TF-IDF \cite{Manning2008}.
     
-    Um padrão seguido para SR baseada em conteúdo para documentos textuais é usar o conteúdo em si do item para gerar recomendação e não os meta-dados, ou seja, as informações sobre o item. Entre as abordagens que aplicam esse conceito está a TF-IDF, onde os itens são representados como vetores de pesos, sendo cada posição correspondente a um termo com sua respectiva relevância. 
+   % Um padrão seguido para SR baseada em conteúdo para documentos textuais é usar o conteúdo em si do item para gerar recomendação e não os metadados, ou seja, as informações sobre o item. 
+    
+    %Como forma de encontrar os termos mais relevantes em um documento, pode-se utilizar o cálculo do TF-IDF. A partir deste é construído um vetor de pesos ao qual representa o item, onde cada posição corresponde a um termo com sua respectiva relevância \cite{Manning2008}.
+    
+    
+    % VSM = vetor
+    % TF-DEF = forma de cálculo
     
     %Contudo, é possível interpretar as posições como sendo características do item. 
-    O TF-IDF é composto de um produto de dois pesos, o \textit{Term Frequency} (TF) e a \textit{Inverse Term Frequency} (ITF). O primeiro indica a frequência de cada termo no texto, no entanto, documentos maiores terão frequências maiores para as palavras e os documentos menores o contrário, tornando injusta a medição por frequência absoluta. Por isso, é necessária uma normalização \cite{Jannach2010}. 
+    O TF-IDF é composto de um produto de dois valores, o \textit{Term Frequency} (TF) e a \textit{Inverse Term Frequency} (ITF). O primeiro indica a frequência de cada termo no texto, no entanto, documentos maiores terão frequências maiores para as palavras e os documentos menores o contrário, tornando injusta a medição por frequência absoluta. Por isso, é necessária uma normalização \cite{Jannach2010}. 
     
     A Equação \ref{eq:tf} apresenta o cálculo do TF, onde calcula-se a frequência normalizada de um termo $i$ em um item $j$ com base na frequência absoluta do termo no documento dividido pela número de ocorrências da palavra mais frequente no documento \cite{Jannach2010}.
      
@@ -416,9 +424,9 @@ Segundo \citeonline{Ricci2010} e \citeonline{Aggarwal2016}, há dois tipos espec
 \section{Abordagem H\'ibrida}
 
     % Aproveita o melhor de cada abordagem e 
-    As abordagens descritas até o presente momento se destacam em determinadas situações, mas deixam a desejar em outras. Por exemplo, a Filtragem Colaborativa, como será descrito na Seção \ref{sec:desafios}, apresenta dificuldades em gerar recomendações adequadas para um novo usuário e para um novo item \cite{Ricci2010}. Deste modo, como forma de contornar as limitações das abordagens, surgem os sistemas de recomendação híbridos, onde se aplicam em um mesmo SR, diversas abordagens para gerar recomendações, permitindo que os pontos fortes de cada uma sejam utilizados, enquanto os pontos fracos, atenuados. Para tanto, os SRs fazem uso de múltiplos dados de entrada, geralmente utilizados por cada abordagem, sendo eles, avaliações de itens, perfis de usuários, modelos de conhecimento, características dos itens, entre outros. As abordagens chamadas ``puras'' utilizam algumas dessas entradas, enquanto a abordagem híbrida pode empregar múltiplas fontes de informação \cite{Jannach2010}.
+    As abordagens descritas até o presente momento se destacam em determinadas situações, mas deixam a desejar em outras. Por exemplo, a Filtragem Colaborativa, como será descrito na Seção \ref{sec:desafios}, apresenta dificuldades em gerar recomendações adequadas para um novo usuário e para um novo item \cite{Ricci2010}. Deste modo, como forma de contornar as limitações das abordagens, surgem os SRs híbridos, onde se aplicam em um mesmo SR, diversas abordagens para gerar recomendações, permitindo que os pontos fortes de cada uma sejam utilizados, enquanto os pontos fracos, atenuados. Para tanto, os SRs fazem uso de múltiplos dados de entrada, geralmente utilizados por cada abordagem, sendo eles, avaliações de itens, perfis de usuários, modelos de conhecimento, características dos itens, entre outros. As abordagens chamadas ``puras'' utilizam algumas dessas entradas, enquanto a abordagem híbrida pode empregar múltiplas fontes de informação \cite{Jannach2010}.
     
-    O processo de hibridização de um sistema de recomendação, ou seja, a mesclagem de diversas abordagens, pode seguir algum método específico que indique como e quando os itens de recomendação de cada abordagem serão utilizados. \citeonline{Jannach2010} expõe três métodos para tornar SRs híbridos: monolítico, paralelo e sequencial, cada um com suas respectivas subdivisões.
+    O processo de hibridização de um SR, ou seja, a mesclagem de diversas abordagens, pode seguir algum método específico que indique como e quando os itens de recomendação de cada abordagem serão utilizados. \citeonline{Jannach2010} expõe três métodos para tornar SRs híbridos: monolítico, paralelo e sequencial, cada um com suas respectivas subdivisões.
     
     O método monolítico apresenta um único componente que integra múltiplas abordagens por preprocessamento e combinação de múltiplas fontes de dados \cite{Aggarwal2016}, ou seja, apenas um componente abriga todas as abordagens aplicadas no sistema, onde troca-se o comportamento explorando os diferentes tipos de dados de entrada. Sistemas híbridos com \textit{design} monolítico podem ser sub-categorizados em dois outros \textit{designs}, sendo eles, por combinação de características e aumento de características \cite{Jannach2010}.
     %onde o primeiro faz uso de diversas entradas distintas e, o segundo, aplica mais passos de transformação além da utilização das entradas distintas.
@@ -431,7 +439,7 @@ Segundo \citeonline{Ricci2010} e \citeonline{Aggarwal2016}, há dois tipos espec
 
 \section{Outras Abordagens}
     
-    Além das abordagens clássicas para sistemas de recomendação, há outras relevantes que merecem ser citadas. Nas próximas subseções algumas delas são brevemente apresentadas.
+    Além das abordagens clássicas para SRs, há outras relevantes que merecem ser citadas. Nas próximas subseções algumas delas são brevemente apresentadas.
     
     \subsection{Baseada em Contexto}
     
@@ -445,12 +453,12 @@ Segundo \citeonline{Ricci2010} e \citeonline{Aggarwal2016}, há dois tipos espec
     
     \subsection{SRs Sociais}
     
-    Os sistemas de recomendação passaram a incorporar dados de interações sociais como \textit{posts}, \textit{tags}, lista de amigos etc., com o desenvolvimento da Web 2.0. A partir dessas informações pode-se aprimorar a qualidade das recomendações fornecidas pelas abordagens, como a baseada em filtragem colaborativa. Além disso, essas informações podem ser utilizadas para criar novas recomendações, bem como, elucidar as relações entre os processos colaborativos e os dados de interações sociais \cite{Bobadilla_2013}. Com base nisso, é possível recomendar conexões entre usuários, páginas web, entre outros \cite{Aggarwal2016}.
+    Os SRs passaram a incorporar dados de interações sociais como \textit{posts}, \textit{tags}, lista de amigos etc., com o desenvolvimento da Web 2.0. A partir dessas informações pode-se aprimorar a qualidade das recomendações fornecidas pelas abordagens, como a baseada em filtragem colaborativa. Além disso, essas informações podem ser utilizadas para criar novas recomendações, bem como, elucidar as relações entre os processos colaborativos e os dados de interações sociais \cite{Bobadilla_2013}. Com base nisso, é possível recomendar conexões entre usuários, páginas web, entre outros \cite{Aggarwal2016}.
     
     
     \subsection{SRs Demográficos}
     
-    Sistemas de Recomendação Demográficos utilizam dados relativos aos usuários como idade, sexo, profissão, além de hábitos como o de assistir a certos canais de televisão, prática de esportes, entre outros \cite{Krulwich1997}. Com base nesses dados, esses sistemas fazem uso de classificadores para dividir os usuários em grupos que compartilham das mesmas características \cite{Aggarwal2016}, partindo da premissa de que pessoas em um mesmo grupo tendem a gostar dos mesmos tipos de itens \cite{Pazzani1999}. 
+    SRs Demográficos utilizam dados relativos aos usuários como idade, sexo, profissão, além de hábitos como o de assistir a certos canais de televisão, prática de esportes, entre outros \cite{Krulwich1997}. Com base nesses dados, esses sistemas fazem uso de classificadores para dividir os usuários em grupos que compartilham das mesmas características \cite{Aggarwal2016}, partindo da premissa de que pessoas em um mesmo grupo tendem a gostar dos mesmos tipos de itens \cite{Pazzani1999}. 
    
     SRs Demográficos isoladamente não são capazes de recomendações melhores que abordagens tradicionais, como filtragem colaborativa ou baseada em conteúdo. Entretanto, quando incorporados a essas e outras abordagens, a qualidade das recomendações pode ser  significativamente melhorada \cite{Aggarwal2016}. 
 
@@ -459,11 +467,11 @@ Segundo \citeonline{Ricci2010} e \citeonline{Aggarwal2016}, há dois tipos espec
 
      % Problemas: cold-start, esparçabilidade, escalabilidade, shilling attacks ... Soluções propostas por outros autores.
     
-    Os sistemas de recomendação apresentam algumas limitações e obstáculos que dificultam que as recomendações sejam calculadas e realizadas. 
+    Os SRs apresentam algumas limitações e obstáculos que dificultam que as recomendações sejam calculadas e realizadas. 
     
-    Quando o sistema recebe novos usuários para recomendação não há informações suficientes sobre suas preferências que possibilite a geração de recomendações para ele \cite{Bobadilla_2013}. Por outro lado, em relação aos itens, não existe nenhuma interação com usuários que permita ser recomendado a alguém. Os sistemas de recomendação ``puros'', ou seja, baseados em filtragem colaborativa, baseados em conteúdo, entre outros, não conseguem lidar com esses problemas, também chamados de \textit{cold start} ou partida fria. Tais problemas, no entanto, podem ser superados por sistemas híbridos \cite{Miranda2010}.
+    Quando o sistema recebe novos usuários para recomendação não há informações suficientes sobre suas preferências que possibilite a geração de recomendações para ele \cite{Bobadilla_2013}. Por outro lado, em relação aos itens, não existe nenhuma interação com usuários que permita ser recomendado a alguém. Os SRs ``puros'', ou seja, baseados em filtragem colaborativa, baseados em conteúdo, entre outros, não conseguem lidar com esses problemas, também chamados de \textit{cold start} ou partida fria. Tais problemas, no entanto, podem ser superados por sistemas híbridos \cite{Miranda2010}.
     
-    Além do problema em recomendar novos itens há o efeito gerado pela adição deste item, ou seja, o conjunto de recomendação prévio não leva em conta esse novo item e, deste modo, pode não ser preciso. Assim, é necessário que o sistema ajuste as bases de recomendação para que o novo item seja recomendado. No entanto, tais bases contêm entre centenas à milhares de itens e usuários e, por isso, efetuar a atualização de uma base de grande porte pode ser custoso e inviável para cada novo item acrescentado. Esse problema se refere à escalabilidade de sistemas de recomendação \cite{Lue2012}. 
+    Além do problema em recomendar novos itens há o efeito gerado pela adição deste item, ou seja, o conjunto de recomendação prévio não leva em conta esse novo item e, deste modo, pode não ser preciso. Assim, é necessário que o sistema ajuste as bases de recomendação para que o novo item seja recomendado. No entanto, tais bases contêm entre centenas à milhares de itens e usuários e, por isso, efetuar a atualização de uma base de grande porte pode ser custoso e inviável para cada novo item acrescentado. Esse problema se refere à escalabilidade de SRs \cite{Lue2012}. 
     
     Outro desafio se refere a esparsidade, ou seja, a proporção dos itens avaliados por usuários em relação ao número total de itens é consideravelmente pequena e mal distribuída. Além disso, a intersecção do conjunto de itens avaliados por pares de usuários tende a ser modesta. Isso acontece em função da baixa taxa de avaliação de itens, seja explícita ou implicitamente \cite{Lue2012, Sharma2017}.
 
@@ -473,7 +481,7 @@ Segundo \citeonline{Ricci2010} e \citeonline{Aggarwal2016}, há dois tipos espec
 
 % Primeiras aplicações
 
-A aplicabilidade de Sistemas de Recomendação é ampla, indo desde sites de comércio eletrônico até a área da saúde. Os primeiros sistemas, como descrito no início do capítulo, objetivavam reduzir a carga de informações ao usuário categorizando e recomendando os itens \cite{Goldberg1992, Resnick1994}. No entanto, com o expansão da área e da Internet novas aplicações de sistemas de recomendação surgiram, entre elas, no comércio eletrônico, em plataformas de \textit{streaming}, turismo e, recentemente, na Internet das Coisas. 
+A aplicabilidade de SRs é ampla, indo desde sites de comércio eletrônico até a área da saúde. Os primeiros sistemas, como descrito no início do capítulo, objetivavam reduzir a carga de informações ao usuário categorizando e recomendando os itens \cite{Goldberg1992, Resnick1994}. No entanto, com o expansão da área e da Internet novas aplicações de SRs surgiram, entre elas, no comércio eletrônico, em plataformas de \textit{streaming}, turismo e, recentemente, na IoT. 
 
 Na área de comércio eletrônico, as avaliações são costumeiramente utilizadas, além do histórico de interações com os produtos, seja na forma de visualização ou compra. Com base nesses dados de usuários, esses sistemas geram recomendações  \cite{Lu2015}. Empresas como Amazon\textsuperscript{\textregistered}\footnote{https://www.amazon.com.br}, Saraiva\textsuperscript{\textregistered}\footnote{https://www.saraiva.com.br} e Walmart\textsuperscript{\textregistered}\footnote{https://www.walmart.com.br} recomendam produtos para seus usuários. Tratando-se da Amazon por exemplo, recomendações são disponibilizadas aos usuários por diversos meios, como página \textit{web} ou por e-mail. Tais sugestões são computadas através de filtragem colaborativa baseada em item. Entre as entradas para a abordagem de recomendação tem-se o conjunto de produtos visualizados e/ou comprados pelo usuários, bem como, os itens mais vendidos, entre outras informações \cite{Krawiec2016}.
 
@@ -483,10 +491,10 @@ Na área de comércio eletrônico, as avaliações são costumeiramente utilizad
     % Netflix
     % Spotify
 
-Sistemas de Recomendação também são utilizados em plataformas de \textit{streaming}, como Netflix\textsuperscript{\textregistered}\footnote{https://www.netflix.com} e Spotify\textsuperscript{\textregistered}\footnote{https://www.spotify.com}, onde filmes, séries ou músicas são recomendados. A Netflix\textsuperscript{\textregistered}, por exemplo, lançou, em 2006, uma competição chamada \textit{Netflix Prize} em que oferecia um milhão de dólares a quem, a partir de um conjunto de dados fornecido, aprimorasse o sistema de recomendação baseado do em fatoração de matriz. Para tanto, a solução proposta deveria em  reduzir, em 10\%, o \textit{Root Mean Square Error} (RMSE). Como resultado, as pesquisas sobre a técnica eclodiram, resultando em um vencedor em 2009 \cite{Jannach2016}. Como resultado, as pesquisas sobre a técnica eclodiram, resultando em um vencedor em 2009 \cite{Jannach2016}.
+SRs também são utilizados em plataformas de \textit{streaming}, como Netflix\textsuperscript{\textregistered}\footnote{https://www.netflix.com} e Spotify\textsuperscript{\textregistered}\footnote{https://www.spotify.com}, onde filmes, séries ou músicas são recomendados. A Netflix\textsuperscript{\textregistered}, por exemplo, lançou, em 2006, uma competição chamada \textit{Netflix Prize} em que oferecia um milhão de dólares a quem, a partir de um conjunto de dados fornecido, aprimorasse o SR baseado do em fatoração de matriz. Para tanto, a solução proposta deveria em  reduzir, em 10\%, o \textit{Root Mean Square Error} (RMSE). Como resultado, as pesquisas sobre a técnica eclodiram, resultando em um vencedor em 2009 \cite{Jannach2016}. Como resultado, as pesquisas sobre a técnica eclodiram, resultando em um vencedor em 2009 \cite{Jannach2016}.
 
 % IoT
-O novo paradigma da Internet das Coisas comportará aplicações que comportarão Sistemas de Recomendação. Para tanto, dados locais e pessoais serão coletados implicitamente através dos vários sensores e dispositivos de IoT. A partir disso, tem-se a representação do contexto de usuários em que recomendações proativas poderão ser entregues no momento mais apropriado e sem a requisição direta da sugestão \cite{Salman2015}. As possíveis recomendações poderão abranger, além de itens, serviços \cite {Mashal2015}.
+O novo paradigma da IoT comportará aplicações que comportarão SRs. Para tanto, dados locais e pessoais serão coletados implicitamente através dos vários sensores e dispositivos de IoT. A partir disso, tem-se a representação do contexto de usuários em que recomendações proativas poderão ser entregues no momento mais apropriado e sem a requisição direta da sugestão \cite{Salman2015}. As possíveis recomendações poderão abranger, além de itens, serviços \cite {Mashal2015}.
 
 
 % Outras áreas
@@ -496,7 +504,7 @@ O novo paradigma da Internet das Coisas comportará aplicações que comportarã
     % Administração Pública
     % 
     
-Sistemas de Recomendação são aplicáveis não apenas nas áreas apresentadas anteriormente, mas também na saúde \cite{Ferretto2017}, educação \cite{Wai2016,Montuschi2015}, turismo \cite{Smirnov2013, Frikha2016}, engenharia de software \cite{Hamza2015}, jogos eletrônicos \cite{Berkovsky2010}, entre outros.
+SRs são aplicáveis não apenas nas áreas apresentadas anteriormente, mas também na saúde \cite{Ferretto2017}, educação \cite{Wai2016,Montuschi2015}, turismo \cite{Smirnov2013, Frikha2016}, engenharia de software \cite{Hamza2015}, jogos eletrônicos \cite{Berkovsky2010}, entre outros.
 
 % Netflix Prize
 % Spotify

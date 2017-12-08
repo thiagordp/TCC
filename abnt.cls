@@ -1643,10 +1643,10 @@ Para mais informacoes, leia o manual da classe.\MessageBreak%
   {\end{citado}}%
 
 %% Contents shows up to subsubsection. 
-\setcounter{tocdepth}{4}
+\setcounter{tocdepth}{2}
 
 %% Section number will appear up to \subsubsection
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{2}
 
 
 

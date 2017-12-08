@@ -14,14 +14,14 @@
 %----------------------------------------------------------------------
 % Pacotes usados especificamente neste documento
 
-\usepackage{graphicx, subcaption} % Possibilita o uso de figuras e gráficos
+\usepackage{graphicx} % Possibilita o uso de figuras e gráficos
 \usepackage{color}    %  Possibilita o uso de cores no documento
 \usepackage{pdfpages} % Possibilita a inclusão da ficha catalográfica
 \usepackage{listings} % Possibilita colocar códigos
 \usepackage{lipsum}
 \usepackage{caption} % colocar textos em figuras
 \captionsetup{justification=raggedright,singlelinecheck=false, labelsep=endash,position=above, skip=0pt}%, textfont=footnotesize}
-\usepackage{subfigure}
+%\usepackage{subfigure}
 \usepackage{xifthen} % deixa fazer uns if-then-else mutcho loko
 \usepackage[brazil]{babel}  % usados para arrumar os caracteres em português
 \usepackage[utf8]{inputenx} % fa
@@ -90,10 +90,9 @@
 	\end{table}
 }
 
-\usepackage{longtable, ltcaption}
-\usepackage{trivfloat}
-\usepackage{floatrow}
-\usepackage{chngcntr}
+
+%\usepackage{floatrow}
+%\usepackage[titles]{tocloft}
 %\begin{quadro}[h!tp]
 %    \centering
 %    \caption{Teste}
@@ -102,11 +101,9 @@
 %        Conteúdo 1 &amp; Conteúdo 2 \\ \hline
 %    \end{tabular}
 %\end{quadro}
-
-
-
-
-
+\usepackage{longtable, ltcaption}
+\usepackage{trivfloat}
+\usepackage{chngcntr}
 \captionsetup[quadro]{position=above,skip=0pt}
 
 
@@ -133,8 +130,6 @@
 \floatstyle{plaintop} % Forçar posição da legenda para o topo
 \restylefloat{quadro} % Forçar posição da legenda para o topo
 \renewcommand{\listquadroname}{Lista de Quadros} % Forçar texto na Lista de Quadros
-
-
 
 %\renewcommand{\listofquadrosname}{Lista de Quadros}
 
@@ -163,17 +158,17 @@
 \grau{Bacharel em Engenharia de Computação}
 \local{Araranguá} % Opcional (Florianópolis é o padrão)
 \data{05}{dezembro}{2017}
-\coordenador[Coordenadora]{Prof. Dr. Eliane Pozzebon} %TODO Rever o Coordenador do curso
+\coordenador[Coordenadora]{Profa. Dra. Eliane Pozzebon} %TODO Rever o Coordenador do curso
 \orientador[Orientador]{Prof. Dr. Alexandre Leopoldo Gonçalves}
 %\coorientador[Coorientador\\Universidade ...]{Prof. Dr.}
 
 \numerodemembrosnabanca{3} % Isso decide se haverá uma folha adicional
 \orientadornabanca{sim} % Se faz parte da banca definir como sim
 \coorientadornabanca{não} % Se faz parte da banca definir como sim
-\bancaMembroA{Primeiro membro\\Universidade ...} %Nome do presidente da banca
-\bancaMembroB{Segundo membro\\Universidade ...}      % Nome do membro da Banca
-\bancaMembroC{Terceiro membro\\Universidade ...}     % Nome do membro da Banca
-\bancaMembroD{Quarto membro\\Universidade ...}       % Nome do membro da Banca
+\bancaMembroA{Prof. Dr. Alexandre Leopoldo Gonçalves\\Universidade Federal de Santa Catarina} %Nome do presidente da banca
+\bancaMembroB{Profa. Dra. Analúcia Schiaffino Morales\\Universidade Federal de Santa Catarina}      % Nome do membro da Banca
+%\bancaMembroC{Prof. Dr. Anderson Luiz Fernandez Perez\\Universidade Federal de Santa Catarina}     % Nome do membro da Banca
+\bancaMembroC{Profa. Dra. Olga Yevseyeva\\Universidade Federal de Santa Catarina}       % Nome do membro da Banca
 %\bancaMembroE{Quinto membro\\Universidade ...}       % Nome do membro da Banca
 %\bancaMembroF{Sexto membro\\Universidade ...}        % Nome do membro da Banca
 %\bancaMembroG{Sétimo membro\\Universidade ...}       % Nome do membro da Banca
@@ -183,11 +178,6 @@
 \include{pretextual/epigrafe}
 \include{pretextual/resumo_pt}
 \include{pretextual/resumo_en}
-
-
-%
-
-
 
 %----------------------------------------------------------------------
 % Início do documento                                
@@ -199,14 +189,23 @@
 	%--------------------------------------------------------
 	% Elementos pré-textuais
 	\capa  
+	
+    \begin{titlepage}
+      \mbox{~}
+    \end{titlepage}
+    
 	%\folhaderosto[comficha] % Se nao quiser imprimir a ficha, é só não usar o parâmetro
 	
 	\include{pretextual/folha_de_rosto}
 	
-%	\folhaaprovacao
-%	\paginadedicatoria
-%	\paginaagradecimento
-%	\paginaepigrafe
+	%folhaaprovacao
+	\includepdf[pages=-, offset=0 0]{pretextual/ficha_catalografica}
+	
+	\include{pretextual/folha_aprovacao}
+	
+	\paginadedicatoria
+	\paginaagradecimento
+	\paginaepigrafe
 	\paginaresumo
 	\paginaabstract
 	%\pretextuais % Substitui todos os elementos pre-textuais acima
@@ -278,8 +277,7 @@
 	\bibliographystyle{ufscThesis/ufsc-alf}
 	\bibliography{postextual/referencias}
 
-
 	%\include{postextual/apendice}
-	\include{postextual/anexo}
+%	\include{postextual/anexo}
 
 \end{document}

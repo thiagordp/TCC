@@ -4,11 +4,15 @@
 % Geladeiras inteligentes existentes
     % Funcionalidades
 
-Geladeiras inteligentes têm sido lançadas por fabricantes como Samsung\textsuperscript{\textregistered} e LG\textsuperscript{\textregistered}, tendo estas muitas características em comum. Em relação ao modelo tradicional, essas geladeiras proporcionam uma maior interação dos usuários a partir de uma interface \textit{touch screen}, além do uso de câmeras no interior do equipamento.
+Este capítulo tem por objetivo detalhar o sistema proposto apresentando uma visão lógica e uma visão física promovendo, assim, um entendimento do como os diversos componentes interagem e se comportam.
 
-A partir da interface é possível criar lembretes para os demais moradores da casa, ler notícias e ver a previsão do tempo. Além disso, é possível adicionar itens ao calendário e visualizar receitas. Por outro lado, conta-se com o auxílio de assistentes virtuais como a Alexa, da Amazon, e a Cortana da Microsoft, que possibilitam que ações sejam executadas a partir de comandos de voz como, por exemplo, compras de novos produtos. 
+\section{Introdução}
 
-Apesar de as funcionalidades serem úteis e interessantes, geladeiras como estas não se atentaram à observação dos hábitos e preferências por produtos de seus usuários. Como exemplo, tais eletrodomésticos não são capazes de inferir que um usuário seja vegetariano ou que tenha intolerância à lactose.
+Geladeiras inteligentes têm sido lançadas por fabricantes como Samsung\textsuperscript{\textregistered} e LG\textsuperscript{\textregistered}, tendo estas muitas características em comum. Em relação ao modelo tradicional, essas geladeiras proporcionam uma maior interação com os usuários a partir de uma interface \textit{touch screen}, além do uso de câmeras no interior do equipamento.
+
+A partir da interface é possível criar lembretes para os demais moradores da casa, ler notícias e ver a previsão do tempo. Além disso, é possível adicionar itens ao calendário e visualizar receitas. Por outro lado, conta-se com o auxílio de assistentes virtuais como a Alexa\textsuperscript{\textregistered}, da Amazon\textsuperscript{\textregistered}, e a Cortana\textsuperscript{\textregistered} da Microsoft\textsuperscript{\textregistered}, que possibilitam que ações sejam executadas a partir de comandos de voz como, por exemplo, compras de novos produtos. 
+
+Apesar de as funcionalidades serem úteis e interessantes, geladeiras como estas não observam os hábitos e preferências por produtos de seus usuários. Como exemplo, tais eletrodomésticos não são capazes de inferir que um usuário seja vegetariano ou que tenha intolerância à lactose.
 
     
 % Componentes do sistema (geladeira, aTTplicação, servidor, mercado) que estão dispostos na arquitetura proposta,
@@ -17,20 +21,20 @@ Apesar de as funcionalidades serem úteis e interessantes, geladeiras como estas
     % O que vai adicionar
     % Quais as funcionalidades
 
-O sistema proposto nesse capítulo foca na questão mencionada e apresenta um modelo de geladeira inteligente que seja capaz de observar os hábitos de seus usuários e disponibilizar uma experiência personalizada de modo a facilitar o seu dia a dia. Para tanto, criou-se uma modelagem que engloba os diversos componentes do sistema além da geladeira em si. Desse modo, o sistema foi dividido em três elementos principais: a geladeira, servidor e mercado.
+O modelo descrito nesse capítulo foca na questão mencionada e apresenta uma proposta de geladeira inteligente que seja capaz de observar os hábitos de seus usuários e disponibilizar uma experiência personalizada de modo a facilitar o seu dia a dia. Para tanto, o modelo foi materializado em um sistema computacional composto de três componentes principais: a geladeira, servidor e mercado.
 
-O primeiro deles, a geladeira, contém dois subsistemas, um mecanismo de leitura de itens e a interface. Já o servidor contém bases de dados e processos que compõe o sistema de análise de interações e recomendação. E, por fim, o mercado é responsável por permitir a compra de produtos, a verificação de disponibilidade destes e a obtenção de informações detalhadas sobre.
+A geladeira contém dois subsistemas, ou seja, um mecanismo de leitura de itens e a interface de interação com o usuário. Já o servidor contém as bases de dados e processos que compõe o sistema de análise de interações e recomendações. E, por fim, o mercado é responsável por permitir a compra de produtos, a verificação de disponibilidade destes e a obtenção de informações detalhadas sobre os mesmos.
     
-Baseando-se nos três componentes, o sistema proposto disponibiliza, como funcionalidades, a listagem dos produtos contidos, compras automáticas e recomendação de produtos e receitas, como será detalhado posteriormente.
+Baseando-se nos três componentes, o sistema disponibiliza como funcionalidades a listagem dos produtos contidos na geladeira, a compra automática e recomendação de produtos e receitas, como será detalhado posteriormente.
     
 %\section{Arquitetura}
 %####################################################%
-O modelo criado foi subdividido em duas modelagens, sendo elas, lógica e física. A primeira apresenta os componentes do sistema abstraindo as tecnologias envolvidas na sua composição, focando, desse modo, nas funcionalidades. Já o modelo físico complementa a visão lógica a partir do detalhamento de cada componente, bem como as tecnologias empregadas em suas respectivas implementações.
+O modelo foi subdividido em duas visões, sendo elas, lógica e física. A primeira apresenta os componentes do sistema abstraindo as tecnologias envolvidas na sua composição, tendo como foco as funcionalidades. Já o modelo físico complementa a visão lógica a partir do detalhamento de cada componente, bem como as tecnologias empregadas em suas respectivas implementações.
 
 \section{Modelo Lógico}
 
-O modelo lógico do sistema proposto neste trabalho é apresentado na Figura \ref{fig:c4_modelo_logico}. Pode-se observar, portanto, cinco camadas: aplicação, serviços, repositórios, processamento e agente externo. A primeira delas, de aplicação, envolve os componentes externos ao servidor principal, mas que são relacionados ao sistema, sendo eles, geladeira e interface de usuário. Já as demais camadas, de serviços, repositórios e processamento, se encontram dentro do servidor%, sendo estas separadas por módulos
-. Por fim, a camada de agente externo abriga o mercado ao qual apresenta um arquitetura independente àquela aqui proposta.
+O modelo lógico do sistema proposto neste trabalho é apresentado na Figura \ref{fig:c4_modelo_logico}. Pode-se observar cinco camadas: aplicação, serviços, repositórios, processamento e agente externo. A primeira delas envolve os componentes externos ao servidor principal, mas que são relacionados ao sistema, sendo eles, a geladeira e a interface de usuário. Já as camadas de serviços, repositórios e processamento fazem parte do servidor de aplicação%, sendo estas separadas por módulos
+. Por fim, a camada de agente externo abriga o mercado que apresenta um arquitetura independente àquela aqui proposta.
 
 % Figura
 
@@ -54,9 +58,9 @@ O modelo lógico do sistema proposto neste trabalho é apresentado na Figura \re
 %  - Qual objetivo
 %  - Porque
 
-A camada de aplicação, como descrito, envolve os componentes  externos ao sistema principal. O primeiro deles é a geladeira à qual é responsável por monitorar os produtos nela contidos. Deste modo, a cada interação do usuário com a geladeira, é realizada uma varredura a fim de verificar o conjunto de produtos existentes. Em seguida, envia-se tais informações para o servidor através do serviço de registro de interação.
+A camada de aplicação, como descrito, envolve os componentes externos ao sistema principal. O primeiro deles é a geladeira à qual se  responsabiliza por monitorar os produtos nela contidos. Deste modo, a cada interação do usuário com a geladeira é realizada uma varredura a fim de verificar o conjunto de produtos existentes. Em seguida, envia-se tais informações para o servidor através do serviço de registro de interação.
 
-Outra funcionalidade à qual a geladeira também é incumbida, é a verificação da condição de fechamento porta e, caso aberta por um determinado período, a geladeira faz um registro na base de estruturas auxiliares através do serviço de registro de interação para que o sistema seja capaz de emitir um aviso ao usuário.
+Outra funcionalidade da geladeira consiste na verificação da condição de fechamento da porta. Caso esteja aberta por um determinado período, a geladeira faz um registro na base de estruturas auxiliares através do serviço de registro de interação. Assim, o sistema é capaz de emitir um aviso ao usuário.
 
 % Descrição da interface
 %  - O que é
@@ -65,7 +69,7 @@ Outra funcionalidade à qual a geladeira também é incumbida, é a verificaçã
 
 O componente seguinte é a interface de usuário, incorporada à porta da geladeira. Ela se responsabiliza por permitir ao usuário a interação com o eletrodoméstico. Assim, tem-se como funcionalidades deste componente: a listagem de produtos contidos, conjunto de produtos prestes a vencer, notificações de alerta caso o usuário esqueça a porta aberta, configurações personalizáveis e, por fim, recomendações de possíveis compras de produtos e receitas.
 
-As recomendações podem ser exibidas automaticamente ou quando o usuário desejar. Assim a aplicação faz, automaticamente, a requisição e alerta o usuário através de uma notificação ou, ainda, o usuário solicita as recomendações através da interface.
+As recomendações podem ser exibidas automaticamente ou quando o usuário desejar. Assim, a aplicação realiza automaticamente a requisição e alerta o usuário através de uma notificação ou, ainda, o usuário solicita as recomendações através da interface.
 
 % Descrição do mercado
 %  - O que é
@@ -81,7 +85,7 @@ As recomendações podem ser exibidas automaticamente ou quando o usuário desej
 
 \subsection{Camada de Serviços}
 
-A camada de serviços disponibiliza um conjunto de funcionalidades aos componentes da camada de aplicação, se comportando como porta de entrada do sistema principal. Assim, há um conjunto de serviços específicos disponibilizados conforme a Figura \ref{fig:c4_modelo_logico} e que serão descritos nos parágrafos seguintes.
+A camada de serviços disponibiliza um conjunto de funcionalidades aos componentes da camada de aplicação, se comportando como meio de entrada do sistema principal. Assim, há um conjunto de serviços específicos disponibilizados conforme a Figura \ref{fig:c4_modelo_logico} e que serão descritos nos parágrafos seguintes.
 
 % Explanação sobre a camada serviços
 
@@ -89,7 +93,7 @@ A camada de serviços disponibiliza um conjunto de funcionalidades aos component
 %  - O que é
 %  - Qual objetivo
 %  - Porque
-O serviço de registro de interação receberá informações dos itens contidos da geladeira além do alerta de porta aberta. Em seguida, registra-se tais informações na base de interações e de estruturas auxiliares, respectivamente.
+O serviço de registro de interação recebe informações dos itens contidos da geladeira além do alerta de porta aberta. Em seguida, registra-se tais informações na base de interações e de estruturas auxiliares, respectivamente.
 
 
 % Descrição do "Consulta de Produtos Disponíveis"
@@ -97,14 +101,16 @@ O serviço de registro de interação receberá informações dos itens contidos
 %  - Qual objetivo
 %  - Porque
 
-Já o serviço de consulta de produtos disponíveis será requisitado pelo usuário através da interface. Então, será feita uma busca na base de interações pelo último registro feito ao qual conterá os produtos existentes no momento.
+Já o serviço de consulta de produtos disponíveis pode ser requisitado pelo usuário através da interface. 
+%A partir disto, será realizada uma busca na base de interações pelo último registro feito ao qual conterá os produtos existentes no momento.
+Então, o conjunto de produtos contidos na geladeira é obtido a partir do último registro inserido na base de interações, já que este último mostra o estado mais recente da geladeira.
 
 % Descrição do "Consulta de produtos vencidos"
 %  - O que é
 %  - Qual objetivo
 %  - Porque
 
-O serviço de consulta de produtos vencidos é acionado periodicamente pela interface. Desse modo, é feita uma busca pelo itens disponíveis na geladeira e o tempo que estão presentes, através da base de interações. Logo após, se faz uma consulta na base de meta-informação para determinar o período de validade (após aberto) de cada produto encontrado. A partir da comparação entre tempo de acondicionamento e prazo de expiração, sabe-se se o produto está vencido ou não. A estimativa é feita pois o prazo de validade transcrito em produtos não condiz após a abertura sua abertura. Assim, uma estimativa de tempo menor é necessária.
+O serviço de consulta de produtos vencidos é acionado periodicamente pela interface. Desse modo, é efetuada uma busca pelo itens disponíveis na geladeira e o tempo que estão presentes, através da base de interações. Logo após, se realiza uma consulta na base de metainformação para determinar o período de validade (após aberto) de cada produto encontrado. A partir da comparação entre tempo de acondicionamento e prazo de expiração, sabe-se se o produto está vencido ou não. A estimativa é feita pois o prazo de validade transcrito nos produtos se reduz após sua abertura.
 
 % Descrição do "Consulta de porta aberta"
 %  - O que é
@@ -119,21 +125,21 @@ O serviço de consulta de porta aberta é requisitado pela interface de usuário
 %  - Qual objetivo
 %  - Porque
 
-O serviço de configurações permite que o usuário personalize algumas características do funcionamento da geladeira. A primeira delas se refere ao mercado no qual as compras são realizadas. Além disso, é possível determinar quais produtos devem, sempre, estar disponíveis para consumo e qual a quantidade mínima necessária.
+O serviço de configurações permite que o usuário personalize algumas características do funcionamento da geladeira. A primeira delas se refere ao mercado no qual as compras são realizadas. Além disso, é possível determinar quais produtos devem sempre estar disponíveis para consumo e qual a quantidade mínima necessária.
 
 % Descrição do "Consulta de Recomendação de Compras"
 %  - O que é
 %  - Qual objetivo
 %  - Porque
 
-O serviço de consulta de recomendação de compras é requisitado pela aplicação periodicamente e também pelo usuário. Assim, quando é feita uma requisição, automática ou não, o serviço faz uma consulta à base de recomendações em busca de possíveis sugestões. O conjunto existente é então retornado para a interface que, por sua vez, indaga ao usuário se deseja realizar a compra e quais produtos deseja adquirir, dentre os apresentados. A lista é retornada ao serviço que, então, faz o registro na base de estruturas auxiliares.
+O serviço de consulta de recomendação de compras é requisitado pela interface periodicamente e também pelo usuário. Assim, quando é feita uma requisição, automática ou não, o serviço faz uma consulta à base de recomendações em busca de possíveis sugestões. O conjunto existente é então retornado para a interface que, por sua vez, indaga ao usuário se deseja realizar a compra e quais produtos, dentre os apresentados, deseja adquirir. A lista é retornada ao serviço que, então, faz o registro na base de estruturas auxiliares.
 
 % Descrição do "Consulta de Recomendação de Receitas"
 %  - O que é
 %  - Qual objetivo
 %  - Porque
 
-O serviço de recomendação de receitas recebe uma requisição do usuário e faz uma consulta à base de recomendações. Caso existam receitas para recomendar, essas serão listadas ao usuário na interface e será possível então a escolha de qual receita deseja-se visualizar.
+O serviço de recomendação de receitas recebe uma requisição do usuário e faz uma consulta à base de recomendações. Caso existam receitas para recomendar, essas serão listadas ao usuário na interface sendo possível a escolha de qual receita se deseja visualizar.
 
 % Descrição do "Compra automática"
 %  - O que é
@@ -143,32 +149,32 @@ O serviço de recomendação de receitas recebe uma requisição do usuário e f
 \subsection{Camada de Repositórios} \label{sec:camada-repo}
 
 % Explanação sobre a camada
-O conjunto de repositórios desta camada atuam na persistência de informações geradas pelos diversos componentes das camadas de aplicação e de processamento. Nessa modelagem, dividiu-se em quatro bases: de interações, de estruturas auxiliares, de recomendações e de meta-informação.
-A primeira base é responsável, como descrito anteriormente, pelo registro de produtos acondicionados na geladeira. A partir disso, as consultas realizadas nessa base recuperarão os itens constantes após cada interação do usuário.
+O conjunto de repositórios desta camada atuam na persistência de informações geradas pelos diversos componentes das camadas de aplicação e de processamento, sendo divididas em quatro bases: de interações, de estruturas auxiliares, de recomendações e de metainformação.
+A primeira base é responsável, como descrito anteriormente, pelo registro de produtos acondicionados na geladeira. A partir disso, as consultas realizadas nessa base podem recuperar os itens constantes após cada interação do usuário.
 
-A base de estruturas auxiliares contém informações que são utilizadas por mais de um serviço. Tais informações são alertas de porta aberta, configurações e as listas de compras determinadas pelo usuário. 
+A base de estruturas auxiliares contém informações que são utilizadas por mais de um serviço. Tais informações representam alertas de porta aberta, configurações e as listas de compras efetuadas pelo usuário. 
 
-Já a base de recomendações armazena todas as sugestões de receitas e de compras de produtos construídas pelo gerador e que serão apresentadas ao usuário.
+Já a base de recomendações armazena todas as sugestões de receitas e de compras de produtos que foram elaboradas pelo módulo de geração de recomendações e que serão apresentadas ao usuário.
 
-A última base, de meta-informação, contém informações referentes ao conteúdo dos produtos adquiridos e que são utilizadas pelo gerador de recomendações e pelo serviço de verificação de produtos vencidos. Tais informações incluem características do produto, como código de barras, fabricante, informações nutricionais, categoria além do tempo estimado de validade. Além disso, inclui-se registros de receitas e suas respectivas informações, ou seja, ingredientes, e passos para o preparo desta.
+A última base, de metainformação, contém informações referentes ao conteúdo dos produtos adquiridos e que são utilizadas pelo módulo de geração de recomendações e pelo serviço de verificação de produtos vencidos. Tais informações incluem características do produto, como código de barras, fabricante, informações nutricionais, categoria além do tempo estimado de validade. Além disso, inclui-se registros de receitas e suas respectivas informações, ou seja, ingredientes, e passos para o preparo destas.
 
 \subsection{Camada de Processamento}
 
 % Explanação sobre a camada
-A camada de processamento contém os módulos de geração de recomendações, de compras automáticas e de sincronização de meta-informação. O primeiro deles faz uso das informações, armazenadas na base de interação, e das características de cada item, mantidas na base de meta-informações.
+A camada de processamento contém os módulos de geração de recomendações, de compras automáticas e de sincronização de metainformação. O primeiro deles faz uso das informações armazenadas na base de interação e das características de cada item, mantidas na base de metainformações.
 
 % Como vai receber do mercado informações de que tem itens em promoção.
-As recomendações de receitas fazem uso da base de interações para ter conhecimento dos produtos contidos atualmente e de meta-informações para resgatar as receitas e seus respectivos ingredientes. A partir disso, é feita uma comparação entre as bases. Caso alguma receita requeira itens que já estão presentes, essa será recomendada ao usuário. %Do contrário, caso apenas alguns itens estejam em falta, será sugerida, ao usuário, além da receita, a compra dos produtos faltantes.
+As recomendações de receitas fazem uso da base de interações para ter conhecimento dos produtos contidos atualmente e de metainformações para resgatar as receitas e seus respectivos ingredientes. A partir disso, é feita uma comparação entre as bases. Caso alguma receita tenha a necessidade de itens que já estão presentes, essa será recomendada ao usuário. %Do contrário, caso apenas alguns itens estejam em falta, será sugerida, ao usuário, além da receita, a compra dos produtos faltantes.
 
-Compras são sugeridas com base na quantidade existente de um certo produto. Assim, quando tal valor cai abaixo da quantidade mínima, determinada pelo usuário, é feita a recomendação de compra do mesmo item. No entanto, o mercado pode não ter à disposição o produto específico, mas pode conter similares. Nesse caso, o sistema faz uma busca por itens similares e pede a aprovação do usuário para a compra deste, ao invés do original. Além disso, sugere-se novos itens, aos quais tenha apresentado interesse, que, por ventura, o mercado venha a disponibilizar.
+Compras são sugeridas com base na quantidade existente de um certo produto. Assim, quando tal valor fica abaixo da quantidade mínima, determinada pelo usuário, é realizada a recomendação de compra do produto. No entanto, o mercado pode não ter à disposição o produto específico, mas pode conter similares. Neste caso, o sistema efetua uma busca por itens similares e solicita a aprovação do usuário para a compra deste, ao invés do original. Além disso, sugere-se novos itens, aos quais tenha apresentado interesse, que, por ventura, o mercado venha a disponibilizar.
 
 O processo de compra é executado automaticamente quando há uma lista de compras pendente. Assim, a partir da verificação de tal pendência na base de estruturas auxiliares, a compra é requisitada ao mercado. 
 
-O processo de sincronização de meta-dados, periodicamente consulta o serviço de sincronização do mercado para verificar se há meta-informações de produtos às quais foram adicionados ou alterados.
+Já o processo de sincronização de metainformações, periodicamente consulta o serviço de sincronização do mercado para verificar se há metainformações de produtos que foram adicionados ou alterados.
 
 \subsection{Camada de Agente Externo}
 
-O componente desta camada é o mercado. Através dele, será possível verificar disponibilidade de produtos e efetivar as compras a partir da lista de produtos selecionados pelo usuário. Além disso, há a funcionalidade de sincronização de meta-informação de produtos onde, para isso, o mercado disponibiliza um serviço possibilitando, assim, que a base de meta-informação possa ser periodicamente atualizada. Essas informações serão utilizadas posteriormente na recomendação de produtos e receitas.
+O componente desta camada é o mercado. Através dele, torna-se possível verificar a disponibilidade de produtos e efetivar compras a partir da lista de produtos selecionados pelo usuário. Além disso, há a funcionalidade de sincronização de metainformação de produtos onde, para isso, o mercado disponibiliza um serviço possibilitando que a base de metainformação possa ser periodicamente atualizada. Essas informações são utilizadas posteriormente na recomendação de produtos e receitas.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -187,7 +193,7 @@ O componente desta camada é o mercado. Através dele, será possível verificar
 % Se preciso desenhar a arquitetura interna do componente
 % Por exemplo a geladeira, vai ter muitas coisas dentro que devem ser explicitadas
 
-A modelagem física desse trabalho é apresentada na Figura \ref{fig:c4_modelo_fisico}. Nas seções a seguir serão detalhados os diversos componentes do sistema, em relação aos aspectos internos.
+A modelagem física deste trabalho é apresentada na Figura \ref{fig:c4_modelo_fisico}. Nas seções a seguir serão detalhados os diversos componentes do sistema, em relação aos aspectos internos.
 
 
 \begin{figure}[H]
@@ -204,35 +210,43 @@ A modelagem física desse trabalho é apresentada na Figura \ref{fig:c4_modelo_f
 \ProximoForaDoSumario 
 \subsubsection{Geladeira}
 
-A geladeira, presente no modelo lógico da Figura \ref{fig:c4_modelo_logico}, foi construída de acordo com a Figura \ref{fig:cap4_estr_geladeira}. Assim, observa-se três componentes principais: os leitores de etiquetas MFCR522 para RFID e NFC, o sensor de fechamento para a porta e a placa Raspberry PI\textsuperscript{\textregistered}\footnote{https://www.raspberrypi.org} 3 Modelo B. O primeiro deles, o conjunto de leitores, responsabiliza-se por efetuar varreduras de etiquetas NFC próximas a cada leitor quando for requerido. A partir disso, os dados lidos, referentes aos produtos, serão transferidos para o Raspberry PI que, por sua vez, os transfere para o serviço de Registro de Interação. Os dados das etiquetas se encontram no formato \textit{Electronic Product Code} (EPC), no qual, identifica-se o fabricante, a classe, o produto e a instância do produto a partir de um número de 96 bits, de forma semelhante ao código de barras presente nos produtos. Vale destacar que as etiquetas utilizadas nesse trabalho operam na faixa HF de 13,56 MHz e foram configuradas no formato NDEF.
+A geladeira, presente no modelo lógico da Figura \ref{fig:c4_modelo_logico}, foi construída de acordo com a Figura \ref{fig:cap4_estr_geladeira}. Assim, observa-se três componentes principais: os leitores de etiquetas MFCR522 para RFID e NFC, o sensor de fechamento para a porta e a placa Raspberry PI\textsuperscript{\textregistered}\footnote{https://www.raspberrypi.org} 3 Modelo B. O primeiro deles, o conjunto de leitores, responsabiliza-se por efetuar varreduras de etiquetas NFC próximas a cada leitor quando for requerido. A partir disso, os dados lidos, referentes aos produtos, são transferidos para o Raspberry PI que, por sua vez, os transfere para o serviço de registro de interação. Os dados das etiquetas se encontram no formato \textit{Electronic Product Code} (EPC), no qual, identifica-se o fabricante, a classe do produto e a instância do produto a partir de um número de 96 bits, de forma semelhante ao código de barras presente nos produtos \cite{GS1BR2017}. Vale destacar que as etiquetas utilizadas nesse trabalho operam na faixa HF de 13,56 MHz e foram configuradas no formato NDEF.
 
-O sensor de fechamento de porta, por outro lado, é responsável por determinar quando ações devem ocorrer. O seu funcionamento envolve dois componentes: o primeiro é dotado de um imã e o outro contém um mecanismo que é influenciado pela presença ou não do ímã. Assim, quando estes se aproximam, indicando fechamento da porta, haverá um curto-circuito entre os terminais do mecanismo. Já quando afastados indica-se abertura, tendo-se, portanto, um circuito aberto.
-
-Considerando-se, primeiramente, o evento de abertura da porta. Caso o usuário não a feche durante um determinado período de tempo, será feita uma requisição, através da placa Raspberry PI, para o serviço de registro de interação, indicando a situação. No entanto, no caso oposto, ou seja, quando ocorrer o fechamento da porta, dentro do período estipulado, realiza-se uma varredura dos produtos e, em seguida, uma requisição é enviada ao serviço para que se efetue o registro de interação.
-
-Por fim, o último componente, o Raspberry PI, opera como um centro de controle, onde obtém dados do sensor de fechamento para, então, comandar leituras de etiquetas e/ou fazer requisições descritas anteriormente.
-
-Para a comunicação entre os três componentes fez-se uso de dois protocolos específicos: a \textit{Serial Peripheral Interface} (SPI) e \textit{Hypertext Transfer Protocol} (HTTP) com \textit{Representational State Transfer} (REST). O primeiro deles foi empregado na comunicação entre os leitores RFID e o Rasbpberry, já o segundo, para troca de informações entre o Raspberry e o serviço de registro. Por fim, a comunicação com o sensor de fechamento se deu através de sinais digitais.
-
-\begin{figure}[H]
+\begin{figure}[htb]
     \caption{Estrutura interna da geladeira}
     \label{fig:cap4_estr_geladeira}
     \includegraphics[width=\textwidth]{figuras/c4_modelo-logico-hardware.png}
     
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{figure}
-% Colocar a imagem
 
-% Explicar cada componente
+O sensor de fechamento de porta, por outro lado, é responsável por determinar quando ações devem ocorrer. O seu funcionamento envolve dois componentes: o primeiro é dotado de um imã e o outro contém um mecanismo que é influenciado pela presença ou não do ímã. Assim, quando estes se aproximam, indica-se o fechamento da porta. Haverá, deste modo, um curto-circuito entre os terminais do mecanismo. Por outro lado, quando afastados indica-se abertura, determinando portanto, um circuito aberto.
 
-Como parte do processo de implementação, uma estrutura em madeira foi construída a fim de simular a interação. O resultado pode ser observado na Figura X. Assim, apesar da aparência rústica, observa-se três níveis: o primeiro, inferior, abriga o Raspberry, já o segundo e terceiro abrigam os leitores e os produtos.
+
+
+%Considerando-se, primeiramente, o evento de abertura da porta, caso o usuário não feche a porta durante um determinado período de tempo
+Considerando que inicialmente a porta está fechada. Em um dado momento, o usuário abre a porta. Caso esta não seja fechada durante um determinado período de tempo, será feita uma requisição para o serviço de registro de interação indicando a situação. Caso contrário, ou seja, a porta esteva aberta e é fechada dentro do período estipulado, realiza-se uma varredura dos produtos e, em seguida, uma requisição é enviada ao serviço para que se efetue o registro de interação.
+
+Por fim, o último componente, o Raspberry PI, opera como um centro de controle, onde obtém dados do sensor de fechamento para, então, comandar leituras de etiquetas e/ou fazer requisições descritas anteriormente.
+
+Para a comunicação entre os três componentes fez-se uso de dois protocolos específicos: a \textit{Serial Peripheral Interface} (SPI) e \textit{Hypertext Transfer Protocol} (HTTP) com \textit{Representational State Transfer} (REST). O primeiro deles foi empregado na comunicação entre os leitores RFID e o Rasbpberry, já o segundo, para a troca de informações entre o Raspberry e o serviço de registro. Por fim, a comunicação com o sensor de fechamento ocorre através de sinais digitais.
+
+Como parte do processo de implementação, uma estrutura em madeira foi construída a fim de simular a interação. O resultado pode ser observado na Figura \ref{fig:cap4_imagem_estrutura}. Assim, apesar da aparência rústica, observa-se três níveis: o primeiro, inferior, abriga o Raspberry, já o segundo e terceiro abrigam os leitores e os produtos.
 
 %%%%%%%%%% FIGURA X - Estrutura da geladeira  %%%%%%%%
+\begin{figure}[H]
+    \caption{Estrutura externa da geladeira}
+    \label{fig:cap4_imagem_estrutura}
+    \includegraphics[width=0.51\textwidth]{figuras/cap4_imagem_estrutura.png}
+    
+    \footnotesize{Fonte: Elaborado pelo Autor}
+\end{figure}
+
 
 \ProximoForaDoSumario 
 \subsubsection{Interface de Usuário}
 
-Como já descrito, a interface de usuário destina-se à interação entre usuários e a geladeira. Assim, as funcionalidades ficam disponíveis em um tela principal, conforme Figura \ref{fig:cap3_app_mainpage}, e podem ser acessadas de acordo com a vontade do usuário ou em momentos em que notificações forem disparadas.
+Como já descrito, a interface de usuário destina-se à interação entre usuários e a geladeira. Assim, conforme Figura \ref{fig:cap3_app_mainpage}, as funcionalidades ficam disponíveis em um tela principal e podem ser acessadas de acordo com a necessidade do usuário ou em momentos em que notificações forem disparadas.
 
 \begin{figure}[htb]
     \caption{Página principal da interface}
@@ -242,7 +256,7 @@ Como já descrito, a interface de usuário destina-se à interação entre usuá
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{figure}
 
-A primeira das funcionalidades, de listagem de conteúdo, é exibida como um conjunto de produtos com respectivas informações de descrição, fabricante e quantidade disponível, conforme Figura \ref{fig:cap4_listagem_de_produtos}.
+A primeira das funcionalidades, de listagem de conteúdo, é exibida como um conjunto de produtos com as respectivas informações de descrição, fabricante e quantidade disponível, conforme Figura \ref{fig:cap4_listagem_de_produtos}.
 
 \begin{figure}[htb]
     \caption{Listagem de produtos}
@@ -252,17 +266,17 @@ A primeira das funcionalidades, de listagem de conteúdo, é exibida como um con
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{figure}
 
-A próxima função permite que o usuário visualize receitas recomendadas. Assim, será, inicialmente, listado um conjunto de receitas selecionados pelo sistema. É possível, em seguida, visualizar os detalhes de qualquer uma delas, como ingredientes e passos para o preparo, conforme Figura \ref{fig:cap4_exibicao_receita}.
+A próxima função permite que o usuário visualize receitas recomendadas. Assim, inicialmente será listado um conjunto de receitas selecionados pelo sistema. Em seguida, é possível visualizar os detalhes de qualquer uma delas, como ingredientes e passos para o preparo, conforme Figura \ref{fig:cap4_exibicao_receita}.
 
 \begin{figure}[htb]
     \caption{Exibição de detalhes de uma receita}
     \label{fig:cap4_exibicao_receita}
     \includegraphics[width=0.8\textwidth]{figuras/cap4_exibicao_receita.png}
     
-   \footnotesize{Fonte: Autor}
+   \footnotesize{Fonte: Elaborado pelo Autor}
 \end{figure}
 
-A última funcionalidade implementada é a exibição do estado da geladeira, ou seja, se está aberta ou fechada no momento. Acessando a respectiva opção no menu da Figura \ref{fig:cap3_app_mainpage} uma nova página é aberta e o estado atual é exibido. Outra forma na qual a aplicação permite ter conhecimento do estado da geladeira é através de notificação que alertam em caso de a porta estar aberta durante muito tempo.
+A última funcionalidade implementada é a exibição do estado da geladeira, ou seja, se está aberta ou fechada no momento. Acessando a respectiva opção no menu da Figura \ref{fig:cap3_app_mainpage} uma nova tela é aberta e o estado atual é exibido. Outra forma na qual a aplicação permite ter conhecimento do estado da geladeira é através de notificações que alertam em caso de a porta estar aberta durante muito tempo.
 
 Toda a interface de usuário foi desenvolvida a partir de um aplicação para a plataforma móvel Android\textsuperscript{\textregistered}.
 
@@ -278,18 +292,18 @@ Toda a interface de usuário foi desenvolvida a partir de um aplicação para a 
 % Objetivo
 Como descrito anteriormente, a camada de serviços atua como porta de entrada do sistema para os componentes da camada de aplicação. 
 % Tecnologias
-Conforme demonstrado na Figura \ref{fig:c4_modelo_fisico}, utiliza-se, sobre o HTTP, o REST, um estilo arquitetural que opera como um modelo abstrato da arquitetura da \textit{Web}. Em outras palavras, qualquer informação contida em um servidor pode ser abstraída como um recurso. Além disso, cada recurso é identificado por um \textit{Uniform Resource Identifier } (URI) e o acesso a esse recurso se dá por meio de métodos HTTP, como o GET e o POST \cite{Fielding2000}.
+Conforme demonstrado na Figura \ref{fig:c4_modelo_fisico}, utiliza-se, sobre o HTTP, o REST, um estilo arquitetural que opera como um modelo abstrato da arquitetura da \textit{Web}. Em outras palavras, qualquer informação contida em um servidor pode ser abstraída como um recurso. Além disso, cada recurso é identificado por um \textit{Uniform Resource Identifier } (URI) e o acesso a esse recurso ocorre por meio de métodos HTTP, como o GET e o POST \cite{Fielding2000}.
 
 % JAX-WS
-A implementação dos serviços em REST se deu na linguagem Java a partir do \textit{ Integrated Development Environment} (IDE) Eclipse \textit{Java Enterprise Edition} (JEE) com a especificação \textit{Java API for XML Web Services} (JAX-WS) para a referida linguagem.
+Para a implementação dos serviços REST utilizou-se a linguagem Java a partir do \textit{ Integrated Development Environment} (IDE) Eclipse \textit{Java Enterprise Edition} (JEE) com a especificação \textit{Java API for XML Web Services} (JAX-WS) para a referida linguagem.
 
 % Formato de Requisições
-Como exemplos, é possível apresentar os serviços de registro de interação e de consulta de estado de porta, conforme Quadro \ref{fig:cap4_service-register} e Quadro \ref{fig:cap4_service-status-door}, respectivamente.
+Como exemplos, é possível apresentar os serviços de registro de interação e de consulta do estado da porta, conforme Quadro \ref{fig:cap4_service-register} e Quadro \ref{fig:cap4_service-status-door}, respectivamente.
 
 \begin{quadro}[htb]
     \caption{Serviço de registro de interação}
     \label{fig:cap4_service-register}
-    \includegraphics[width=\textwidth]{cap4_service-register}
+   \frame{\includegraphics[width=\textwidth]{cap4_service-register}}
     
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
@@ -307,14 +321,17 @@ Como exemplos, é possível apresentar os serviços de registro de interação e
 \begin{quadro}[htb]
     \caption{Serviço de consulta de estado de porta}
     \label{fig:cap4_service-status-door}
-    \includegraphics[width=\textwidth]{cap4_service-status-door}
+    \frame{\includegraphics[width=\textwidth]{cap4_service-status-door}}
     
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
 
-A estrutura de um serviço, como descrito, é composto pelo método pelo qual é acessado sendo nos serviços de exemplo, \texttt{POST} e \texttt{GET}, respectivamente. Além disso, é atribuído um endereço em específico para cada serviço sendo, \texttt{/register} e \texttt{/open\_door}, nessa ordem. 
 
-É possível especificar a interação com o serviço a partir de parâmetros, aos quais variam de acordo com o método HTTP utilizado. Assim, é possível informar parâmetros na URL, tanto no POST quanto no GET ou no próprio corpo da requisição HTTP, no caso do POST.
+Como descrito, a estrutura de um serviço conta com um método HTTP para ser acessado. Nos exemplos, utiliza-se os métodos \texttt{POST} e \texttt{GET}, respectivamente. Além disso, para cada serviço atribuiu-se um endereço, sendo eles, \texttt{/register} e \texttt{/open\_door}, nessa ordem. 
+
+% A estrutura de um serviço, como descrito, é composto pelo método pelo qual é acessado sendo nos serviços de exemplo, \texttt{POST} e \texttt{GET}, respectivamente. Além disso, é atribuído um endereço em específico para cada serviço sendo, \texttt{/register} e \texttt{/open\_door}, nessa ordem. 
+
+É possível especificar a interação com o serviço a partir de parâmetros, aos quais variam de acordo com o método HTTP utilizado. Assim, é possível informar parâmetros na URL na própria requisição HTTP, tanto no POST quanto no GET, ou apenas no corpo da mesma, no caso do POST.
 
 Por fim, cada serviço poderia ser acessado pelas seguintes URIs.
 
@@ -324,7 +341,7 @@ Por fim, cada serviço poderia ser acessado pelas seguintes URIs.
 \end{itemize}
 
 % MongoDB
-A interação dos serviços com as bases de repositórios, por outro lado, se deu por meio de classes Java disponibilizadas pelo próprio mecanismo de armazenamento, ou seja, classes do MongoDB\textsuperscript{\textregistered}.
+A interação dos serviços com as bases de repositórios, por outro lado, ocorre por meio de classes Java disponibilizadas pelo próprio mecanismo de armazenamento, ou seja, classes do MongoDB\textsuperscript{\textregistered}\footnote{https://www.mongodb.com}.
 
 %\subsubsection{Registro de Interação}
 %\subsubsection{Consulta de Produtos Disponíveis}
@@ -338,31 +355,30 @@ A interação dos serviços com as bases de repositórios, por outro lado, se de
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Camada de Repositórios}
 
-As bases de dados nesse trabalho estão relacionadas ao servidor principal de serviços e recomendação. Conforme a Figura \ref{fig:c4_modelo_fisico} e, como já dito, tem-se quatro bases de dados: de interações, estruturas auxiliares, recomendações e metainformação. Tais bases dão suporte para todas as funcionalidades do sistema, desde registro de interação até a recomendação de produtos. 
+As bases de dados nesse trabalho estão relacionadas ao servidor principal de serviços e recomendação. Conforme a Figura \ref{fig:c4_modelo_fisico}, tem-se quatro bases de dados: de interações, estruturas auxiliares, recomendações e metainformação. Tais bases promovem suporte para todas as funcionalidades do sistema, desde o registro de interações até a recomendação de produtos. 
 
-A tecnologia utilizada para implementação dos repositórios baseia-se no conceito de banco de dados não relacionais, como o NoSQL. Tem-se como principal característica, nesse conceito, o não-suporte ao \textit{Search Query Language} (SQL) para alcance de performance ou confiabilidade. O intuito desse tipo de banco de dados é ser utilizado em aplicações de grande escala, nas quais supera o desempenho de bancos relacionais. Os dados são registrados em coleções, que não restringem os tipos de dados armazenáveis. Consequentemente, é possível, por exemplo, registrar, em uma mesma coleção, cadastros de usuários e de fornecedores. \cite{Boicea2012}. 
+A tecnologia utilizada para implementação dos repositórios baseia-se no conceito de banco de dados não relacionais, como o NoSQL. Tem-se como principal característica, nesse conceito, o não suporte ao modelo relacional para alcance de desempenho ou confiabilidade. O intuito desse tipo de banco de dados é ser utilizado em aplicações de grande escala, nas quais supera o desempenho de bancos relacionais. Os dados são registrados em coleções, que não restringem os tipos de dados armazenados. Consequentemente, é possível, por exemplo, registrar em uma mesma coleção cadastros de usuários e de fornecedores. \cite{Boicea2012}. 
 
-Neste trabalho, optou-se pelo MongoDB\textsuperscript{\textregistered}, um sistema de banco de dados NoSQL baseado em documentos, ao qual o armazenamento decorre no formato \textit{JavaScript Object Notation}(JSON), um formato baseado em chave e valor. 
+Neste trabalho optou-se pelo MongoDB\textsuperscript{\textregistered}, um sistema de banco de dados NoSQL baseado em documentos, ao qual o armazenamento decorre no formato \textit{JavaScript Object Notation} (JSON), um formato baseado em chave e valor. 
 
-
-O sistema deste trabalho apresenta o comportamento de interações constantes com as bases de dados, provenientes de diversos dispositivos, seja na forma de inserções como resgates de informação. Por isso, na implementação utilizou-se o conceito de base de dados NoSQL.
+O sistema desenvolvido neste trabalho possui um conjunto expressivo de interações provenientes dos dispositivos que o compõem, sendo que em um ambiente real resultaria em um número expressivo de inserções e recuperações de informação. Por isso, na implementação utilizou-se o conceito de base de dados NoSQL.
 
 Nas seções que seguem, os repositórios serão detalhados em seus aspectos internos, como tipos de dados armazenadas, a origem da necessidade destes e em que momento são utilizados.
 
 \ProximoForaDoSumario 
 \subsubsection{Base de Interações}
 
-Como descrito na Seção \ref{sec:camada-repo}, essa camada é responsável pelo registro das interações de usuários com produtos. A cada registro, ter-se-á um conjunto de códigos EPC de itens atuais, além da identificação da geladeira e o \textit{timestamp}, ou seja, o momento no qual ocorreu a interação. A Figura \ref{fig:cap4_base-int_json}, demonstra um registro tal qual como é inserido na base.
+Como descrito na Seção \ref{sec:camada-repo}, essa camada é responsável pelo registro das interações de usuários com produtos. A cada registro, ter-se-á um conjunto de códigos EPC de itens atuais, além da identificação da geladeira e o \textit{timestamp}, ou seja, o momento no qual ocorreu a interação. O Quadro \ref{fig:cap4_base-int_json} demonstra um exemplo de registro que é inserido na base.
 
 \begin{quadro}[htb]
     \caption{Registro na base de interações}
     \label{fig:cap4_base-int_json}
-    \includegraphics[width=0.45\textwidth]{cap4_base-int_json}
+    \frame{\includegraphics[width=0.45\textwidth]{cap4_base-int_json}}
     
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
 
-Nota-se, pela Figura \ref{fig:cap4_base-int_json}, que havia quatro itens na geladeira no dia 13 de setembro de 2017 à 13h26. No entanto, não é claro quais produtos estão contidos. Para tanto, operações de deslocamento de bit são realizadas sobre o código EPC revelando, desse modo, o fabricante, o produto e o número de série da instância. O Quadro \ref{fig:cap4_epc} exibe estrutura de um código EPC.
+Nota-se, pelo Quadro \ref{fig:cap4_base-int_json}, que haviam quatro itens na geladeira no dia 13 de setembro de 2017 à 13h26. No entanto, não é claro quais produtos estão contidos. Para tanto, operações de deslocamento de bit são realizadas sobre o código EPC revelando, desse modo, o fabricante, o produto e o número de série da instância. O Quadro \ref{fig:cap4_epc} exibe estrutura de um código EPC.
 
 \begin{quadro}[htb]
     \caption{Estrutura de um código EPC}
@@ -372,82 +388,84 @@ Nota-se, pela Figura \ref{fig:cap4_base-int_json}, que havia quatro itens na gel
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
 
-Esse tipo de registro é a principal fonte de informação a cerca dos hábitos dos usuários, uma vez que explicita os produtos com os quais  mais se tem contato, bem como os horários em que isso ocorre. A partir dessas informações, é possível calcular as recomendações.
+Esse tipo de registro é a principal fonte de informação sobre os hábitos dos usuários, uma vez que explicita os produtos com os quais mais se tem contato, bem como os horários em que isso ocorre. A partir dessas informações, é possível calcular as recomendações.
 
 
 \ProximoForaDoSumario 
 \subsubsection{Base de Estruturas Auxiliares}  \label{sssec:base_est-aux}
 
-A base de estruturas auxiliares tem como principal objetivo intermediar a comunicação entre serviços e entre processos. Assim, ela contém diversos tipos de registros, sendo eles, de estado da porta, configurações de cada geladeira e listas de compras pendentes.
+A base de estruturas auxiliares tem como principal objetivo intermediar a comunicação entre serviços e processos que fazem parte da camada de processamento. Assim, ela contém diversos tipos de registros, sendo eles, de estado da porta, configurações de cada geladeira e listas de compras pendentes.
 
 O primeiro dos registros, informa qual o último estado registrado por uma determinada geladeira, ou seja, aberto ou fechado. Assim, tal informação será requisitada pela interface, através do serviço de consulta de porta, e alertará o usuário caso necessário. O Quadro \ref{fig:cap4_aux_setting}, demonstra um registro de estado da porta.
 
 \begin{quadro}[htb]
     \caption{Estrutura de um registro de estado da porta}
     \label{fig:cap4_aux_setting}
-    \includegraphics[width=0.35\textwidth]{cap4_aux_setting}
+    \frame{\includegraphics[width=0.35\textwidth]{cap4_aux_setting}}
     
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
 
 Como é visível no Quadro \ref{fig:cap4_aux_setting}, três informações são guardadas: a identificação da geladeira, o tipo de registro que será inserido, ou seja, estado da porta, e o estado em si. Segundo a implementação, ``0'' significa porta aberta e, ``1'', fechada.
 
-O segundo tipo de registro, de configurações, mantém um conjunto de parâmetros específicos de cada geladeira, conforme Quadro \ref{fig:cap4_settings}. Esses parâmetros se referem ao serviço do mercado no qual às compras são realizadas e metainformações de produtos e receitas são resgatadas; ao tempo para que a porta da geladeira deve permanecer aberta antes que a interface notifique o usuário; ao período mínimo entre compras automáticas e os produtos que o usuário deseja que estejam sempre disponíveis. As demais informações se referem à identificação da geladeira bem como o tipo de registro, nesse caso, de configurações.
+O segundo tipo de registro, de configurações, mantém um conjunto de parâmetros específicos de cada geladeira, conforme Quadro \ref{fig:cap4_settings}. 
+%Esses parâmetros se referem ao serviço do mercado no qual às compras são realizadas e metainformações de produtos e receitas são resgatadas; ao tempo para que a porta da geladeira deve permanecer aberta antes que a interface notifique o usuário; ao período mínimo entre compras automáticas e os produtos que o usuário deseja que estejam sempre disponíveis. As demais informações se referem à identificação da geladeira, bem como o tipo de registro, nesse caso, de configurações.
+Tais parâmetros incluem os dados do servidor do mercado escolhido e o tempo mínimo necessário que deve decorrer até que o usuário seja alertado que deixou a porta aberta. Além disso, inclui-se o intervalo de tempo em que ocorrem as compras automáticas e, por fim, a lista de produtos que são considerados essenciais.
 
-As informações referentes ao mercado são utilizadas pelos processos do sistema, ou seja, de compra automática, recomendação e sincronização de meta-informação. Já informações de tempo de notificação são requisitados pela interface através do serviço de configurações. Por outro lado, o tempo mínimo entre compras é requisitado pelo processo de compras automáticas. Por fim, a lista de produtos requeridos pelo usuário é utilizada pelo processo de recomendação na sugestão de novas compras.
+As informações referentes ao mercado são utilizadas pelos processos do sistema. Já informações de tempo de notificação são requisitados pela interface através do serviço de configurações. Por outro lado, o tempo mínimo entre compras é requisitado pelo processo de compras automáticas. Por fim, a lista de produtos requeridos pelo usuário é utilizada pelo processo de recomendação na sugestão de novas compras.
 
 \begin{quadro}[htb]
     \caption{Estrutura de um registro de configurações}
     \label{fig:cap4_settings}
-    \includegraphics[width=0.5\textwidth]{cap4_settings}
+    \frame{\includegraphics[width=0.5\textwidth]{cap4_settings}}
      
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
 
-A terceira categoria de registro se refere às listas de compras definida pelo usuário. Nesse caso, tem-se informações de identificação da geladeira, o momento no qual ao registro foi feito, bem como a lista de produtos e suas respectivas quantidades. Assim, tal lista será, posteriormente, analisada e efetivada pelo processo de compra automática.
+A terceira categoria de registros se refere às listas de compras definida pelo usuário. Neste caso, tem-se informações de identificação da geladeira, o momento no qual ao registro foi feito, bem como a lista de produtos e suas respectivas quantidades. Assim, tal lista será, posteriormente, analisada e efetivada pelo processo de compra automática.
 
 
 % TODO: COLOCAR FIGURA DA LISTA DE COMPRAS AQUI.
 
 %-----------------------------------------------------------%
 \ProximoForaDoSumario 
-\subsubsection{Base de Meta-Informação} \label{sssec:metainfo}
+\subsubsection{Base de Metainformação} \label{sssec:metainfo}
 
 % META INFO DE PRODUTOS
 
-Os produtos disponibilizados pelo mercado terão suas informações armazenadas nessa base de dados. Dessa forma, o sistema terá acesso a preços, códigos de barras, informações nutricionais, entre outros. Assim, será possível utilizar tais informações em recomendações como, por exemplo, produtos similares a um em específico. 
+Os produtos disponibilizados pelo mercado possuem suas informações armazenadas nessa base de dados. Desta forma, o sistema terá acesso a preços, códigos de barras, informações nutricionais, entre outros. Assim, torna-se possível utilizar tais informações em recomendações como, por exemplo, produtos similares a um em específico. 
 
 A estrutura do registro de um produto em específico é demonstrada no Quadro \ref{fig:cap4_metainfo}.
 
 \begin{quadro}[htb]
     \caption{Estrutura de um registro de metainformação de produto}
     \label{fig:cap4_metainfo}
-    \includegraphics[width=0.9\textwidth]{cap4_metainfo}
+    \frame{\includegraphics[width=0.9\textwidth]{cap4_metainfo}}
     
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
 
 A primeira parte do registro indica as informações nutricionais, que poderão ser utilizadas, futuramente, na recomendação de produtos segundo uma dieta específica do usuário. A seguir, tem-se informações de peso/volume e fabricante.
 
-Cada produto cadastrado é classificado em dois níveis: classe e especificação, sendo o primeiro relacionado a um determinado tipo de produto como, por exemplo, bebidas e laticínios. A especificação determina qual o produto em si que é representado como, refrigerante e leite. Assim, torna-se possível recomendar produtos através da abordagem baseada em conteúdo.
-Na sequência, é informado o tempo estimado, em dias, para considerar o produto adequado para consumo e, em seguida, a quantidade disponível no mercado, o preço unitário, código de barras e o parâmetro que indica que o registro se trata da metainformação de um produto.
+Cada produto cadastrado é classificado em dois níveis: classe e especificação. O primeiro relaciona-se a um determinado tipo de produto como, por exemplo, bebidas e laticínios. A especificação determina qual produto em si é representado como, refrigerante e leite. Assim, torna-se possível recomendar produtos através da abordagem baseada em conteúdo.
+Na sequência, é informado o tempo estimado em dias para considerar o produto adequado para consumo e, em seguida, a quantidade disponível no mercado, o preço unitário, o código de barras e o parâmetro que indica que o registro se trata da metainformação de um produto.
 
-Outra informação relevante se refere aos parâmetros do código EPC que exemplares do produto terão. Considerando, novamente, o Quadro \ref{fig:cap4_epc}, tais parâmetros se referem ao fabricante e o produto.
+Outra informação relevante se refere aos parâmetros do código EPC que exemplares do produto terão. Considerando, novamente, o Quadro \ref{fig:cap4_epc}, tais parâmetros se referem ao fabricante e ao produto.
 
-Por fim, tem-se informações de descrição do produto, de endereço da respectiva imagem ilustrativa e do instante ao qual esse registro foi atualizado. Tanto descrição como endereço da imagem são empregados pela interface de usuário na demonstração do produto, já o instante do registro é utilizado pelo processo de sincronização de meta-informação na verificação da necessidade por atualização do registro de metainformação.
+Por fim, tem-se informações de descrição do produto, de endereço da respectiva imagem ilustrativa e do instante em qual esse registro foi atualizado. Tanto a descrição como o endereço da imagem são empregados pela interface de usuário na demonstração do produto. 
+%Já o instante do registro é utilizado pelo processo de sincronização de metainformação na verificação da necessidade por atualização do registro de metainformação.
+Já o processo de sincronização de metainformação faz uso do momento do registro para verificar a necessidade por atualizações de metainformações.
 
 % Metainfo de receitas
-As receitas disponibilizadas pelo mercado terão a estrutura demonstrada na Figura \ref{fig:c4_recipe-meta}.
-
+As receitas disponibilizadas possuem a estrutura demonstrada na Quadro \ref{fig:c4_recipe-meta}.
 \begin{quadro}[htb]
     \caption{Registro de receita}
     \label{fig:c4_recipe-meta}
-    \includegraphics[width=0.8\textwidth]{c4_recipe-meta}
+    \frame{\includegraphics[width=0.8\textwidth]{c4_recipe-meta}}
     
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
-
-Cada receita terá um nome ou uma descrição breve de seu conteúdo, além de um conjunto de passos para o preparo. Haverá também um conjunto de produtos que fazem parte da receita bem como suas respectivas classificações e quantidades necessárias à receita. Por fim, cada receita terá sua própria classificação, indicando que se trata de uma torta ou bolo, por exemplo. Tal informação de classificação é utilizada na recomendação de novas receitas.
+Assim, a receita terá um nome ou uma descrição breve de seu conteúdo, além de um conjunto de passos para o preparo. Haverá também uma lista de produtos que fazem parte da receita, bem como suas respectivas classificações e quantidades necessárias à receita. Por fim, cada receita terá sua própria classificação, indicando que se trata de uma torta ou doce de leite, por exemplo. Tal informação de classificação é utilizada na recomendação de novas receitas.
 
 %-----------------------------------------------------------%
 \ProximoForaDoSumario 
@@ -463,21 +481,25 @@ Cada recomendação de produto, independente do seu tipo, apresenta a estrutura 
 \begin{quadro}[htb]
     \caption{Registro de recomendação de produtos}
     \label{fig:cap4_rec-prod}
-    \includegraphics[width=\textwidth]{cap4_rec-prod}
+    \frame{\includegraphics[width=\textwidth]{cap4_rec-prod}}
     
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
 
-No registro no Quadro \ref{fig:cap4_rec-prod} é apresentada uma recomendação de um novo produto ao usuário. Cada registro deste especifica a que tipo de registro se refere, ou seja, de produto faltante ou novo. Além disso, o momento ao qual a recomendação foi gerada é guardado para diferenciar recomendações novas e antigas. A seguir, tem-se a lista de produtos em si. Cada produto recomendado tem todo a sua metainformação anexada à recomendação.
+%%%%%%% aqui
+No registro que consta no Quadro \ref{fig:cap4_rec-prod} é apresentada uma recomendação de um novo produto ao usuário. 
+%Cada registro deste especifica a que tipo de registro se refere, ou seja, de produto faltante ou novo. 
+Cada registro especifica o seu tipo, ou seja, uma recomendação de um produto faltante ou um novo.
+Além disso, o momento em que a recomendação foi gerada é armazenado para diferenciar recomendações novas e antigas. A informação que segue no registro é a lista de produtos recomendados. Cada produto recomendado tem todo a sua metainformação anexada à recomendação.
 
 % Recomendação de receita
 
-O registro de recomendação de receitas, conforme Quadro \ref{fig:cap4_rec-recipe}, apresenta o tipo de recomendação, além da identificação da geladeira à qual se refere, bem como o momento em que foi gerada. Por fim, um lista de receitas é apresentada, cada qual com a estrutura demonstrada na Seção \ref{sssec:metainfo}.
+O registro de recomendação de receitas, conforme Quadro \ref{fig:cap4_rec-recipe}, apresenta  as seguintes informações: o tipo de recomendação, além da identificação da geladeira à qual se refere, bem como o momento em que foi gerada. Por fim, um lista de receitas é apresentada, cada qual com a estrutura demonstrada na Seção \ref{sssec:metainfo}.
 
 \begin{quadro}[htb]
     \caption{Registro de recomendação de receitas}
     \label{fig:cap4_rec-recipe}
-    \includegraphics[width=\textwidth]{cap4_rec-recipe}
+    \frame{\includegraphics[width=\textwidth]{cap4_rec-recipe}}
     
     \footnotesize{Fonte: Elaborado pelo Autor}
 \end{quadro}
@@ -492,77 +514,77 @@ Nas próximas seções, os aspectos da implementação dos processos serão deta
 \ProximoForaDoSumario 
 \subsubsection{Processo de Compras Automáticas}
 
-A compra automática se dará quando existirem receitas pendentes na base de estruturas auxiliares. Quando isso ocorrer o processo deve contatar o serviço de compras do mercado para efetuar a aquisição definida pelo usuário. Isso é feito a partir de uma requisição HTTP, que é enviada ao serviço do mercado, contendo a lista de produtos e as respectivas quantidades requeridas.
+A compra automática ocorre quando existirem listas de compras pendentes na base de estruturas auxiliares. Quando isso ocorrer o processo deve contatar o serviço de compras do mercado para efetuar a aquisição definida pelo usuário. Isso é realizado a partir de uma requisição HTTP que é enviada ao serviço do mercado contendo a lista de produtos requeridos e as respectivas quantidades.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ProximoForaDoSumario 
 \subsubsection{Processo de Geração de Recomendações} \label{sssec:proc_ger_rec}
 
-Nesse trabalho, implementou-se quatro formas distintas de recomendação, conforme será descrito a seguir, sendo elas, recomendação de produtos faltantes ou novos além de receitas a partir do conteúdo disponível ou do perfil.
+Neste trabalho, implementou-se quatro formas distintas de recomendação conforme descrito a seguir, sendo elas, recomendação de produtos faltantes ou novos, além de receitas a partir do conteúdo disponível ou do perfil.
 
 \begin{itemize}
     \item \textbf{Recomendação de Produtos Faltantes}
 \end{itemize}
 
-A recomendação de produtos faltantes baseia-se na ideia de lembrar ao usuário quando determinados produtos, considerando essenciais, estão em falta e efetuar a compra desses itens. Assim, o usuário será alertado quando isso ocorrer e poderá decidir se aceita que se efetive a compra ou não.
+A recomendação de produtos faltantes baseia-se na ideia de lembrar ao usuário quando determinados produtos considerando essenciais estão em falta e efetuar a compra desses itens. Assim, o usuário será alertado quando isso ocorrer e poderá decidir se aceita que se efetive a compra ou não.
 
-Para que as recomendações sejam possíveis, são necessárias duas informações: lista de produtos essenciais, obtida a partir das configurações de usuário, e da lista de interações. 
+Para que as recomendações sejam possíveis são necessárias duas informações: lista de produtos essenciais, obtida a partir das configurações de usuário, e da lista de interações. 
 
 A partir dessas informações, um processo em segundo plano, periodicamente, verificará a necessidade da compra desses produtos.
 
-Inicialmente, será criada uma lista de produtos contidos atualmente e suas respectivas quantidades, a partir da conjunto de registros de interações. Em seguida, será comparado produtos requisitados com as respectivas quantidades de produtos existentes e, então, uma lista com os itens em falta será criada e gravada na base de registros de recomendação.
+Para a geração das recomendações, inicialmente será criada uma lista com os produtos contidos atualmente na geladeira e suas respectivas quantidades, a partir do conjunto de registros de interações. Em seguida, será comparado produtos requisitados com as respectivas quantidades de produtos existentes e, então, uma lista com os itens em falta será criada e gravada na base de registros de recomendação.
+ 
+% Inicialmente, será criada uma lista de produtos contidos atualmente   e suas respectivas quantidades, a partir do conjunto de registros de interações. Em seguida, será comparado produtos requisitados com as respectivas quantidades de produtos existentes e, então, uma lista com os itens em falta será criada e gravada na base de registros de recomendação.
 
 \begin{itemize}
     \item \textbf{Recomendação de Produtos Novos}
 \end{itemize}
 
-A recomendação de produtos novos tem como princípio fundamental o conceito de filtragem colaborativa, descrita na Seção \ref{sec:filtragem-colaborativa}. Assim, sugestões são criadas a partir da comparação entre usuários com preferências parecidas. Tendo conhecimento do usuário com maior semelhança, é possível recomendar produtos que um usuário interagiu mas que o outro não conhece. Apesar de não conhecer o produto sugerido, a probabilidade de a recomendação agradar o usuário é alta, já que a sugestão emergiu de um usuário parecido.
+A recomendação de produtos novos tem como princípio fundamental o conceito de filtragem colaborativa, descrita na Seção \ref{sec:filtragem-colaborativa}. Assim, sugestões são criadas a partir da comparação entre usuários com preferências parecidas. Tendo conhecimento do usuário com maior semelhança, é possível recomendar produtos que um usuário interagiu mas que o outro não conhece. Apesar de não conhecer o produto sugerido, a probabilidade de a recomendação agradar o usuário é alta, já que a sugestão emergiu de um usuário com perfil similar.
 
-A comparação entre usuários foi realizada a partir da correlação de Pearson, descrita na Seção \ref{sssec:similaridade}.
+A comparação entre usuários foi realizada utilizando da correlação de Pearson, descrita na Seção \ref{sssec:similaridade}. As informações utilizadas para as sugestões de itens são compostas pelos registros de interações e as metainformações dos produtos. 
 
-As informações utilizadas para as sugestões de itens são os registros de interações e as metainformações dos produtos. 
+Primeiramente, uma matriz idêntica à matriz da Tabela \ref{tab:matriz-av-item-user} foi construída. No entanto, cada par de usuário e item é interpretado como o número de interações entre usuário e item, ao contrário da matriz de avaliação da tabela mencionada. A partir da matriz, é possível calcular a média de interações para cada usuário. Tendo o número de interações entre cada usuário e cada item além da média de interações, é possível obter a similaridade entre cada usuário.
 
-Primeiramente, uma matriz, semelhante à matriz da Tabela \ref{tab:matriz-av-item-user} foi construída, no entanto, cada par de usuário e item é interpretado como o número de interações entre usuário e item, ao contrário da matriz de avaliação da tabela mencionada. A partir da matriz, é possível calcular a média de interações para cada usuário, valor requisitado pelo cálculo. Tendo o número de interações entre cada usuário e cada item além da média de interações, é possível obter a similaridade entre cada usuário.
+A partir da similaridade entre usuários, ordena-se uma lista de usuários de maneira descendente, tendo como referência o usuário ao qual deseja-se recomendar um item.
+Após isso, a lista ordenada é percorrida. Para cada usuário presente nela, é calculada uma subtração de conjuntos envolvendo tal indivíduo e o usuário de receberá as recomendações. Tais conjuntos se referem aos produtos aos quais cada usuário interagiu. E, como consequência do cálculo, o conjunto de itens resultantes releva os produtos aos quais o usuário de referência ainda não interagiu mas o outro o fez. Por fim, o resultado é adicionado ao conjunto de recomendação.
 
-Tendo a similaridade entre usuários, ordena-se uma lista de usuários do mais semelhante ao menos, tendo como referência o usuário ao qual deseja-se recomendar um item. A seguir, a começar pelo primeiro usuário da lista de semelhantes, se faz a subtração de conjunto de produtos interagidos por este em relação ao usuário de referência. Desse modo, tem-se um conjunto de produtos que o usuário ainda não interagiu. Assim, o processo será feito para os demais usuários da lista até que se atinja um conjunto de produtos com a quantidade desejada que, então, será registrado na base de recomendações.
+%
+%A seguir, começando pelo primeiro usuário da lista de semelhantes, se faz a subtração de conjunto de produtos interagidos por este em relação ao usuário de referência. Desse modo, tem-se um conjunto de produtos que o usuário ainda não interagiu. 
+%
+Assim, o processo será realizado para os demais usuários da lista até que se atinja um conjunto de produtos com a quantidade desejada que, então, será registrado na base de recomendações.
 
 \begin{itemize}
     \item \textbf{Recomendação de Receitas com Base nos Produtos Disponíveis}
 \end{itemize}
 
-Recomendação de receitas a partir dos produtos disponíveis leva em conta itens acessíveis para selecionar as receitas que, em seu conteúdo, englobem, tanto quanto possível, apenas os itens disponíveis.
-
-Para o cálculo das recomendações, são necessárias as metainformações dos produtos e receitas além dos registros de interação. Assim, é possível comparar produtos atuais com os itens contidos em receitas.
+Este tipo de recomendação objetiva selecionar as receitas que englobem em seu conteúdo apenas os itens disponíveis, tanto quanto possível. Para o cálculo das recomendações, são necessárias as metainformações dos produtos e receitas, além dos registros de interação. Assim, é possível comparar produtos atuais com os itens contidos em receitas.
 
 Cada receita não especifica um produto em particular, mas deixa claro a classificação do produto. Assim, ao invés de especificar uma caixa de leite da marca X, deixa restrito a um produto que é um laticínio e, mais especificamente, uma caixa de leite.
 
-Inicialmente, a lista de itens, atualmente contidos na geladeira, é criada. Após isso, para cada receita na base de dados, é contabilizado o número de itens presentes na receita e na geladeira. Em seguida, ordena-se a lista começando por aquela que contém o maior número de correspondências entre receita e conteúdo. Por fim, um conjunto contendo as primeiras receitas da lista é gravado na base como recomendação.
+Para o processo de criação de recomendação, inicialmente, a lista de itens atualmente contidos na geladeira é criada. Após isso, para cada receita na base de dados é contabilizado o número de itens presentes na receita e na geladeira. Em seguida, ordena-se a lista de receitas começando por aquela que contém o maior número de correspondências entre receita e conteúdo. Por fim, um conjunto contendo as primeiras receitas da lista é gravado na base como uma recomendação já efetuada.
 
 \begin{itemize} 
-    \item \textbf{Recomendação de Receitas com base no Perfil do Usuário}
+    \item \textbf{Recomendação de Receitas com Base no Perfil do Usuário}
 \end{itemize}
 
-As recomendações de receitas a partir do perfil do usuário buscam trazer receitas ao usuário a partir das suas preferências por produtos em específico. Assim, seleciona-se receitas que contenham produtos que o usuário tem maior preferência.
+As recomendações de receitas a partir do perfil do usuário buscam trazer receitas ao usuário a partir das suas preferências por produtos em específico. Assim, seleciona-se receitas que contenham produtos que o usuário tem maior preferência. As informações necessárias à recomendação são as interações dos usuários e as metainformações de produtos e receitas.
 
-As informações necessárias à recomendação são as interações dos usuários e as metainformações de produtos e receitas.
-
-Para gerar as sugestões, inicialmente cria-se uma lista com todos os produtos com os quais o usuário em questão interagiu e as contagens de interações com cada produto. Seleciona-se, em seguida, o conjunto de produtos com maior frequência de interações. Por fim, seleciona-se receitas que contenham tais produtos, da mesma forma que a recomendação por conteúdo disponível.
+Para gerar as sugestões, inicialmente cria-se uma lista com todos os produtos com os quais o usuário em questão interagiu e as contagens de interações com cada produto. Seleciona-se, em seguida, o conjunto de produtos com maior frequência de interações. Por fim, seleciona-se receitas que contenham tais produtos%, da mesma forma que a recomendação por conteúdo disponível.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ProximoForaDoSumario 
-\subsubsection{Processo de Sincronização de Meta-Informação}
+\subsubsection{Processo de Sincronização de metainformação}
 
-A sincronização é feita a partir da comparação entre dos momentos em que se criou o registro presente na base de metainformação e o registro contido no mercado. Caso o registro do mercado seja mais recente, esse será enviado para o servidor para atualização do registro. 
+A sincronização é feita a partir da comparação entre os momentos em que se criou o registro presente na base de metainformação e o registro contido no mercado. Caso o registro do mercado seja mais recente, esse será enviado para o servidor para atualização do registro. 
 
-Para que a sincronização seja possível, em cada metainformação tem-se um campo chamado  \textit{timestamp} que indica a data de criação de tal registro.
-Por fim, a operação de sincronização deve ser realizada periodicamente por um processo em segundo plano.
-
-A implementação desse processo não foi executada devido a falta de tempo e o fato de não ser essencial ao trabalho.
+Para que a sincronização seja possível, em cada metainformação tem-se um campo chamado  \textit{timestamp} que indica a data de criação de tal registro. Por fim, a operação de sincronização deve ser realizada periodicamente por um processo em segundo plano. 
+%A implementação desse processo não foi executada devido a falta de tempo e o fato de não ser essencial ao trabalho.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Camada de Agente Externo}
 
-A camada descrita nesta seção refere-se ao componente independente do sistema do modelo proposto, isto é, o mercado. Ele possui um sistema próprio, mas que disponibiliza um conjunto de serviços pelos quais é possível a interação externa. O primeiro serviço é a sincronização de metainformação de produtos e receitas, onde periodicamente serão verificadas alterações, ou inserções de novos produtos e receitas. Caso exista dados desatualizados, estes serão enviados ao servidor principal.
+A camada descrita nesta seção refere-se ao componente independente do modelo proposto, isto é, o mercado. Ele possui um sistema próprio, mas que disponibiliza um conjunto de serviços pelos quais é possível a interação externa. O primeiro serviço é a sincronização de metainformação de produtos, onde periodicamente serão verificadas alterações, ou inserções de novos produtos. Caso existam dados desatualizados, estes serão enviados ao servidor principal.
 
-Além disso, há o serviço de compras, onde uma lista de produtos será informada em conjunto com as respectivas quantidades. Uma verificação de disponibilidade dos itens solicitados será realizada e, como retorno, o serviço indica quais produtos foram adquiridos com sucesso e quais não pela não disponibilidade. Vale destacar que, apesar de a verificação de disponibilidade ser realizada antes mesmo da sugestão ao usuário, é possível que o produto acabe até o momento em que a compra seja solicitada.
+Além disso, há o serviço de compras, onde uma lista de produtos será informada em conjunto com as respectivas quantidades. Uma verificação de disponibilidade dos itens solicitados será realizada e, como retorno, o serviço indica quais produtos foram adquiridos com sucesso e quais não puderam ser atendidos. Vale destacar que, apesar de a verificação de disponibilidade ser realizada antes mesmo da sugestão ao usuário, é possível que o produto acabe até o momento em que a compra seja realmente solicitada.

@@ -194,8 +194,8 @@
 
 %---------------------------------------------------------------------------
 % Número de níveis de subseçőes
-\setcounter{tocdepth}{5}
-\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
 
 %---------------------------------------------------------------------------
 % Formataçăo das seçőes e seus componentes
@@ -351,7 +351,7 @@
 %---------------------------------------------------------------------------
 % Apęndices e Anexos - Pós-Textuais
 \addto\captionsbrazil{
-\renewcommand\refname{REFERĘNCIAS}
+\renewcommand\refname{REFERÊNCIAS}
 }
 
 \renewcommand{\annexname}{ANEXO}
